@@ -1,0 +1,72 @@
+<svg width="400" height="500" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <rect width="400" height="500" fill="url(#grad2)"/>
+
+  <!-- Desk/workspace -->
+  <rect x="50" y="320" width="300" height="15" rx="4" fill="#D1D5DB"/>
+
+  <!-- Laptop -->
+  <g transform="translate(100, 220)">
+    <!-- Screen -->
+    <rect x="0" y="0" width="200" height="130" rx="8" fill="#0B1630"/>
+    <rect x="8" y="8" width="184" height="110" rx="4" fill="#F7F7FB"/>
+
+    <!-- Screen content lines -->
+    <rect x="20" y="25" width="100" height="8" rx="4" fill="#E5E7EB"/>
+    <rect x="20" y="42" width="150" height="6" rx="3" fill="#E5E7EB"/>
+    <rect x="20" y="55" width="130" height="6" rx="3" fill="#E5E7EB"/>
+    <rect x="20" y="68" width="145" height="6" rx="3" fill="#E5E7EB"/>
+    <rect x="20" y="85" width="80" height="16" rx="4" fill="#0F766E" opacity="0.2"/>
+
+    <!-- Laptop base -->
+    <rect x="-10" y="130" width="220" height="12" rx="2" fill="#4B5563"/>
+  </g>
+
+  <!-- Person sitting -->
+  <g transform="translate(130, 60)">
+    <!-- Hair -->
+    <ellipse cx="70" cy="45" rx="50" ry="42" fill="#1a1a1a"/>
+
+    <!-- Head -->
+    <ellipse cx="70" cy="65" rx="40" ry="42" fill="#8B6F4E"/>
+
+    <!-- Face features -->
+    <ellipse cx="55" cy="60" rx="4" ry="5" fill="#0B1630"/>
+    <ellipse cx="85" cy="60" rx="4" ry="5" fill="#0B1630"/>
+    <path d="M60 80 Q70 88 80 80" stroke="#0B1630" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Glasses -->
+    <rect x="45" y="54" width="20" height="14" rx="4" stroke="#0B1630" stroke-width="2" fill="none"/>
+    <rect x="75" y="54" width="20" height="14" rx="4" stroke="#0B1630" stroke-width="2" fill="none"/>
+    <line x1="65" y1="60" x2="75" y2="60" stroke="#0B1630" stroke-width="2"/>
+
+    <!-- Body -->
+    <ellipse cx="70" cy="170" rx="55" ry="60" fill="#F4A826"/>
+
+    <!-- Arms on desk/laptop -->
+    <ellipse cx="20" cy="165" rx="15" ry="35" fill="#F4A826"/>
+    <ellipse cx="120" cy="165" rx="15" ry="35" fill="#F4A826"/>
+
+    <!-- Hands -->
+    <ellipse cx="15" cy="190" rx="12" ry="10" fill="#8B6F4E"/>
+    <ellipse cx="125" cy="190" rx="12" ry="10" fill="#8B6F4E"/>
+  </g>
+
+  <!-- Coffee mug -->
+  <g transform="translate(310, 280)">
+    <rect x="0" y="0" width="30" height="38" rx="4" fill="#0F766E"/>
+    <ellipse cx="15" cy="2" rx="15" ry="5" fill="#0D5D57"/>
+    <path d="M30 12 Q42 16 30 28" stroke="#0F766E" stroke-width="4" fill="none"/>
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="50" cy="80" r="6" fill="#F4A826" opacity="0.6"/>
+  <circle cx="360" cy="150" r="5" fill="#0F766E" opacity="0.5"/>
+
+  <defs>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7F7FB"/>
+      <stop offset="100%" stop-color="#E8E8ED"/>
+    </linearGradient>
+  </defs>
+</svg>

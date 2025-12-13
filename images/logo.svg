@@ -1,0 +1,10 @@
+<svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Ninja star/shuriken inspired mark -->
+  <g transform="translate(4, 8)">
+    <path d="M12 0L15 9L24 12L15 15L12 24L9 15L0 12L9 9L12 0Z" fill="#0B1630"/>
+    <path d="M12 6L14 10L18 12L14 14L12 18L10 14L6 12L10 10L12 6Z" fill="#F4A826"/>
+  </g>
+  <!-- Text -->
+  <text x="36" y="26" font-family="Inter, -apple-system, sans-serif" font-weight="700" font-size="18" fill="#0B1630">Coursework</text>
+  <text x="140" y="26" font-family="Inter, -apple-system, sans-serif" font-weight="700" font-size="18" fill="#F4A826">Ninja</text>
+</svg>

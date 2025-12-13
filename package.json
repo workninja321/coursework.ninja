@@ -1,0 +1,25 @@
+{
+  "name": "coursework-ninja",
+  "version": "1.0.0",
+  "description": "Coursework Ninja - Academic support landing page with SEO automation",
+  "type": "module",
+  "scripts": {
+    "seo:run": "node scripts/seo-machine.mjs",
+    "seo:dry-run": "SEO_DRY_RUN=true node scripts/seo-machine.mjs"
+  },
+  "keywords": [
+    "wgu",
+    "academic",
+    "seo",
+    "automation"
+  ],
+  "author": "",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "googleapis": "^144.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

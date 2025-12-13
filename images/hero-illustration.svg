@@ -1,0 +1,129 @@
+<svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient blob -->
+  <ellipse cx="300" cy="250" rx="280" ry="220" fill="url(#bgGradient)" opacity="0.3"/>
+
+  <!-- Main laptop/desk illustration -->
+  <g transform="translate(100, 80)">
+    <!-- Desk surface -->
+    <rect x="0" y="320" width="400" height="20" rx="4" fill="#E5E7EB"/>
+    <ellipse cx="200" cy="340" rx="180" ry="10" fill="#D1D5DB" opacity="0.5"/>
+
+    <!-- Laptop base -->
+    <rect x="50" y="280" width="300" height="40" rx="4" fill="#4B5563"/>
+    <rect x="55" y="285" width="290" height="30" rx="2" fill="#6B7280"/>
+
+    <!-- Laptop screen -->
+    <rect x="30" y="60" width="340" height="220" rx="12" fill="#0B1630"/>
+    <rect x="40" y="70" width="320" height="195" rx="6" fill="#F7F7FB"/>
+
+    <!-- Screen content - Document -->
+    <rect x="55" y="85" width="180" height="14" rx="7" fill="#E5E7EB"/>
+    <rect x="55" y="110" width="280" height="8" rx="4" fill="#E5E7EB"/>
+    <rect x="55" y="128" width="260" height="8" rx="4" fill="#E5E7EB"/>
+    <rect x="55" y="146" width="240" height="8" rx="4" fill="#E5E7EB"/>
+    <rect x="55" y="164" width="270" height="8" rx="4" fill="#E5E7EB"/>
+
+    <!-- Highlighted text with edit marks -->
+    <rect x="55" y="186" width="150" height="22" rx="4" fill="#FEF3C7"/>
+    <rect x="215" y="186" width="100" height="22" rx="4" fill="#D1FAE5"/>
+
+    <!-- Comment bubble -->
+    <g transform="translate(260, 215)">
+      <rect width="100" height="50" rx="8" fill="#F4A826"/>
+      <path d="M10 50 L20 40 L35 40 L10 50" fill="#F4A826"/>
+      <rect x="10" y="10" width="70" height="5" rx="2.5" fill="white"/>
+      <rect x="10" y="22" width="55" height="5" rx="2.5" fill="white"/>
+      <rect x="10" y="34" width="60" height="5" rx="2.5" fill="white"/>
+    </g>
+
+    <!-- Webcam dot -->
+    <circle cx="200" cy="63" r="3" fill="#4B5563"/>
+  </g>
+
+  <!-- Person illustration -->
+  <g transform="translate(80, 180)">
+    <!-- Hair -->
+    <ellipse cx="60" cy="35" rx="45" ry="40" fill="#2D1810"/>
+
+    <!-- Head -->
+    <ellipse cx="60" cy="55" rx="35" ry="38" fill="#D4A574"/>
+
+    <!-- Face features -->
+    <ellipse cx="48" cy="48" rx="4" ry="5" fill="#0B1630"/>
+    <ellipse cx="72" cy="48" rx="4" ry="5" fill="#0B1630"/>
+    <path d="M52 70 Q60 78 68 70" stroke="#0B1630" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+    <!-- Glasses -->
+    <rect x="38" y="42" width="18" height="14" rx="4" stroke="#0B1630" stroke-width="2" fill="none"/>
+    <rect x="64" y="42" width="18" height="14" rx="4" stroke="#0B1630" stroke-width="2" fill="none"/>
+    <line x1="56" y1="48" x2="64" y2="48" stroke="#0B1630" stroke-width="2"/>
+
+    <!-- Body/Shirt -->
+    <ellipse cx="60" cy="145" rx="50" ry="55" fill="#0B1630"/>
+
+    <!-- Arm reaching to keyboard -->
+    <ellipse cx="120" cy="150" rx="20" ry="12" fill="#D4A574"/>
+  </g>
+
+  <!-- Coffee mug -->
+  <g transform="translate(460, 280)">
+    <rect x="0" y="0" width="35" height="45" rx="4" fill="#F4A826"/>
+    <ellipse cx="17.5" cy="2" rx="17.5" ry="6" fill="#D99520"/>
+    <path d="M35 15 Q50 20 35 35" stroke="#F4A826" stroke-width="5" fill="none"/>
+    <!-- Steam -->
+    <path d="M12 -10 Q16 -20 12 -30" stroke="#9CA3AF" stroke-width="2" fill="none" opacity="0.6">
+      <animate attributeName="d" values="M12 -10 Q16 -20 12 -30;M12 -10 Q8 -20 12 -30;M12 -10 Q16 -20 12 -30" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M22 -8 Q26 -18 22 -28" stroke="#9CA3AF" stroke-width="2" fill="none" opacity="0.6">
+      <animate attributeName="d" values="M22 -8 Q26 -18 22 -28;M22 -8 Q18 -18 22 -28;M22 -8 Q26 -18 22 -28" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Book stack -->
+  <g transform="translate(40, 320)">
+    <rect x="0" y="20" width="50" height="12" rx="2" fill="#0F766E"/>
+    <rect x="5" y="10" width="50" height="12" rx="2" fill="#F4A826"/>
+    <rect x="2" y="0" width="50" height="12" rx="2" fill="#0B1630"/>
+  </g>
+
+  <!-- Floating elements - representing ideas/notes -->
+  <g opacity="0.8">
+    <!-- Checkmark circle -->
+    <circle cx="520" cy="100" r="25" fill="#D1FAE5">
+      <animate attributeName="cy" values="100;90;100" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M510 100 L517 107 L530 93" stroke="#0F766E" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <animate attributeName="transform" values="translate(0,0);translate(0,-10);translate(0,0)" dur="3s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Star/achievement -->
+    <path d="M550 180 L553 189 L563 189 L555 195 L558 205 L550 199 L542 205 L545 195 L537 189 L547 189 Z" fill="#F4A826">
+      <animate attributeName="transform" values="translate(0,0) scale(1);translate(0,-5) scale(1.1);translate(0,0) scale(1)" dur="4s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- Document icon -->
+    <g transform="translate(55, 130)">
+      <rect width="30" height="40" rx="4" fill="white" stroke="#E5E7EB" stroke-width="2">
+        <animate attributeName="transform" values="translate(0,0);translate(0,-8);translate(0,0)" dur="3.5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="6" y="8" width="18" height="3" rx="1.5" fill="#E5E7EB">
+        <animate attributeName="transform" values="translate(0,0);translate(0,-8);translate(0,0)" dur="3.5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="6" y="15" width="14" height="3" rx="1.5" fill="#E5E7EB">
+        <animate attributeName="transform" values="translate(0,0);translate(0,-8);translate(0,0)" dur="3.5s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="6" y="22" width="16" height="3" rx="1.5" fill="#E5E7EB">
+        <animate attributeName="transform" values="translate(0,0);translate(0,-8);translate(0,0)" dur="3.5s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F4A826" stop-opacity="0.2"/>
+      <stop offset="50%" stop-color="#0F766E" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#0B1630" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+</svg>
