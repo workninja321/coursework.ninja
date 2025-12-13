@@ -7,16 +7,16 @@ This document contains all editable text content for the Coursework Ninja websit
 ## META & SEO
 
 **Page Title:**
-Coursework Ninja – Expert Academic Support for WGU Students
+Coursework Ninja – Degree Support for WGU Students
 
 **Meta Description:**
-Professional editing, feedback and coaching for WGU and online university students. We help you plan, write and prepare — submit your best work with confidence.
+Professional WGU assistance service designed for busy adults. We help you accelerate through courses, pass exams, and graduate faster with confidence.
 
 **OG Title:**
-Coursework Ninja – Expert Academic Support for WGU Students
+Coursework Ninja – Degree Support for WGU Students
 
 **OG Description:**
-Professional editing, feedback and coaching for WGU and online university students.
+Professional WGU assistance service designed for busy adults. Accelerate through courses and graduate faster.
 
 ---
 
@@ -41,16 +41,16 @@ Professional editing, feedback and coaching for WGU and online university studen
 ## HERO SECTION
 
 **Main Headline:**
-Get Expert Assistance with your WGU [Rotating: Exams / Courses / Degrees]
+Accelerated Assistance for WGU [Rotating: Exams / Courses / Degrees]
 
 **Subtitle:**
-Professional coaching, editing and feedback designed for busy adults. We help you plan, write and prepare — so you can submit your best work with confidence.
+Professional WGU assistance service designed for busy adults. We help you accelerate through courses, pass exams, and graduate faster.
 
-**Primary CTA:** Message us on WhatsApp
+**Primary CTA:** Fast-Track My Degree
 
 **Secondary CTA:** Prefer Telegram? Tap here
 
-**Helper Text:** Fastest response · Typically replies within a few hours
+**Helper Text:** ⚡ Average Response Time: 2 Minutes | 🔒 100% Private & Secure
 
 ### Hero Carousel Floating Messages
 
@@ -59,7 +59,7 @@ Professional coaching, editing and feedback designed for busy adults. We help yo
 - Message 2: 4.0 GPA this term!
 
 **Slide 2:**
-- Message 1: Capstone approved!
+- Message 1: Final Submission approved!
 - Message 2: Finished 2 weeks early
 
 **Slide 3:**
@@ -79,13 +79,13 @@ Professional coaching, editing and feedback designed for busy adults. We help yo
 **Label:** Trusted by students from top universities worldwide
 
 **Universities Listed:**
+- Western Governors University (WGU)
+- Southern New Hampshire University (SNHU)
+- Grand Canyon University (GCU)
+- Liberty University
+- University of Phoenix
 - Harvard University
 - Stanford University
-- Columbia University
-- University of Pennsylvania
-- INSEAD
-- London Business School
-- IE Business School
 
 ---
 
@@ -133,9 +133,9 @@ Professional coaching, editing and feedback designed for busy adults. We help yo
 **Tag:** Quick Win
 **Name:** Individual Exams
 **Features:**
-- One-on-one exam prep
-- Practice questions & review
-- 24-48hr turnaround
+- Proctored exam support
+- Remote screen assistance
+- Same-day scheduling
 
 **CTA:** Get Exam Help
 
@@ -159,7 +159,7 @@ Professional coaching, editing and feedback designed for busy adults. We help yo
 - Priority expert access
 - Pay only 20% upfront
 
-**CTA:** Plan Your Degree
+**CTA:** Accelerate Your Degree
 
 ### Section Footer
 **Text:** Not sure which option is right for you?
@@ -339,28 +339,6 @@ Because we handle the heavy lifting—research, writing, and exams—simultaneou
 
 ---
 
-### Category: Process & Methods
-
-**Q: How do you handle WGU Online Proctored Exams (OAs)?**
-
-Imagine walking into your exam and having a "supercomputer" part of your brain activate—that's us.
-
-- **The Setup:** You sit at your computer, looking calm and composed.
-- **The Execution:** While you remain on camera, our expert team remotely connects to your system. We manage the mouse and keyboard seamlessly, selecting the correct answers in real-time.
-- **The Experience:** You simply sit, watch, and succeed. It is stress-free, undetectable, and guarantees a high score.
-
----
-
-**Q: How do you handle Performance Assessments (Papers/Tasks)?**
-
-We don't just "write papers"; we draft **immaculate submissions** that guarantee you an exceptional score.
-
-- **Subject Experts:** One of our 23 subject experts (not a generalist) will review your rubric.
-- **Human Writing:** They write papers from scratch. Zero Plagiarism. Zero AI.
-- **Revisions:** If an evaluator returns a task (which is rare), we handle the revisions immediately at no extra cost until it passes.
-
----
-
 ### Category: Guarantees & Trust
 
 **Q: Do you 100% guarantee I will pass my WGU courses?**
@@ -391,6 +369,28 @@ We have built a solid reputation across student forums & social media channels b
 We offer an interest-free instalment plan to make it affordable while we fast-track your graduation (typically 5–6 months):
 - **Month 1:** 20% Deposit to begin.
 - **Months 2–5:** 20% paid monthly.
+
+---
+
+### Category: Process & Methods
+
+**Q: How do you handle WGU Online Proctored Exams (OAs)?**
+
+Imagine walking into your exam and having a "supercomputer" part of your brain activate—that's us.
+
+- **The Setup:** You sit at your computer, looking calm and composed.
+- **The Execution:** While you remain on camera, our expert team remotely connects to your system. We manage the mouse and keyboard seamlessly, selecting the correct answers in real-time.
+- **The Experience:** You simply sit, watch, and succeed. It is stress-free, undetectable, and guarantees a high score.
+
+---
+
+**Q: How do you handle Performance Assessments (Papers/Tasks)?**
+
+We don't just "write papers"; we draft **immaculate submissions** that guarantee you an exceptional score.
+
+- **Subject Experts:** One of our 23 subject experts (not a generalist) will review your rubric.
+- **Human Writing:** They write papers from scratch. Zero Plagiarism. Zero AI.
+- **Revisions:** If an evaluator returns a task (which is rare), we handle the revisions immediately at no extra cost until it passes.
 
 ---
 
