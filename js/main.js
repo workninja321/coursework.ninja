@@ -212,7 +212,7 @@
 
     let currentSlide = 0;
     let autoplayInterval = null;
-    const autoplayDelay = 5000; // 5 seconds per slide
+    const autoplayDelay = 3000; // 3 seconds per slide
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function goToSlide(index) {
@@ -554,6 +554,75 @@
     });
   }
 
+  // ========== ANIMATED NUMBER COUNTERS ==========
+  function initCounterAnimation() {
+    const counters = document.querySelectorAll('[data-count]');
+    if (!counters.length) return;
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function formatNumber(num, useComma) {
+      if (useComma) {
+        return num.toLocaleString('en-US');
+      }
+      return num.toString();
+    }
+
+    function animateCounter(counter) {
+      const target = parseInt(counter.dataset.count, 10);
+      const suffix = counter.dataset.suffix || '';
+      const useComma = counter.dataset.format === 'comma';
+      const duration = 2000; // 2 seconds
+      const startTime = performance.now();
+
+      // If reduced motion, just show final value
+      if (reducedMotion) {
+        counter.textContent = formatNumber(target, useComma) + suffix;
+        return;
+      }
+
+      function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Easing function (ease-out)
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const currentValue = Math.floor(easeOut * target);
+
+        counter.textContent = formatNumber(currentValue, useComma) + suffix;
+
+        if (progress < 1) {
+          requestAnimationFrame(updateCounter);
+        } else {
+          counter.textContent = formatNumber(target, useComma) + suffix;
+        }
+      }
+
+      requestAnimationFrame(updateCounter);
+    }
+
+    // Use IntersectionObserver to trigger animation when visible
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.5
+      });
+
+      counters.forEach(function(counter) {
+        observer.observe(counter);
+      });
+    } else {
+      // Fallback for older browsers
+      counters.forEach(animateCounter);
+    }
+  }
+
   // ========== INITIALIZE ==========
   function init() {
     initStickyHeader();
@@ -566,6 +635,7 @@
     initHeroAnimation();
     initLazyLoad();
     initFaqAccordion();
+    initCounterAnimation();
 
     // Log initialization
     console.log('Coursework Ninja: JS initialized');
