@@ -2851,9 +2851,12 @@ h1, h2, h3, h4 {
   cursor: default;
 }
 
-.footer__crypto-item svg {
+.footer__crypto-item svg,
+.footer__crypto-item img {
   width: 28px;
   height: 28px;
+  border-radius: 50%;
+  object-fit: contain;
 }
 
 .footer__crypto-item:hover {
@@ -2880,7 +2883,8 @@ h1, h2, h3, h4 {
     height: 52px;
   }
 
-  .footer__crypto-item svg {
+  .footer__crypto-item svg,
+  .footer__crypto-item img {
     width: 32px;
     height: 32px;
   }
@@ -2904,7 +2908,8 @@ h1, h2, h3, h4 {
     height: 56px;
   }
 
-  .footer__crypto-item svg {
+  .footer__crypto-item svg,
+  .footer__crypto-item img {
     width: 36px;
     height: 36px;
   }
