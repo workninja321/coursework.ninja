@@ -569,6 +569,10 @@
     }
 
     function animateCounter(counter) {
+      // Prevent re-animation
+      if (counter.dataset.animated === 'true') return;
+      counter.dataset.animated = 'true';
+
       const target = parseInt(counter.dataset.count, 10);
       const suffix = counter.dataset.suffix || '';
       const useComma = counter.dataset.format === 'comma';
@@ -601,6 +605,17 @@
       requestAnimationFrame(updateCounter);
     }
 
+    // Check if element is in viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+      );
+    }
+
     // Use IntersectionObserver to trigger animation when visible
     if ('IntersectionObserver' in window) {
       const observer = new IntersectionObserver(function(entries) {
@@ -611,11 +626,19 @@
           }
         });
       }, {
-        threshold: 0.5
+        threshold: 0.1,
+        rootMargin: '50px'
       });
 
       counters.forEach(function(counter) {
-        observer.observe(counter);
+        // If already visible, animate immediately after short delay
+        if (isInViewport(counter)) {
+          setTimeout(function() {
+            animateCounter(counter);
+          }, 500);
+        } else {
+          observer.observe(counter);
+        }
       });
     } else {
       // Fallback for older browsers
