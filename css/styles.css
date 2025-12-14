@@ -319,7 +319,7 @@ h1, h2, h3, h4 {
 }
 
 .header__logo-img {
-  height: 52px;
+  height: 91px;
   width: auto;
 }
 
@@ -336,7 +336,7 @@ h1, h2, h3, h4 {
   }
 
   .header__logo-img {
-    height: 56px;
+    height: 98px;
   }
 
   .header__logo-text {
@@ -350,7 +350,7 @@ h1, h2, h3, h4 {
   }
 
   .header__logo-img {
-    height: 60px;
+    height: 105px;
   }
 
   .header__logo-text {
