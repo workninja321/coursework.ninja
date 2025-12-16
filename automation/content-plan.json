@@ -3,7 +3,7 @@
     "version": "1.0",
     "lastUpdated": "2025-12-16",
     "totalTopics": 60,
-    "publishedCount": 2
+    "publishedCount": 3
   },
   "categories": [
     { "id": "degree-guides", "name": "Degree Guides", "description": "Comprehensive guides for WGU degree programs" },
@@ -100,7 +100,8 @@
       "category": "exam-prep",
       "tags": ["PA", "Writing", "Assessments"],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-17",
       "internalLinks": ["wgu-oa-exam-tips", "wgu-study-tips"],
       "estimatedReadTime": 10,
       "notes": "Cover rubric reading, task analysis, revision strategies, evaluator expectations"
