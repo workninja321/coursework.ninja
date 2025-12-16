@@ -3,7 +3,7 @@
     "version": "1.0",
     "lastUpdated": "2025-12-16",
     "totalTopics": 60,
-    "publishedCount": 3
+    "publishedCount": 5
   },
   "categories": [
     { "id": "degree-guides", "name": "Degree Guides", "description": "Comprehensive guides for WGU degree programs" },
@@ -24,8 +24,9 @@
       "category": "degree-guides",
       "tags": ["MBA", "Business", "Graduate"],
       "priority": 1,
-      "status": "pending",
-      "internalLinks": ["wgu-study-tips", "wgu-vs-snhu"],
+      "status": "published",
+      "publishedDate": "2025-12-17",
+      "internalLinks": ["wgu-oa-exam-tips", "wgu-acceleration-guide", "wgu-performance-assessment-guide", "wgu-vs-snhu-comparison"],
       "estimatedReadTime": 12,
       "notes": "Cover program structure, courses, tips for acceleration, career outcomes"
     },
@@ -69,8 +70,9 @@
       "category": "comparisons",
       "tags": ["Comparison", "SNHU", "Online Education"],
       "priority": 2,
-      "status": "pending",
-      "internalLinks": ["wgu-mba-complete-guide", "wgu-bsit-guide"],
+      "status": "published",
+      "publishedDate": "2025-12-17",
+      "internalLinks": ["wgu-oa-exam-tips", "wgu-acceleration-guide", "wgu-performance-assessment-guide"],
       "estimatedReadTime": 9,
       "notes": "Compare cost, format, accreditation, time to completion, career outcomes"
     },
