@@ -14,6 +14,7 @@ automation/logs/
 *.json
 !package.json
 !package-lock.json
+!automation/content-plan.json
 
 # OS files
 .DS_Store
