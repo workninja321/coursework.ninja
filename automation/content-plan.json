@@ -3,7 +3,7 @@
     "version": "1.0",
     "lastUpdated": "2025-12-16",
     "totalTopics": 60,
-    "publishedCount": 0
+    "publishedCount": 2
   },
   "categories": [
     { "id": "degree-guides", "name": "Degree Guides", "description": "Comprehensive guides for WGU degree programs" },
@@ -84,7 +84,8 @@
       "category": "exam-prep",
       "tags": ["OA", "Exams", "Study Tips"],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-16",
       "internalLinks": ["wgu-study-tips", "wgu-time-management"],
       "estimatedReadTime": 8,
       "notes": "Include pre-assessment strategy, study resources, test day tips"
@@ -129,7 +130,8 @@
       "category": "study-tips",
       "tags": ["Acceleration", "Fast Track", "Strategy"],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-16",
       "internalLinks": ["wgu-study-tips-working-adults", "wgu-oa-exam-tips"],
       "estimatedReadTime": 11,
       "notes": "Cover CU loading, course sequencing, mentor communication, transfer credits"
