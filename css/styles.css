@@ -442,17 +442,19 @@ h1, h2, h3, h4 {
 /* Mobile Menu */
 .header__mobile-menu {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background-color: var(--color-navy);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding-top: calc(env(safe-area-inset-top, 0px) + var(--space-10));
+  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + var(--space-10));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   opacity: 0;
   visibility: hidden;
+  pointer-events: none;
   transition: opacity var(--transition-base), visibility var(--transition-base);
   z-index: var(--z-modal);
 }
@@ -460,12 +462,13 @@ h1, h2, h3, h4 {
 .header__mobile-menu.is-open {
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 
 .header__mobile-close {
-  position: absolute;
-  top: var(--space-5);
-  right: var(--space-5);
+  position: fixed;
+  top: calc(env(safe-area-inset-top, 0px) + var(--space-5));
+  right: calc(env(safe-area-inset-right, 0px) + var(--space-5));
   width: 48px;
   height: 48px;
   display: flex;
@@ -477,6 +480,7 @@ h1, h2, h3, h4 {
   color: var(--color-white);
   cursor: pointer;
   transition: background var(--transition-fast);
+  z-index: 1;
 }
 
 .header__mobile-close:hover {
@@ -485,7 +489,8 @@ h1, h2, h3, h4 {
 
 .header__mobile-nav {
   text-align: center;
-  padding: var(--space-6);
+  padding: 0 var(--space-6) var(--space-6);
+  width: 100%;
 }
 
 .header__mobile-menu-list {
