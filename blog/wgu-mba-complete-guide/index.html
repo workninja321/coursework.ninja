@@ -77,7 +77,7 @@
     "itemListElement": [
       {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://coursework.ninja/"},
       {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://coursework.ninja/blog/"},
-      {"@type": "ListItem", "position": 3, "name": "WGU MBA Complete Guide", "item": "https://coursework.ninja/blog/wgu-mba-complete-guide/"}
+      {"@type": "ListItem", "position": 3, "name": "WGU MBA Guide", "item": "https://coursework.ninja/blog/wgu-mba-complete-guide/"}
     ]
   }
   </script>
@@ -109,7 +109,7 @@
         "name": "Is the WGU MBA respected by employers?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, the WGU MBA is accredited by ACBSP (Accreditation Council for Business Schools and Programs) and WGU is regionally accredited by NWCCU. Major employers including Amazon, Google, and Microsoft have partnerships with WGU. Your skills and experience matter more to employers than the specific school."
+          "text": "Yes, the WGU MBA is accredited by ACBSP (Accreditation Council for Business Schools and Programs) and WGU is regionally accredited by NWCCU. Major employers including Amazon, Google, and Microsoft have partnerships with WGU."
         }
       },
       {
@@ -125,6 +125,7 @@
   </script>
 
   <style>
+    /* Featured image banner */
     .blog-featured-image {
       background: var(--color-offwhite);
       padding: var(--space-8) 0;
@@ -138,56 +139,277 @@
       border-radius: var(--radius-xl);
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
-    .blog-content {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: var(--space-12) var(--space-6);
+
+    /* Blog header - account for fixed header */
+    .blog-header {
+      padding: calc(var(--space-16) + 80px) 0 var(--space-12);
+      background: linear-gradient(135deg, var(--color-navy) 0%, #1a2744 100%);
+      color: var(--color-white);
     }
-    .blog-content h1 {
-      color: var(--color-navy);
-      font-size: 2.5rem;
+    .blog-header__breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.6);
+      margin-bottom: var(--space-6);
+    }
+    .blog-header__breadcrumb a {
+      color: var(--color-gold);
+      text-decoration: none;
+    }
+    .blog-header__breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .blog-header__title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: var(--font-bold);
       line-height: 1.2;
       margin-bottom: var(--space-4);
+      color: #FFFFFF !important;
     }
-    .blog-meta {
-      color: var(--color-slate);
-      font-size: 0.9rem;
-      margin-bottom: var(--space-8);
-      padding-bottom: var(--space-6);
-      border-bottom: 1px solid #e2e8f0;
+    .blog-header__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.7);
     }
-    .blog-content h2 {
+    .blog-header__meta-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+    .blog-content {
+      padding: var(--space-12) 0 var(--space-16);
+    }
+    .blog-content__wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-10);
+    }
+    @media (min-width: 1024px) {
+      .blog-content__wrapper {
+        grid-template-columns: 1fr 280px;
+      }
+    }
+    .blog-article {
+      max-width: 720px;
+    }
+    .blog-article h2 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-bold);
       color: var(--color-navy);
-      font-size: 1.75rem;
-      margin-top: var(--space-10);
-      margin-bottom: var(--space-4);
+      margin: var(--space-10) 0 var(--space-4);
     }
-    .blog-content h3 {
+    .blog-article h3 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-semibold);
       color: var(--color-navy);
-      font-size: 1.35rem;
-      margin-top: var(--space-8);
-      margin-bottom: var(--space-3);
+      margin: var(--space-8) 0 var(--space-3);
     }
-    .blog-content p {
+    .blog-article p {
       color: var(--color-slate);
       line-height: 1.8;
       margin-bottom: var(--space-4);
     }
-    .blog-content ul, .blog-content ol {
+    .blog-article ul {
       color: var(--color-slate);
       line-height: 1.8;
       margin-bottom: var(--space-4);
       padding-left: var(--space-6);
+      list-style-type: disc;
     }
-    .blog-content li {
+    .blog-article ol {
+      color: var(--color-slate);
+      line-height: 1.8;
+      margin-bottom: var(--space-4);
+      padding-left: var(--space-6);
+      list-style-type: decimal;
+    }
+    .blog-article li {
       margin-bottom: var(--space-2);
+      display: list-item;
     }
-    .blog-content a {
+    .blog-article li::marker {
+      color: var(--color-teal);
+    }
+    .blog-article strong {
+      color: var(--color-navy);
+      font-weight: var(--font-semibold);
+    }
+    .blog-article a {
       color: var(--color-teal);
       text-decoration: underline;
     }
-    .blog-content a:hover {
-      color: var(--color-gold);
+    .blog-article a:hover {
+      color: var(--color-navy);
+    }
+    .blog-toc {
+      position: sticky;
+      top: 100px;
+      background: var(--color-offwhite);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+    }
+    .blog-toc__title {
+      font-size: var(--text-base);
+      font-weight: var(--font-semibold);
+      color: var(--color-navy);
+      margin-bottom: var(--space-4);
+    }
+    .blog-toc__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .blog-toc__item {
+      margin-bottom: var(--space-2);
+    }
+    .blog-toc__link {
+      font-size: var(--text-sm);
+      color: var(--color-slate);
+      text-decoration: none;
+      display: block;
+      padding: var(--space-1) 0;
+      transition: color 0.2s;
+    }
+    .blog-toc__link:hover {
+      color: var(--color-teal);
+    }
+    .blog-cta {
+      background: linear-gradient(135deg, var(--color-navy) 0%, #1a2744 100%);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      margin: var(--space-10) 0;
+      text-align: center;
+    }
+    .blog-cta__title {
+      font-size: var(--text-xl);
+      font-weight: var(--font-bold);
+      color: #FFFFFF !important;
+      margin-bottom: var(--space-3);
+    }
+    .blog-cta__text {
+      color: rgba(255,255,255,0.8) !important;
+      margin-bottom: var(--space-6);
+    }
+    .blog-cta__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space-3);
+    }
+    .blog-cta__buttons .btn--primary {
+      background: var(--color-gold);
+      color: var(--color-navy);
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-lg);
+      font-weight: var(--font-semibold);
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .blog-cta__buttons .btn--primary:hover {
+      background: var(--color-gold-hover);
+      transform: translateY(-2px);
+    }
+    .blog-cta__buttons .btn--secondary {
+      background: rgba(255,255,255,0.1);
+      color: #FFFFFF;
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-lg);
+      font-weight: var(--font-semibold);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .blog-cta__buttons .btn--secondary:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-2px);
+    }
+    .blog-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-top: var(--space-8);
+      padding-top: var(--space-6);
+      border-top: 1px solid #e5e7eb;
+    }
+    .blog-tag {
+      background: var(--color-offwhite);
+      color: var(--color-slate);
+      font-size: var(--text-sm);
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+      text-decoration: none;
+    }
+    .blog-tag:hover {
+      background: var(--color-gold);
+      color: var(--color-navy);
+    }
+    .blog-faq {
+      margin-top: var(--space-12);
+      padding-top: var(--space-10);
+      border-top: 1px solid #e5e7eb;
+    }
+    .blog-faq__title {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-bold);
+      color: var(--color-navy);
+      margin-bottom: var(--space-6);
+    }
+    .blog-faq .faq__item {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-3);
+      overflow: hidden;
+    }
+    .blog-faq .faq__question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space-4) var(--space-5);
+      background: var(--color-white);
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-size: var(--text-base);
+      font-weight: var(--font-medium);
+      color: var(--color-navy);
+      transition: background 0.2s;
+    }
+    .blog-faq .faq__question:hover {
+      background: var(--color-offwhite);
+    }
+    .blog-faq .faq__question span {
+      flex: 1;
+      padding-right: var(--space-4);
+    }
+    .blog-faq .faq__icon {
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .blog-faq .faq__question[aria-expanded="true"] .faq__icon {
+      transform: rotate(180deg);
+    }
+    .blog-faq .faq__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: var(--color-offwhite);
+    }
+    .blog-faq .faq__answer.is-open {
+      max-height: 500px;
+    }
+    .blog-faq .faq__answer p {
+      padding: var(--space-4) var(--space-5);
+      margin: 0;
+      color: var(--color-slate);
+      line-height: 1.7;
     }
     .course-table {
       width: 100%;
@@ -225,592 +447,492 @@
     .highlight-box h3 {
       color: var(--color-gold);
       margin-top: 0;
+      margin-bottom: var(--space-3);
     }
     .highlight-box p {
       color: #cbd5e1;
-    }
-    .tip-box {
-      background: #ecfdf5;
-      border-left: 4px solid #10b981;
-      padding: var(--space-5);
-      border-radius: var(--radius-lg);
-      margin: var(--space-6) 0;
-    }
-    .tip-box h4 {
-      color: #047857;
-      margin-top: 0;
       margin-bottom: var(--space-2);
     }
-    .tip-box p {
-      color: #065f46;
+    .highlight-box p:last-child {
       margin-bottom: 0;
+    }
+    .tip-box {
+      background: #f0fdf4;
+      border-left: 4px solid var(--color-teal);
+      padding: var(--space-4) var(--space-6);
+      margin: var(--space-6) 0;
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+    }
+    .tip-box strong {
+      color: var(--color-teal);
     }
     .warning-box {
       background: #fef3c7;
       border-left: 4px solid #f59e0b;
-      padding: var(--space-5);
-      border-radius: var(--radius-lg);
+      padding: var(--space-4) var(--space-6);
       margin: var(--space-6) 0;
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
     }
-    .warning-box h4 {
-      color: #92400e;
-      margin-top: 0;
-      margin-bottom: var(--space-2);
-    }
-    .warning-box p {
-      color: #78350f;
-      margin-bottom: 0;
-    }
-    .blog-cta {
-      background: var(--color-offwhite);
-      padding: var(--space-8);
-      border-radius: var(--radius-xl);
-      text-align: center;
-      margin: var(--space-10) 0;
-    }
-    .blog-cta h3 {
-      color: var(--color-navy);
-      margin-top: 0;
-    }
-    .blog-cta .btn {
-      display: inline-block;
-      background: var(--color-gold);
-      color: var(--color-navy);
-      padding: var(--space-4) var(--space-8);
-      border-radius: var(--radius-full);
-      font-weight: var(--font-semibold);
-      text-decoration: none;
-      margin-top: var(--space-4);
-    }
-    .blog-cta .btn:hover {
-      background: var(--color-gold-light);
-    }
-    .faq-section {
-      margin-top: var(--space-12);
-    }
-    .faq-item {
-      border-bottom: 1px solid #e2e8f0;
-      padding: var(--space-4) 0;
-    }
-    .faq-question {
-      font-weight: var(--font-semibold);
-      color: var(--color-navy);
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .faq-question::after {
-      content: '+';
-      font-size: 1.5rem;
-      color: var(--color-gold);
-    }
-    .faq-item.active .faq-question::after {
-      content: '−';
-    }
-    .faq-answer {
-      display: none;
-      padding-top: var(--space-3);
-      color: var(--color-slate);
-      line-height: 1.7;
-    }
-    .faq-item.active .faq-answer {
-      display: block;
-    }
-    .timeline {
-      position: relative;
-      padding-left: var(--space-8);
-      margin: var(--space-6) 0;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 12px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: var(--color-gold);
-    }
-    .timeline-item {
-      position: relative;
-      padding-bottom: var(--space-6);
-    }
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -26px;
-      top: 4px;
-      width: 12px;
-      height: 12px;
-      background: var(--color-gold);
-      border-radius: 50%;
-    }
-    .timeline-item h4 {
-      color: var(--color-navy);
-      margin-bottom: var(--space-2);
-    }
-    .timeline-item p {
-      margin-bottom: 0;
+    .warning-box strong {
+      color: #b45309;
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="header__container container">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__container">
       <a href="/" class="header__logo">
-        <img src="/images/logo-icon.png" alt="Coursework Ninja" class="header__logo-img">
-        <span class="header__logo-text">Coursework Ninja</span>
+        <img src="/images/logo.webp" alt="Coursework Ninja" class="header__logo-img">
       </a>
-      <nav class="header__nav">
-        <a href="/#how-it-works" class="header__nav-link">How It Works</a>
-        <a href="/#services" class="header__nav-link">Services</a>
-        <a href="/blog/" class="header__nav-link">Blog</a>
-        <a href="/#faq" class="header__nav-link">FAQ</a>
-        <a href="/#contact" class="btn btn--primary">Get Started</a>
+      <nav class="header__nav" id="nav" aria-label="Main navigation">
+        <ul class="header__menu">
+          <li><a href="/#why-choose-us" class="header__link">Why Us</a></li>
+          <li><a href="/#services" class="header__link">Services</a></li>
+          <li><a href="/blog/" class="header__link">Blog</a></li>
+          <li><a href="/#testimonials" class="header__link">Testimonials</a></li>
+        </ul>
       </nav>
-      <button class="header__mobile-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
+      <a href="https://wa.me/447474784797" class="btn btn--primary header__cta" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Chat on WhatsApp</span>
+      </a>
+      <button class="header__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="header__toggle-icon header__toggle-icon--menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="header__toggle-icon header__toggle-icon--close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
-    </div>
-    <div class="header__mobile-menu">
-      <button class="header__mobile-close" aria-label="Close menu">&times;</button>
-      <nav class="header__mobile-nav">
-        <a href="/#how-it-works" class="header__mobile-link">How It Works</a>
-        <a href="/#services" class="header__mobile-link">Services</a>
-        <a href="/blog/" class="header__mobile-link">Blog</a>
-        <a href="/#faq" class="header__mobile-link">FAQ</a>
-      </nav>
-      <div class="header__mobile-cta">
-        <a href="/#contact" class="btn btn--primary">Get Started</a>
-      </div>
     </div>
   </header>
 
-  <!-- Breadcrumb -->
-  <nav class="breadcrumb" style="background: var(--color-offwhite); padding: var(--space-4) 0;">
-    <div class="container">
-      <a href="/">Home</a> &rsaquo;
-      <a href="/blog/">Blog</a> &rsaquo;
-      <span>WGU MBA Complete Guide</span>
-    </div>
-  </nav>
-
-  <!-- Featured Image -->
-  <section class="blog-featured-image">
-    <img src="/images/blog/wgu-mba-complete-guide-cover.webp" alt="WGU MBA Program complete guide - fast-track your business degree" class="blog-featured-image__img" width="1200" height="675" loading="eager">
-  </section>
-
-  <!-- Blog Content -->
-  <article class="blog-content">
-    <h1>WGU MBA Program: Complete Guide to Fast-Track Your Business Degree</h1>
-    <div class="blog-meta">
-      <span>Published: December 17, 2025</span> &bull;
-      <span>12 min read</span> &bull;
-      <span>Category: Degree Guides</span>
-    </div>
-
-    <p>The Western Governors University MBA is one of the most affordable and flexible graduate business degrees available. With WGU's competency-based model, motivated students can complete their MBA in as little as 6-12 months, saving thousands compared to traditional programs.</p>
-
-    <p>This comprehensive guide covers everything you need to know about the WGU MBA: program structure, courses, costs, acceleration strategies, and tips from successful graduates.</p>
-
-    <h2>WGU MBA Program Overview</h2>
-
-    <p>The WGU Master of Business Administration is a 36 competency unit (CU) program designed for working professionals. Unlike traditional MBA programs with fixed schedules, WGU allows you to move through courses at your own pace.</p>
-
-    <h3>Key Program Features</h3>
-    <ul>
-      <li><strong>Competency-Based:</strong> Advance by demonstrating mastery, not seat time</li>
-      <li><strong>Flat-Rate Tuition:</strong> Take as many courses as you can per 6-month term</li>
-      <li><strong>No GMAT Required:</strong> Admission based on bachelor's degree and interview</li>
-      <li><strong>ACBSP Accredited:</strong> Recognized business program accreditation</li>
-      <li><strong>100% Online:</strong> Study anytime, anywhere</li>
-      <li><strong>Mentor Support:</strong> Dedicated program mentor throughout your journey</li>
-    </ul>
-
-    <div class="highlight-box">
-      <h3>WGU MBA at a Glance</h3>
-      <p><strong>Total CUs:</strong> 36 Competency Units (11 courses)</p>
-      <p><strong>Average Completion:</strong> 12-18 months</p>
-      <p><strong>Fastest Completion:</strong> 6 months (one term)</p>
-      <p><strong>Cost per Term:</strong> ~$4,530</p>
-      <p><strong>Total Cost (average):</strong> $9,000-$13,500</p>
-    </div>
-
-    <h2>WGU MBA Course Breakdown</h2>
-
-    <p>The WGU MBA consists of 11 courses totaling 36 competency units. Understanding each course helps you plan your acceleration strategy effectively.</p>
-
-    <table class="course-table">
-      <thead>
-        <tr>
-          <th>Course Code</th>
-          <th>Course Name</th>
-          <th>CUs</th>
-          <th>Assessment</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>C200</td>
-          <td>Managing Organizations and Leading People</td>
-          <td>3</td>
-          <td>PA</td>
-        </tr>
-        <tr>
-          <td>C202</td>
-          <td>Managing Human Capital</td>
-          <td>3</td>
-          <td>PA</td>
-        </tr>
-        <tr>
-          <td>C204</td>
-          <td>Management Communication</td>
-          <td>3</td>
-          <td>PA</td>
-        </tr>
-        <tr>
-          <td>C206</td>
-          <td>Ethical Leadership</td>
-          <td>3</td>
-          <td>PA</td>
-        </tr>
-        <tr>
-          <td>C207</td>
-          <td>Data-Driven Decision Making</td>
-          <td>3</td>
-          <td>OA</td>
-        </tr>
-        <tr>
-          <td>C211</td>
-          <td>Global Economics for Managers</td>
-          <td>3</td>
-          <td>OA</td>
-        </tr>
-        <tr>
-          <td>C213</td>
-          <td>Accounting for Decision Makers</td>
-          <td>3</td>
-          <td>OA</td>
-        </tr>
-        <tr>
-          <td>C214</td>
-          <td>Financial Management</td>
-          <td>3</td>
-          <td>OA</td>
-        </tr>
-        <tr>
-          <td>C215</td>
-          <td>Operations and Supply Chain Management</td>
-          <td>3</td>
-          <td>OA</td>
-        </tr>
-        <tr>
-          <td>C218</td>
-          <td>MBA Marketing</td>
-          <td>3</td>
-          <td>OA</td>
-        </tr>
-        <tr>
-          <td>C216</td>
-          <td>MBA Capstone</td>
-          <td>6</td>
-          <td>PA</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p><strong>PA</strong> = Performance Assessment (written paper) | <strong>OA</strong> = Objective Assessment (proctored exam)</p>
-
-    <h3>Understanding the Assessment Types</h3>
-
-    <p>The WGU MBA uses two types of assessments:</p>
-
-    <ul>
-      <li><strong><a href="/blog/wgu-oa-exam-tips/">Objective Assessments (OAs)</a>:</strong> Multiple-choice proctored exams testing your knowledge of concepts. Six courses use OAs. These can often be completed quickly if you have business experience.</li>
-      <li><strong><a href="/blog/wgu-performance-assessment-guide/">Performance Assessments (PAs)</a>:</strong> Written papers and projects demonstrating your ability to apply concepts. Five courses use PAs. These require more time but allow you to show depth of understanding.</li>
-    </ul>
-
-    <h2>WGU MBA Costs: The Real Numbers</h2>
-
-    <p>One of the WGU MBA's biggest advantages is its affordability. Here's the complete cost breakdown:</p>
-
-    <h3>Tuition Structure</h3>
-    <ul>
-      <li><strong>Tuition per term:</strong> $4,530 (as of 2025)</li>
-      <li><strong>Term length:</strong> 6 months</li>
-      <li><strong>Course limit:</strong> Unlimited per term</li>
-    </ul>
-
-    <h3>Total Cost Scenarios</h3>
-    <table class="course-table">
-      <thead>
-        <tr>
-          <th>Pace</th>
-          <th>Time to Complete</th>
-          <th>Total Cost</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Aggressive (accelerated)</td>
-          <td>1 term (6 months)</td>
-          <td>$4,530</td>
-        </tr>
-        <tr>
-          <td>Fast</td>
-          <td>2 terms (1 year)</td>
-          <td>$9,060</td>
-        </tr>
-        <tr>
-          <td>Average</td>
-          <td>3 terms (18 months)</td>
-          <td>$13,590</td>
-        </tr>
-        <tr>
-          <td>Relaxed</td>
-          <td>4 terms (2 years)</td>
-          <td>$18,120</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="tip-box">
-      <h4>Cost-Saving Strategy</h4>
-      <p>The faster you complete the program, the less you pay. Many students save $9,000+ by finishing in one term instead of three. Read our <a href="/blog/wgu-acceleration-guide/">acceleration guide</a> for strategies to speed up your degree.</p>
-    </div>
-
-    <h2>How to Accelerate Through the WGU MBA</h2>
-
-    <p>Completing the WGU MBA in one term (6 months) is absolutely achievable with the right strategy. Here's how successful accelerators approach the program:</p>
-
-    <h3>Before You Start</h3>
-    <ul>
-      <li><strong>Check for transfer credits:</strong> Prior graduate courses may transfer</li>
-      <li><strong>Leverage your experience:</strong> Business professionals often move faster</li>
-      <li><strong>Clear your schedule:</strong> Plan for 20-30 hours/week of study time</li>
-      <li><strong>Set a term goal:</strong> Decide how many courses you want to complete</li>
-    </ul>
-
-    <h3>Recommended Course Order</h3>
-
-    <div class="timeline">
-      <div class="timeline-item">
-        <h4>Week 1-2: Start with Your Strengths</h4>
-        <p>Begin with OA courses in areas where you have experience. Many students knock out C207 (Data-Driven Decision Making) and C218 (Marketing) quickly if they have background in these areas.</p>
+  <div class="header__mobile-menu" id="mobile-menu">
+    <button class="header__mobile-close" id="mobile-close" aria-label="Close menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <nav class="header__mobile-nav" aria-label="Mobile navigation">
+      <ul class="header__mobile-menu-list">
+        <li><a href="/#why-choose-us" class="header__mobile-link">Why Us</a></li>
+        <li><a href="/#services" class="header__mobile-link">Services</a></li>
+        <li><a href="/blog/" class="header__mobile-link">Blog</a></li>
+        <li><a href="/#testimonials" class="header__mobile-link">Testimonials</a></li>
+      </ul>
+      <div class="header__mobile-cta">
+        <a href="https://wa.me/447474784797" class="btn btn--primary btn--full" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a href="https://t.me/courseworkninja" class="btn btn--secondary btn--full" target="_blank" rel="noopener">Or use Telegram</a>
       </div>
-      <div class="timeline-item">
-        <h4>Week 3-6: Tackle PA Courses</h4>
-        <p>Move to PA courses like C200 (Managing Organizations) and C202 (Human Capital). These require written papers but can be completed efficiently with good time management.</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Week 7-10: Challenging Content</h4>
-        <p>Address more challenging courses like C214 (Financial Management) and C213 (Accounting). Give yourself extra time if these subjects are new to you.</p>
-      </div>
-      <div class="timeline-item">
-        <h4>Week 11-16: Clean Up and Capstone</h4>
-        <p>Complete remaining courses and dedicate the final weeks to C216 (MBA Capstone). The capstone requires creating a comprehensive business analysis and recommendations.</p>
-      </div>
-    </div>
+    </nav>
+  </div>
 
-    <div class="warning-box">
-      <h4>Important Note</h4>
-      <p>WGU restricts you to one active course at a time initially. Once you demonstrate competency, your mentor can approve adding additional courses. Build trust early by completing courses efficiently.</p>
-    </div>
-
-    <h2>WGU MBA Course Tips</h2>
-
-    <h3>Easiest Courses (Start Here)</h3>
-
-    <p><strong>C207 - Data-Driven Decision Making:</strong> If you have any experience with data analysis or statistics, this OA can be completed quickly. Focus on understanding basic statistical concepts and Excel formulas.</p>
-
-    <p><strong>C218 - MBA Marketing:</strong> Marketing fundamentals that most business professionals already understand. The OA covers 4Ps, market segmentation, and positioning strategies.</p>
-
-    <p><strong>C204 - Management Communication:</strong> A PA course focused on professional communication. If you write well and have business experience, this paper writes itself.</p>
-
-    <h3>Most Challenging Courses</h3>
-
-    <p><strong>C214 - Financial Management:</strong> The most challenging OA for many students. Requires understanding time value of money, capital budgeting, and financial statement analysis. Dedicate extra study time here.</p>
-
-    <p><strong>C213 - Accounting for Decision Makers:</strong> Challenging if you don't have an accounting background. Focus on understanding financial statements, ratios, and managerial accounting concepts.</p>
-
-    <p><strong>C216 - MBA Capstone:</strong> The final course requiring a comprehensive business proposal. Give yourself at least 2-3 weeks for this one.</p>
-
-    <h2>WGU MBA Career Outcomes</h2>
-
-    <p>A WGU MBA can significantly impact your career. Here's what graduates report:</p>
-
-    <h3>Salary Impact</h3>
-    <ul>
-      <li>Average salary increase: 15-25% post-graduation</li>
-      <li>Management positions: 70% of graduates report career advancement</li>
-      <li>Entrepreneurship: 18% start or grow their own businesses</li>
-    </ul>
-
-    <h3>Common Career Paths</h3>
-    <ul>
-      <li>Operations Manager</li>
-      <li>Project Manager</li>
-      <li>Marketing Manager</li>
-      <li>Financial Analyst</li>
-      <li>Business Consultant</li>
-      <li>Human Resources Manager</li>
-      <li>Executive Leadership</li>
-    </ul>
-
-    <h3>Employer Recognition</h3>
-
-    <p>WGU has established partnerships with major employers who recognize and value WGU degrees:</p>
-    <ul>
-      <li>Amazon</li>
-      <li>Google</li>
-      <li>Microsoft</li>
-      <li>Disney</li>
-      <li>Tenet Healthcare</li>
-      <li>State and Federal Government agencies</li>
-    </ul>
-
-    <p>For more on how WGU compares to other online universities, see our <a href="/blog/wgu-vs-snhu-comparison/">WGU vs SNHU comparison guide</a>.</p>
-
-    <div class="blog-cta">
-      <h3>Need Help With Your WGU MBA Courses?</h3>
-      <p>Our experts have helped hundreds of MBA students pass their assessments and accelerate their degrees. Get personalized support today.</p>
-      <a href="/#contact" class="btn">Get Expert Help</a>
-    </div>
-
-    <h2>Admission Requirements</h2>
-
-    <p>Getting into the WGU MBA is straightforward:</p>
-
-    <h3>Basic Requirements</h3>
-    <ul>
-      <li><strong>Bachelor's degree:</strong> From a regionally accredited institution</li>
-      <li><strong>Minimum GPA:</strong> No minimum GPA requirement</li>
-      <li><strong>GMAT/GRE:</strong> Not required</li>
-      <li><strong>Work experience:</strong> Not required (but helpful for acceleration)</li>
-    </ul>
-
-    <h3>Application Process</h3>
-    <ol>
-      <li>Submit online application</li>
-      <li>Provide official transcripts</li>
-      <li>Complete admissions interview</li>
-      <li>Receive acceptance decision</li>
-      <li>Choose your start date (1st of each month)</li>
-    </ol>
-
-    <h2>Is the WGU MBA Right for You?</h2>
-
-    <h3>Ideal Candidates</h3>
-    <ul>
-      <li>Self-motivated learners who can study independently</li>
-      <li>Working professionals seeking flexibility</li>
-      <li>Career changers looking for business credentials</li>
-      <li>Those seeking an affordable MBA option</li>
-      <li>Students who want to accelerate based on existing knowledge</li>
-    </ul>
-
-    <h3>May Not Be Ideal For</h3>
-    <ul>
-      <li>Those seeking extensive networking opportunities</li>
-      <li>Students who need structured classroom environments</li>
-      <li>Those pursuing careers requiring top-tier MBA branding</li>
-      <li>Students who prefer group projects and peer collaboration</li>
-    </ul>
-
-    <h2>Frequently Asked Questions</h2>
-
-    <div class="faq-section">
-      <div class="faq-item">
-        <div class="faq-question">How long does the WGU MBA take to complete?</div>
-        <div class="faq-answer">
-          <p>The WGU MBA can be completed in as little as 6 months if you can dedicate significant time to studying. On average, most students complete the program in 12-18 months. WGU's competency-based model allows you to accelerate through courses where you already have knowledge and experience.</p>
+  <main id="main-content">
+    <!-- BLOG HEADER -->
+    <section class="blog-header">
+      <div class="container">
+        <nav class="blog-header__breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <a href="/blog/">Blog</a>
+          <span>/</span>
+          <span>WGU MBA Guide</span>
+        </nav>
+        <h1 class="blog-header__title">WGU MBA Program: Complete Guide to Fast-Track Your Business Degree</h1>
+        <div class="blog-header__meta">
+          <span class="blog-header__meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            December 17, 2025
+          </span>
+          <span class="blog-header__meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            12 min read
+          </span>
+          <span class="blog-header__meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            Degree Guides
+          </span>
         </div>
       </div>
+    </section>
 
-      <div class="faq-item">
-        <div class="faq-question">How much does the WGU MBA cost?</div>
-        <div class="faq-answer">
-          <p>The WGU MBA costs approximately $4,530 per 6-month term (as of 2025). Since you can take as many courses as you can complete each term, the total cost ranges from $4,530 (one term) to around $18,000+ depending on your pace. Most students complete it in 2-3 terms ($9,000-$13,500).</p>
+    <!-- FEATURED IMAGE -->
+    <section class="blog-featured-image">
+      <div class="container">
+        <img src="/images/blog/wgu-mba-complete-guide-cover.webp" alt="WGU MBA Program complete guide - fast-track your business degree" class="blog-featured-image__img" width="1200" height="630" loading="eager">
+      </div>
+    </section>
+
+    <!-- BLOG CONTENT -->
+    <section class="blog-content">
+      <div class="container">
+        <div class="blog-content__wrapper">
+          <article class="blog-article">
+            <p>The Western Governors University MBA is one of the most affordable and flexible graduate business degrees available. With WGU's competency-based model, motivated students can complete their MBA in as little as 6-12 months, saving thousands compared to traditional programs.</p>
+
+            <p>This comprehensive guide covers everything you need to know about the WGU MBA: program structure, courses, costs, acceleration strategies, and tips from successful graduates.</p>
+
+            <h2 id="overview">WGU MBA Program Overview</h2>
+
+            <p>The WGU Master of Business Administration is a 36 competency unit (CU) program designed for working professionals. Unlike traditional MBA programs with fixed schedules, WGU allows you to move through courses at your own pace.</p>
+
+            <h3>Key Program Features</h3>
+            <ul>
+              <li><strong>Competency-Based:</strong> Advance by demonstrating mastery, not seat time</li>
+              <li><strong>Flat-Rate Tuition:</strong> Take as many courses as you can per 6-month term</li>
+              <li><strong>No GMAT Required:</strong> Admission based on bachelor's degree and interview</li>
+              <li><strong>ACBSP Accredited:</strong> Recognized business program accreditation</li>
+              <li><strong>100% Online:</strong> Study anytime, anywhere</li>
+              <li><strong>Mentor Support:</strong> Dedicated program mentor throughout your journey</li>
+            </ul>
+
+            <div class="highlight-box">
+              <h3>WGU MBA at a Glance</h3>
+              <p><strong>Total CUs:</strong> 36 Competency Units (11 courses)</p>
+              <p><strong>Average Completion:</strong> 12-18 months</p>
+              <p><strong>Fastest Completion:</strong> 6 months (one term)</p>
+              <p><strong>Cost per Term:</strong> ~$4,530</p>
+              <p><strong>Total Cost (average):</strong> $9,000-$13,500</p>
+            </div>
+
+            <h2 id="courses">WGU MBA Course Breakdown</h2>
+
+            <p>The WGU MBA consists of 11 courses totaling 36 competency units. Understanding each course helps you plan your acceleration strategy effectively.</p>
+
+            <table class="course-table">
+              <thead>
+                <tr>
+                  <th>Course Code</th>
+                  <th>Course Name</th>
+                  <th>CUs</th>
+                  <th>Assessment</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>C200</td>
+                  <td>Managing Organizations and Leading People</td>
+                  <td>3</td>
+                  <td>PA</td>
+                </tr>
+                <tr>
+                  <td>C202</td>
+                  <td>Managing Human Capital</td>
+                  <td>3</td>
+                  <td>PA</td>
+                </tr>
+                <tr>
+                  <td>C204</td>
+                  <td>Management Communication</td>
+                  <td>3</td>
+                  <td>PA</td>
+                </tr>
+                <tr>
+                  <td>C206</td>
+                  <td>Ethical Leadership</td>
+                  <td>3</td>
+                  <td>PA</td>
+                </tr>
+                <tr>
+                  <td>C207</td>
+                  <td>Data-Driven Decision Making</td>
+                  <td>3</td>
+                  <td>OA</td>
+                </tr>
+                <tr>
+                  <td>C211</td>
+                  <td>Global Economics for Managers</td>
+                  <td>3</td>
+                  <td>OA</td>
+                </tr>
+                <tr>
+                  <td>C213</td>
+                  <td>Accounting for Decision Makers</td>
+                  <td>3</td>
+                  <td>OA</td>
+                </tr>
+                <tr>
+                  <td>C214</td>
+                  <td>Financial Management</td>
+                  <td>3</td>
+                  <td>OA</td>
+                </tr>
+                <tr>
+                  <td>C215</td>
+                  <td>Operations and Supply Chain Management</td>
+                  <td>3</td>
+                  <td>OA</td>
+                </tr>
+                <tr>
+                  <td>C218</td>
+                  <td>MBA Marketing</td>
+                  <td>3</td>
+                  <td>OA</td>
+                </tr>
+                <tr>
+                  <td>C216</td>
+                  <td>MBA Capstone</td>
+                  <td>6</td>
+                  <td>PA</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p><strong>PA</strong> = <a href="/blog/wgu-performance-assessment-guide/">Performance Assessment</a> (written paper) | <strong>OA</strong> = <a href="/blog/wgu-oa-exam-tips/">Objective Assessment</a> (proctored exam)</p>
+
+            <h2 id="costs">WGU MBA Costs: The Real Numbers</h2>
+
+            <p>One of the WGU MBA's biggest advantages is its affordability. Here's the complete cost breakdown:</p>
+
+            <table class="course-table">
+              <thead>
+                <tr>
+                  <th>Pace</th>
+                  <th>Time to Complete</th>
+                  <th>Total Cost</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Aggressive (accelerated)</td>
+                  <td>1 term (6 months)</td>
+                  <td>$4,530</td>
+                </tr>
+                <tr>
+                  <td>Fast</td>
+                  <td>2 terms (1 year)</td>
+                  <td>$9,060</td>
+                </tr>
+                <tr>
+                  <td>Average</td>
+                  <td>3 terms (18 months)</td>
+                  <td>$13,590</td>
+                </tr>
+                <tr>
+                  <td>Relaxed</td>
+                  <td>4 terms (2 years)</td>
+                  <td>$18,120</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="tip-box">
+              <strong>Cost-Saving Strategy:</strong> The faster you complete the program, the less you pay. Many students save $9,000+ by finishing in one term instead of three. Read our <a href="/blog/wgu-acceleration-guide/">acceleration guide</a> for strategies to speed up your degree.
+            </div>
+
+            <h2 id="acceleration">How to Accelerate Through the WGU MBA</h2>
+
+            <p>Completing the WGU MBA in one term (6 months) is absolutely achievable with the right strategy. Here's how successful accelerators approach the program:</p>
+
+            <h3>Before You Start</h3>
+            <ul>
+              <li><strong>Check for transfer credits:</strong> Prior graduate courses may transfer</li>
+              <li><strong>Leverage your experience:</strong> Business professionals often move faster</li>
+              <li><strong>Clear your schedule:</strong> Plan for 20-30 hours/week of study time</li>
+              <li><strong>Set a term goal:</strong> Decide how many courses you want to complete</li>
+            </ul>
+
+            <div class="warning-box">
+              <strong>Important:</strong> WGU restricts you to one active course at a time initially. Once you demonstrate competency, your mentor can approve adding additional courses. Build trust early by completing courses efficiently.
+            </div>
+
+            <!-- In-article CTA -->
+            <div class="blog-cta">
+              <h3 class="blog-cta__title">Need Help With Your WGU MBA Courses?</h3>
+              <p class="blog-cta__text">Our experts have helped hundreds of MBA students pass their assessments and accelerate their degrees.</p>
+              <div class="blog-cta__buttons">
+                <a href="https://wa.me/447474784797?text=Hi!%20I%20need%20help%20with%20my%20WGU%20MBA%20coursework." class="btn btn--primary" target="_blank" rel="noopener">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Get MBA Help
+                </a>
+                <a href="https://t.me/courseworkninja" class="btn btn--secondary" target="_blank" rel="noopener">Telegram</a>
+              </div>
+            </div>
+
+            <h2 id="career">WGU MBA Career Outcomes</h2>
+
+            <p>A WGU MBA can significantly impact your career. Here's what graduates report:</p>
+
+            <ul>
+              <li>Average salary increase: 15-25% post-graduation</li>
+              <li>Management positions: 70% of graduates report career advancement</li>
+              <li>Entrepreneurship: 18% start or grow their own businesses</li>
+            </ul>
+
+            <p>WGU has established partnerships with major employers who recognize and value WGU degrees: Amazon, Google, Microsoft, Disney, and Tenet Healthcare.</p>
+
+            <p>For more on how WGU compares to other online universities, see our <a href="/blog/wgu-vs-snhu-comparison/">WGU vs SNHU comparison guide</a>.</p>
+
+            <h2 id="admission">Admission Requirements</h2>
+
+            <h3>Basic Requirements</h3>
+            <ul>
+              <li><strong>Bachelor's degree:</strong> From a regionally accredited institution</li>
+              <li><strong>Minimum GPA:</strong> No minimum GPA requirement</li>
+              <li><strong>GMAT/GRE:</strong> Not required</li>
+              <li><strong>Work experience:</strong> Not required (but helpful for acceleration)</li>
+            </ul>
+
+            <h3>Application Process</h3>
+            <ol>
+              <li>Submit online application</li>
+              <li>Provide official transcripts</li>
+              <li>Complete admissions interview</li>
+              <li>Receive acceptance decision</li>
+              <li>Choose your start date (1st of each month)</li>
+            </ol>
+
+            <!-- FAQ Section -->
+            <section class="blog-faq">
+              <h2 class="blog-faq__title">Frequently Asked Questions</h2>
+
+              <div class="faq__items">
+                <div class="faq__item">
+                  <button class="faq__question" aria-expanded="false">
+                    <span>How long does the WGU MBA take to complete?</span>
+                    <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="faq__answer">
+                    <p>The WGU MBA can be completed in as little as 6 months if you can dedicate significant time to studying. On average, most students complete the program in 12-18 months. WGU's competency-based model allows you to accelerate through courses where you already have knowledge and experience.</p>
+                  </div>
+                </div>
+
+                <div class="faq__item">
+                  <button class="faq__question" aria-expanded="false">
+                    <span>How much does the WGU MBA cost?</span>
+                    <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="faq__answer">
+                    <p>The WGU MBA costs approximately $4,530 per 6-month term (as of 2025). Since you can take as many courses as you can complete each term, the total cost ranges from $4,530 (one term) to around $18,000+ depending on your pace. Most students complete it in 2-3 terms ($9,000-$13,500).</p>
+                  </div>
+                </div>
+
+                <div class="faq__item">
+                  <button class="faq__question" aria-expanded="false">
+                    <span>Is the WGU MBA respected by employers?</span>
+                    <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="faq__answer">
+                    <p>Yes, the WGU MBA is accredited by ACBSP (Accreditation Council for Business Schools and Programs) and WGU is regionally accredited by NWCCU. Major employers including Amazon, Google, and Microsoft have partnerships with WGU.</p>
+                  </div>
+                </div>
+
+                <div class="faq__item">
+                  <button class="faq__question" aria-expanded="false">
+                    <span>What are the admission requirements for the WGU MBA?</span>
+                    <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="faq__answer">
+                    <p>WGU MBA admission requires a bachelor's degree from an accredited institution. There is no GMAT or GRE requirement. You'll also need to complete a brief admissions interview. Professional experience is not required but is beneficial for accelerating through the program.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Related Resources -->
+            <section class="related-resources" style="margin-top: var(--space-10); padding-top: var(--space-8); border-top: 1px solid #e2e8f0;">
+              <h2 style="color: var(--color-navy); margin-bottom: var(--space-4);">Related Resources</h2>
+              <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-acceleration-guide/">How to Accelerate Through WGU: Complete Your Degree Faster</a></li>
+                <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-oa-exam-tips/">How to Pass WGU Objective Assessments: Proven OA Study Strategies</a></li>
+                <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-performance-assessment-guide/">WGU Performance Assessments: Write Papers That Pass First Time</a></li>
+                <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-vs-snhu-comparison/">WGU vs SNHU: Which Online University Is Right for You?</a></li>
+              </ul>
+            </section>
+
+            <!-- Tags -->
+            <div class="blog-tags">
+              <a href="/blog/tag/mba/" class="blog-tag">MBA</a>
+              <a href="/blog/tag/business/" class="blog-tag">Business</a>
+              <a href="/blog/tag/graduate/" class="blog-tag">Graduate</a>
+            </div>
+          </article>
+
+          <!-- Sidebar -->
+          <aside class="blog-sidebar">
+            <nav class="blog-toc" aria-label="Table of contents">
+              <h2 class="blog-toc__title">Table of Contents</h2>
+              <ul class="blog-toc__list">
+                <li class="blog-toc__item"><a href="#overview" class="blog-toc__link">Program Overview</a></li>
+                <li class="blog-toc__item"><a href="#courses" class="blog-toc__link">Course Breakdown</a></li>
+                <li class="blog-toc__item"><a href="#costs" class="blog-toc__link">Costs</a></li>
+                <li class="blog-toc__item"><a href="#acceleration" class="blog-toc__link">How to Accelerate</a></li>
+                <li class="blog-toc__item"><a href="#career" class="blog-toc__link">Career Outcomes</a></li>
+                <li class="blog-toc__item"><a href="#admission" class="blog-toc__link">Admission Requirements</a></li>
+              </ul>
+            </nav>
+          </aside>
         </div>
       </div>
+    </section>
 
-      <div class="faq-item">
-        <div class="faq-question">Is the WGU MBA respected by employers?</div>
-        <div class="faq-answer">
-          <p>Yes, the WGU MBA is accredited by ACBSP (Accreditation Council for Business Schools and Programs) and WGU is regionally accredited by NWCCU. Major employers including Amazon, Google, and Microsoft have partnerships with WGU. Your skills and experience matter more to employers than the specific school.</p>
+    <!-- CTA BANNER -->
+    <section class="cta-banner">
+      <div class="cta-banner__pattern"></div>
+      <div class="cta-banner__glow"></div>
+      <div class="container">
+        <div class="cta-banner__content">
+          <h2 class="cta-banner__title">Ready to Graduate Faster?</h2>
+          <p class="cta-banner__tagline">No forms. No waiting. <span>Just results.</span></p>
+          <div class="cta-banner__buttons">
+            <a href="https://wa.me/447474784797" class="cta-banner__btn cta-banner__btn--whatsapp" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+            <a href="https://t.me/courseworkninja" class="cta-banner__btn cta-banner__btn--telegram" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              <span>Telegram</span>
+            </a>
+          </div>
         </div>
       </div>
+    </section>
+  </main>
 
-      <div class="faq-item">
-        <div class="faq-question">What are the admission requirements for the WGU MBA?</div>
-        <div class="faq-answer">
-          <p>WGU MBA admission requires a bachelor's degree from an accredited institution. There is no GMAT or GRE requirement. You'll also need to complete a brief admissions interview. Professional experience is not required but is beneficial for accelerating through the program.</p>
-        </div>
-      </div>
-    </div>
-
-    <h2>Final Thoughts</h2>
-
-    <p>The WGU MBA represents one of the best values in graduate business education. With no GMAT requirements, flexible scheduling, and the ability to accelerate, it's an excellent choice for motivated professionals who want to advance their careers without breaking the bank.</p>
-
-    <p>Whether you complete it in 6 months or 2 years, a WGU MBA gives you the credentials and knowledge to take your career to the next level.</p>
-
-    <h3>Related Resources</h3>
-    <ul>
-      <li><a href="/blog/wgu-acceleration-guide/">How to Accelerate Through WGU: Complete Your Degree Faster</a></li>
-      <li><a href="/blog/wgu-oa-exam-tips/">How to Pass WGU Objective Assessments: Proven OA Study Strategies</a></li>
-      <li><a href="/blog/wgu-performance-assessment-guide/">WGU Performance Assessments: Write Papers That Pass First Time</a></li>
-      <li><a href="/blog/wgu-vs-snhu-comparison/">WGU vs SNHU: Which Online University Is Right for You?</a></li>
-    </ul>
-  </article>
-
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <a href="/" class="footer__logo">
-            <img src="/images/logo-icon.png" alt="Coursework Ninja" class="footer__logo-img">
-            <span>Coursework Ninja</span>
-          </a>
-          <p class="footer__tagline">Expert academic support for online students</p>
+      <div class="footer__countries">
+        <span class="footer__countries-label">Serving Students Worldwide</span>
+        <div class="footer__countries-slider">
+          <div class="footer__countries-track">
+            <span class="footer__country">United States</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United Kingdom</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Canada</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Australia</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Germany</span><span class="footer__country-dot"></span>
+            <span class="footer__country">India</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Nigeria</span><span class="footer__country-dot"></span>
+            <span class="footer__country">South Africa</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Philippines</span><span class="footer__country-dot"></span>
+            <span class="footer__country">UAE</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Saudi Arabia</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Singapore</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United States</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United Kingdom</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Canada</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Australia</span><span class="footer__country-dot"></span>
+          </div>
         </div>
-        <div class="footer__links">
-          <h4>Quick Links</h4>
-          <a href="/#how-it-works">How It Works</a>
-          <a href="/#services">Services</a>
-          <a href="/blog/">Blog</a>
-          <a href="/#faq">FAQ</a>
-        </div>
-        <div class="footer__links">
-          <h4>Resources</h4>
-          <a href="/blog/wgu-oa-exam-tips/">WGU OA Tips</a>
-          <a href="/blog/wgu-acceleration-guide/">Acceleration Guide</a>
-          <a href="/blog/wgu-performance-assessment-guide/">PA Guide</a>
-        </div>
-        <div class="footer__contact">
-          <h4>Contact</h4>
-          <a href="https://wa.me/447474784797" target="_blank" rel="noopener">WhatsApp</a>
-          <a href="https://t.me/courseworkninja" target="_blank" rel="noopener">Telegram</a>
+      </div>
+      <div class="footer__crypto">
+        <span class="footer__crypto-label">We Accept</span>
+        <div class="footer__crypto-logos">
+          <div class="footer__crypto-item" title="Bitcoin"><img src="/images/crypto/btc.webp" alt="Bitcoin" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Ethereum"><img src="/images/crypto/eth.webp" alt="Ethereum" loading="lazy"></div>
+          <div class="footer__crypto-item" title="USDT"><img src="/images/crypto/usdt.webp" alt="USDT" loading="lazy"></div>
+          <div class="footer__crypto-item" title="USDC"><img src="/images/crypto/usdc.webp" alt="USDC" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Solana"><img src="/images/crypto/sol.webp" alt="Solana" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Monero"><img src="/images/crypto/xmr.webp" alt="Monero" loading="lazy"></div>
+          <div class="footer__crypto-item" title="DAI"><img src="/images/crypto/dai.webp" alt="DAI" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Litecoin"><img src="/images/crypto/ltc.webp" alt="Litecoin" loading="lazy"></div>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2025 Coursework Ninja. All rights reserved.</p>
+        <p class="footer__copyright">&copy; 2025 Coursework Ninja. All rights reserved.</p>
       </div>
     </div>
   </footer>
 
   <script src="/js/main.js" defer></script>
-  <script>
-    document.querySelectorAll('.faq-question').forEach(question => {
-      question.addEventListener('click', () => {
-        const item = question.parentElement;
-        item.classList.toggle('active');
-      });
-    });
-  </script>
 </body>
 </html>

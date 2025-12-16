@@ -1,0 +1,238 @@
+# Blog Post Template Reference
+
+**IMPORTANT**: Always use this template structure when creating new blog posts. Reference the existing posts in `/blog/wgu-oa-exam-tips/` or `/blog/wgu-acceleration-guide/` for working examples.
+
+## Required Template Structure
+
+### 1. Head Section
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO Meta -->
+  <title>[Title] | Coursework Ninja</title>
+  <meta name="description" content="[150-160 char description]">
+  <meta name="keywords" content="[keyword1], [keyword2], [keyword3]">
+  <link rel="canonical" href="https://coursework.ninja/blog/[slug]/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://coursework.ninja/blog/[slug]/">
+  <meta property="og:title" content="[Title]">
+  <meta property="og:description" content="[Description]">
+  <meta property="og:image" content="https://coursework.ninja/images/blog/[slug]-cover.webp">
+  <meta property="og:site_name" content="Coursework Ninja">
+  <meta property="article:published_time" content="[YYYY-MM-DD]">
+  <meta property="article:modified_time" content="[YYYY-MM-DD]">
+  <meta property="article:author" content="Coursework Ninja Team">
+  <meta property="article:section" content="[Category]">
+  <meta property="article:tag" content="[Tag1]">
+  <meta property="article:tag" content="[Tag2]">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="[Title]">
+  <meta name="twitter:description" content="[Short description]">
+  <meta name="twitter:image" content="https://coursework.ninja/images/blog/[slug]-cover.webp">
+
+  <meta name="theme-color" content="#0B1630">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Article Schema (required) -->
+  <!-- BreadcrumbList Schema (required) -->
+  <!-- FAQPage Schema (if FAQ section exists) -->
+
+  <style>
+    /* Include full embedded styles - see existing posts */
+  </style>
+</head>
+```
+
+### 2. Header (EXACT copy from existing posts)
+```html
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER - Use exact structure from wgu-oa-exam-tips/index.html -->
+  <header class="header" id="header">
+    <!-- ... full header with nav, WhatsApp CTA, mobile toggle -->
+  </header>
+
+  <div class="header__mobile-menu" id="mobile-menu">
+    <!-- ... full mobile menu with close button, nav links, CTAs -->
+  </div>
+```
+
+### 3. Main Content Structure
+```html
+<main id="main-content">
+  <!-- BLOG HEADER with gradient background -->
+  <section class="blog-header">
+    <div class="container">
+      <nav class="blog-header__breadcrumb" aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="/blog/">Blog</a>
+        <span>/</span>
+        <span>[Short Title]</span>
+      </nav>
+      <h1 class="blog-header__title">[Full Title]</h1>
+      <div class="blog-header__meta">
+        <span class="blog-header__meta-item">
+          <svg><!-- calendar icon --></svg>
+          [Month Day, Year]
+        </span>
+        <span class="blog-header__meta-item">
+          <svg><!-- clock icon --></svg>
+          [X] min read
+        </span>
+        <span class="blog-header__meta-item">
+          <svg><!-- book icon --></svg>
+          [Category]
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED IMAGE -->
+  <section class="blog-featured-image">
+    <div class="container">
+      <img src="/images/blog/[slug]-cover.webp" alt="[Descriptive alt text]" class="blog-featured-image__img" width="1200" height="630" loading="eager">
+    </div>
+  </section>
+
+  <!-- BLOG CONTENT with sidebar -->
+  <section class="blog-content">
+    <div class="container">
+      <div class="blog-content__wrapper">
+        <article class="blog-article">
+          <!-- Article content with h2, h3, p, ul, ol -->
+
+          <!-- In-article CTA box -->
+          <div class="blog-cta">
+            <h3 class="blog-cta__title">[CTA Title]</h3>
+            <p class="blog-cta__text">[CTA Text]</p>
+            <div class="blog-cta__buttons">
+              <a href="https://wa.me/447474784797?text=[encoded message]" class="btn btn--primary" target="_blank" rel="noopener">
+                <svg><!-- WhatsApp icon --></svg>
+                [Button Text]
+              </a>
+              <a href="https://t.me/courseworkninja" class="btn btn--secondary" target="_blank" rel="noopener">Telegram</a>
+            </div>
+          </div>
+
+          <!-- FAQ Section (if applicable) -->
+          <section class="blog-faq">
+            <h2 class="blog-faq__title">Frequently Asked Questions</h2>
+            <div class="faq__items">
+              <!-- FAQ items with accordion functionality -->
+            </div>
+          </section>
+
+          <!-- Related Resources -->
+          <section class="related-resources">
+            <!-- Links to related posts -->
+          </section>
+
+          <!-- Tags -->
+          <div class="blog-tags">
+            <a href="/blog/tag/[tag]/" class="blog-tag">[Tag]</a>
+          </div>
+        </article>
+
+        <!-- SIDEBAR with sticky TOC -->
+        <aside class="blog-sidebar">
+          <nav class="blog-toc" aria-label="Table of contents">
+            <h2 class="blog-toc__title">Table of Contents</h2>
+            <ul class="blog-toc__list">
+              <li class="blog-toc__item"><a href="#section-id" class="blog-toc__link">[Section Title]</a></li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="cta-banner__pattern"></div>
+    <div class="cta-banner__glow"></div>
+    <div class="container">
+      <div class="cta-banner__content">
+        <h2 class="cta-banner__title">Ready to Graduate Faster?</h2>
+        <p class="cta-banner__tagline">No forms. No waiting. <span>Just results.</span></p>
+        <div class="cta-banner__buttons">
+          <!-- WhatsApp and Telegram buttons -->
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+```
+
+### 4. Footer (EXACT copy from existing posts)
+```html
+<!-- FOOTER with countries slider and crypto logos -->
+<footer class="footer">
+  <!-- Use exact structure from wgu-oa-exam-tips/index.html -->
+</footer>
+
+<script src="/js/main.js" defer></script>
+</body>
+</html>
+```
+
+## Required Embedded CSS Styles
+Copy the full `<style>` block from `/blog/wgu-oa-exam-tips/index.html` including:
+- `.blog-featured-image` styles
+- `.blog-header` and related styles
+- `.blog-content` and wrapper grid styles
+- `.blog-article` typography styles
+- `.blog-toc` sidebar styles
+- `.blog-cta` call-to-action styles
+- `.blog-tags` styles
+- `.blog-faq` accordion styles
+- `.tip-box` and `.warning-box` styles
+
+## Key Layout Features
+1. **Two-column layout on desktop** (article + sidebar)
+2. **Sticky table of contents** in sidebar
+3. **Gradient header** with breadcrumb and meta info
+4. **Full footer** with countries slider and crypto logos
+5. **CTA banner** at bottom of content
+
+## Image Style for Cover Images
+All featured images MUST follow this format:
+1. **Background Image**: Relevant photo/image related to the topic
+2. **Duotone Overlay**: Blue and gold translucent overlay on top of the background image
+3. **Text**: White bold text with the title placed on top of the overlay
+4. **Aspect Ratio**: 16:9 banner style
+5. **Format**: WebP (convert from PNG using cwebp)
+
+Example prompt for image generation:
+```
+"Generate a 16:9 banner image with [relevant background photo]. Apply a duotone overlay with navy blue (#0B1630) and gold (#F4A826) translucent colors over the image. Add white bold text '[TITLE]' prominently centered on top. Professional corporate style."
+```
+
+## SEO Checklist
+- [ ] Title tag with " | Coursework Ninja" suffix
+- [ ] Meta description 150-160 characters
+- [ ] Canonical URL
+- [ ] Open Graph tags (og:type, og:url, og:title, og:description, og:image)
+- [ ] Twitter card tags
+- [ ] Article schema JSON-LD
+- [ ] BreadcrumbList schema JSON-LD
+- [ ] FAQPage schema JSON-LD (if FAQ section exists)
+- [ ] H1 matches title
+- [ ] H2s for main sections with id attributes for TOC links
+- [ ] Internal links to related posts
+- [ ] Alt text on images
+- [ ] WebP format for images
