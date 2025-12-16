@@ -523,16 +523,18 @@
         const isExpanded = this.getAttribute('aria-expanded') === 'true';
         const answer = this.nextElementSibling;
 
-        // Close all other answers in the same category
-        const category = this.closest('.faq__category');
-        const otherQuestions = category.querySelectorAll('.faq__question');
+        // Close all other answers in the same container (category or items)
+        const container = this.closest('.faq__category') || this.closest('.faq__items') || this.closest('.blog-faq');
+        if (container) {
+          const otherQuestions = container.querySelectorAll('.faq__question');
 
-        otherQuestions.forEach(function(otherQuestion) {
-          if (otherQuestion !== question) {
-            otherQuestion.setAttribute('aria-expanded', 'false');
-            otherQuestion.nextElementSibling.classList.remove('is-open');
-          }
-        });
+          otherQuestions.forEach(function(otherQuestion) {
+            if (otherQuestion !== question) {
+              otherQuestion.setAttribute('aria-expanded', 'false');
+              otherQuestion.nextElementSibling.classList.remove('is-open');
+            }
+          });
+        }
 
         // Toggle current answer
         if (isExpanded) {
