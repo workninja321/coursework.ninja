@@ -476,6 +476,50 @@
     .warning-box strong {
       color: #b45309;
     }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-4);
+      margin: var(--space-8) 0;
+    }
+    @media (min-width: 640px) {
+      .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .stats-grid__title {
+      grid-column: 1 / -1;
+      font-size: var(--text-xl);
+      font-weight: var(--font-bold);
+      color: var(--color-navy);
+      margin-bottom: var(--space-2);
+      padding-bottom: var(--space-3);
+      border-bottom: 2px solid var(--color-gold);
+    }
+    .stat-card {
+      background: linear-gradient(135deg, var(--color-navy), #1a2744);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      text-align: center;
+    }
+    .stat-card__value {
+      font-size: var(--text-xl);
+      font-weight: var(--font-bold);
+      color: var(--color-gold);
+      margin-bottom: var(--space-1);
+    }
+    .stat-card__label {
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.8);
+    }
+    .stat-card--wide {
+      grid-column: span 2;
+    }
+    @media (min-width: 640px) {
+      .stat-card--wide {
+        grid-column: span 1;
+      }
+    }
   </style>
 </head>
 <body>
@@ -585,13 +629,32 @@
               <li><strong>Mentor Support:</strong> Dedicated program mentor throughout your journey</li>
             </ul>
 
-            <div class="highlight-box">
-              <h3>WGU MBA at a Glance</h3>
-              <p><strong>Total CUs:</strong> 36 Competency Units (11 courses)</p>
-              <p><strong>Average Completion:</strong> 12-18 months</p>
-              <p><strong>Fastest Completion:</strong> 6 months (one term)</p>
-              <p><strong>Cost per Term:</strong> ~$4,530</p>
-              <p><strong>Total Cost (average):</strong> $9,000-$13,500</p>
+            <div class="stats-grid">
+              <h3 class="stats-grid__title">WGU MBA at a Glance</h3>
+              <div class="stat-card">
+                <div class="stat-card__value">11</div>
+                <div class="stat-card__label">Total Courses</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__value">36 CUs</div>
+                <div class="stat-card__label">Competency Units</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__value">6 mo</div>
+                <div class="stat-card__label">Fastest Completion</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__value">12-18 mo</div>
+                <div class="stat-card__label">Average Completion</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__value">$4,530</div>
+                <div class="stat-card__label">Cost per Term</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-card__value">$9K-$13K</div>
+                <div class="stat-card__label">Typical Total Cost</div>
+              </div>
             </div>
 
             <h2 id="courses">WGU MBA Course Breakdown</h2>
