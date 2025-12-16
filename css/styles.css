@@ -446,10 +446,9 @@ h1, h2, h3, h4 {
   background-color: var(--color-navy);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  padding-top: calc(env(safe-area-inset-top, 0px) + var(--space-10));
-  padding-bottom: calc(env(safe-area-inset-bottom, 0px) + var(--space-10));
+  padding: calc(env(safe-area-inset-top, 0px) + 80px) var(--space-6) calc(env(safe-area-inset-bottom, 0px) + var(--space-10));
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   opacity: 0;
@@ -474,38 +473,40 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
+  background: transparent;
+  border: 2px solid var(--color-gold);
   border-radius: var(--radius-full);
-  color: var(--color-white);
+  color: var(--color-gold);
   cursor: pointer;
-  transition: background var(--transition-fast);
+  transition: background var(--transition-fast), color var(--transition-fast);
   z-index: 1;
 }
 
 .header__mobile-close:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--color-gold);
+  color: var(--color-navy);
 }
 
 .header__mobile-nav {
   text-align: center;
-  padding: 0 var(--space-6) var(--space-6);
   width: 100%;
+  max-width: 320px;
 }
 
 .header__mobile-menu-list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
-  margin-bottom: var(--space-10);
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
   list-style: none;
   padding: 0;
+  margin-left: 0;
 }
 
 .header__mobile-link {
   display: block;
-  padding: var(--space-3) var(--space-6);
-  font-size: var(--text-2xl);
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--text-xl);
   font-weight: var(--font-semibold);
   color: var(--color-white);
   text-decoration: none;
@@ -521,9 +522,35 @@ h1, h2, h3, h4 {
 .header__mobile-cta {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-3);
   width: 100%;
-  max-width: 280px;
+}
+
+.header__mobile-cta .btn {
+  justify-content: center;
+  font-size: var(--text-base);
+  padding: var(--space-4) var(--space-6);
+}
+
+.header__mobile-cta .btn--primary {
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+  border: none;
+}
+
+.header__mobile-cta .btn--primary:hover {
+  background-color: var(--color-gold-light);
+}
+
+.header__mobile-cta .btn--secondary {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+}
+
+.header__mobile-cta .btn--secondary:hover {
+  background-color: var(--color-white);
+  color: var(--color-navy);
 }
 
 /* Desktop Header */
