@@ -47,7 +47,7 @@
 
   <style>
     .blog-index-header {
-      padding: var(--space-16) 0 var(--space-12);
+      padding: calc(var(--space-16) + 80px) 0 var(--space-12);
       background: linear-gradient(135deg, var(--color-navy) 0%, #1a2744 100%);
       color: var(--color-white);
       text-align: center;
@@ -57,6 +57,7 @@
       font-size: clamp(2rem, 5vw, 3rem);
       font-weight: var(--font-bold);
       margin-bottom: var(--space-4);
+      color: #FFFFFF !important;
     }
 
     .blog-index-header__subtitle {
@@ -86,14 +87,14 @@
       padding: var(--space-2) var(--space-4);
       border-radius: var(--radius-full);
       text-decoration: none;
-      transition: all 0.2s;
       border: 2px solid transparent;
+      opacity: 0.6;
     }
 
-    .blog-index-category:hover,
     .blog-index-category--active {
       background: var(--color-gold);
       color: var(--color-navy);
+      opacity: 1;
     }
 
     .blog-posts-grid {
@@ -273,16 +274,16 @@
     <!-- ========== BLOG CONTENT ========== -->
     <section class="blog-index-content">
       <div class="container">
-        <!-- Category Filters -->
-        <nav class="blog-index-categories" aria-label="Blog categories">
-          <a href="/blog/" class="blog-index-category blog-index-category--active">All Posts</a>
-          <a href="/blog/category/degree-guides/" class="blog-index-category">Degree Guides</a>
-          <a href="/blog/category/course-help/" class="blog-index-category">Course Help</a>
-          <a href="/blog/category/study-tips/" class="blog-index-category">Study Tips</a>
-          <a href="/blog/category/exam-prep/" class="blog-index-category">Exam Prep</a>
-          <a href="/blog/category/comparisons/" class="blog-index-category">Comparisons</a>
-          <a href="/blog/category/career/" class="blog-index-category">Career</a>
-        </nav>
+        <!-- Category Tags (display only - category pages coming soon) -->
+        <div class="blog-index-categories" aria-label="Blog categories">
+          <span class="blog-index-category blog-index-category--active">All Posts</span>
+          <span class="blog-index-category">Degree Guides</span>
+          <span class="blog-index-category">Course Help</span>
+          <span class="blog-index-category">Study Tips</span>
+          <span class="blog-index-category">Exam Prep</span>
+          <span class="blog-index-category">Comparisons</span>
+          <span class="blog-index-category">Career</span>
+        </div>
 
         <!-- Blog Posts Grid -->
         <div class="blog-posts-grid">
