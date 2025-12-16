@@ -2,6 +2,34 @@
 
 **IMPORTANT**: Always use this template structure when creating new blog posts. Reference the existing posts in `/blog/wgu-oa-exam-tips/` or `/blog/wgu-acceleration-guide/` for working examples.
 
+## Pre-Writing Research Requirements
+
+**CRITICAL**: Before writing ANY blog post, conduct thorough research:
+
+1. **Web Search**: Use WebSearch to find current, accurate information about the topic
+   - Search for official sources (university websites, accreditation bodies)
+   - Find recent statistics, costs, and program details
+   - Look for common questions students ask about the topic
+
+2. **Verify Facts**: All statistics, costs, requirements, and dates MUST be verified
+   - Tuition costs change - always search for current year pricing
+   - Program requirements may have updated
+   - Accreditation status should be confirmed
+
+3. **Competitor Research**: Check what other sites cover on the same topic
+   - Identify gaps in existing content you can fill
+   - Find unique angles or information others miss
+   - Ensure your content is more comprehensive
+
+4. **Student Pain Points**: Research forums, Reddit, and Q&A sites
+   - Understand what students actually struggle with
+   - Address real concerns in your content
+   - Include practical tips based on real student experiences
+
+5. **Documentation**: Keep track of sources for accuracy
+   - Note where key statistics come from
+   - Be prepared to update content if information changes
+
 ## Required Template Structure
 
 ### 1. Head Section
@@ -236,3 +264,52 @@ Example prompt for image generation:
 - [ ] Internal links to related posts
 - [ ] Alt text on images
 - [ ] WebP format for images
+
+## Post-Creation Checklist
+
+**IMPORTANT**: After creating or updating any blog post, complete these steps:
+
+### 1. Update Homepage Blog Section
+The homepage (`/index.html`) displays the **3 most recent blog posts** in the `#blog` section. After creating a new post:
+
+1. Open `/index.html`
+2. Find the `<section id="blog" class="blog-section">` section
+3. Update the `blog-section__grid` to show the 3 most recent posts
+4. Each blog card requires:
+   - Image link and `<img>` tag pointing to cover image
+   - Category badge (`blog-section__card-category`)
+   - Title with link (`blog-section__card-title`)
+   - Excerpt text (`blog-section__card-excerpt`)
+   - Read time meta (`blog-section__card-meta`)
+
+Example blog card structure:
+```html
+<article class="blog-section__card">
+  <a href="/blog/[slug]/" class="blog-section__card-image-link">
+    <img src="/images/blog/[slug]-cover.webp" alt="[descriptive alt]" class="blog-section__card-img" width="600" height="315" loading="lazy">
+  </a>
+  <div class="blog-section__card-content">
+    <span class="blog-section__card-category">[Category]</span>
+    <h3 class="blog-section__card-title">
+      <a href="/blog/[slug]/">[Post Title]</a>
+    </h3>
+    <p class="blog-section__card-excerpt">[Brief excerpt]</p>
+    <div class="blog-section__card-meta">
+      <span>[X] min read</span>
+    </div>
+  </div>
+</article>
+```
+
+### 2. Update Blog Index
+Add the new post to `/blog/index.html` listing page.
+
+### 3. Update Sitemap
+Add the new URL to `/sitemap.xml`.
+
+### 4. Internal Linking
+- Add links TO the new post from 2-3 related existing posts
+- Ensure the new post links to related existing content
+
+### 5. Commit All Changes
+Commit the blog post, homepage update, and any other modified files together.

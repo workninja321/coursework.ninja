@@ -2438,6 +2438,12 @@ h1, h2, h3, h4 {
   }
 }
 
+@media (min-width: 1024px) {
+  .blog-section__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .blog-section__card {
   background: var(--color-white);
   border-radius: var(--radius-xl);
