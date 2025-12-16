@@ -2460,6 +2460,22 @@ h1, h2, h3, h4 {
   justify-content: center;
 }
 
+.blog-section__card-image-link {
+  display: block;
+  overflow: hidden;
+}
+
+.blog-section__card-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-base);
+}
+
+.blog-section__card:hover .blog-section__card-img {
+  transform: scale(1.05);
+}
+
 .blog-section__card-content {
   padding: var(--space-6);
   flex: 1;

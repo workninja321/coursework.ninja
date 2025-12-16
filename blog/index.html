@@ -118,11 +118,22 @@
       box-shadow: 0 8px 30px rgba(0,0,0,0.12);
     }
 
+    .blog-card__image-link {
+      display: block;
+      overflow: hidden;
+    }
+
     .blog-card__image {
       width: 100%;
-      height: 180px;
+      height: auto;
+      display: block;
       object-fit: cover;
       background: var(--color-offwhite);
+      transition: transform 0.3s;
+    }
+
+    .blog-card:hover .blog-card__image {
+      transform: scale(1.05);
     }
 
     .blog-card__content {
@@ -293,9 +304,9 @@
         <!-- Blog Posts Grid -->
         <div class="blog-posts-grid">
           <article class="blog-card">
-            <div class="blog-card__image" style="background: linear-gradient(135deg, #0F766E 0%, #0B1630 100%); display: flex; align-items: center; justify-content: center;">
-              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
-            </div>
+            <a href="/blog/wgu-oa-exam-tips/" class="blog-card__image-link">
+              <img src="/images/blog/wgu-oa-exam-tips-cover.png" alt="WGU OA Exam Tips - Proven strategies for passing Objective Assessments" class="blog-card__image" width="600" height="315" loading="lazy">
+            </a>
             <div class="blog-card__content">
               <span class="blog-card__category">Exam Preparation</span>
               <h2 class="blog-card__title"><a href="/blog/wgu-oa-exam-tips/">How to Pass WGU Objective Assessments: Proven OA Study Strategies</a></h2>
@@ -311,9 +322,9 @@
           </article>
 
           <article class="blog-card">
-            <div class="blog-card__image" style="background: linear-gradient(135deg, #F4A826 0%, #0B1630 100%); display: flex; align-items: center; justify-content: center;">
-              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            </div>
+            <a href="/blog/wgu-acceleration-guide/" class="blog-card__image-link">
+              <img src="/images/blog/wgu-acceleration-guide-cover.png" alt="WGU Acceleration Guide - Strategies for completing your degree faster" class="blog-card__image" width="600" height="315" loading="lazy">
+            </a>
             <div class="blog-card__content">
               <span class="blog-card__category">Study Tips</span>
               <h2 class="blog-card__title"><a href="/blog/wgu-acceleration-guide/">How to Accelerate Through WGU: Complete Your Degree Faster</a></h2>
