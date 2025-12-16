@@ -446,44 +446,79 @@ h1, h2, h3, h4 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--color-white);
-  padding: var(--space-6) var(--space-5);
-  padding-top: calc(var(--header-height-mobile) + var(--space-6));
-  transform: translateX(100%);
-  transition: transform var(--transition-base);
-  overflow-y: auto;
-  z-index: calc(var(--z-sticky) + 50);
+  background-color: var(--color-navy);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-base), visibility var(--transition-base);
+  z-index: var(--z-modal);
 }
 
 .header__mobile-menu.is-open {
-  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.header__mobile-close {
+  position: absolute;
+  top: var(--space-5);
+  right: var(--space-5);
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: var(--radius-full);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.header__mobile-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.header__mobile-nav {
+  text-align: center;
+  padding: var(--space-6);
 }
 
 .header__mobile-menu-list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
-  margin-bottom: var(--space-8);
+  gap: var(--space-4);
+  margin-bottom: var(--space-10);
+  list-style: none;
+  padding: 0;
 }
 
 .header__mobile-link {
   display: block;
-  padding: var(--space-4);
-  font-size: var(--text-lg);
-  font-weight: var(--font-medium);
-  color: var(--color-navy);
-  border-radius: var(--radius-md);
-  transition: background-color var(--transition-fast);
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  color: var(--color-white);
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
 .header__mobile-link:hover {
-  background-color: var(--color-offwhite);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-gold);
 }
 
 .header__mobile-cta {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 280px;
 }
 
 /* Desktop Header */

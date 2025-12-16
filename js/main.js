@@ -49,6 +49,7 @@
   function initMobileMenu() {
     const toggle = document.querySelector(selectors.navToggle);
     const menu = document.querySelector(selectors.mobileMenu);
+    const closeBtn = document.querySelector('#mobile-close');
     const links = document.querySelectorAll(selectors.mobileLinks);
 
     if (!toggle || !menu) return;
@@ -84,6 +85,11 @@
 
     // Toggle button click
     toggle.addEventListener('click', toggleMenu);
+
+    // Close button click
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeMenu);
+    }
 
     // Close on link click
     links.forEach(function(link) {
