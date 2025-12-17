@@ -258,6 +258,22 @@ Copy the full `<style>` block from `/blog/wgu-oa-exam-tips/index.html` including
 - Small decorative stars or sparkles in gold
 - Optional: small icon representing the topic
 
+### Image Generation Method (REQUIRED)
+
+**ALWAYS use OpenRouter API with google/gemini-3-pro-image-preview model:**
+
+```bash
+curl -s "https://openrouter.ai/api/v1/chat/completions" \
+  -H "Authorization: Bearer $OPENROUTER_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "google/gemini-3-pro-image-preview",
+    "messages": [{"role": "user", "content": "Generate an image: Premium blog cover image, 1200x630px, dark navy blue (#0B1630) background with elegant gold (#F4A826) translucent wave accent. White bold text [SHORT TITLE] centered. Small [ICON] icon. Corporate premium style, clean minimal design, subtle gold sparkles. No people, no photos."}]
+  }'
+```
+
+**DO NOT use Pollinations AI or other free image generators.**
+
 ### Image Generation Prompt Template:
 ```
 "Premium blog cover image, 1200x630px, dark navy blue (#0B1630) background with elegant gold (#F4A826) translucent wave accent. White bold text '[SHORT TITLE]' centered. Small [ICON DESCRIPTION] icon. Corporate premium style, clean minimal design, subtle gold sparkles. No people, no photos."
