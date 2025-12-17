@@ -1,7 +1,7 @@
 # OpenRouter Image Generation API Reference
 
 ## Model
-`google/gemini-3-pro-image-preview`
+`google/gemini-2.5-flash-image-preview`
 
 ## Endpoint
 `https://openrouter.ai/api/v1/chat/completions`
