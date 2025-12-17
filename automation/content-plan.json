@@ -1,9 +1,9 @@
 {
   "meta": {
     "version": "1.0",
-    "lastUpdated": "2025-12-16",
+    "lastUpdated": "2025-12-17",
     "totalTopics": 60,
-    "publishedCount": 5
+    "publishedCount": 6
   },
   "categories": [
     { "id": "degree-guides", "name": "Degree Guides", "description": "Comprehensive guides for WGU degree programs" },
@@ -40,8 +40,9 @@
       "category": "degree-guides",
       "tags": ["IT", "BSIT", "Technology", "Undergraduate"],
       "priority": 1,
-      "status": "pending",
-      "internalLinks": ["wgu-certification-guide", "wgu-study-tips"],
+      "status": "published",
+      "publishedDate": "2025-12-17",
+      "internalLinks": ["wgu-oa-exam-tips", "wgu-acceleration-guide", "wgu-performance-assessment-guide", "wgu-mba-complete-guide"],
       "estimatedReadTime": 10,
       "notes": "Include certification info, course sequence, lab tips"
     },
