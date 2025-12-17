@@ -242,21 +242,18 @@ Copy the full `<style>` block from `/blog/wgu-oa-exam-tips/index.html` including
 **IMPORTANT**: All blog cover images MUST follow this premium style. This is the established brand style.
 
 ### Required Style Elements:
-1. **Navy Blue Background**: Dark navy (#0B1630) as the primary base color
-2. **Gold Accent Elements**: Translucent gold (#F4A826) waves, shapes, or decorative elements
-3. **Translucent Overlay Effect**: Blue and gold colors should blend with translucent overlays creating depth
-4. **White Bold Text**: Short, punchy title text (2-4 words max) prominently displayed
-5. **Subtle Icon/Symbol**: Small relevant icon or symbol related to the topic (graduation cap, stethoscope, computer, etc.)
-6. **Premium/Corporate Feel**: Clean, professional, not cluttered
-7. **Aspect Ratio**: 1200x630px (OG image standard, approximately 1.9:1)
-8. **Format**: WebP (convert from source using cwebp -q 85)
+1. **Photorealistic Background**: High-quality photorealistic image relevant to the topic (education, technology, healthcare, etc.)
+2. **Blue and Gold Overlay**: Translucent overlay using navy blue (#0B1630) and gold (#F4A826) colors creating depth and brand consistency
+3. **White Bold Text**: Short, punchy title text (2-4 words max) prominently displayed on top of the overlay
+4. **Premium/Corporate Feel**: Clean, professional, sophisticated look
+5. **Aspect Ratio**: 1200x630px (OG image standard, approximately 1.9:1)
+6. **Format**: WebP (convert from source using cwebp -q 85)
 
 ### Visual Reference:
-- Deep navy background with gradient
-- Gold wave or curved shape as accent (like a ribbon across the image)
-- Clean white sans-serif text (Inter Bold or similar)
-- Small decorative stars or sparkles in gold
-- Optional: small icon representing the topic
+- Photorealistic background image (e.g., student studying, laptop with books, professional setting)
+- Navy blue and gold translucent overlay creating depth
+- Bold white sans-serif text (Inter Bold or similar) on top
+- Professional, corporate aesthetic
 
 ### Image Generation Method (REQUIRED)
 
@@ -268,7 +265,7 @@ curl -s "https://openrouter.ai/api/v1/chat/completions" \
   -H "Content-Type: application/json" \
   -d '{
     "model": "google/gemini-3-pro-image-preview",
-    "messages": [{"role": "user", "content": "Generate an image: Premium blog cover image, 1200x630px, dark navy blue (#0B1630) background with elegant gold (#F4A826) translucent wave accent. White bold text [SHORT TITLE] centered. Small [ICON] icon. Corporate premium style, clean minimal design, subtle gold sparkles. No people, no photos."}]
+    "messages": [{"role": "user", "content": "Generate an image: Premium blog cover image, 1200x630px. Photorealistic background of [SCENE DESCRIPTION]. Navy blue and gold translucent overlay effect. Bold white text [SHORT TITLE] centered prominently. Corporate premium style, sophisticated and professional."}]
   }'
 ```
 
@@ -276,7 +273,7 @@ curl -s "https://openrouter.ai/api/v1/chat/completions" \
 
 ### Image Generation Prompt Template:
 ```
-"Premium blog cover image, 1200x630px, dark navy blue (#0B1630) background with elegant gold (#F4A826) translucent wave accent. White bold text '[SHORT TITLE]' centered. Small [ICON DESCRIPTION] icon. Corporate premium style, clean minimal design, subtle gold sparkles. No people, no photos."
+"Premium blog cover image, 1200x630px. Photorealistic background of [SCENE DESCRIPTION relevant to topic]. Navy blue (#0B1630) and gold (#F4A826) translucent overlay effect creating depth. Bold white text '[SHORT TITLE]' centered prominently on top. Corporate premium style, sophisticated and professional."
 ```
 
 ### Examples of Short Titles:
@@ -286,12 +283,18 @@ curl -s "https://openrouter.ai/api/v1/chat/completions" \
 - "MBA GUIDE"
 - "STUDY TIPS"
 
+### Scene Description Examples by Topic:
+- IT Certifications: "a professional workspace with laptop, certifications, and tech equipment"
+- Nursing: "a healthcare professional in a modern medical setting"
+- Business/MBA: "a corporate boardroom or professional business setting"
+- Study Tips: "a student studying with books and laptop in a modern environment"
+- Capstone: "graduation caps and academic achievement symbols"
+
 ### What NOT to Do:
-- Do NOT use photo backgrounds
-- Do NOT use busy/cluttered designs
+- Do NOT use plain solid color backgrounds
+- Do NOT use busy/cluttered designs without overlay
 - Do NOT use the full article title (too long)
-- Do NOT use bright/light backgrounds
-- Do NOT deviate from the navy + gold color scheme
+- Do NOT skip the blue/gold overlay effect
 
 ## SEO Checklist
 - [ ] Title tag with " | Coursework Ninja" suffix
