@@ -237,18 +237,45 @@ Copy the full `<style>` block from `/blog/wgu-oa-exam-tips/index.html` including
 4. **Full footer** with countries slider and crypto logos
 5. **CTA banner** at bottom of content
 
-## Image Style for Cover Images
-All featured images MUST follow this format:
-1. **Background Image**: Relevant photo/image related to the topic
-2. **Duotone Overlay**: Blue and gold translucent overlay on top of the background image
-3. **Text**: White bold text with the title placed on top of the overlay
-4. **Aspect Ratio**: 16:9 banner style
-5. **Format**: WebP (convert from PNG using cwebp)
+## Cover Image Style (FIXED - DO NOT CHANGE)
 
-Example prompt for image generation:
+**IMPORTANT**: All blog cover images MUST follow this premium style. This is the established brand style.
+
+### Required Style Elements:
+1. **Navy Blue Background**: Dark navy (#0B1630) as the primary base color
+2. **Gold Accent Elements**: Translucent gold (#F4A826) waves, shapes, or decorative elements
+3. **Translucent Overlay Effect**: Blue and gold colors should blend with translucent overlays creating depth
+4. **White Bold Text**: Short, punchy title text (2-4 words max) prominently displayed
+5. **Subtle Icon/Symbol**: Small relevant icon or symbol related to the topic (graduation cap, stethoscope, computer, etc.)
+6. **Premium/Corporate Feel**: Clean, professional, not cluttered
+7. **Aspect Ratio**: 1200x630px (OG image standard, approximately 1.9:1)
+8. **Format**: WebP (convert from source using cwebp -q 85)
+
+### Visual Reference:
+- Deep navy background with gradient
+- Gold wave or curved shape as accent (like a ribbon across the image)
+- Clean white sans-serif text (Inter Bold or similar)
+- Small decorative stars or sparkles in gold
+- Optional: small icon representing the topic
+
+### Image Generation Prompt Template:
 ```
-"Generate a 16:9 banner image with [relevant background photo]. Apply a duotone overlay with navy blue (#0B1630) and gold (#F4A826) translucent colors over the image. Add white bold text '[TITLE]' prominently centered on top. Professional corporate style."
+"Premium blog cover image, 1200x630px, dark navy blue (#0B1630) background with elegant gold (#F4A826) translucent wave accent. White bold text '[SHORT TITLE]' centered. Small [ICON DESCRIPTION] icon. Corporate premium style, clean minimal design, subtle gold sparkles. No people, no photos."
 ```
+
+### Examples of Short Titles:
+- "WGU CAPSTONE" (not the full article title)
+- "NURSING GUIDE"
+- "IT CERTS"
+- "MBA GUIDE"
+- "STUDY TIPS"
+
+### What NOT to Do:
+- Do NOT use photo backgrounds
+- Do NOT use busy/cluttered designs
+- Do NOT use the full article title (too long)
+- Do NOT use bright/light backgrounds
+- Do NOT deviate from the navy + gold color scheme
 
 ## SEO Checklist
 - [ ] Title tag with " | Coursework Ninja" suffix

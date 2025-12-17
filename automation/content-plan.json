@@ -3,7 +3,7 @@
     "version": "1.0",
     "lastUpdated": "2025-12-17",
     "totalTopics": 60,
-    "publishedCount": 8
+    "publishedCount": 10
   },
   "categories": [
     { "id": "degree-guides", "name": "Degree Guides", "description": "Comprehensive guides for WGU degree programs" },
@@ -120,7 +120,8 @@
       "category": "study-tips",
       "tags": ["Study Tips", "Time Management", "Work-Life Balance"],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-17",
       "internalLinks": ["wgu-oa-exam-tips", "wgu-acceleration-guide"],
       "estimatedReadTime": 7,
       "notes": "Practical tips for busy professionals, scheduling strategies"
@@ -227,7 +228,8 @@
       "category": "degree-guides",
       "tags": ["Certifications", "IT", "CompTIA", "AWS"],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-17",
       "internalLinks": ["wgu-bsit-guide", "wgu-oa-exam-tips"],
       "estimatedReadTime": 10,
       "notes": "List all certs by program, study strategies, voucher info"
