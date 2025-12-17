@@ -3,7 +3,7 @@
     "version": "1.0",
     "lastUpdated": "2025-12-17",
     "totalTopics": 60,
-    "publishedCount": 6
+    "publishedCount": 8
   },
   "categories": [
     { "id": "degree-guides", "name": "Degree Guides", "description": "Comprehensive guides for WGU degree programs" },
@@ -56,7 +56,8 @@
       "category": "degree-guides",
       "tags": ["Nursing", "Healthcare", "BSN", "MSN"],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-17",
       "internalLinks": ["wgu-clinical-tips", "wgu-study-tips"],
       "estimatedReadTime": 11,
       "notes": "Cover clinical requirements, cohort model, state authorization"
@@ -180,7 +181,8 @@
       "category": "exam-prep",
       "tags": ["Capstone", "Final Project", "Graduation"],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-17",
       "internalLinks": ["wgu-performance-assessment-guide", "wgu-mba-complete-guide"],
       "estimatedReadTime": 12,
       "notes": "Topic selection, research methods, writing structure, committee expectations"
