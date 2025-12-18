@@ -3,7 +3,7 @@
     "version": "1.0",
     "lastUpdated": "2025-12-18",
     "totalTopics": 60,
-    "publishedCount": 20
+    "publishedCount": 22
   },
   "categories": [
     { "id": "degree-guides", "name": "Degree Guides", "description": "Comprehensive guides for WGU degree programs" },
@@ -168,7 +168,8 @@
       "category": "course-help",
       "tags": ["D080", "Business", "MBA Courses"],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-18",
       "internalLinks": ["wgu-mba-complete-guide", "wgu-oa-exam-tips"],
       "estimatedReadTime": 7,
       "notes": "Focus on international business concepts, cultural dimensions"
@@ -247,9 +248,10 @@
       "category": "comparisons",
       "tags": ["Comparison", "Online Education", "Traditional"],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-18",
       "internalLinks": ["wgu-jobs-after-graduation", "wgu-acceleration-guide"],
-      "estimatedReadTime": 10,
+      "estimatedReadTime": 11,
       "notes": "Address employer perceptions, accreditation, flexibility, outcomes"
     },
     {

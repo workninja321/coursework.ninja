@@ -258,7 +258,7 @@ For each task in the tasks array:
 Important rules:
 - Do NOT run any Bash commands
 - Do NOT delete any existing files
-- Do NOT modify index.html (the main landing page)
+- Do NOT modify index.html except the homepage #blog "Recent Blog Posts" cards (keep exactly 3, and update them when publishing new blog posts)
 - Keep the visual design consistent with the existing site
 
 When done, output a summary listing:

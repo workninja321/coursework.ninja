@@ -7,6 +7,9 @@ Academic support service landing page for WGU students. Single-page marketing si
 Generate new static pages (blog posts + landing pages) from automation/tasks.json.
 Keep design consistent with existing HTML/CSS/JS. Reuse existing components and styles from index.html.
 
+## Workflow Reference
+For the end-to-end publishing checklist (content → cover image → indexes → homepage → content plan → push), see: `automation/WORKFLOW.md`.
+
 ## Current Site Structure
 ```
 coursework-ninja/
@@ -55,7 +58,7 @@ Use these CSS custom properties from styles.css:
 
 ## Hard Rules
 1. Do NOT change overall branding/colors/typography unless explicitly required
-2. Do NOT delete existing pages or modify index.html structure
+2. Do NOT delete existing pages; keep `index.html` changes minimal (the routine allowed edit is updating the homepage `#blog` “Recent Blog Posts” cards to show ONLY the latest 3 posts)
 3. Keep URLs stable - use lowercase kebab-case slugs
 4. Every new page must include:
    - `<title>` with format: "Page Title | Coursework Ninja"
@@ -116,6 +119,7 @@ When creating new blog posts:
 2. Update `blog/index.html` (add post to listing)
 3. Update `sitemap.xml` (add new URL)
 4. Update relevant `tags/<tag>/index.html` if applicable
+5. Update homepage `index.html` `#blog` section (show ONLY the latest 3 posts)
 
 ## CTA Buttons
 Use WhatsApp/Telegram links consistently:
