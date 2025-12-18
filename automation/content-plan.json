@@ -1,9 +1,9 @@
 {
   "meta": {
     "version": "1.0",
-    "lastUpdated": "2025-12-17",
+    "lastUpdated": "2025-12-18",
     "totalTopics": 60,
-    "publishedCount": 10
+    "publishedCount": 20
   },
   "categories": [
     { "id": "degree-guides", "name": "Degree Guides", "description": "Comprehensive guides for WGU degree programs" },
@@ -152,7 +152,8 @@
       "category": "course-help",
       "tags": ["C779", "Web Development", "IT Courses"],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-18",
       "internalLinks": ["wgu-bsit-guide", "wgu-oa-exam-tips"],
       "estimatedReadTime": 8,
       "notes": "HTML, CSS, JavaScript fundamentals, certification prep"
@@ -198,7 +199,8 @@
       "category": "career",
       "tags": ["Career", "Jobs", "Salary", "Employment"],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-17",
       "internalLinks": ["wgu-mba-complete-guide", "wgu-bsit-guide"],
       "estimatedReadTime": 9,
       "notes": "Include salary data, employer reception, interview tips"
@@ -213,7 +215,8 @@
       "category": "study-tips",
       "tags": ["Transfer Credits", "Enrollment", "Getting Started"],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-17",
       "internalLinks": ["wgu-acceleration-guide", "wgu-certification-guide"],
       "estimatedReadTime": 8,
       "notes": "Cover Sophia, Study.com, Straighterline, certifications"
@@ -319,7 +322,8 @@
       "category": "degree-guides",
       "tags": ["Cybersecurity", "IT", "InfoSec"],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-18",
       "internalLinks": ["wgu-bsit-guide", "wgu-certification-guide"],
       "estimatedReadTime": 10,
       "notes": "Cover certs included, lab requirements, career outlook"
@@ -432,14 +436,15 @@
     {
       "id": "028",
       "type": "blog",
-      "slug": "wgu-mentor-relationship-tips",
+      "slug": "wgu-mentor-tips",
       "title": "How to Work With Your WGU Mentor: Tips for Success",
       "primaryKeyword": "WGU mentor",
       "secondaryKeywords": ["WGU program mentor", "mentor relationship WGU", "WGU mentor tips", "WGU mentor calls"],
       "category": "study-tips",
       "tags": ["Mentor", "Success Tips", "Communication"],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-01-15",
       "internalLinks": ["wgu-acceleration-guide", "wgu-study-tips-working-adults"],
       "estimatedReadTime": 6,
       "notes": "Communication strategies, setting expectations, asking for help"
@@ -454,7 +459,8 @@
       "category": "exam-prep",
       "tags": ["Proctoring", "OA", "Exams"],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-17",
       "internalLinks": ["wgu-oa-exam-tips", "wgu-study-tips-working-adults"],
       "estimatedReadTime": 7,
       "notes": "Technical requirements, environment setup, exam day process"
@@ -499,7 +505,8 @@
       "category": "study-tips",
       "tags": ["Financial Aid", "Scholarships", "Tuition"],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-01-15",
       "internalLinks": ["wgu-transfer-credits-guide", "wgu-acceleration-guide"],
       "estimatedReadTime": 9,
       "notes": "FAFSA, WGU scholarships, employer tuition reimbursement"
@@ -784,7 +791,8 @@
       "category": "study-tips",
       "tags": ["Acceleration", "One Term", "Fast Track"],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-18",
       "internalLinks": ["wgu-acceleration-guide", "wgu-transfer-credits-guide"],
       "estimatedReadTime": 12,
       "notes": "Real strategies, time commitments, course selection"
@@ -882,14 +890,15 @@
     {
       "id": "058",
       "type": "blog",
-      "slug": "wgu-study-resources-free",
+      "slug": "wgu-study-resources-guide",
       "title": "Best Free Study Resources for WGU Students in 2025",
       "primaryKeyword": "WGU study resources",
       "secondaryKeywords": ["free WGU resources", "WGU study materials", "WGU learning resources"],
       "category": "study-tips",
       "tags": ["Resources", "Free", "Study Materials"],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-17",
       "internalLinks": ["wgu-oa-exam-tips", "wgu-study-tips-working-adults"],
       "estimatedReadTime": 10,
       "notes": "Curated list of YouTube, Quizlet, Reddit, etc."
@@ -904,8 +913,9 @@
       "category": "study-tips",
       "tags": ["Course Planning", "Strategy", "Acceleration"],
       "priority": 2,
-      "status": "pending",
-      "internalLinks": ["wgu-acceleration-guide", "wgu-mentor-relationship-tips"],
+      "status": "published",
+      "publishedDate": "2025-12-17",
+      "internalLinks": ["wgu-acceleration-guide", "wgu-mentor-tips"],
       "estimatedReadTime": 9,
       "notes": "Strategic course sequencing for different goals"
     },
@@ -920,7 +930,7 @@
       "tags": ["Mental Health", "Burnout", "Balance"],
       "priority": 2,
       "status": "pending",
-      "internalLinks": ["wgu-study-tips-working-adults", "wgu-mentor-relationship-tips"],
+      "internalLinks": ["wgu-study-tips-working-adults", "wgu-mentor-tips"],
       "estimatedReadTime": 8,
       "notes": "Self-care, pacing, recognizing warning signs"
     }
