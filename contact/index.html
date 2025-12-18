@@ -268,6 +268,10 @@
         grid-template-columns: 1.2fr 0.8fr;
         align-items: start;
       }
+
+      .contact-mini-card--steps {
+        grid-column: 1 / -1;
+      }
     }
 
     .contact-details__title {
@@ -336,11 +340,6 @@
       font-weight: var(--font-semibold);
       font-size: var(--text-sm);
       margin-bottom: var(--space-4);
-    }
-
-    .contact-aside {
-      display: grid;
-      gap: var(--space-6);
     }
 
     .contact-mini-card {
@@ -576,12 +575,11 @@
               </ul>
             </div>
 
-            <aside class="contact-aside" aria-label="Quick start">
-              <div class="contact-mini-card">
-                <p class="contact-mini-card__label">Copy &amp; paste</p>
-                <h3 class="contact-mini-card__title">Message template</h3>
-                <p class="contact-mini-card__hint">Use this for WhatsApp, Telegram, or email to get a faster first reply.</p>
-                <pre class="contact-template" id="contact-template">Hi Coursework Ninja — I need help with:
+            <div class="contact-mini-card contact-mini-card--template">
+              <p class="contact-mini-card__label">Copy &amp; paste</p>
+              <h3 class="contact-mini-card__title">Message template</h3>
+              <p class="contact-mini-card__hint">Use this for WhatsApp, Telegram, or email to get a faster first reply.</p>
+              <pre class="contact-template" id="contact-template">Hi Coursework Ninja — I need help with:
 
 Program + course code:
 Assessment type (OA/PA/Project):
@@ -590,22 +588,21 @@ What I’ve tried:
 Where I’m stuck:
 
 </pre>
-                <div class="contact-mini-card__actions">
-                  <button class="btn btn--primary btn--full" type="button" data-copy-target="#contact-template">Copy template</button>
-                  <a class="btn btn--secondary btn--full" href="mailto:help@coursework.ninja?subject=Coursework%20Help%20Request%20%E2%80%94%20Coursework%20Ninja&amp;body=Hi%20Coursework%20Ninja%20%E2%80%94%20I%20need%20help%20with%3A%0A%0AProgram%20%2B%20course%20code%3A%0AAssessment%20type%20(OA%2FPA%2FProject)%3A%0ADeadline%20(timezone)%3A%0AWhat%20I%E2%80%99ve%20tried%3A%0AWhere%20I%E2%80%99m%20stuck%3A%0A">Email with template</a>
-                </div>
+              <div class="contact-mini-card__actions">
+                <button class="btn btn--primary btn--full" type="button" data-copy-target="#contact-template">Copy template</button>
+                <a class="btn btn--secondary btn--full" href="mailto:help@coursework.ninja?subject=Coursework%20Help%20Request%20%E2%80%94%20Coursework%20Ninja&amp;body=Hi%20Coursework%20Ninja%20%E2%80%94%20I%20need%20help%20with%3A%0A%0AProgram%20%2B%20course%20code%3A%0AAssessment%20type%20(OA%2FPA%2FProject)%3A%0ADeadline%20(timezone)%3A%0AWhat%20I%E2%80%99ve%20tried%3A%0AWhere%20I%E2%80%99m%20stuck%3A%0A">Email with template</a>
               </div>
+            </div>
 
-              <div class="contact-mini-card">
-                <p class="contact-mini-card__label">Next steps</p>
-                <h3 class="contact-mini-card__title">What happens after you reach out</h3>
-                <ol class="contact-steps">
-                  <li><span class="contact-step__num">1</span><span>We confirm your course + assessment and clarify requirements.</span></li>
-                  <li><span class="contact-step__num">2</span><span>We reply with a clear plan, timeline, and what we need from you.</span></li>
-                  <li><span class="contact-step__num">3</span><span>You approve, then we get to work and keep you updated.</span></li>
-                </ol>
-              </div>
-            </aside>
+            <div class="contact-mini-card contact-mini-card--steps">
+              <p class="contact-mini-card__label">Next steps</p>
+              <h3 class="contact-mini-card__title">What happens after you reach out</h3>
+              <ol class="contact-steps">
+                <li><span class="contact-step__num">1</span><span>We confirm your course + assessment and clarify requirements.</span></li>
+                <li><span class="contact-step__num">2</span><span>We reply with a clear plan, timeline, and what we need from you.</span></li>
+                <li><span class="contact-step__num">3</span><span>You approve, then we get to work and keep you updated.</span></li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
