@@ -21,6 +21,11 @@ For a blog item with slug `<slug>`:
 - Homepage “Recent Blog Posts” section: `index.html` (`#blog`) **must show ONLY 3 posts**
 - Content plan bookkeeping: `automation/content-plan.json` (mark published)
 
+## Site-Wide Pages
+
+- Contact hub page: `contact/index.html` (WhatsApp + Telegram + `help@coursework.ninja`)
+  - Must be linked in the header on every page (desktop + mobile nav)
+
 ## Required Page Elements (Blog)
 
 Each blog post must include:
@@ -40,7 +45,7 @@ Each blog post must include:
 - Internal links (minimum 3):
   - `/` (home)
   - `/blog/`
-  - `/#contact`
+  - `/contact/`
   - plus relevant related posts
 - Visible bullets/numbering:
   - Global CSS resets `ul { list-style: none; }`, but blog articles are overridden in `css/styles.css` (see the `.blog-article ul/ol` rules) so list markers are visible site-wide.
@@ -82,16 +87,19 @@ Professional corporate style, clean and modern. No additional text or elements.
 1. Pick the next `pending` blog item from `automation/content-plan.json`
 2. Create `blog/<slug>/index.html` using existing blog post structure + styles
 3. Generate `images/blog/<slug>-cover.webp` with OpenRouter (Nano Banana Pro)
-4. Update `blog/index.html` (add the new post card near the top)
-5. Update `sitemap.xml` (add the new URL with correct `lastmod`)
-6. Update `index.html` homepage blog section to show ONLY the latest 3 posts
-7. Update `automation/content-plan.json`:
+4. Run `node scripts/sync-site.mjs`:
+   - updates nav links (adds Contact everywhere)
+   - updates `blog/index.html` cards
+   - updates `index.html` homepage blog section (ONLY latest 3 posts)
+   - updates `sitemap.xml`
+5. Sanity-check the generated changes
+6. Update `automation/content-plan.json`:
    - set `status` → `published`
    - set `publishedDate` (YYYY-MM-DD)
    - bump `meta.publishedCount`
    - set `meta.lastUpdated`
-8. `git add -A`
-9. Commit with a clear message, then `git push origin main`
+7. `git add -A`
+8. Commit with a clear message, then `git push origin main`
 
 ## Safety Rules
 

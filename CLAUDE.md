@@ -73,7 +73,7 @@ Every new page should link to:
 1. Homepage (`/` or `index.html`)
 2. Blog index (`/blog/`)
 3. At least one relevant existing page or tag page
-4. Contact section (`/#contact`)
+4. Contact page (`/contact/`)
 
 Hub pages (blog index, tag pages) aggregate content - this prevents rewriting old posts.
 
@@ -116,10 +116,8 @@ New pages should follow this HTML structure:
 ## Files to Update When Adding Content
 When creating new blog posts:
 1. Create `blog/<slug>/index.html`
-2. Update `blog/index.html` (add post to listing)
-3. Update `sitemap.xml` (add new URL)
-4. Update relevant `tags/<tag>/index.html` if applicable
-5. Update homepage `index.html` `#blog` section (show ONLY the latest 3 posts)
+2. Run `npm run site:sync` (updates nav + blog index + homepage top-3 + sitemap)
+3. Update relevant `tags/<tag>/index.html` if applicable
 
 ## CTA Buttons
 Use WhatsApp/Telegram links consistently:

@@ -246,7 +246,7 @@ For each task in the tasks array:
 
 5. Add internal links:
    - Link to homepage
-   - Link to /#contact
+   - Link to /contact/
    - Link to any pages mentioned in internal_links field
    - If there are tags, mention them
 
@@ -297,6 +297,19 @@ if (claudeResult.status !== 0) {
 console.log("\n--- Claude Output ---");
 console.log(claudeResult.stdout);
 console.log("--- End Claude Output ---\n");
+
+// ============ Step 6.5: Sync Site Rollups ============
+// Keeps navigation + blog rollups consistent (homepage top-3, blog index, sitemap).
+log("Syncing site rollups (nav/blog index/homepage/sitemap)...");
+const syncResult = spawnSync("node", ["scripts/sync-site.mjs"], {
+  cwd: ROOT,
+  encoding: "utf8",
+});
+if (syncResult.status !== 0) {
+  console.error(syncResult.stdout || "");
+  console.error(syncResult.stderr || "");
+  log("Warning: sync-site failed. Continuing...");
+}
 
 // ============ Step 7: Verify & Commit ============
 

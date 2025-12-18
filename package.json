@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "seo:run": "node scripts/seo-machine.mjs",
-    "seo:dry-run": "SEO_DRY_RUN=true node scripts/seo-machine.mjs"
+    "seo:dry-run": "SEO_DRY_RUN=true node scripts/seo-machine.mjs",
+    "site:sync": "node scripts/sync-site.mjs",
+    "nav:sync": "node scripts/sync-nav.mjs"
   },
   "keywords": [
     "wgu",
