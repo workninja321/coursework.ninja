@@ -3,15 +3,39 @@
     "version": "1.0",
     "lastUpdated": "2025-12-18",
     "totalTopics": 60,
-    "publishedCount": 22
+    "publishedCount": 27
   },
   "categories": [
-    { "id": "degree-guides", "name": "Degree Guides", "description": "Comprehensive guides for WGU degree programs" },
-    { "id": "course-help", "name": "Course Help", "description": "Specific course strategies and tips" },
-    { "id": "study-tips", "name": "Study Tips", "description": "General study strategies for online learners" },
-    { "id": "comparisons", "name": "Comparisons", "description": "WGU vs other universities" },
-    { "id": "career", "name": "Career & Jobs", "description": "Career outcomes and job prospects" },
-    { "id": "exam-prep", "name": "Exam Preparation", "description": "OA and PA preparation strategies" }
+    {
+      "id": "degree-guides",
+      "name": "Degree Guides",
+      "description": "Comprehensive guides for WGU degree programs"
+    },
+    {
+      "id": "course-help",
+      "name": "Course Help",
+      "description": "Specific course strategies and tips"
+    },
+    {
+      "id": "study-tips",
+      "name": "Study Tips",
+      "description": "General study strategies for online learners"
+    },
+    {
+      "id": "comparisons",
+      "name": "Comparisons",
+      "description": "WGU vs other universities"
+    },
+    {
+      "id": "career",
+      "name": "Career & Jobs",
+      "description": "Career outcomes and job prospects"
+    },
+    {
+      "id": "exam-prep",
+      "name": "Exam Preparation",
+      "description": "OA and PA preparation strategies"
+    }
   ],
   "content": [
     {
@@ -20,13 +44,27 @@
       "slug": "wgu-mba-complete-guide",
       "title": "WGU MBA Program: Complete Guide to Fast-Track Your Business Degree",
       "primaryKeyword": "WGU MBA",
-      "secondaryKeywords": ["WGU MBA program", "WGU business degree", "online MBA WGU", "WGU MBA accelerated"],
+      "secondaryKeywords": [
+        "WGU MBA program",
+        "WGU business degree",
+        "online MBA WGU",
+        "WGU MBA accelerated"
+      ],
       "category": "degree-guides",
-      "tags": ["MBA", "Business", "Graduate"],
+      "tags": [
+        "MBA",
+        "Business",
+        "Graduate"
+      ],
       "priority": 1,
       "status": "published",
       "publishedDate": "2025-12-17",
-      "internalLinks": ["wgu-oa-exam-tips", "wgu-acceleration-guide", "wgu-performance-assessment-guide", "wgu-vs-snhu-comparison"],
+      "internalLinks": [
+        "wgu-oa-exam-tips",
+        "wgu-acceleration-guide",
+        "wgu-performance-assessment-guide",
+        "wgu-vs-snhu-comparison"
+      ],
       "estimatedReadTime": 12,
       "notes": "Cover program structure, courses, tips for acceleration, career outcomes"
     },
@@ -36,13 +74,28 @@
       "slug": "wgu-bsit-guide",
       "title": "WGU BSIT: How to Complete Your IT Degree in Record Time",
       "primaryKeyword": "WGU BSIT",
-      "secondaryKeywords": ["WGU IT degree", "WGU information technology", "BSIT WGU", "WGU tech degree"],
+      "secondaryKeywords": [
+        "WGU IT degree",
+        "WGU information technology",
+        "BSIT WGU",
+        "WGU tech degree"
+      ],
       "category": "degree-guides",
-      "tags": ["IT", "BSIT", "Technology", "Undergraduate"],
+      "tags": [
+        "IT",
+        "BSIT",
+        "Technology",
+        "Undergraduate"
+      ],
       "priority": 1,
       "status": "published",
       "publishedDate": "2025-12-17",
-      "internalLinks": ["wgu-oa-exam-tips", "wgu-acceleration-guide", "wgu-performance-assessment-guide", "wgu-mba-complete-guide"],
+      "internalLinks": [
+        "wgu-oa-exam-tips",
+        "wgu-acceleration-guide",
+        "wgu-performance-assessment-guide",
+        "wgu-mba-complete-guide"
+      ],
       "estimatedReadTime": 10,
       "notes": "Include certification info, course sequence, lab tips"
     },
@@ -52,13 +105,26 @@
       "slug": "wgu-nursing-program-guide",
       "title": "WGU Nursing Programs: RN to BSN and MSN Pathways Explained",
       "primaryKeyword": "WGU nursing",
-      "secondaryKeywords": ["WGU RN to BSN", "WGU MSN", "WGU nursing program", "online nursing degree WGU"],
+      "secondaryKeywords": [
+        "WGU RN to BSN",
+        "WGU MSN",
+        "WGU nursing program",
+        "online nursing degree WGU"
+      ],
       "category": "degree-guides",
-      "tags": ["Nursing", "Healthcare", "BSN", "MSN"],
+      "tags": [
+        "Nursing",
+        "Healthcare",
+        "BSN",
+        "MSN"
+      ],
       "priority": 1,
       "status": "published",
       "publishedDate": "2025-12-17",
-      "internalLinks": ["wgu-clinical-tips", "wgu-study-tips"],
+      "internalLinks": [
+        "wgu-clinical-tips",
+        "wgu-study-tips"
+      ],
       "estimatedReadTime": 11,
       "notes": "Cover clinical requirements, cohort model, state authorization"
     },
@@ -68,13 +134,26 @@
       "slug": "wgu-vs-snhu-comparison",
       "title": "WGU vs SNHU: Which Online University Is Right for You?",
       "primaryKeyword": "WGU vs SNHU",
-      "secondaryKeywords": ["WGU or SNHU", "SNHU vs WGU", "online degree comparison", "WGU SNHU which is better"],
+      "secondaryKeywords": [
+        "WGU or SNHU",
+        "SNHU vs WGU",
+        "online degree comparison",
+        "WGU SNHU which is better"
+      ],
       "category": "comparisons",
-      "tags": ["Comparison", "SNHU", "Online Education"],
+      "tags": [
+        "Comparison",
+        "SNHU",
+        "Online Education"
+      ],
       "priority": 2,
       "status": "published",
       "publishedDate": "2025-12-17",
-      "internalLinks": ["wgu-oa-exam-tips", "wgu-acceleration-guide", "wgu-performance-assessment-guide"],
+      "internalLinks": [
+        "wgu-oa-exam-tips",
+        "wgu-acceleration-guide",
+        "wgu-performance-assessment-guide"
+      ],
       "estimatedReadTime": 9,
       "notes": "Compare cost, format, accreditation, time to completion, career outcomes"
     },
@@ -84,13 +163,25 @@
       "slug": "wgu-oa-exam-tips",
       "title": "How to Pass WGU Objective Assessments: Proven OA Study Strategies",
       "primaryKeyword": "WGU OA tips",
-      "secondaryKeywords": ["WGU objective assessment", "pass WGU OA", "WGU exam tips", "WGU test strategies"],
+      "secondaryKeywords": [
+        "WGU objective assessment",
+        "pass WGU OA",
+        "WGU exam tips",
+        "WGU test strategies"
+      ],
       "category": "exam-prep",
-      "tags": ["OA", "Exams", "Study Tips"],
+      "tags": [
+        "OA",
+        "Exams",
+        "Study Tips"
+      ],
       "priority": 1,
       "status": "published",
       "publishedDate": "2025-12-16",
-      "internalLinks": ["wgu-study-tips", "wgu-time-management"],
+      "internalLinks": [
+        "wgu-study-tips",
+        "wgu-time-management"
+      ],
       "estimatedReadTime": 8,
       "notes": "Include pre-assessment strategy, study resources, test day tips"
     },
@@ -100,13 +191,25 @@
       "slug": "wgu-performance-assessment-guide",
       "title": "WGU Performance Assessments: Write Papers That Pass First Time",
       "primaryKeyword": "WGU PA tips",
-      "secondaryKeywords": ["WGU performance assessment", "WGU papers", "WGU writing tips", "pass WGU PA"],
+      "secondaryKeywords": [
+        "WGU performance assessment",
+        "WGU papers",
+        "WGU writing tips",
+        "pass WGU PA"
+      ],
       "category": "exam-prep",
-      "tags": ["PA", "Writing", "Assessments"],
+      "tags": [
+        "PA",
+        "Writing",
+        "Assessments"
+      ],
       "priority": 1,
       "status": "published",
       "publishedDate": "2025-12-17",
-      "internalLinks": ["wgu-oa-exam-tips", "wgu-study-tips"],
+      "internalLinks": [
+        "wgu-oa-exam-tips",
+        "wgu-study-tips"
+      ],
       "estimatedReadTime": 10,
       "notes": "Cover rubric reading, task analysis, revision strategies, evaluator expectations"
     },
@@ -116,13 +219,25 @@
       "slug": "wgu-study-tips-working-adults",
       "title": "WGU Study Tips for Working Adults: Balance Work, Life, and School",
       "primaryKeyword": "WGU study tips",
-      "secondaryKeywords": ["WGU time management", "study while working", "WGU balance", "adult learner tips WGU"],
+      "secondaryKeywords": [
+        "WGU time management",
+        "study while working",
+        "WGU balance",
+        "adult learner tips WGU"
+      ],
       "category": "study-tips",
-      "tags": ["Study Tips", "Time Management", "Work-Life Balance"],
+      "tags": [
+        "Study Tips",
+        "Time Management",
+        "Work-Life Balance"
+      ],
       "priority": 2,
       "status": "published",
       "publishedDate": "2025-12-17",
-      "internalLinks": ["wgu-oa-exam-tips", "wgu-acceleration-guide"],
+      "internalLinks": [
+        "wgu-oa-exam-tips",
+        "wgu-acceleration-guide"
+      ],
       "estimatedReadTime": 7,
       "notes": "Practical tips for busy professionals, scheduling strategies"
     },
@@ -132,13 +247,25 @@
       "slug": "wgu-acceleration-guide",
       "title": "How to Accelerate Through WGU: Complete Your Degree Faster",
       "primaryKeyword": "WGU acceleration",
-      "secondaryKeywords": ["accelerate WGU degree", "WGU fast track", "finish WGU quickly", "WGU speed"],
+      "secondaryKeywords": [
+        "accelerate WGU degree",
+        "WGU fast track",
+        "finish WGU quickly",
+        "WGU speed"
+      ],
       "category": "study-tips",
-      "tags": ["Acceleration", "Fast Track", "Strategy"],
+      "tags": [
+        "Acceleration",
+        "Fast Track",
+        "Strategy"
+      ],
       "priority": 1,
       "status": "published",
       "publishedDate": "2025-12-16",
-      "internalLinks": ["wgu-study-tips-working-adults", "wgu-oa-exam-tips"],
+      "internalLinks": [
+        "wgu-study-tips-working-adults",
+        "wgu-oa-exam-tips"
+      ],
       "estimatedReadTime": 11,
       "notes": "Cover CU loading, course sequencing, mentor communication, transfer credits"
     },
@@ -148,13 +275,25 @@
       "slug": "wgu-c779-web-development",
       "title": "WGU C779 Web Development Foundations: Complete Study Guide",
       "primaryKeyword": "WGU C779",
-      "secondaryKeywords": ["C779 study guide", "WGU web development", "C779 OA", "C779 tips"],
+      "secondaryKeywords": [
+        "C779 study guide",
+        "WGU web development",
+        "C779 OA",
+        "C779 tips"
+      ],
       "category": "course-help",
-      "tags": ["C779", "Web Development", "IT Courses"],
+      "tags": [
+        "C779",
+        "Web Development",
+        "IT Courses"
+      ],
       "priority": 2,
       "status": "published",
       "publishedDate": "2025-12-18",
-      "internalLinks": ["wgu-bsit-guide", "wgu-oa-exam-tips"],
+      "internalLinks": [
+        "wgu-bsit-guide",
+        "wgu-oa-exam-tips"
+      ],
       "estimatedReadTime": 8,
       "notes": "HTML, CSS, JavaScript fundamentals, certification prep"
     },
@@ -164,13 +303,25 @@
       "slug": "wgu-d080-global-business",
       "title": "WGU D080 Global Business: How to Pass This Challenging Course",
       "primaryKeyword": "WGU D080",
-      "secondaryKeywords": ["D080 study guide", "WGU global business", "D080 tips", "D080 OA"],
+      "secondaryKeywords": [
+        "D080 study guide",
+        "WGU global business",
+        "D080 tips",
+        "D080 OA"
+      ],
       "category": "course-help",
-      "tags": ["D080", "Business", "MBA Courses"],
+      "tags": [
+        "D080",
+        "Business",
+        "MBA Courses"
+      ],
       "priority": 2,
       "status": "published",
       "publishedDate": "2025-12-18",
-      "internalLinks": ["wgu-mba-complete-guide", "wgu-oa-exam-tips"],
+      "internalLinks": [
+        "wgu-mba-complete-guide",
+        "wgu-oa-exam-tips"
+      ],
       "estimatedReadTime": 7,
       "notes": "Focus on international business concepts, cultural dimensions"
     },
@@ -180,13 +331,25 @@
       "slug": "wgu-capstone-guide",
       "title": "WGU Capstone Project: Step-by-Step Guide to Completing Your Final Project",
       "primaryKeyword": "WGU capstone",
-      "secondaryKeywords": ["WGU capstone project", "WGU final project", "capstone tips WGU", "WGU capstone help"],
+      "secondaryKeywords": [
+        "WGU capstone project",
+        "WGU final project",
+        "capstone tips WGU",
+        "WGU capstone help"
+      ],
       "category": "exam-prep",
-      "tags": ["Capstone", "Final Project", "Graduation"],
+      "tags": [
+        "Capstone",
+        "Final Project",
+        "Graduation"
+      ],
       "priority": 1,
       "status": "published",
       "publishedDate": "2025-12-17",
-      "internalLinks": ["wgu-performance-assessment-guide", "wgu-mba-complete-guide"],
+      "internalLinks": [
+        "wgu-performance-assessment-guide",
+        "wgu-mba-complete-guide"
+      ],
       "estimatedReadTime": 12,
       "notes": "Topic selection, research methods, writing structure, committee expectations"
     },
@@ -196,13 +359,26 @@
       "slug": "wgu-jobs-after-graduation",
       "title": "Jobs After WGU: Career Opportunities and Salary Expectations",
       "primaryKeyword": "WGU jobs",
-      "secondaryKeywords": ["WGU career outcomes", "WGU salary", "jobs after WGU degree", "WGU employment"],
+      "secondaryKeywords": [
+        "WGU career outcomes",
+        "WGU salary",
+        "jobs after WGU degree",
+        "WGU employment"
+      ],
       "category": "career",
-      "tags": ["Career", "Jobs", "Salary", "Employment"],
+      "tags": [
+        "Career",
+        "Jobs",
+        "Salary",
+        "Employment"
+      ],
       "priority": 2,
       "status": "published",
       "publishedDate": "2025-12-17",
-      "internalLinks": ["wgu-mba-complete-guide", "wgu-bsit-guide"],
+      "internalLinks": [
+        "wgu-mba-complete-guide",
+        "wgu-bsit-guide"
+      ],
       "estimatedReadTime": 9,
       "notes": "Include salary data, employer reception, interview tips"
     },
@@ -212,13 +388,25 @@
       "slug": "wgu-transfer-credits-guide",
       "title": "WGU Transfer Credits: How to Maximize Credits and Save Time",
       "primaryKeyword": "WGU transfer credits",
-      "secondaryKeywords": ["transfer credits to WGU", "WGU credit transfer", "WGU prior learning", "WGU transcripts"],
+      "secondaryKeywords": [
+        "transfer credits to WGU",
+        "WGU credit transfer",
+        "WGU prior learning",
+        "WGU transcripts"
+      ],
       "category": "study-tips",
-      "tags": ["Transfer Credits", "Enrollment", "Getting Started"],
+      "tags": [
+        "Transfer Credits",
+        "Enrollment",
+        "Getting Started"
+      ],
       "priority": 2,
       "status": "published",
       "publishedDate": "2025-12-17",
-      "internalLinks": ["wgu-acceleration-guide", "wgu-certification-guide"],
+      "internalLinks": [
+        "wgu-acceleration-guide",
+        "wgu-certification-guide"
+      ],
       "estimatedReadTime": 8,
       "notes": "Cover Sophia, Study.com, Straighterline, certifications"
     },
@@ -228,13 +416,26 @@
       "slug": "wgu-certification-guide",
       "title": "WGU IT Certifications: Which Certs Are Included and How to Pass Them",
       "primaryKeyword": "WGU certifications",
-      "secondaryKeywords": ["WGU IT certs", "WGU CompTIA", "WGU AWS", "certifications included WGU"],
+      "secondaryKeywords": [
+        "WGU IT certs",
+        "WGU CompTIA",
+        "WGU AWS",
+        "certifications included WGU"
+      ],
       "category": "degree-guides",
-      "tags": ["Certifications", "IT", "CompTIA", "AWS"],
+      "tags": [
+        "Certifications",
+        "IT",
+        "CompTIA",
+        "AWS"
+      ],
       "priority": 1,
       "status": "published",
       "publishedDate": "2025-12-17",
-      "internalLinks": ["wgu-bsit-guide", "wgu-oa-exam-tips"],
+      "internalLinks": [
+        "wgu-bsit-guide",
+        "wgu-oa-exam-tips"
+      ],
       "estimatedReadTime": 10,
       "notes": "List all certs by program, study strategies, voucher info"
     },
@@ -244,13 +445,25 @@
       "slug": "wgu-vs-traditional-college",
       "title": "WGU vs Traditional College: Is an Online Competency-Based Degree Worth It?",
       "primaryKeyword": "WGU vs traditional college",
-      "secondaryKeywords": ["online vs traditional degree", "competency based education", "WGU worth it", "WGU legitimacy"],
+      "secondaryKeywords": [
+        "online vs traditional degree",
+        "competency based education",
+        "WGU worth it",
+        "WGU legitimacy"
+      ],
       "category": "comparisons",
-      "tags": ["Comparison", "Online Education", "Traditional"],
+      "tags": [
+        "Comparison",
+        "Online Education",
+        "Traditional"
+      ],
       "priority": 2,
       "status": "published",
       "publishedDate": "2025-12-18",
-      "internalLinks": ["wgu-jobs-after-graduation", "wgu-acceleration-guide"],
+      "internalLinks": [
+        "wgu-jobs-after-graduation",
+        "wgu-acceleration-guide"
+      ],
       "estimatedReadTime": 11,
       "notes": "Address employer perceptions, accreditation, flexibility, outcomes"
     },
@@ -260,12 +473,24 @@
       "slug": "wgu-mba-help",
       "title": "WGU MBA Help: Expert Assistance for Your Business Degree",
       "primaryKeyword": "WGU MBA help",
-      "secondaryKeywords": ["WGU MBA tutoring", "MBA coursework help", "WGU MBA assistance", "MBA degree support"],
+      "secondaryKeywords": [
+        "WGU MBA tutoring",
+        "MBA coursework help",
+        "WGU MBA assistance",
+        "MBA degree support"
+      ],
       "category": "degree-guides",
-      "tags": ["MBA", "Services", "Help"],
+      "tags": [
+        "MBA",
+        "Services",
+        "Help"
+      ],
       "priority": 1,
       "status": "pending",
-      "internalLinks": ["wgu-mba-complete-guide", "wgu-capstone-guide"],
+      "internalLinks": [
+        "wgu-mba-complete-guide",
+        "wgu-capstone-guide"
+      ],
       "estimatedReadTime": 5,
       "notes": "Service-focused landing page for MBA students"
     },
@@ -275,12 +500,24 @@
       "slug": "wgu-it-help",
       "title": "WGU IT Degree Help: Pass Your Tech Courses and Certifications",
       "primaryKeyword": "WGU IT help",
-      "secondaryKeywords": ["WGU BSIT help", "WGU IT tutoring", "WGU tech degree help", "IT coursework assistance"],
+      "secondaryKeywords": [
+        "WGU BSIT help",
+        "WGU IT tutoring",
+        "WGU tech degree help",
+        "IT coursework assistance"
+      ],
       "category": "degree-guides",
-      "tags": ["IT", "Services", "Help"],
+      "tags": [
+        "IT",
+        "Services",
+        "Help"
+      ],
       "priority": 1,
       "status": "pending",
-      "internalLinks": ["wgu-bsit-guide", "wgu-certification-guide"],
+      "internalLinks": [
+        "wgu-bsit-guide",
+        "wgu-certification-guide"
+      ],
       "estimatedReadTime": 5,
       "notes": "Service-focused landing page for IT students"
     },
@@ -290,12 +527,23 @@
       "slug": "wgu-nursing-help",
       "title": "WGU Nursing Help: Expert Support for RN to BSN and MSN Students",
       "primaryKeyword": "WGU nursing help",
-      "secondaryKeywords": ["WGU RN to BSN help", "nursing coursework help", "WGU MSN help", "nursing degree assistance"],
+      "secondaryKeywords": [
+        "WGU RN to BSN help",
+        "nursing coursework help",
+        "WGU MSN help",
+        "nursing degree assistance"
+      ],
       "category": "degree-guides",
-      "tags": ["Nursing", "Services", "Help"],
+      "tags": [
+        "Nursing",
+        "Services",
+        "Help"
+      ],
       "priority": 1,
       "status": "pending",
-      "internalLinks": ["wgu-nursing-program-guide"],
+      "internalLinks": [
+        "wgu-nursing-program-guide"
+      ],
       "estimatedReadTime": 5,
       "notes": "Service-focused landing page for nursing students"
     },
@@ -305,12 +553,24 @@
       "slug": "wgu-accounting-degree-guide",
       "title": "WGU Accounting Degree: Your Path to CPA and Beyond",
       "primaryKeyword": "WGU accounting",
-      "secondaryKeywords": ["WGU accounting degree", "WGU BSBA accounting", "online accounting degree", "WGU CPA"],
+      "secondaryKeywords": [
+        "WGU accounting degree",
+        "WGU BSBA accounting",
+        "online accounting degree",
+        "WGU CPA"
+      ],
       "category": "degree-guides",
-      "tags": ["Accounting", "Business", "CPA"],
+      "tags": [
+        "Accounting",
+        "Business",
+        "CPA"
+      ],
       "priority": 2,
       "status": "pending",
-      "internalLinks": ["wgu-mba-complete-guide", "wgu-jobs-after-graduation"],
+      "internalLinks": [
+        "wgu-mba-complete-guide",
+        "wgu-jobs-after-graduation"
+      ],
       "estimatedReadTime": 9,
       "notes": "Cover CPA eligibility, course sequence, career paths"
     },
@@ -320,13 +580,25 @@
       "slug": "wgu-cybersecurity-degree-guide",
       "title": "WGU Cybersecurity Degree: Launch Your InfoSec Career",
       "primaryKeyword": "WGU cybersecurity",
-      "secondaryKeywords": ["WGU cybersecurity degree", "WGU infosec", "online cybersecurity degree", "WGU security+"],
+      "secondaryKeywords": [
+        "WGU cybersecurity degree",
+        "WGU infosec",
+        "online cybersecurity degree",
+        "WGU security+"
+      ],
       "category": "degree-guides",
-      "tags": ["Cybersecurity", "IT", "InfoSec"],
+      "tags": [
+        "Cybersecurity",
+        "IT",
+        "InfoSec"
+      ],
       "priority": 1,
       "status": "published",
       "publishedDate": "2025-12-18",
-      "internalLinks": ["wgu-bsit-guide", "wgu-certification-guide"],
+      "internalLinks": [
+        "wgu-bsit-guide",
+        "wgu-certification-guide"
+      ],
       "estimatedReadTime": 10,
       "notes": "Cover certs included, lab requirements, career outlook"
     },
@@ -336,12 +608,24 @@
       "slug": "wgu-data-analytics-guide",
       "title": "WGU Data Analytics Degree: Skills and Career Opportunities",
       "primaryKeyword": "WGU data analytics",
-      "secondaryKeywords": ["WGU data science", "WGU analytics degree", "online data analytics", "WGU MSDA"],
+      "secondaryKeywords": [
+        "WGU data science",
+        "WGU analytics degree",
+        "online data analytics",
+        "WGU MSDA"
+      ],
       "category": "degree-guides",
-      "tags": ["Data Analytics", "IT", "Data Science"],
+      "tags": [
+        "Data Analytics",
+        "IT",
+        "Data Science"
+      ],
       "priority": 2,
       "status": "pending",
-      "internalLinks": ["wgu-bsit-guide", "wgu-jobs-after-graduation"],
+      "internalLinks": [
+        "wgu-bsit-guide",
+        "wgu-jobs-after-graduation"
+      ],
       "estimatedReadTime": 9,
       "notes": "Cover tools taught, projects, career paths"
     },
@@ -351,12 +635,24 @@
       "slug": "wgu-teaching-degree-guide",
       "title": "WGU Teaching Degrees: Become a Licensed Teacher Online",
       "primaryKeyword": "WGU teaching degree",
-      "secondaryKeywords": ["WGU education degree", "WGU teacher certification", "online teaching degree", "WGU MAT"],
+      "secondaryKeywords": [
+        "WGU education degree",
+        "WGU teacher certification",
+        "online teaching degree",
+        "WGU MAT"
+      ],
       "category": "degree-guides",
-      "tags": ["Education", "Teaching", "Licensure"],
+      "tags": [
+        "Education",
+        "Teaching",
+        "Licensure"
+      ],
       "priority": 2,
       "status": "pending",
-      "internalLinks": ["wgu-capstone-guide", "wgu-study-tips-working-adults"],
+      "internalLinks": [
+        "wgu-capstone-guide",
+        "wgu-study-tips-working-adults"
+      ],
       "estimatedReadTime": 10,
       "notes": "Cover state licensure, student teaching, demonstration teaching"
     },
@@ -366,12 +662,25 @@
       "slug": "wgu-c170-data-management",
       "title": "WGU C170 Data Management: SQL and Database Fundamentals Guide",
       "primaryKeyword": "WGU C170",
-      "secondaryKeywords": ["C170 study guide", "WGU SQL course", "C170 OA tips", "WGU database course"],
+      "secondaryKeywords": [
+        "C170 study guide",
+        "WGU SQL course",
+        "C170 OA tips",
+        "WGU database course"
+      ],
       "category": "course-help",
-      "tags": ["C170", "SQL", "Databases", "IT Courses"],
+      "tags": [
+        "C170",
+        "SQL",
+        "Databases",
+        "IT Courses"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-bsit-guide", "wgu-oa-exam-tips"],
+      "internalLinks": [
+        "wgu-bsit-guide",
+        "wgu-oa-exam-tips"
+      ],
       "estimatedReadTime": 8,
       "notes": "SQL syntax, ER diagrams, normalization concepts"
     },
@@ -381,12 +690,24 @@
       "slug": "wgu-c724-information-systems-management",
       "title": "WGU C724: Information Systems Management Study Guide",
       "primaryKeyword": "WGU C724",
-      "secondaryKeywords": ["C724 study guide", "WGU information systems", "C724 OA", "C724 tips"],
+      "secondaryKeywords": [
+        "C724 study guide",
+        "WGU information systems",
+        "C724 OA",
+        "C724 tips"
+      ],
       "category": "course-help",
-      "tags": ["C724", "IS Management", "MBA Courses"],
+      "tags": [
+        "C724",
+        "IS Management",
+        "MBA Courses"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-mba-complete-guide", "wgu-oa-exam-tips"],
+      "internalLinks": [
+        "wgu-mba-complete-guide",
+        "wgu-oa-exam-tips"
+      ],
       "estimatedReadTime": 7,
       "notes": "Cover IT governance, strategy alignment, project management"
     },
@@ -396,12 +717,24 @@
       "slug": "wgu-c768-technical-communication",
       "title": "WGU C768 Technical Communication: PA Tips and Writing Guide",
       "primaryKeyword": "WGU C768",
-      "secondaryKeywords": ["C768 tips", "WGU technical writing", "C768 PA guide", "C768 help"],
+      "secondaryKeywords": [
+        "C768 tips",
+        "WGU technical writing",
+        "C768 PA guide",
+        "C768 help"
+      ],
       "category": "course-help",
-      "tags": ["C768", "Writing", "Technical Communication"],
+      "tags": [
+        "C768",
+        "Writing",
+        "Technical Communication"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-performance-assessment-guide", "wgu-bsit-guide"],
+      "internalLinks": [
+        "wgu-performance-assessment-guide",
+        "wgu-bsit-guide"
+      ],
       "estimatedReadTime": 8,
       "notes": "Document structure, audience analysis, visuals and formatting"
     },
@@ -411,12 +744,24 @@
       "slug": "wgu-vs-gcu-comparison",
       "title": "WGU vs GCU: Comparing Two Popular Online Universities",
       "primaryKeyword": "WGU vs GCU",
-      "secondaryKeywords": ["Grand Canyon University vs WGU", "GCU or WGU", "WGU GCU comparison", "online degree comparison"],
+      "secondaryKeywords": [
+        "Grand Canyon University vs WGU",
+        "GCU or WGU",
+        "WGU GCU comparison",
+        "online degree comparison"
+      ],
       "category": "comparisons",
-      "tags": ["Comparison", "GCU", "Online Education"],
+      "tags": [
+        "Comparison",
+        "GCU",
+        "Online Education"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-vs-snhu-comparison", "wgu-vs-traditional-college"],
+      "internalLinks": [
+        "wgu-vs-snhu-comparison",
+        "wgu-vs-traditional-college"
+      ],
       "estimatedReadTime": 9,
       "notes": "Compare cost, format, religious affiliation, outcomes"
     },
@@ -426,12 +771,23 @@
       "slug": "wgu-vs-purdue-global",
       "title": "WGU vs Purdue Global: Which Online University Is Better?",
       "primaryKeyword": "WGU vs Purdue Global",
-      "secondaryKeywords": ["Purdue Global vs WGU", "WGU Purdue comparison", "online university comparison"],
+      "secondaryKeywords": [
+        "Purdue Global vs WGU",
+        "WGU Purdue comparison",
+        "online university comparison"
+      ],
       "category": "comparisons",
-      "tags": ["Comparison", "Purdue Global", "Online Education"],
+      "tags": [
+        "Comparison",
+        "Purdue Global",
+        "Online Education"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-vs-snhu-comparison", "wgu-vs-gcu-comparison"],
+      "internalLinks": [
+        "wgu-vs-snhu-comparison",
+        "wgu-vs-gcu-comparison"
+      ],
       "estimatedReadTime": 9,
       "notes": "Compare format, pacing, accreditation, cost"
     },
@@ -441,13 +797,25 @@
       "slug": "wgu-mentor-tips",
       "title": "How to Work With Your WGU Mentor: Tips for Success",
       "primaryKeyword": "WGU mentor",
-      "secondaryKeywords": ["WGU program mentor", "mentor relationship WGU", "WGU mentor tips", "WGU mentor calls"],
+      "secondaryKeywords": [
+        "WGU program mentor",
+        "mentor relationship WGU",
+        "WGU mentor tips",
+        "WGU mentor calls"
+      ],
       "category": "study-tips",
-      "tags": ["Mentor", "Success Tips", "Communication"],
+      "tags": [
+        "Mentor",
+        "Success Tips",
+        "Communication"
+      ],
       "priority": 2,
       "status": "published",
       "publishedDate": "2025-01-15",
-      "internalLinks": ["wgu-acceleration-guide", "wgu-study-tips-working-adults"],
+      "internalLinks": [
+        "wgu-acceleration-guide",
+        "wgu-study-tips-working-adults"
+      ],
       "estimatedReadTime": 6,
       "notes": "Communication strategies, setting expectations, asking for help"
     },
@@ -457,13 +825,25 @@
       "slug": "wgu-proctored-exam-guide",
       "title": "WGU Proctored Exams: What to Expect and How to Prepare",
       "primaryKeyword": "WGU proctored exam",
-      "secondaryKeywords": ["WGU exam proctoring", "WGU OA proctored", "ExamSoft WGU", "proctoring tips WGU"],
+      "secondaryKeywords": [
+        "WGU exam proctoring",
+        "WGU OA proctored",
+        "ExamSoft WGU",
+        "proctoring tips WGU"
+      ],
       "category": "exam-prep",
-      "tags": ["Proctoring", "OA", "Exams"],
+      "tags": [
+        "Proctoring",
+        "OA",
+        "Exams"
+      ],
       "priority": 2,
       "status": "published",
       "publishedDate": "2025-12-17",
-      "internalLinks": ["wgu-oa-exam-tips", "wgu-study-tips-working-adults"],
+      "internalLinks": [
+        "wgu-oa-exam-tips",
+        "wgu-study-tips-working-adults"
+      ],
       "estimatedReadTime": 7,
       "notes": "Technical requirements, environment setup, exam day process"
     },
@@ -473,14 +853,27 @@
       "slug": "sophia-learning-wgu-transfer",
       "title": "Sophia Learning for WGU: Which Courses Transfer and How to Use It",
       "primaryKeyword": "Sophia Learning WGU",
-      "secondaryKeywords": ["Sophia courses WGU", "Sophia transfer credits", "WGU Sophia", "Sophia for WGU students"],
+      "secondaryKeywords": [
+        "Sophia courses WGU",
+        "Sophia transfer credits",
+        "WGU Sophia",
+        "Sophia for WGU students"
+      ],
       "category": "study-tips",
-      "tags": ["Sophia", "Transfer Credits", "Cost Savings"],
+      "tags": [
+        "Sophia",
+        "Transfer Credits",
+        "Cost Savings"
+      ],
       "priority": 2,
-      "status": "pending",
-      "internalLinks": ["wgu-transfer-credits-guide", "wgu-acceleration-guide"],
+      "status": "published",
+      "internalLinks": [
+        "wgu-transfer-credits-guide",
+        "wgu-acceleration-guide"
+      ],
       "estimatedReadTime": 8,
-      "notes": "Course mapping, strategies, timing before enrollment"
+      "notes": "Course mapping, strategies, timing before enrollment",
+      "publishedDate": "2025-12-18"
     },
     {
       "id": "031",
@@ -488,14 +881,26 @@
       "slug": "study-com-wgu-transfer",
       "title": "Study.com for WGU: Maximize Transfer Credits and Save Money",
       "primaryKeyword": "Study.com WGU",
-      "secondaryKeywords": ["Study.com transfer credits", "WGU Study.com courses", "Study.com for WGU"],
+      "secondaryKeywords": [
+        "Study.com transfer credits",
+        "WGU Study.com courses",
+        "Study.com for WGU"
+      ],
       "category": "study-tips",
-      "tags": ["Study.com", "Transfer Credits", "Cost Savings"],
+      "tags": [
+        "Study.com",
+        "Transfer Credits",
+        "Cost Savings"
+      ],
       "priority": 2,
-      "status": "pending",
-      "internalLinks": ["wgu-transfer-credits-guide", "sophia-learning-wgu-transfer"],
+      "status": "published",
+      "internalLinks": [
+        "wgu-transfer-credits-guide",
+        "sophia-learning-wgu-transfer"
+      ],
       "estimatedReadTime": 8,
-      "notes": "Course mapping, subscription tips, proctored exams"
+      "notes": "Course mapping, subscription tips, proctored exams",
+      "publishedDate": "2025-12-18"
     },
     {
       "id": "032",
@@ -503,13 +908,25 @@
       "slug": "wgu-financial-aid-guide",
       "title": "WGU Financial Aid: Scholarships, Grants, and Payment Options",
       "primaryKeyword": "WGU financial aid",
-      "secondaryKeywords": ["WGU scholarships", "WGU grants", "WGU tuition", "pay for WGU"],
+      "secondaryKeywords": [
+        "WGU scholarships",
+        "WGU grants",
+        "WGU tuition",
+        "pay for WGU"
+      ],
       "category": "study-tips",
-      "tags": ["Financial Aid", "Scholarships", "Tuition"],
+      "tags": [
+        "Financial Aid",
+        "Scholarships",
+        "Tuition"
+      ],
       "priority": 2,
       "status": "published",
       "publishedDate": "2025-01-15",
-      "internalLinks": ["wgu-transfer-credits-guide", "wgu-acceleration-guide"],
+      "internalLinks": [
+        "wgu-transfer-credits-guide",
+        "wgu-acceleration-guide"
+      ],
       "estimatedReadTime": 9,
       "notes": "FAFSA, WGU scholarships, employer tuition reimbursement"
     },
@@ -519,12 +936,23 @@
       "slug": "wgu-capstone-help",
       "title": "WGU Capstone Help: Expert Assistance for Your Final Project",
       "primaryKeyword": "WGU capstone help",
-      "secondaryKeywords": ["WGU capstone assistance", "capstone project help", "WGU final project help"],
+      "secondaryKeywords": [
+        "WGU capstone assistance",
+        "capstone project help",
+        "WGU final project help"
+      ],
       "category": "exam-prep",
-      "tags": ["Capstone", "Services", "Help"],
+      "tags": [
+        "Capstone",
+        "Services",
+        "Help"
+      ],
       "priority": 1,
       "status": "pending",
-      "internalLinks": ["wgu-capstone-guide", "wgu-performance-assessment-guide"],
+      "internalLinks": [
+        "wgu-capstone-guide",
+        "wgu-performance-assessment-guide"
+      ],
       "estimatedReadTime": 5,
       "notes": "Service-focused landing page for capstone students"
     },
@@ -534,12 +962,25 @@
       "slug": "wgu-exam-help",
       "title": "WGU Exam Help: Pass Your OAs With Expert Support",
       "primaryKeyword": "WGU exam help",
-      "secondaryKeywords": ["WGU OA help", "WGU test help", "WGU assessment help", "pass WGU exams"],
+      "secondaryKeywords": [
+        "WGU OA help",
+        "WGU test help",
+        "WGU assessment help",
+        "pass WGU exams"
+      ],
       "category": "exam-prep",
-      "tags": ["Exams", "OA", "Services", "Help"],
+      "tags": [
+        "Exams",
+        "OA",
+        "Services",
+        "Help"
+      ],
       "priority": 1,
       "status": "pending",
-      "internalLinks": ["wgu-oa-exam-tips", "wgu-proctored-exam-guide"],
+      "internalLinks": [
+        "wgu-oa-exam-tips",
+        "wgu-proctored-exam-guide"
+      ],
       "estimatedReadTime": 5,
       "notes": "Service-focused landing page for OA assistance"
     },
@@ -549,12 +990,23 @@
       "slug": "wgu-healthcare-management-guide",
       "title": "WGU Healthcare Management Degree: Career Paths and Program Guide",
       "primaryKeyword": "WGU healthcare management",
-      "secondaryKeywords": ["WGU health administration", "WGU MHA", "healthcare management degree online"],
+      "secondaryKeywords": [
+        "WGU health administration",
+        "WGU MHA",
+        "healthcare management degree online"
+      ],
       "category": "degree-guides",
-      "tags": ["Healthcare", "Management", "MHA"],
+      "tags": [
+        "Healthcare",
+        "Management",
+        "MHA"
+      ],
       "priority": 2,
       "status": "pending",
-      "internalLinks": ["wgu-nursing-program-guide", "wgu-mba-complete-guide"],
+      "internalLinks": [
+        "wgu-nursing-program-guide",
+        "wgu-mba-complete-guide"
+      ],
       "estimatedReadTime": 9,
       "notes": "Cover career paths, program structure, industry outlook"
     },
@@ -564,12 +1016,24 @@
       "slug": "wgu-human-resources-guide",
       "title": "WGU Human Resources Degree: Your Path to HR Leadership",
       "primaryKeyword": "WGU human resources",
-      "secondaryKeywords": ["WGU HR degree", "WGU SHRM", "human resources degree online", "WGU HR management"],
+      "secondaryKeywords": [
+        "WGU HR degree",
+        "WGU SHRM",
+        "human resources degree online",
+        "WGU HR management"
+      ],
       "category": "degree-guides",
-      "tags": ["HR", "Human Resources", "Business"],
+      "tags": [
+        "HR",
+        "Human Resources",
+        "Business"
+      ],
       "priority": 2,
       "status": "pending",
-      "internalLinks": ["wgu-mba-complete-guide", "wgu-jobs-after-graduation"],
+      "internalLinks": [
+        "wgu-mba-complete-guide",
+        "wgu-jobs-after-graduation"
+      ],
       "estimatedReadTime": 9,
       "notes": "Cover SHRM certification, career paths, course highlights"
     },
@@ -579,12 +1043,24 @@
       "slug": "wgu-project-management-guide",
       "title": "WGU Project Management: Degree, Certifications, and Career Guide",
       "primaryKeyword": "WGU project management",
-      "secondaryKeywords": ["WGU PMP", "WGU MSPM", "project management degree online", "WGU PM certification"],
+      "secondaryKeywords": [
+        "WGU PMP",
+        "WGU MSPM",
+        "project management degree online",
+        "WGU PM certification"
+      ],
       "category": "degree-guides",
-      "tags": ["Project Management", "PMP", "Business"],
+      "tags": [
+        "Project Management",
+        "PMP",
+        "Business"
+      ],
       "priority": 2,
       "status": "pending",
-      "internalLinks": ["wgu-mba-complete-guide", "wgu-certification-guide"],
+      "internalLinks": [
+        "wgu-mba-complete-guide",
+        "wgu-certification-guide"
+      ],
       "estimatedReadTime": 9,
       "notes": "Cover PMP prep, MSPM program, career outlook"
     },
@@ -594,12 +1070,24 @@
       "slug": "wgu-cloud-computing-guide",
       "title": "WGU Cloud Computing Degree: AWS, Azure, and Career Opportunities",
       "primaryKeyword": "WGU cloud computing",
-      "secondaryKeywords": ["WGU AWS certification", "WGU cloud degree", "cloud computing degree online"],
+      "secondaryKeywords": [
+        "WGU AWS certification",
+        "WGU cloud degree",
+        "cloud computing degree online"
+      ],
       "category": "degree-guides",
-      "tags": ["Cloud Computing", "AWS", "Azure", "IT"],
+      "tags": [
+        "Cloud Computing",
+        "AWS",
+        "Azure",
+        "IT"
+      ],
       "priority": 2,
       "status": "pending",
-      "internalLinks": ["wgu-bsit-guide", "wgu-certification-guide"],
+      "internalLinks": [
+        "wgu-bsit-guide",
+        "wgu-certification-guide"
+      ],
       "estimatedReadTime": 10,
       "notes": "Cover cloud certs included, hands-on labs, career outlook"
     },
@@ -609,12 +1097,23 @@
       "slug": "wgu-software-engineering-guide",
       "title": "WGU Software Engineering Degree: Become a Developer",
       "primaryKeyword": "WGU software engineering",
-      "secondaryKeywords": ["WGU software development", "WGU computer science", "software engineering degree online"],
+      "secondaryKeywords": [
+        "WGU software development",
+        "WGU computer science",
+        "software engineering degree online"
+      ],
       "category": "degree-guides",
-      "tags": ["Software Engineering", "Programming", "IT"],
+      "tags": [
+        "Software Engineering",
+        "Programming",
+        "IT"
+      ],
       "priority": 2,
       "status": "pending",
-      "internalLinks": ["wgu-bsit-guide", "wgu-jobs-after-graduation"],
+      "internalLinks": [
+        "wgu-bsit-guide",
+        "wgu-jobs-after-graduation"
+      ],
       "estimatedReadTime": 10,
       "notes": "Cover languages taught, capstone project, job outcomes"
     },
@@ -624,12 +1123,23 @@
       "slug": "wgu-network-operations-guide",
       "title": "WGU Network Operations Degree: CCNA and Network Engineering Path",
       "primaryKeyword": "WGU network operations",
-      "secondaryKeywords": ["WGU CCNA", "WGU networking degree", "network engineering degree online"],
+      "secondaryKeywords": [
+        "WGU CCNA",
+        "WGU networking degree",
+        "network engineering degree online"
+      ],
       "category": "degree-guides",
-      "tags": ["Networking", "CCNA", "IT"],
+      "tags": [
+        "Networking",
+        "CCNA",
+        "IT"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-bsit-guide", "wgu-certification-guide"],
+      "internalLinks": [
+        "wgu-bsit-guide",
+        "wgu-certification-guide"
+      ],
       "estimatedReadTime": 9,
       "notes": "Cover Cisco certs, network labs, career paths"
     },
@@ -639,12 +1149,23 @@
       "slug": "wgu-marketing-degree-guide",
       "title": "WGU Marketing Degree: Digital Marketing Skills and Career Paths",
       "primaryKeyword": "WGU marketing degree",
-      "secondaryKeywords": ["WGU digital marketing", "WGU BSBM marketing", "online marketing degree"],
+      "secondaryKeywords": [
+        "WGU digital marketing",
+        "WGU BSBM marketing",
+        "online marketing degree"
+      ],
       "category": "degree-guides",
-      "tags": ["Marketing", "Business", "Digital Marketing"],
+      "tags": [
+        "Marketing",
+        "Business",
+        "Digital Marketing"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-mba-complete-guide", "wgu-jobs-after-graduation"],
+      "internalLinks": [
+        "wgu-mba-complete-guide",
+        "wgu-jobs-after-graduation"
+      ],
       "estimatedReadTime": 8,
       "notes": "Cover digital marketing skills, career outcomes"
     },
@@ -654,12 +1175,23 @@
       "slug": "wgu-supply-chain-management",
       "title": "WGU Supply Chain Management: Degree and Career Opportunities",
       "primaryKeyword": "WGU supply chain",
-      "secondaryKeywords": ["WGU operations management", "supply chain degree online", "WGU logistics"],
+      "secondaryKeywords": [
+        "WGU operations management",
+        "supply chain degree online",
+        "WGU logistics"
+      ],
       "category": "degree-guides",
-      "tags": ["Supply Chain", "Operations", "Business"],
+      "tags": [
+        "Supply Chain",
+        "Operations",
+        "Business"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-mba-complete-guide", "wgu-jobs-after-graduation"],
+      "internalLinks": [
+        "wgu-mba-complete-guide",
+        "wgu-jobs-after-graduation"
+      ],
       "estimatedReadTime": 8,
       "notes": "Cover industry demand, skills taught, career paths"
     },
@@ -669,12 +1201,23 @@
       "slug": "wgu-c484-organizational-behavior",
       "title": "WGU C484 Organizational Behavior: Study Guide and OA Tips",
       "primaryKeyword": "WGU C484",
-      "secondaryKeywords": ["C484 study guide", "WGU organizational behavior", "C484 OA tips"],
+      "secondaryKeywords": [
+        "C484 study guide",
+        "WGU organizational behavior",
+        "C484 OA tips"
+      ],
       "category": "course-help",
-      "tags": ["C484", "OB", "Business Courses"],
+      "tags": [
+        "C484",
+        "OB",
+        "Business Courses"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-mba-complete-guide", "wgu-oa-exam-tips"],
+      "internalLinks": [
+        "wgu-mba-complete-guide",
+        "wgu-oa-exam-tips"
+      ],
       "estimatedReadTime": 7,
       "notes": "Cover motivation theories, leadership styles, team dynamics"
     },
@@ -684,12 +1227,23 @@
       "slug": "wgu-c483-principles-management",
       "title": "WGU C483 Principles of Management: Complete Study Guide",
       "primaryKeyword": "WGU C483",
-      "secondaryKeywords": ["C483 study guide", "WGU management course", "C483 OA tips"],
+      "secondaryKeywords": [
+        "C483 study guide",
+        "WGU management course",
+        "C483 OA tips"
+      ],
       "category": "course-help",
-      "tags": ["C483", "Management", "Business Courses"],
+      "tags": [
+        "C483",
+        "Management",
+        "Business Courses"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-mba-complete-guide", "wgu-oa-exam-tips"],
+      "internalLinks": [
+        "wgu-mba-complete-guide",
+        "wgu-oa-exam-tips"
+      ],
       "estimatedReadTime": 7,
       "notes": "Cover planning, organizing, leading, controlling"
     },
@@ -699,12 +1253,23 @@
       "slug": "wgu-c214-financial-management",
       "title": "WGU C214 Financial Management: OA Prep and Study Tips",
       "primaryKeyword": "WGU C214",
-      "secondaryKeywords": ["C214 study guide", "WGU finance course", "C214 OA tips"],
+      "secondaryKeywords": [
+        "C214 study guide",
+        "WGU finance course",
+        "C214 OA tips"
+      ],
       "category": "course-help",
-      "tags": ["C214", "Finance", "MBA Courses"],
+      "tags": [
+        "C214",
+        "Finance",
+        "MBA Courses"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-mba-complete-guide", "wgu-oa-exam-tips"],
+      "internalLinks": [
+        "wgu-mba-complete-guide",
+        "wgu-oa-exam-tips"
+      ],
       "estimatedReadTime": 8,
       "notes": "Cover TVM, ratio analysis, capital budgeting"
     },
@@ -714,12 +1279,23 @@
       "slug": "wgu-c715-organizational-leadership",
       "title": "WGU C715 Organizational Leadership: Graduate Course Guide",
       "primaryKeyword": "WGU C715",
-      "secondaryKeywords": ["C715 study guide", "WGU leadership course", "C715 tips"],
+      "secondaryKeywords": [
+        "C715 study guide",
+        "WGU leadership course",
+        "C715 tips"
+      ],
       "category": "course-help",
-      "tags": ["C715", "Leadership", "MBA Courses"],
+      "tags": [
+        "C715",
+        "Leadership",
+        "MBA Courses"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-mba-complete-guide", "wgu-oa-exam-tips"],
+      "internalLinks": [
+        "wgu-mba-complete-guide",
+        "wgu-oa-exam-tips"
+      ],
       "estimatedReadTime": 7,
       "notes": "Cover leadership theories, change management, ethics"
     },
@@ -729,12 +1305,25 @@
       "slug": "wgu-c493-scripting-programming",
       "title": "WGU C493 Scripting and Programming: Python Course Guide",
       "primaryKeyword": "WGU C493",
-      "secondaryKeywords": ["C493 study guide", "WGU Python course", "C493 tips", "WGU scripting"],
+      "secondaryKeywords": [
+        "C493 study guide",
+        "WGU Python course",
+        "C493 tips",
+        "WGU scripting"
+      ],
       "category": "course-help",
-      "tags": ["C493", "Python", "Programming", "IT Courses"],
+      "tags": [
+        "C493",
+        "Python",
+        "Programming",
+        "IT Courses"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-bsit-guide", "wgu-software-engineering-guide"],
+      "internalLinks": [
+        "wgu-bsit-guide",
+        "wgu-software-engineering-guide"
+      ],
       "estimatedReadTime": 8,
       "notes": "Cover Python basics, data structures, algorithms"
     },
@@ -744,12 +1333,25 @@
       "slug": "wgu-d191-advanced-data-management",
       "title": "WGU D191 Advanced Data Management: PostgreSQL Guide",
       "primaryKeyword": "WGU D191",
-      "secondaryKeywords": ["D191 study guide", "WGU PostgreSQL", "D191 PA tips", "advanced SQL WGU"],
+      "secondaryKeywords": [
+        "D191 study guide",
+        "WGU PostgreSQL",
+        "D191 PA tips",
+        "advanced SQL WGU"
+      ],
       "category": "course-help",
-      "tags": ["D191", "PostgreSQL", "SQL", "IT Courses"],
+      "tags": [
+        "D191",
+        "PostgreSQL",
+        "SQL",
+        "IT Courses"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-c170-data-management", "wgu-bsit-guide"],
+      "internalLinks": [
+        "wgu-c170-data-management",
+        "wgu-bsit-guide"
+      ],
       "estimatedReadTime": 9,
       "notes": "Cover stored procedures, triggers, ETL concepts"
     },
@@ -759,12 +1361,24 @@
       "slug": "wgu-c846-business-of-it",
       "title": "WGU C846 Business of IT: Project+ Certification Guide",
       "primaryKeyword": "WGU C846",
-      "secondaryKeywords": ["C846 study guide", "WGU Project+", "CompTIA Project+ WGU"],
+      "secondaryKeywords": [
+        "C846 study guide",
+        "WGU Project+",
+        "CompTIA Project+ WGU"
+      ],
       "category": "course-help",
-      "tags": ["C846", "Project+", "Certifications", "IT Courses"],
+      "tags": [
+        "C846",
+        "Project+",
+        "Certifications",
+        "IT Courses"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-certification-guide", "wgu-bsit-guide"],
+      "internalLinks": [
+        "wgu-certification-guide",
+        "wgu-bsit-guide"
+      ],
       "estimatedReadTime": 8,
       "notes": "Cover Project+ objectives, study strategies, exam day"
     },
@@ -774,12 +1388,24 @@
       "slug": "wgu-d278-scripting-programming",
       "title": "WGU D278 Scripting and Programming Applications: Java Guide",
       "primaryKeyword": "WGU D278",
-      "secondaryKeywords": ["D278 study guide", "WGU Java course", "D278 PA tips"],
+      "secondaryKeywords": [
+        "D278 study guide",
+        "WGU Java course",
+        "D278 PA tips"
+      ],
       "category": "course-help",
-      "tags": ["D278", "Java", "Programming", "IT Courses"],
+      "tags": [
+        "D278",
+        "Java",
+        "Programming",
+        "IT Courses"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-software-engineering-guide", "wgu-bsit-guide"],
+      "internalLinks": [
+        "wgu-software-engineering-guide",
+        "wgu-bsit-guide"
+      ],
       "estimatedReadTime": 9,
       "notes": "Cover OOP concepts, Java syntax, project requirements"
     },
@@ -789,13 +1415,24 @@
       "slug": "wgu-one-term-graduation-guide",
       "title": "How to Graduate WGU in One Term: The Ultimate Acceleration Guide",
       "primaryKeyword": "WGU one term",
-      "secondaryKeywords": ["graduate WGU in one term", "WGU single term graduation", "WGU fastest graduation"],
+      "secondaryKeywords": [
+        "graduate WGU in one term",
+        "WGU single term graduation",
+        "WGU fastest graduation"
+      ],
       "category": "study-tips",
-      "tags": ["Acceleration", "One Term", "Fast Track"],
+      "tags": [
+        "Acceleration",
+        "One Term",
+        "Fast Track"
+      ],
       "priority": 1,
       "status": "published",
       "publishedDate": "2025-12-18",
-      "internalLinks": ["wgu-acceleration-guide", "wgu-transfer-credits-guide"],
+      "internalLinks": [
+        "wgu-acceleration-guide",
+        "wgu-transfer-credits-guide"
+      ],
       "estimatedReadTime": 12,
       "notes": "Real strategies, time commitments, course selection"
     },
@@ -805,12 +1442,24 @@
       "slug": "wgu-student-success-stories",
       "title": "WGU Success Stories: How Real Students Completed Their Degrees",
       "primaryKeyword": "WGU success stories",
-      "secondaryKeywords": ["WGU graduate stories", "WGU reviews", "WGU testimonials", "WGU worth it"],
+      "secondaryKeywords": [
+        "WGU graduate stories",
+        "WGU reviews",
+        "WGU testimonials",
+        "WGU worth it"
+      ],
       "category": "career",
-      "tags": ["Success Stories", "Testimonials", "Motivation"],
+      "tags": [
+        "Success Stories",
+        "Testimonials",
+        "Motivation"
+      ],
       "priority": 2,
       "status": "pending",
-      "internalLinks": ["wgu-jobs-after-graduation", "wgu-acceleration-guide"],
+      "internalLinks": [
+        "wgu-jobs-after-graduation",
+        "wgu-acceleration-guide"
+      ],
       "estimatedReadTime": 8,
       "notes": "Compile anonymized success patterns, timelines, tips"
     },
@@ -820,14 +1469,27 @@
       "slug": "wgu-employer-perception",
       "title": "Do Employers Respect WGU Degrees? What Hiring Managers Really Think",
       "primaryKeyword": "WGU employer perception",
-      "secondaryKeywords": ["is WGU respected", "WGU degree value", "WGU hiring", "employers accept WGU"],
+      "secondaryKeywords": [
+        "is WGU respected",
+        "WGU degree value",
+        "WGU hiring",
+        "employers accept WGU"
+      ],
       "category": "career",
-      "tags": ["Career", "Employment", "Employer Perception"],
+      "tags": [
+        "Career",
+        "Employment",
+        "Employer Perception"
+      ],
       "priority": 2,
-      "status": "pending",
-      "internalLinks": ["wgu-jobs-after-graduation", "wgu-vs-traditional-college"],
+      "status": "published",
+      "internalLinks": [
+        "wgu-jobs-after-graduation",
+        "wgu-vs-traditional-college"
+      ],
       "estimatedReadTime": 9,
-      "notes": "Research-based article on employer attitudes"
+      "notes": "Research-based article on employer attitudes",
+      "publishedDate": "2025-12-18"
     },
     {
       "id": "054",
@@ -835,12 +1497,22 @@
       "slug": "wgu-accounting-help",
       "title": "WGU Accounting Help: Expert Support for Your Accounting Degree",
       "primaryKeyword": "WGU accounting help",
-      "secondaryKeywords": ["WGU accounting tutoring", "accounting coursework help", "WGU CPA help"],
+      "secondaryKeywords": [
+        "WGU accounting tutoring",
+        "accounting coursework help",
+        "WGU CPA help"
+      ],
       "category": "degree-guides",
-      "tags": ["Accounting", "Services", "Help"],
+      "tags": [
+        "Accounting",
+        "Services",
+        "Help"
+      ],
       "priority": 2,
       "status": "pending",
-      "internalLinks": ["wgu-accounting-degree-guide"],
+      "internalLinks": [
+        "wgu-accounting-degree-guide"
+      ],
       "estimatedReadTime": 5,
       "notes": "Service-focused landing page for accounting students"
     },
@@ -850,12 +1522,23 @@
       "slug": "wgu-cybersecurity-help",
       "title": "WGU Cybersecurity Help: Pass Your InfoSec Courses and Certs",
       "primaryKeyword": "WGU cybersecurity help",
-      "secondaryKeywords": ["WGU security help", "cybersecurity coursework help", "WGU infosec tutoring"],
+      "secondaryKeywords": [
+        "WGU security help",
+        "cybersecurity coursework help",
+        "WGU infosec tutoring"
+      ],
       "category": "degree-guides",
-      "tags": ["Cybersecurity", "Services", "Help"],
+      "tags": [
+        "Cybersecurity",
+        "Services",
+        "Help"
+      ],
       "priority": 2,
       "status": "pending",
-      "internalLinks": ["wgu-cybersecurity-degree-guide", "wgu-certification-guide"],
+      "internalLinks": [
+        "wgu-cybersecurity-degree-guide",
+        "wgu-certification-guide"
+      ],
       "estimatedReadTime": 5,
       "notes": "Service-focused landing page for cybersecurity students"
     },
@@ -865,14 +1548,26 @@
       "slug": "wgu-night-owl-study-schedule",
       "title": "WGU Night Owl Study Schedule: How to Study After Work",
       "primaryKeyword": "WGU study schedule",
-      "secondaryKeywords": ["WGU night study", "study after work", "WGU evening routine"],
+      "secondaryKeywords": [
+        "WGU night study",
+        "study after work",
+        "WGU evening routine"
+      ],
       "category": "study-tips",
-      "tags": ["Study Schedule", "Time Management", "Night Owl"],
+      "tags": [
+        "Study Schedule",
+        "Time Management",
+        "Night Owl"
+      ],
       "priority": 3,
-      "status": "pending",
-      "internalLinks": ["wgu-study-tips-working-adults", "wgu-acceleration-guide"],
+      "status": "published",
+      "internalLinks": [
+        "wgu-study-tips-working-adults",
+        "wgu-acceleration-guide"
+      ],
       "estimatedReadTime": 7,
-      "notes": "Evening and night study strategies for working adults"
+      "notes": "Evening and night study strategies for working adults",
+      "publishedDate": "2025-12-18"
     },
     {
       "id": "057",
@@ -880,12 +1575,23 @@
       "slug": "wgu-weekend-warrior-guide",
       "title": "WGU Weekend Warrior: Complete a Course Every Weekend",
       "primaryKeyword": "WGU weekend study",
-      "secondaryKeywords": ["WGU weekend course", "study weekends only", "WGU weekend warrior"],
+      "secondaryKeywords": [
+        "WGU weekend course",
+        "study weekends only",
+        "WGU weekend warrior"
+      ],
       "category": "study-tips",
-      "tags": ["Study Schedule", "Weekend", "Acceleration"],
+      "tags": [
+        "Study Schedule",
+        "Weekend",
+        "Acceleration"
+      ],
       "priority": 3,
       "status": "pending",
-      "internalLinks": ["wgu-acceleration-guide", "wgu-one-term-graduation-guide"],
+      "internalLinks": [
+        "wgu-acceleration-guide",
+        "wgu-one-term-graduation-guide"
+      ],
       "estimatedReadTime": 8,
       "notes": "Weekend-intensive study strategies"
     },
@@ -895,13 +1601,24 @@
       "slug": "wgu-study-resources-guide",
       "title": "Best Free Study Resources for WGU Students in 2025",
       "primaryKeyword": "WGU study resources",
-      "secondaryKeywords": ["free WGU resources", "WGU study materials", "WGU learning resources"],
+      "secondaryKeywords": [
+        "free WGU resources",
+        "WGU study materials",
+        "WGU learning resources"
+      ],
       "category": "study-tips",
-      "tags": ["Resources", "Free", "Study Materials"],
+      "tags": [
+        "Resources",
+        "Free",
+        "Study Materials"
+      ],
       "priority": 2,
       "status": "published",
       "publishedDate": "2025-12-17",
-      "internalLinks": ["wgu-oa-exam-tips", "wgu-study-tips-working-adults"],
+      "internalLinks": [
+        "wgu-oa-exam-tips",
+        "wgu-study-tips-working-adults"
+      ],
       "estimatedReadTime": 10,
       "notes": "Curated list of YouTube, Quizlet, Reddit, etc."
     },
@@ -911,13 +1628,24 @@
       "slug": "wgu-course-order-strategy",
       "title": "WGU Course Order Strategy: Which Classes to Take First",
       "primaryKeyword": "WGU course order",
-      "secondaryKeywords": ["WGU course sequence", "which WGU courses first", "WGU class order"],
+      "secondaryKeywords": [
+        "WGU course sequence",
+        "which WGU courses first",
+        "WGU class order"
+      ],
       "category": "study-tips",
-      "tags": ["Course Planning", "Strategy", "Acceleration"],
+      "tags": [
+        "Course Planning",
+        "Strategy",
+        "Acceleration"
+      ],
       "priority": 2,
       "status": "published",
       "publishedDate": "2025-12-17",
-      "internalLinks": ["wgu-acceleration-guide", "wgu-mentor-tips"],
+      "internalLinks": [
+        "wgu-acceleration-guide",
+        "wgu-mentor-tips"
+      ],
       "estimatedReadTime": 9,
       "notes": "Strategic course sequencing for different goals"
     },
@@ -927,14 +1655,27 @@
       "slug": "wgu-burnout-prevention",
       "title": "Avoiding WGU Burnout: Sustainable Strategies for Long-Term Success",
       "primaryKeyword": "WGU burnout",
-      "secondaryKeywords": ["WGU stress", "avoid burnout WGU", "WGU mental health", "sustainable WGU pace"],
+      "secondaryKeywords": [
+        "WGU stress",
+        "avoid burnout WGU",
+        "WGU mental health",
+        "sustainable WGU pace"
+      ],
       "category": "study-tips",
-      "tags": ["Mental Health", "Burnout", "Balance"],
+      "tags": [
+        "Mental Health",
+        "Burnout",
+        "Balance"
+      ],
       "priority": 2,
-      "status": "pending",
-      "internalLinks": ["wgu-study-tips-working-adults", "wgu-mentor-tips"],
+      "status": "published",
+      "internalLinks": [
+        "wgu-study-tips-working-adults",
+        "wgu-mentor-tips"
+      ],
       "estimatedReadTime": 8,
-      "notes": "Self-care, pacing, recognizing warning signs"
+      "notes": "Self-care, pacing, recognizing warning signs",
+      "publishedDate": "2025-12-18"
     }
   ]
 }

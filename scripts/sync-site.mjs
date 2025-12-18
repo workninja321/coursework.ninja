@@ -119,6 +119,11 @@ function discoverBlogPosts() {
     const absPath = path.join(ROOT, relPath);
     if (!fs.existsSync(absPath)) continue;
 
+    const stat = fs.statSync(absPath);
+    // Git timestamps are unavailable for untracked files, so fall back to filesystem timestamps.
+    const fsMtime = Math.floor(stat.mtimeMs / 1000);
+    const fsBirthtime = Math.floor((stat.birthtimeMs || stat.mtimeMs) / 1000);
+
     const html = fs.readFileSync(absPath, "utf8");
     const title =
       extractFirst(html, /<h1[^>]*class="blog-header__title"[^>]*>([\s\S]*?)<\/h1>/m) ||
@@ -158,8 +163,8 @@ function discoverBlogPosts() {
       modifiedDate,
       readTime: readTime ? Number(readTime) : null,
       imageAlt,
-      gitTimestamp: getGitTimestamp(relPath),
-      createdTimestamp: getGitCreatedTimestamp(relPath),
+      gitTimestamp: getGitTimestamp(relPath) || fsMtime,
+      createdTimestamp: getGitCreatedTimestamp(relPath) || fsBirthtime,
     });
   }
 
