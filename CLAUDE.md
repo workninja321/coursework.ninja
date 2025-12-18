@@ -132,3 +132,41 @@ Use WhatsApp/Telegram links consistently:
 - Focus on student success and outcomes
 - Emphasize: human experts, no AI, privacy, guarantees
 - Target audience: busy working adults pursuing WGU degrees
+
+## Blog Cover Image Generation
+
+### API Configuration
+- **Endpoint**: `https://openrouter.ai/api/v1/chat/completions`
+- **Model**: `google/gemini-3-pro-image-preview` (nano banana)
+- **API Key**: Use OpenRouter API key
+
+### Request Format
+```json
+{
+  "model": "google/gemini-3-pro-image-preview",
+  "messages": [{"role": "user", "content": "PROMPT"}],
+  "modalities": ["image", "text"],
+  "image_config": {"aspect_ratio": "16:9"}
+}
+```
+
+### Required Image Style
+All blog cover images MUST follow this exact format:
+1. **Background**: Relevant stock photo related to the topic
+2. **Overlay**: Blue (#0B1630) to gold (#F4A826) duotone gradient overlay
+3. **Text**: White bold text with the title prominently centered
+4. **Aspect Ratio**: 16:9 banner format (1200x630 or similar)
+5. **Quality**: Professional, premium corporate aesthetic
+
+### Prompt Template
+```
+Generate a 16:9 banner image for a blog post about [TOPIC].
+Background: [relevant photo description - graduates, desk with laptop, calendar, etc.]
+Apply a duotone overlay transitioning from navy blue (#0B1630) on the left to gold (#F4A826) on the right.
+Add white bold text "[TITLE]" prominently centered.
+Professional corporate style, clean and modern.
+```
+
+### Output
+- Save to: `images/blog/[slug]-cover.webp`
+- Convert PNG to WebP: `cwebp -q 85 input.png -o output.webp`
