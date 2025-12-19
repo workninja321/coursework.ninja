@@ -518,6 +518,66 @@
     }
   }
 
+  // ========== BLOG CATEGORY FILTER ==========
+  function initBlogCategoryFilter() {
+    const categoryBar = document.querySelector('.blog-index-categories');
+    if (!categoryBar) return;
+
+    const buttons = categoryBar.querySelectorAll('.blog-index-category');
+    const cards = document.querySelectorAll('.blog-card');
+
+    if (!buttons.length || !cards.length) return;
+
+    function normalize(value) {
+      return (value || '').trim().toLowerCase();
+    }
+
+    function setActive(activeButton) {
+      buttons.forEach(function(button) {
+        const isActive = button === activeButton;
+        button.classList.toggle('blog-index-category--active', isActive);
+        button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+    }
+
+    function filter(category) {
+      const normalized = normalize(category);
+      const showAll = normalized === '' || normalized === 'all posts' || normalized === 'all';
+      let visible = 0;
+
+      cards.forEach(function(card) {
+        const label = card.querySelector('.blog-card__category');
+        const labelText = normalize(label ? label.textContent : '');
+        const matches = showAll || (labelText && labelText === normalized);
+
+        card.style.display = matches ? '' : 'none';
+        if (matches) {
+          visible += 1;
+        }
+      });
+
+      const emptyState = document.querySelector('.blog-empty');
+      if (emptyState) {
+        emptyState.hidden = visible > 0;
+      }
+    }
+
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        const category = button.getAttribute('data-category') || button.textContent;
+        setActive(button);
+        filter(category);
+      });
+    });
+
+    const initial = categoryBar.querySelector('.blog-index-category--active') || buttons[0];
+    if (initial) {
+      const initialCategory = initial.getAttribute('data-category') || initial.textContent;
+      setActive(initial);
+      filter(initialCategory);
+    }
+  }
+
   // ========== FAQ ACCORDION ==========
   function initFaqAccordion() {
     const faqQuestions = document.querySelectorAll('.faq__question');
@@ -665,6 +725,7 @@
     initRippleEffect();
     initHeroAnimation();
     initLazyLoad();
+    initBlogCategoryFilter();
     initFaqAccordion();
     initCounterAnimation();
 

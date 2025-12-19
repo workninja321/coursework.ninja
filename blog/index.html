@@ -80,21 +80,47 @@
     }
 
     .blog-index-category {
+      appearance: none;
       background: var(--color-offwhite);
       color: var(--color-slate);
       font-size: var(--text-sm);
       font-weight: var(--font-medium);
+      font-family: inherit;
+      line-height: 1;
       padding: var(--space-2) var(--space-4);
       border-radius: var(--radius-full);
       text-decoration: none;
       border: 2px solid transparent;
       opacity: 0.6;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .blog-index-category:hover,
+    .blog-index-category:focus-visible {
+      opacity: 0.9;
+      border-color: rgba(244, 168, 38, 0.5);
+    }
+
+    .blog-index-category:focus-visible {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(244, 168, 38, 0.35);
     }
 
     .blog-index-category--active {
       background: var(--color-gold);
       color: var(--color-navy);
+      border-color: var(--color-gold);
       opacity: 1;
+    }
+
+    .blog-index-category--active:hover,
+    .blog-index-category--active:focus-visible {
+      opacity: 1;
+      border-color: var(--color-gold);
     }
 
     .blog-posts-grid {
@@ -294,15 +320,15 @@
     <!-- ========== BLOG CONTENT ========== -->
     <section class="blog-index-content">
       <div class="container">
-        <!-- Category Tags (display only - category pages coming soon) -->
+        <!-- Category Filters -->
         <div class="blog-index-categories" aria-label="Blog categories">
-          <span class="blog-index-category blog-index-category--active">All Posts</span>
-          <span class="blog-index-category">Degree Guides</span>
-          <span class="blog-index-category">Course Help</span>
-          <span class="blog-index-category">Study Tips</span>
-          <span class="blog-index-category">Exam Prep</span>
-          <span class="blog-index-category">Comparisons</span>
-          <span class="blog-index-category">Career</span>
+          <button class="blog-index-category blog-index-category--active" type="button" data-category="All Posts" aria-pressed="true">All Posts</button>
+          <button class="blog-index-category" type="button" data-category="Degree Guides" aria-pressed="false">Degree Guides</button>
+          <button class="blog-index-category" type="button" data-category="Course Help" aria-pressed="false">Course Help</button>
+          <button class="blog-index-category" type="button" data-category="Study Tips" aria-pressed="false">Study Tips</button>
+          <button class="blog-index-category" type="button" data-category="Exam Preparation" aria-pressed="false">Exam Preparation</button>
+          <button class="blog-index-category" type="button" data-category="Comparisons" aria-pressed="false">Comparisons</button>
+          <button class="blog-index-category" type="button" data-category="Career" aria-pressed="false">Career</button>
         </div>
 
         <!-- Blog Posts Grid -->
