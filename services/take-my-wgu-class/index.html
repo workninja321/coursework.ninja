@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Take My WGU Class For Me | Pay Someone to Complete Your WGU Courses | Coursework Ninja</title>
   <meta name="description" content="Struggling with WGU classes? Our expert tutors can take your WGU class for you. 100% human work, guaranteed grades, complete privacy. Get a free quote in 2 minutes.">
-  <link rel="canonical" href="https://courseworkninja.com/services/take-my-wgu-class/">
+  <link rel="canonical" href="https://coursework.ninja/services/take-my-wgu-class/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://courseworkninja.com/services/take-my-wgu-class/">
+  <meta property="og:url" content="https://coursework.ninja/services/take-my-wgu-class/">
   <meta property="og:title" content="Take My WGU Class For Me | Expert WGU Course Help">
   <meta property="og:description" content="Struggling with WGU classes? Our expert tutors can take your WGU class for you. 100% human work, guaranteed grades, complete privacy.">
-  <meta property="og:image" content="https://courseworkninja.com/images/og-image.jpg">
+  <meta property="og:image" content="https://coursework.ninja/images/og-image.webp">
+  <meta property="og:site_name" content="Coursework Ninja">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -37,7 +38,7 @@
     "provider": {
       "@type": "Organization",
       "name": "Coursework Ninja",
-      "url": "https://courseworkninja.com"
+      "url": "https://coursework.ninja"
     },
     "areaServed": "Worldwide",
     "serviceType": "Academic Tutoring",
@@ -57,24 +58,9 @@
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://courseworkninja.com/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Services",
-        "item": "https://courseworkninja.com/services/"
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": "Take My WGU Class",
-        "item": "https://courseworkninja.com/services/take-my-wgu-class/"
-      }
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://coursework.ninja/"},
+      {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://coursework.ninja/services/"},
+      {"@type": "ListItem", "position": 3, "name": "Take My WGU Class", "item": "https://coursework.ninja/services/take-my-wgu-class/"}
     ]
   }
   </script>
@@ -185,14 +171,12 @@
   </script>
 
   <style>
-    /* Service Page Specific Styles */
     .service-hero {
+      padding: calc(var(--space-16) + 80px) 0 var(--space-16);
       background: linear-gradient(135deg, var(--color-navy) 0%, #1a2744 100%);
-      padding: var(--space-20) 0;
       position: relative;
       overflow: hidden;
     }
-
     .service-hero::before {
       content: '';
       position: absolute;
@@ -203,15 +187,19 @@
       background: radial-gradient(ellipse at top right, rgba(244, 168, 38, 0.1) 0%, transparent 70%);
       pointer-events: none;
     }
-
-    .service-hero__container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 var(--space-6);
-      position: relative;
-      z-index: 1;
+    .service-hero__breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.6);
+      margin-bottom: var(--space-6);
     }
-
+    .service-hero__breadcrumb a {
+      color: var(--color-gold);
+      text-decoration: none;
+    }
+    .service-hero__breadcrumb a:hover { text-decoration: underline; }
     .service-hero__badge {
       display: inline-flex;
       align-items: center;
@@ -220,11 +208,10 @@
       color: var(--color-gold);
       padding: var(--space-2) var(--space-4);
       border-radius: var(--radius-full);
-      font-size: 0.875rem;
+      font-size: var(--text-sm);
       font-weight: var(--font-semibold);
       margin-bottom: var(--space-6);
     }
-
     .service-hero__title {
       font-size: clamp(2rem, 5vw, 3.5rem);
       font-weight: var(--font-bold);
@@ -233,191 +220,102 @@
       margin-bottom: var(--space-6);
       max-width: 800px;
     }
-
-    .service-hero__title span {
-      color: var(--color-gold);
-    }
-
+    .service-hero__title span { color: var(--color-gold); }
     .service-hero__subtitle {
-      font-size: 1.25rem;
-      color: rgba(255, 255, 255, 0.8);
+      font-size: var(--text-lg);
+      color: rgba(255, 255, 255, 0.85);
       max-width: 600px;
       margin-bottom: var(--space-8);
-      line-height: 1.6;
+      line-height: 1.7;
     }
-
     .service-hero__cta {
       display: flex;
       flex-wrap: wrap;
       gap: var(--space-4);
       margin-bottom: var(--space-10);
     }
-
     .service-hero__trust {
       display: flex;
       flex-wrap: wrap;
       gap: var(--space-6);
     }
-
     .service-hero__trust-item {
       display: flex;
       align-items: center;
       gap: var(--space-2);
       color: rgba(255, 255, 255, 0.9);
-      font-size: 0.9rem;
+      font-size: var(--text-sm);
     }
-
     .service-hero__trust-item svg {
       width: 20px;
       height: 20px;
       color: var(--color-gold);
     }
-
-    /* Stats Strip */
     .stats-strip {
       background: var(--color-white);
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
       padding: var(--space-8) 0;
     }
-
-    .stats-strip__container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 var(--space-6);
+    .stats-strip__grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: var(--space-6);
     }
-
     @media (max-width: 768px) {
-      .stats-strip__container {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .stats-strip__grid { grid-template-columns: repeat(2, 1fr); }
     }
-
-    .stats-strip__item {
-      text-align: center;
-    }
-
+    .stats-strip__item { text-align: center; }
     .stats-strip__number {
-      font-size: 2rem;
+      font-size: var(--text-2xl);
       font-weight: var(--font-bold);
       color: var(--color-navy);
       display: block;
     }
-
     .stats-strip__label {
       color: var(--color-slate);
-      font-size: 0.9rem;
+      font-size: var(--text-sm);
     }
-
-    /* Breadcrumb */
-    .breadcrumb {
-      background: var(--color-offwhite);
-      padding: var(--space-4) 0;
-    }
-
-    .breadcrumb__container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 var(--space-6);
-    }
-
-    .breadcrumb__list {
-      display: flex;
-      align-items: center;
-      gap: var(--space-2);
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      font-size: 0.875rem;
-    }
-
-    .breadcrumb__item {
-      display: flex;
-      align-items: center;
-      gap: var(--space-2);
-    }
-
-    .breadcrumb__item:not(:last-child)::after {
-      content: '/';
-      color: var(--color-slate);
-    }
-
-    .breadcrumb__link {
-      color: var(--color-teal);
-      text-decoration: none;
-    }
-
-    .breadcrumb__link:hover {
-      text-decoration: underline;
-    }
-
-    .breadcrumb__current {
-      color: var(--color-slate);
-    }
-
-    /* Benefits Section */
-    .benefits {
-      padding: var(--space-20) 0;
+    .benefits-section {
+      padding: var(--space-16) 0;
       background: var(--color-white);
     }
-
-    .benefits__container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 var(--space-6);
-    }
-
-    .benefits__header {
+    .section-header {
       text-align: center;
       margin-bottom: var(--space-12);
     }
-
-    .benefits__title {
-      font-size: 2rem;
+    .section-title {
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
       font-weight: var(--font-bold);
       color: var(--color-navy);
-      margin-bottom: var(--space-4);
+      margin-bottom: var(--space-3);
     }
-
-    .benefits__subtitle {
+    .section-subtitle {
+      font-size: var(--text-base);
       color: var(--color-slate);
-      font-size: 1.1rem;
       max-width: 600px;
       margin: 0 auto;
     }
-
-    .benefits__grid {
+    .benefits-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: var(--space-8);
     }
-
     @media (max-width: 900px) {
-      .benefits__grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .benefits-grid { grid-template-columns: repeat(2, 1fr); }
     }
-
     @media (max-width: 600px) {
-      .benefits__grid {
-        grid-template-columns: 1fr;
-      }
+      .benefits-grid { grid-template-columns: 1fr; }
     }
-
     .benefit-card {
       background: var(--color-offwhite);
       padding: var(--space-8);
       border-radius: var(--radius-xl);
       transition: transform 0.2s, box-shadow 0.2s;
     }
-
     .benefit-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 40px rgba(11, 22, 48, 0.1);
     }
-
     .benefit-card__icon {
       width: 56px;
       height: 56px;
@@ -428,67 +326,34 @@
       justify-content: center;
       margin-bottom: var(--space-5);
     }
-
     .benefit-card__icon svg {
       width: 28px;
       height: 28px;
       color: var(--color-navy);
     }
-
     .benefit-card__title {
-      font-size: 1.25rem;
+      font-size: var(--text-xl);
       font-weight: var(--font-semibold);
       color: var(--color-navy);
       margin-bottom: var(--space-3);
     }
-
     .benefit-card__text {
       color: var(--color-slate);
       line-height: 1.6;
     }
-
-    /* How It Works */
     .how-it-works {
-      padding: var(--space-20) 0;
+      padding: var(--space-16) 0;
       background: var(--color-offwhite);
     }
-
-    .how-it-works__container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 var(--space-6);
-    }
-
-    .how-it-works__header {
-      text-align: center;
-      margin-bottom: var(--space-12);
-    }
-
-    .how-it-works__title {
-      font-size: 2rem;
-      font-weight: var(--font-bold);
-      color: var(--color-navy);
-      margin-bottom: var(--space-4);
-    }
-
     .how-it-works__steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: var(--space-8);
-      position: relative;
     }
-
     @media (max-width: 768px) {
-      .how-it-works__steps {
-        grid-template-columns: 1fr;
-      }
+      .how-it-works__steps { grid-template-columns: 1fr; }
     }
-
-    .how-it-works__step {
-      text-align: center;
-      position: relative;
-    }
-
+    .how-it-works__step { text-align: center; }
     .how-it-works__step-number {
       width: 64px;
       height: 64px;
@@ -498,76 +363,60 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.5rem;
+      font-size: var(--text-xl);
       font-weight: var(--font-bold);
       margin: 0 auto var(--space-5);
     }
-
     .how-it-works__step-title {
-      font-size: 1.25rem;
+      font-size: var(--text-xl);
       font-weight: var(--font-semibold);
       color: var(--color-navy);
       margin-bottom: var(--space-3);
     }
-
     .how-it-works__step-text {
       color: var(--color-slate);
       line-height: 1.6;
     }
-
-    /* Main Content */
     .service-content {
-      padding: var(--space-20) 0;
+      padding: var(--space-16) 0;
       background: var(--color-white);
     }
-
-    .service-content__container {
-      max-width: 900px;
+    .service-content__inner {
+      max-width: 800px;
       margin: 0 auto;
-      padding: 0 var(--space-6);
     }
-
     .service-content h2 {
-      font-size: 1.75rem;
+      font-size: clamp(1.5rem, 3vw, 1.75rem);
       font-weight: var(--font-bold);
       color: var(--color-navy);
       margin: var(--space-12) 0 var(--space-6);
     }
-
-    .service-content h2:first-child {
-      margin-top: 0;
-    }
-
+    .service-content h2:first-child { margin-top: 0; }
     .service-content h3 {
-      font-size: 1.35rem;
+      font-size: var(--text-xl);
       font-weight: var(--font-semibold);
       color: var(--color-navy);
       margin: var(--space-8) 0 var(--space-4);
     }
-
     .service-content p {
       color: var(--color-slate);
       line-height: 1.8;
       margin-bottom: var(--space-5);
-      font-size: 1.05rem;
+      font-size: var(--text-base);
     }
-
     .service-content ul, .service-content ol {
       color: var(--color-slate);
       line-height: 1.8;
       margin-bottom: var(--space-5);
       padding-left: var(--space-6);
     }
-
-    .service-content li {
-      margin-bottom: var(--space-2);
+    .service-content li { margin-bottom: var(--space-2); }
+    .service-content strong { color: var(--color-navy); }
+    .service-content a {
+      color: var(--color-teal);
+      text-decoration: none;
     }
-
-    .service-content strong {
-      color: var(--color-navy);
-    }
-
-    /* In-Content CTA */
+    .service-content a:hover { text-decoration: underline; }
     .content-cta {
       background: linear-gradient(135deg, var(--color-navy) 0%, #1a2744 100%);
       padding: var(--space-10);
@@ -575,64 +424,43 @@
       margin: var(--space-10) 0;
       text-align: center;
     }
-
     .content-cta__title {
-      font-size: 1.5rem;
+      font-size: var(--text-xl);
       font-weight: var(--font-bold);
       color: var(--color-white);
       margin-bottom: var(--space-3);
     }
-
     .content-cta__text {
       color: rgba(255, 255, 255, 0.8);
       margin-bottom: var(--space-6);
     }
-
     .content-cta__buttons {
       display: flex;
       justify-content: center;
       gap: var(--space-4);
       flex-wrap: wrap;
     }
-
-    /* FAQ Section */
     .faq-section {
-      padding: var(--space-20) 0;
+      padding: var(--space-16) 0;
       background: var(--color-offwhite);
     }
-
-    .faq-section__container {
-      max-width: 900px;
+    .faq-section__inner {
+      max-width: 800px;
       margin: 0 auto;
-      padding: 0 var(--space-6);
     }
-
-    .faq-section__header {
-      text-align: center;
-      margin-bottom: var(--space-12);
-    }
-
-    .faq-section__title {
-      font-size: 2rem;
-      font-weight: var(--font-bold);
-      color: var(--color-navy);
-      margin-bottom: var(--space-4);
-    }
-
     .faq-item {
       background: var(--color-white);
       border-radius: var(--radius-lg);
       margin-bottom: var(--space-4);
       overflow: hidden;
     }
-
     .faq-item__question {
       width: 100%;
       padding: var(--space-6);
       background: none;
       border: none;
       text-align: left;
-      font-size: 1.1rem;
+      font-size: var(--text-base);
       font-weight: var(--font-semibold);
       color: var(--color-navy);
       cursor: pointer;
@@ -641,73 +469,37 @@
       align-items: center;
       gap: var(--space-4);
     }
-
-    .faq-item__question:hover {
-      background: rgba(244, 168, 38, 0.05);
-    }
-
+    .faq-item__question:hover { background: rgba(244, 168, 38, 0.05); }
     .faq-item__icon {
       width: 24px;
       height: 24px;
       transition: transform 0.3s;
       flex-shrink: 0;
     }
-
-    .faq-item.is-open .faq-item__icon {
-      transform: rotate(180deg);
-    }
-
+    .faq-item.is-open .faq-item__icon { transform: rotate(180deg); }
     .faq-item__answer {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.3s ease;
     }
-
-    .faq-item.is-open .faq-item__answer {
-      max-height: 500px;
-    }
-
+    .faq-item.is-open .faq-item__answer { max-height: 500px; }
     .faq-item__answer-inner {
       padding: 0 var(--space-6) var(--space-6);
       color: var(--color-slate);
       line-height: 1.7;
     }
-
-    /* Related Services */
     .related-services {
-      padding: var(--space-20) 0;
+      padding: var(--space-16) 0;
       background: var(--color-white);
     }
-
-    .related-services__container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 var(--space-6);
-    }
-
-    .related-services__header {
-      text-align: center;
-      margin-bottom: var(--space-12);
-    }
-
-    .related-services__title {
-      font-size: 2rem;
-      font-weight: var(--font-bold);
-      color: var(--color-navy);
-    }
-
     .related-services__grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: var(--space-6);
     }
-
     @media (max-width: 768px) {
-      .related-services__grid {
-        grid-template-columns: 1fr;
-      }
+      .related-services__grid { grid-template-columns: 1fr; }
     }
-
     .related-service-card {
       background: var(--color-offwhite);
       padding: var(--space-8);
@@ -716,25 +508,21 @@
       transition: transform 0.2s, box-shadow 0.2s;
       display: block;
     }
-
     .related-service-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 40px rgba(11, 22, 48, 0.1);
     }
-
     .related-service-card__title {
-      font-size: 1.25rem;
+      font-size: var(--text-xl);
       font-weight: var(--font-semibold);
       color: var(--color-navy);
       margin-bottom: var(--space-3);
     }
-
     .related-service-card__text {
       color: var(--color-slate);
       line-height: 1.6;
       margin-bottom: var(--space-4);
     }
-
     .related-service-card__link {
       color: var(--color-teal);
       font-weight: var(--font-semibold);
@@ -742,753 +530,747 @@
       align-items: center;
       gap: var(--space-2);
     }
-
-    /* Final CTA */
-    .final-cta {
-      background: linear-gradient(135deg, var(--color-navy) 0%, #1a2744 100%);
-      padding: var(--space-20) 0;
-      text-align: center;
-    }
-
-    .final-cta__container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 var(--space-6);
-    }
-
-    .final-cta__title {
-      font-size: 2.5rem;
-      font-weight: var(--font-bold);
-      color: var(--color-white);
-      margin-bottom: var(--space-4);
-    }
-
-    .final-cta__text {
-      font-size: 1.25rem;
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: var(--space-8);
-    }
-
-    .final-cta__buttons {
-      display: flex;
-      justify-content: center;
-      gap: var(--space-4);
-      flex-wrap: wrap;
-    }
   </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="header__container">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header__container">
       <a href="/" class="header__logo">
-        <img src="/images/logo-icon.png" alt="Coursework Ninja" class="header__logo-img">
-        <span class="header__logo-text">Coursework Ninja</span>
+        <img src="/images/logo.webp" alt="Coursework Ninja" class="header__logo-img">
       </a>
-      <nav class="header__nav" id="main-nav">
-        <ul class="header__nav-list">
-          <li><a href="/" class="header__nav-link">Home</a></li>
-          <li><a href="/services/" class="header__nav-link header__nav-link--active">Services</a></li>
-          <li><a href="/roadmaps/" class="header__nav-link">Roadmaps</a></li>
-          <li><a href="/blog/" class="header__nav-link">Blog</a></li>
+      <nav class="header__nav" id="nav" aria-label="Main navigation">
+        <ul class="header__menu">
+          <li><a href="/#why-choose-us" class="header__link">Why Us</a></li>
+          <li><a href="/services/" class="header__link header__link--active">Services</a></li>
+          <li><a href="/blog/" class="header__link">Blog</a></li>
+          <li><a href="/roadmaps/" class="header__link">Roadmaps</a></li>
+          <li><a href="/#testimonials" class="header__link">Testimonials</a></li>
+          <li><a href="/contact/" class="header__link">Contact</a></li>
         </ul>
       </nav>
-      <div class="header__cta">
-        <a href="https://wa.me/1234567890" class="btn btn--primary btn--sm">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Get Quote
-        </a>
-      </div>
-      <button class="header__mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
+      <a href="https://wa.me/447474784797" class="btn btn--primary header__cta" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Chat on WhatsApp</span>
+      </a>
+      <button class="header__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="header__toggle-icon header__toggle-icon--menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="header__toggle-icon header__toggle-icon--close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
       </button>
     </div>
   </header>
 
-  <!-- Breadcrumb -->
-  <nav class="breadcrumb" aria-label="Breadcrumb">
-    <div class="breadcrumb__container">
-      <ol class="breadcrumb__list">
-        <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Home</a></li>
-        <li class="breadcrumb__item"><a href="/services/" class="breadcrumb__link">Services</a></li>
-        <li class="breadcrumb__item"><span class="breadcrumb__current">Take My WGU Class</span></li>
-      </ol>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section class="service-hero">
-    <div class="service-hero__container">
-      <span class="service-hero__badge">
-        <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z"/></svg>
-        Complete Course Assistance
-      </span>
-      <h1 class="service-hero__title">
-        Pay Someone to <span>Take My WGU Class</span> For Me
-      </h1>
-      <p class="service-hero__subtitle">
-        Overwhelmed with coursework? Our expert tutors complete your entire WGU course—assignments, discussions, and exams—while you focus on what matters most.
-      </p>
-      <div class="service-hero__cta">
-        <a href="https://wa.me/1234567890" class="btn btn--primary btn--lg">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Get Free Quote on WhatsApp
-        </a>
-        <a href="https://t.me/courseworkninja" class="btn btn--secondary btn--lg">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-          Message on Telegram
-        </a>
-      </div>
-      <div class="service-hero__trust">
-        <div class="service-hero__trust-item">
-          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-          100% Human Work
-        </div>
-        <div class="service-hero__trust-item">
-          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-          Secure & Private
-        </div>
-        <div class="service-hero__trust-item">
-          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
-          2-Minute Response
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats Strip -->
-  <section class="stats-strip">
-    <div class="stats-strip__container">
-      <div class="stats-strip__item">
-        <span class="stats-strip__number">23+</span>
-        <span class="stats-strip__label">Expert Tutors</span>
-      </div>
-      <div class="stats-strip__item">
-        <span class="stats-strip__number">10+</span>
-        <span class="stats-strip__label">Years Experience</span>
-      </div>
-      <div class="stats-strip__item">
-        <span class="stats-strip__number">1,700+</span>
-        <span class="stats-strip__label">Happy Students</span>
-      </div>
-      <div class="stats-strip__item">
-        <span class="stats-strip__number">920+</span>
-        <span class="stats-strip__label">Degrees Completed</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Benefits Section -->
-  <section class="benefits">
-    <div class="benefits__container">
-      <div class="benefits__header">
-        <h2 class="benefits__title">Why Students Trust Us to Take Their WGU Classes</h2>
-        <p class="benefits__subtitle">We've helped thousands of working professionals complete their WGU degrees while balancing career and family responsibilities.</p>
-      </div>
-      <div class="benefits__grid">
-        <div class="benefit-card">
-          <div class="benefit-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3 class="benefit-card__title">Subject-Matter Experts</h3>
-          <p class="benefit-card__text">Every tutor holds advanced degrees in their field. Your MBA courses are handled by MBA graduates, your IT courses by certified tech professionals, and so on.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3 class="benefit-card__title">Complete Privacy Protection</h3>
-          <p class="benefit-card__text">Bank-level encryption, strict confidentiality agreements, and anonymous payment options ensure your academic journey stays completely private.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          </div>
-          <h3 class="benefit-card__title">Grade Guarantee</h3>
-          <p class="benefit-card__text">We guarantee passing grades on all work. If an assignment doesn't meet the standard, we revise it free of charge until it passes.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <h3 class="benefit-card__title">Fast Turnaround</h3>
-          <p class="benefit-card__text">Need to accelerate your degree? We work on your timeline. Many courses can be completed in 1-2 weeks with our dedicated support.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          </div>
-          <h3 class="benefit-card__title">24/7 Communication</h3>
-          <p class="benefit-card__text">Get updates whenever you want them. Our team responds within 2 minutes on WhatsApp and Telegram, day or night.</p>
-        </div>
-        <div class="benefit-card">
-          <div class="benefit-card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-          </div>
-          <h3 class="benefit-card__title">100% Human Work</h3>
-          <p class="benefit-card__text">Every assignment is completed by real human experts—never AI. All work passes Turnitin and AI detection checks before delivery.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- How It Works -->
-  <section class="how-it-works">
-    <div class="how-it-works__container">
-      <div class="how-it-works__header">
-        <h2 class="how-it-works__title">Getting Started Is Easy</h2>
-      </div>
-      <div class="how-it-works__steps">
-        <div class="how-it-works__step">
-          <div class="how-it-works__step-number">1</div>
-          <h3 class="how-it-works__step-title">Message Us</h3>
-          <p class="how-it-works__step-text">Reach out on WhatsApp or Telegram with your course details. Tell us about your deadline, grade goals, and any specific requirements.</p>
-        </div>
-        <div class="how-it-works__step">
-          <div class="how-it-works__step-number">2</div>
-          <h3 class="how-it-works__step-title">Get Your Quote</h3>
-          <p class="how-it-works__step-text">Within 2 minutes, receive a personalized quote based on your course complexity, timeline, and scope. No hidden fees, ever.</p>
-        </div>
-        <div class="how-it-works__step">
-          <div class="how-it-works__step-number">3</div>
-          <h3 class="how-it-works__step-title">Relax & Succeed</h3>
-          <p class="how-it-works__step-text">Once approved, we assign an expert to your course. Track progress in real-time while we handle the heavy lifting.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Main Content -->
-  <section class="service-content">
-    <div class="service-content__container">
-
-      <h2>The Reality of Balancing WGU with Life's Demands</h2>
-
-      <p>If you're reading this, you're probably one of the millions of working professionals who chose Western Governors University for its flexibility. The competency-based model promised a path to your degree that works around your schedule—not the other way around. But somewhere along the way, reality set in.</p>
-
-      <p>Maybe you're working 50-hour weeks while trying to squeeze in coursework at midnight. Perhaps you have young children who need your attention, or aging parents who depend on your care. You might be dealing with a demanding boss, a long commute, or simply the exhaustion that comes from trying to do it all.</p>
-
-      <p>The flexibility of WGU is real, but so are its challenges. Unlike traditional universities where you can coast through lectures and cram for exams, WGU's competency-based approach requires genuine engagement with the material. Performance Assessments demand original writing that demonstrates real understanding. Objective Assessments require thorough preparation. And the clock is always ticking toward your term end date.</p>
-
-      <p>This is where many students find themselves asking a question they never thought they'd consider: <strong>"Can someone take my WGU class for me?"</strong></p>
-
-      <h2>Understanding Your Options for WGU Course Assistance</h2>
-
-      <p>When you're overwhelmed, it's natural to look for solutions. The question isn't whether you need help—clearly you do, or you wouldn't be here. The question is what kind of help will actually work for your situation.</p>
-
-      <h3>The Problem with Traditional Tutoring</h3>
-
-      <p>Traditional tutoring services offer to teach you the material and help you study. That's valuable if you have time to learn. But if you're working full-time, caring for a family, and facing a term deadline, you don't have time to learn everything from scratch. You need results, not study sessions.</p>
-
-      <h3>The Limitation of Writing Services</h3>
-
-      <p>Basic essay mills can write a Performance Assessment for you, but they often don't understand WGU's unique requirements. They don't know what the evaluators look for. They don't understand competency-based education. And they certainly can't help with Objective Assessments or proctored exams.</p>
-
-      <h3>The Comprehensive Solution: Full Course Assistance</h3>
-
-      <p>What if someone who understood WGU inside and out could take over your entire course? Someone who knows the evaluation rubrics, understands what "competency" really means at WGU, and can navigate the student portal as smoothly as you can. Someone who has helped hundreds of students through the exact courses you're struggling with.</p>
-
-      <p>That's what Coursework Ninja offers. Not tutoring. Not generic essay writing. Complete, end-to-end management of your WGU courses by experts who specialize in WGU's competency-based model.</p>
-
-      <!-- In-Content CTA 1 -->
-      <div class="content-cta">
-        <h3 class="content-cta__title">Ready to Reclaim Your Time?</h3>
-        <p class="content-cta__text">Get a free, no-obligation quote in under 2 minutes. Tell us about your course and we'll create a custom plan.</p>
-        <div class="content-cta__buttons">
-          <a href="https://wa.me/1234567890" class="btn btn--primary">Get Quote on WhatsApp</a>
-          <a href="https://t.me/courseworkninja" class="btn btn--secondary">Message on Telegram</a>
-        </div>
-      </div>
-
-      <h2>Who Uses Our "Take My WGU Class" Service?</h2>
-
-      <p>Over the past decade, we've helped thousands of students complete their WGU degrees. While every student's situation is unique, most fall into a few common categories.</p>
-
-      <h3>The Overcommitted Professional</h3>
-
-      <p>You took on WGU because you needed the degree to advance your career. But your current job is more demanding than expected. Maybe you got promoted, took on a new project, or your company is going through changes that require extra hours. You simply don't have the bandwidth to do both well.</p>
-
-      <h3>The Unexpected Life Event</h3>
-
-      <p>Life doesn't pause for academic deadlines. Medical issues, family emergencies, relocations, divorces—these things happen. Some students come to us mid-term when circumstances change suddenly and they're at risk of losing their tuition investment.</p>
-
-      <h3>The Accelerator</h3>
-
-      <p>You have the ability to pass your courses, but you want to finish faster than studying allows. Maybe a job opportunity requires the degree by a certain date. Maybe you're paying out of pocket and want to minimize terms. Our accelerated course completion helps you graduate in record time.</p>
-
-      <h3>The Subject-Specific Struggler</h3>
-
-      <p>Your MBA is going great, except for those quantitative courses. Your IT degree is on track, except for the business communications class that's sapping your motivation. Sometimes one or two courses threaten to derail an otherwise successful academic career.</p>
-
-      <h3>The Fresh Start Seeker</h3>
-
-      <p>Perhaps you've already failed a course or two. Your academic mentor is asking questions. You need to get back on track quickly and demonstrate consistent progress. Our experts can help you rebuild momentum and finish strong.</p>
-
-      <h2>How Our WGU Class Assistance Actually Works</h2>
-
-      <p>Transparency is core to how we operate. Here's exactly what happens when you hire us to take your WGU class.</p>
-
-      <h3>Step 1: Initial Consultation</h3>
-
-      <p>When you reach out on WhatsApp or Telegram, a specialist will ask about your situation. What course or courses do you need help with? What's your timeline? Do you have any work already completed? Are there specific concerns or requirements we should know about?</p>
-
-      <p>This isn't a sales pitch—it's a genuine assessment to make sure we can help. If your request falls outside our capabilities (rare, but possible), we'll tell you upfront rather than overpromise.</p>
-
-      <h3>Step 2: Detailed Quote</h3>
-
-      <p>Based on your consultation, you'll receive a detailed quote within 2 minutes. This includes:</p>
-
-      <ul>
-        <li>Total cost with no hidden fees</li>
-        <li>Estimated completion timeline</li>
-        <li>What's included (assessments, discussions, revision rounds)</li>
-        <li>Payment options and schedule</li>
+  <div class="header__mobile-menu" id="mobile-menu">
+    <button class="header__mobile-close" id="mobile-close" aria-label="Close menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <nav class="header__mobile-nav" aria-label="Mobile navigation">
+      <ul class="header__mobile-menu-list">
+        <li><a href="/#why-choose-us" class="header__mobile-link">Why Us</a></li>
+        <li><a href="/services/" class="header__mobile-link">Services</a></li>
+        <li><a href="/blog/" class="header__mobile-link">Blog</a></li>
+        <li><a href="/roadmaps/" class="header__mobile-link">Roadmaps</a></li>
+        <li><a href="/#testimonials" class="header__mobile-link">Testimonials</a></li>
+        <li><a href="/contact/" class="header__mobile-link">Contact</a></li>
       </ul>
-
-      <p>You're under no obligation at this point. Take time to think it over, compare options, or ask additional questions.</p>
-
-      <h3>Step 3: Expert Assignment</h3>
-
-      <p>Once you approve the quote and make the initial payment, we assign your course to a subject-matter expert. This isn't random—we match you with a tutor who has specific expertise in your course content. An accounting course goes to a CPA. A nursing course goes to a practicing RN with advanced degrees. An IT course goes to a certified technology professional.</p>
-
-      <h3>Step 4: Secure Access</h3>
-
-      <p>You provide secure access to your WGU student portal. We use VPN technology to match your typical login patterns and never access from flagged locations. Your account security is paramount—we've completed thousands of courses without a single security incident.</p>
-
-      <h3>Step 5: Course Completion</h3>
-
-      <p>Your assigned expert navigates your course systematically. They complete Performance Assessments with original, well-researched writing. They prepare for and complete Objective Assessments with the knowledge needed to pass. They participate in any required discussions or activities. Throughout this process, you receive regular updates.</p>
-
-      <h3>Step 6: Quality Assurance</h3>
-
-      <p>Before any work is submitted, it goes through our quality assurance process. This includes plagiarism checking (Turnitin), AI detection verification, rubric alignment review, and formatting checks. We submit only when we're confident in passing.</p>
-
-      <h3>Step 7: Completion & Support</h3>
-
-      <p>Once your course is complete and grades are posted, you receive final confirmation. If any assessment requires revision (uncommon but possible), we handle it promptly at no additional charge. Our support continues until you're fully satisfied.</p>
-
-      <!-- In-Content CTA 2 -->
-      <div class="content-cta">
-        <h3 class="content-cta__title">Have Questions About the Process?</h3>
-        <p class="content-cta__text">We're happy to walk you through exactly how we'd handle your specific courses. No commitment required.</p>
-        <div class="content-cta__buttons">
-          <a href="https://wa.me/1234567890" class="btn btn--primary">Ask Us on WhatsApp</a>
-        </div>
+      <div class="header__mobile-cta">
+        <a href="https://wa.me/447474784797" class="btn btn--primary btn--full" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a href="https://t.me/courseworkninja" class="btn btn--secondary btn--full" target="_blank" rel="noopener">Or use Telegram</a>
       </div>
-
-      <h2>WGU Programs and Courses We Support</h2>
-
-      <p>We have experts available for all WGU programs across all four colleges. Here's a sampling of the most common courses and programs we help with.</p>
-
-      <h3>College of Business</h3>
-
-      <ul>
-        <li><strong>MBA Program:</strong> Organizational Leadership, Strategic Management, Data-Driven Decision Making, Marketing, Accounting for Decision Makers, and all core MBA courses</li>
-        <li><strong>BS Business Administration:</strong> Business Law, Microeconomics, Macroeconomics, Organizational Behavior, Project Management</li>
-        <li><strong>BS Accounting:</strong> Intermediate Accounting, Auditing, Tax courses, Cost Accounting, Financial Statement Analysis</li>
-        <li><strong>MS Management & Leadership:</strong> Ethical Leadership, Innovation, Change Management, Executive Communications</li>
-      </ul>
-
-      <h3>College of IT</h3>
-
-      <ul>
-        <li><strong>BS Computer Science:</strong> Data Structures, Algorithms, Software Engineering, Operating Systems, Discrete Math</li>
-        <li><strong>BS Cybersecurity:</strong> Network Security, Ethical Hacking, Digital Forensics, Security Architecture</li>
-        <li><strong>BS Data Analytics:</strong> Statistics, Data Mining, Machine Learning foundations, Visualization</li>
-        <li><strong>BS Software Engineering:</strong> Full-stack development, DevOps, Quality Assurance, System Design</li>
-        <li><strong>Certifications:</strong> A+, Network+, Security+, CCNA, AWS, Project+, and more</li>
-      </ul>
-
-      <h3>College of Health Professions</h3>
-
-      <ul>
-        <li><strong>BSN (RN to BSN):</strong> Community Health, Nursing Research, Leadership in Nursing, Evidence-Based Practice</li>
-        <li><strong>MSN Programs:</strong> Advanced Pathophysiology, Pharmacology, Health Assessment, Nursing Informatics</li>
-        <li><strong>BS Health Informatics:</strong> Healthcare Systems, Health Data Management, Information Systems</li>
-        <li><strong>MBA Healthcare Management:</strong> Healthcare Policy, Finance, Quality Management</li>
-      </ul>
-
-      <h3>Teachers College</h3>
-
-      <ul>
-        <li><strong>Teaching Licensure Programs:</strong> Foundational Perspectives, Classroom Management, Pedagogy courses</li>
-        <li><strong>MS Education Programs:</strong> Curriculum Design, Instructional Design, Educational Leadership</li>
-        <li><strong>Special Education:</strong> Exceptional Learners, Assessment, Behavior Management</li>
-      </ul>
-
-      <p>Don't see your specific course listed? We still cover it. These are just examples—our team includes experts across every WGU program and course offering.</p>
-
-      <h2>Addressing Common Concerns</h2>
-
-      <p>Hiring someone to take your class is a significant decision. You probably have concerns. Let's address them directly.</p>
-
-      <h3>Privacy and Security</h3>
-
-      <p>This is typically the biggest concern, and rightfully so. Your academic career and professional reputation are at stake. Here's how we protect you:</p>
-
-      <ul>
-        <li><strong>Encryption:</strong> All communications and file transfers use bank-level encryption</li>
-        <li><strong>Confidentiality Agreements:</strong> Every tutor signs legally binding NDAs</li>
-        <li><strong>No Third Parties:</strong> We never share your information with anyone outside our core team</li>
-        <li><strong>Anonymous Payments:</strong> Accept cryptocurrency for students who want complete anonymity</li>
-        <li><strong>Secure Access Protocols:</strong> VPN use, pattern-matching logins, no suspicious access patterns</li>
-        <li><strong>Track Record:</strong> 10+ years and 1,700+ students without a privacy breach</li>
-      </ul>
-
-      <h3>Quality and Grades</h3>
-
-      <p>Our reputation depends on results. We guarantee passing grades on all work we complete. In practice, most students receive B+ or higher grades. For WGU's pass/fail competency assessments, we achieve first-attempt passes in the overwhelming majority of cases.</p>
-
-      <p>If any assignment doesn't pass, we revise it at no additional cost until it does. In rare cases where we cannot deliver satisfactory results, we provide refunds.</p>
-
-      <h3>Detection Risk</h3>
-
-      <p>WGU, like all universities, has systems to detect academic integrity violations. We're intimately familiar with these systems because we've worked within them for a decade. Our approaches are specifically designed to avoid triggering detection:</p>
-
-      <ul>
-        <li>100% human-written work that passes AI detection</li>
-        <li>Original content that passes plagiarism detection</li>
-        <li>Login patterns that match normal student behavior</li>
-        <li>Writing style consistency across your academic career</li>
-        <li>Understanding of what evaluators look for in submissions</li>
-      </ul>
-
-      <h3>Cost Considerations</h3>
-
-      <p>Quality WGU course assistance isn't cheap. You're paying for expert-level work, guaranteed results, and comprehensive security. When you consider the cost of failing a course (lost tuition, extended enrollment, delayed career advancement), our services typically represent a smart investment.</p>
-
-      <p>We offer flexible payment plans for students managing finances, and volume discounts for those who need help with multiple courses or full terms.</p>
-
-      <h2>What Sets Coursework Ninja Apart</h2>
-
-      <p>The market for academic assistance is crowded. Here's why students choose us over alternatives.</p>
-
-      <h3>WGU Specialization</h3>
-
-      <p>We're not a generic essay mill that happens to accept WGU assignments. WGU is our specialty. Our team understands competency-based education, evaluation rubrics, the student portal, proctoring systems, and the specific challenges WGU students face. This specialization translates to higher quality outcomes.</p>
-
-      <h3>Expert Matching</h3>
-
-      <p>Your course isn't assigned to just any available writer. We match you with an expert who has demonstrable expertise in your specific subject area. MBA courses go to MBA graduates with professional experience. IT courses go to certified tech professionals. This ensures the work reflects genuine subject matter expertise.</p>
-
-      <h3>Communication Standards</h3>
-
-      <p>You'll never wait days for a response. Our 2-minute average response time on WhatsApp and Telegram means you can always get updates, ask questions, or raise concerns immediately. We believe in over-communicating, not leaving you in the dark.</p>
-
-      <h3>Comprehensive Service</h3>
-
-      <p>We don't just complete assignments—we manage your entire course. Discussions, quizzes, participation activities, performance assessments, objective assessment preparation and execution—everything required to complete your course is included.</p>
-
-      <h3>Proven Track Record</h3>
-
-      <p>With over 920 WGU degrees completed and a 98% client satisfaction rate, our track record speaks for itself. We've been doing this successfully for over a decade. Our longevity in this space is testimony to the quality and reliability of our services.</p>
-
-      <!-- In-Content CTA 3 -->
-      <div class="content-cta">
-        <h3 class="content-cta__title">Join 1,700+ Successful WGU Students</h3>
-        <p class="content-cta__text">Don't let overwhelming coursework derail your degree. Let our experts carry the load while you focus on what matters.</p>
-        <div class="content-cta__buttons">
-          <a href="https://wa.me/1234567890" class="btn btn--primary">Start Your Journey on WhatsApp</a>
-          <a href="https://t.me/courseworkninja" class="btn btn--secondary">Or Contact via Telegram</a>
-        </div>
-      </div>
-
-      <h2>Pricing and Getting Started</h2>
-
-      <p>Every course is priced individually based on several factors:</p>
-
-      <ul>
-        <li><strong>Course complexity:</strong> A quantitative course with heavy calculations typically costs more than a writing-based course</li>
-        <li><strong>Assessment types:</strong> Courses with proctored OAs require additional preparation and expertise</li>
-        <li><strong>Timeline:</strong> Accelerated completion comes at a premium; standard timelines are more economical</li>
-        <li><strong>Scope:</strong> Full course vs. specific assessments only</li>
-      </ul>
-
-      <p>We provide transparent quotes with no hidden fees. The price you're quoted is the price you pay. Payment is typically structured as 50% upfront and 50% upon completion, though flexible arrangements are available.</p>
-
-      <p>Accepted payment methods include credit/debit cards, PayPal, bank transfers, and cryptocurrencies (Bitcoin, Ethereum, USDT, and others).</p>
-
-      <h3>Taking the First Step</h3>
-
-      <p>Starting is simple. Send us a message on WhatsApp or Telegram with basic information about your situation:</p>
-
-      <ul>
-        <li>Which course(s) you need help with</li>
-        <li>Your deadline or target completion date</li>
-        <li>Any work already completed in the course</li>
-        <li>Any specific concerns or requirements</li>
-      </ul>
-
-      <p>Within minutes, you'll have a detailed quote and can decide whether to proceed. There's no pressure and no obligation. We're here to help you succeed on your terms.</p>
-
-      <h2>Related Resources</h2>
-
-      <p>Explore more ways we support WGU students:</p>
-
-      <ul>
-        <li><a href="/services/take-my-wgu-exam/">Take My WGU Exam</a> – Specialized support for Objective Assessments</li>
-        <li><a href="/services/wgu-capstone-help/">WGU Capstone Help</a> – End-to-end capstone project management</li>
-        <li><a href="/blog/wgu-term-planning-guide/">WGU Term Planning Guide</a> – Strategies for structuring successful terms</li>
-        <li><a href="/blog/wgu-course-order-strategy/">WGU Course Order Strategy</a> – Optimal sequencing for your courses</li>
-        <li><a href="/roadmaps/mba/">MBA Degree Roadmap</a> – Complete guide to the WGU MBA program</li>
-      </ul>
-
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="faq-section">
-    <div class="faq-section__container">
-      <div class="faq-section__header">
-        <h2 class="faq-section__title">Frequently Asked Questions</h2>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-item__question" aria-expanded="false">
-          Is it safe to pay someone to take my WGU class?
-          <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-        <div class="faq-item__answer">
-          <div class="faq-item__answer-inner">
-            Yes, when you work with Coursework Ninja, your privacy and security are our top priorities. We use bank-level encryption, never share your information with third parties, and accept anonymous payment methods like cryptocurrency. Our tutors sign strict confidentiality agreements, and we have a proven track record of helping thousands of students without any privacy issues.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-item__question" aria-expanded="false">
-          How does the process of taking my WGU class work?
-          <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-        <div class="faq-item__answer">
-          <div class="faq-item__answer-inner">
-            The process is simple: First, message us on WhatsApp or Telegram with details about your course. Within 2 minutes, you'll receive a personalized quote. Once you approve, we assign a subject-matter expert who logs into your course portal and completes all assignments, discussions, and assessments according to your timeline. You receive regular progress updates throughout.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-item__question" aria-expanded="false">
-          What grade can I expect if someone takes my WGU class?
-          <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-        <div class="faq-item__answer">
-          <div class="faq-item__answer-inner">
-            We guarantee passing grades on all work we complete. Most of our clients receive grades in the B+ to A range. For WGU's competency-based assessments, we ensure you demonstrate proficiency on the first attempt in the vast majority of cases. If work doesn't meet the passing threshold, we revise it at no additional cost until it does.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-item__question" aria-expanded="false">
-          Can you take my entire WGU term or multiple classes?
-          <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-        <div class="faq-item__answer">
-          <div class="faq-item__answer-inner">
-            Absolutely. Many students hire us to manage their entire 6-month term, which typically includes 4-6 courses. We can handle multiple classes simultaneously, coordinating with different subject experts as needed. This is actually our most popular option because it provides consistent support throughout your academic journey and often comes with volume discounts.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-item__question" aria-expanded="false">
-          How quickly can you complete my WGU course?
-          <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-        <div class="faq-item__answer">
-          <div class="faq-item__answer-inner">
-            Completion time depends on the course complexity and your deadline. Some courses with primarily written assessments can be completed in 1-2 weeks. Courses with proctored exams or complex projects may take 2-4 weeks. We can also work on accelerated timelines when needed. During your quote, we'll provide a realistic completion estimate based on your specific course requirements.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-item__question" aria-expanded="false">
-          Do you handle proctored exams at WGU?
-          <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-        <div class="faq-item__answer">
-          <div class="faq-item__answer-inner">
-            Yes, we provide comprehensive support for proctored Objective Assessments (OAs). Our tutors prepare you thoroughly with study materials, practice tests, and one-on-one coaching sessions. For students who prefer direct assistance, we also offer exam-taking services using secure, proven methods that have helped hundreds of students pass their proctored exams.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-item__question" aria-expanded="false">
-          What WGU programs do you support?
-          <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-        <div class="faq-item__answer">
-          <div class="faq-item__answer-inner">
-            We support all WGU programs across all four colleges: Business (MBA, accounting, HR, marketing), IT (computer science, cybersecurity, data analytics, software development), Education (teaching licenses, educational leadership), and Health Professions (nursing, health informatics, healthcare management). Our team includes specialists in every major field of study.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-item__question" aria-expanded="false">
-          How do I pay for WGU class help services?
-          <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-        <div class="faq-item__answer">
-          <div class="faq-item__answer-inner">
-            We accept multiple payment methods for your convenience and privacy: credit/debit cards, PayPal, bank transfers, and cryptocurrencies (Bitcoin, Ethereum, USDT, and others). Crypto payments are popular among students who prefer maximum anonymity. We typically require 50% upfront and 50% upon completion, though flexible payment plans are available for full-term packages.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-item__question" aria-expanded="false">
-          What if I'm not satisfied with the work?
-          <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-        <div class="faq-item__answer">
-          <div class="faq-item__answer-inner">
-            Your satisfaction is guaranteed. If any assignment doesn't meet your expectations or fails to pass, we provide unlimited revisions at no extra charge. In the rare case that we cannot deliver satisfactory results, we offer a full refund. Our 98% client satisfaction rate speaks to the quality and reliability of our services.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-item__question" aria-expanded="false">
-          How do you ensure the work is original and not AI-generated?
-          <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-        <div class="faq-item__answer">
-          <div class="faq-item__answer-inner">
-            Every piece of work is completed by human subject-matter experts with verified credentials in their fields. We never use AI writing tools like ChatGPT. All work passes through Turnitin and AI detection software before delivery. Our tutors are professionals with graduate degrees who understand academic standards and write in natural, human styles that reflect genuine expertise.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-item__question" aria-expanded="false">
-          Can I communicate with the tutor handling my class?
-          <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-        <div class="faq-item__answer">
-          <div class="faq-item__answer-inner">
-            Yes, we encourage ongoing communication. While we protect tutor identities for privacy reasons, you can communicate directly through our secure messaging system. Ask questions, provide preferences, request updates, or give feedback on completed work. Many students appreciate being involved in the process while still having the heavy lifting handled by experts.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-item__question" aria-expanded="false">
-          What makes Coursework Ninja different from other WGU help services?
-          <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </button>
-        <div class="faq-item__answer">
-          <div class="faq-item__answer-inner">
-            Several factors set us apart: 10+ years of WGU-specific experience, 23+ subject-matter experts with verified credentials, a 98% satisfaction rate, 24/7 availability with 2-minute response times, 100% human work (never AI), bank-level security, anonymous payment options, and a proven track record with over 920 WGU degrees completed. We're not a generic essay mill—we specialize in WGU's unique competency-based model.
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Related Services -->
-  <section class="related-services">
-    <div class="related-services__container">
-      <div class="related-services__header">
-        <h2 class="related-services__title">Explore More WGU Services</h2>
-      </div>
-      <div class="related-services__grid">
-        <a href="/services/take-my-wgu-exam/" class="related-service-card">
-          <h3 class="related-service-card__title">Take My WGU Exam</h3>
-          <p class="related-service-card__text">Struggling with Objective Assessments? Our experts provide complete OA preparation and exam support to help you pass on the first attempt.</p>
-          <span class="related-service-card__link">
-            Learn more
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
-          </span>
-        </a>
-        <a href="/services/wgu-capstone-help/" class="related-service-card">
-          <h3 class="related-service-card__title">WGU Capstone Help</h3>
-          <p class="related-service-card__text">The capstone is your final hurdle. Our specialists guide you from topic selection through final submission, ensuring a polished project.</p>
-          <span class="related-service-card__link">
-            Learn more
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
-          </span>
-        </a>
-        <a href="/services/" class="related-service-card">
-          <h3 class="related-service-card__title">All Services</h3>
-          <p class="related-service-card__text">Browse our complete range of WGU support services, from individual assignment help to full degree completion programs.</p>
-          <span class="related-service-card__link">
-            View all services
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
-          </span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Final CTA -->
-  <section class="final-cta">
-    <div class="final-cta__container">
-      <h2 class="final-cta__title">Ready to Complete Your WGU Degree?</h2>
-      <p class="final-cta__text">Join 1,700+ students who've successfully completed their WGU courses with our help. Get your free quote in under 2 minutes.</p>
-      <div class="final-cta__buttons">
-        <a href="https://wa.me/1234567890" class="btn btn--primary btn--lg">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Get Free Quote on WhatsApp
-        </a>
-        <a href="https://t.me/courseworkninja" class="btn btn--secondary btn--lg">
-          <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-          Message on Telegram
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer__container">
-      <div class="footer__grid">
-        <div class="footer__brand">
-          <a href="/" class="footer__logo">
-            <img src="/images/logo-icon.png" alt="Coursework Ninja" class="footer__logo-img">
-            <span class="footer__logo-text">Coursework Ninja</span>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="service-hero">
+      <div class="container">
+        <nav class="service-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <a href="/services/">Services</a>
+          <span>/</span>
+          <span>Take My WGU Class</span>
+        </nav>
+        <span class="service-hero__badge">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0z"/></svg>
+          Complete Course Assistance
+        </span>
+        <h1 class="service-hero__title">
+          Pay Someone to <span>Take My WGU Class</span> For Me
+        </h1>
+        <p class="service-hero__subtitle">
+          Overwhelmed with coursework? Our expert tutors complete your entire WGU course—assignments, discussions, and exams—while you focus on what matters most.
+        </p>
+        <div class="service-hero__cta">
+          <a href="https://wa.me/447474784797?text=Hi!%20I%20need%20help%20with%20my%20WGU%20class." class="btn btn--primary btn--large" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Get Free Quote on WhatsApp
           </a>
-          <p class="footer__tagline">Expert academic support for WGU students. 100% human work, guaranteed results.</p>
+          <a href="https://t.me/courseworkninja" class="btn btn--secondary btn--large" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            Or use Telegram
+          </a>
         </div>
-        <div class="footer__links">
-          <h4 class="footer__heading">Services</h4>
-          <ul class="footer__list">
-            <li><a href="/services/take-my-wgu-class/">Take My WGU Class</a></li>
-            <li><a href="/services/take-my-wgu-exam/">Take My WGU Exam</a></li>
-            <li><a href="/services/wgu-capstone-help/">WGU Capstone Help</a></li>
-            <li><a href="/services/">All Services</a></li>
+        <div class="service-hero__trust">
+          <div class="service-hero__trust-item">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            100% Human Work
+          </div>
+          <div class="service-hero__trust-item">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            Secure & Private
+          </div>
+          <div class="service-hero__trust-item">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/></svg>
+            2-Minute Response
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Strip -->
+    <section class="stats-strip">
+      <div class="container">
+        <div class="stats-strip__grid">
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">23+</span>
+            <span class="stats-strip__label">Expert Tutors</span>
+          </div>
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">10+</span>
+            <span class="stats-strip__label">Years Experience</span>
+          </div>
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">1,700+</span>
+            <span class="stats-strip__label">Happy Students</span>
+          </div>
+          <div class="stats-strip__item">
+            <span class="stats-strip__number">920+</span>
+            <span class="stats-strip__label">Degrees Completed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Why Students Trust Us to Take Their WGU Classes</h2>
+          <p class="section-subtitle">We've helped thousands of working professionals complete their WGU degrees while balancing career and family responsibilities.</p>
+        </div>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Subject-Matter Experts</h3>
+            <p class="benefit-card__text">Every tutor holds advanced degrees in their field. Your MBA courses are handled by MBA graduates, your IT courses by certified tech professionals, and so on.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Complete Privacy Protection</h3>
+            <p class="benefit-card__text">Bank-level encryption, strict confidentiality agreements, and anonymous payment options ensure your academic journey stays completely private.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Grade Guarantee</h3>
+            <p class="benefit-card__text">We guarantee passing grades on all work. If an assignment doesn't meet the standard, we revise it free of charge until it passes.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="benefit-card__title">Fast Turnaround</h3>
+            <p class="benefit-card__text">Need to accelerate your degree? We work on your timeline. Many courses can be completed in 1-2 weeks with our dedicated support.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3 class="benefit-card__title">24/7 Communication</h3>
+            <p class="benefit-card__text">Get updates whenever you want them. Our team responds within 2 minutes on WhatsApp and Telegram, day or night.</p>
+          </div>
+          <div class="benefit-card">
+            <div class="benefit-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3 class="benefit-card__title">100% Human Work</h3>
+            <p class="benefit-card__text">Every assignment is completed by real human experts—never AI. All work passes Turnitin and AI detection checks before delivery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Getting Started Is Easy</h2>
+        </div>
+        <div class="how-it-works__steps">
+          <div class="how-it-works__step">
+            <div class="how-it-works__step-number">1</div>
+            <h3 class="how-it-works__step-title">Message Us</h3>
+            <p class="how-it-works__step-text">Reach out on WhatsApp or Telegram with your course details. Tell us about your deadline, grade goals, and any specific requirements.</p>
+          </div>
+          <div class="how-it-works__step">
+            <div class="how-it-works__step-number">2</div>
+            <h3 class="how-it-works__step-title">Get Your Quote</h3>
+            <p class="how-it-works__step-text">Within 2 minutes, receive a personalized quote based on your course complexity, timeline, and scope. No hidden fees, ever.</p>
+          </div>
+          <div class="how-it-works__step">
+            <div class="how-it-works__step-number">3</div>
+            <h3 class="how-it-works__step-title">Relax & Succeed</h3>
+            <p class="how-it-works__step-text">Once approved, we assign an expert to your course. Track progress in real-time while we handle the heavy lifting.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="service-content">
+      <div class="container">
+        <div class="service-content__inner">
+
+          <h2>The Reality of Balancing WGU with Life's Demands</h2>
+
+          <p>If you're reading this, you're probably one of the millions of working professionals who chose Western Governors University for its flexibility. The competency-based model promised a path to your degree that works around your schedule—not the other way around. But somewhere along the way, reality set in.</p>
+
+          <p>Maybe you're working 50-hour weeks while trying to squeeze in coursework at midnight. Perhaps you have young children who need your attention, or aging parents who depend on your care. You might be dealing with a demanding boss, a long commute, or simply the exhaustion that comes from trying to do it all.</p>
+
+          <p>The flexibility of WGU is real, but so are its challenges. Unlike traditional universities where you can coast through lectures and cram for exams, WGU's competency-based approach requires genuine engagement with the material. Performance Assessments demand original writing that demonstrates real understanding. Objective Assessments require thorough preparation. And the clock is always ticking toward your term end date.</p>
+
+          <p>This is where many students find themselves asking a question they never thought they'd consider: <strong>"Can someone take my WGU class for me?"</strong></p>
+
+          <h2>Understanding Your Options for WGU Course Assistance</h2>
+
+          <p>When you're overwhelmed, it's natural to look for solutions. The question isn't whether you need help—clearly you do, or you wouldn't be here. The question is what kind of help will actually work for your situation.</p>
+
+          <h3>The Problem with Traditional Tutoring</h3>
+
+          <p>Traditional tutoring services offer to teach you the material and help you study. That's valuable if you have time to learn. But if you're working full-time, caring for a family, and facing a term deadline, you don't have time to learn everything from scratch. You need results, not study sessions.</p>
+
+          <h3>The Limitation of Writing Services</h3>
+
+          <p>Basic essay mills can write a Performance Assessment for you, but they often don't understand WGU's unique requirements. They don't know what the evaluators look for. They don't understand competency-based education. And they certainly can't help with Objective Assessments or proctored exams.</p>
+
+          <h3>The Comprehensive Solution: Full Course Assistance</h3>
+
+          <p>What if someone who understood WGU inside and out could take over your entire course? Someone who knows the evaluation rubrics, understands what "competency" really means at WGU, and can navigate the student portal as smoothly as you can. Someone who has helped hundreds of students through the exact courses you're struggling with.</p>
+
+          <p>That's what Coursework Ninja offers. Not tutoring. Not generic essay writing. Complete, end-to-end management of your WGU courses by experts who specialize in WGU's competency-based model.</p>
+
+          <!-- In-Content CTA 1 -->
+          <div class="content-cta">
+            <h3 class="content-cta__title">Ready to Reclaim Your Time?</h3>
+            <p class="content-cta__text">Get a free, no-obligation quote in under 2 minutes. Tell us about your course and we'll create a custom plan.</p>
+            <div class="content-cta__buttons">
+              <a href="https://wa.me/447474784797?text=Hi!%20I%20need%20a%20quote%20for%20my%20WGU%20class." class="btn btn--primary" target="_blank" rel="noopener">Get Quote on WhatsApp</a>
+              <a href="https://t.me/courseworkninja" class="btn btn--secondary" target="_blank" rel="noopener">Message on Telegram</a>
+            </div>
+          </div>
+
+          <h2>Who Uses Our "Take My WGU Class" Service?</h2>
+
+          <p>Over the past decade, we've helped thousands of students complete their WGU degrees. While every student's situation is unique, most fall into a few common categories.</p>
+
+          <h3>The Overcommitted Professional</h3>
+
+          <p>You took on WGU because you needed the degree to advance your career. But your current job is more demanding than expected. Maybe you got promoted, took on a new project, or your company is going through changes that require extra hours. You simply don't have the bandwidth to do both well.</p>
+
+          <h3>The Unexpected Life Event</h3>
+
+          <p>Life doesn't pause for academic deadlines. Medical issues, family emergencies, relocations, divorces—these things happen. Some students come to us mid-term when circumstances change suddenly and they're at risk of losing their tuition investment.</p>
+
+          <h3>The Accelerator</h3>
+
+          <p>You have the ability to pass your courses, but you want to finish faster than studying allows. Maybe a job opportunity requires the degree by a certain date. Maybe you're paying out of pocket and want to minimize terms. Our accelerated course completion helps you graduate in record time.</p>
+
+          <h3>The Subject-Specific Struggler</h3>
+
+          <p>Your MBA is going great, except for those quantitative courses. Your IT degree is on track, except for the business communications class that's sapping your motivation. Sometimes one or two courses threaten to derail an otherwise successful academic career.</p>
+
+          <h3>The Fresh Start Seeker</h3>
+
+          <p>Perhaps you've already failed a course or two. Your academic mentor is asking questions. You need to get back on track quickly and demonstrate consistent progress. Our experts can help you rebuild momentum and finish strong.</p>
+
+          <h2>How Our WGU Class Assistance Actually Works</h2>
+
+          <p>Transparency is core to how we operate. Here's exactly what happens when you hire us to take your WGU class.</p>
+
+          <h3>Step 1: Initial Consultation</h3>
+
+          <p>When you reach out on WhatsApp or Telegram, a specialist will ask about your situation. What course or courses do you need help with? What's your timeline? Do you have any work already completed? Are there specific concerns or requirements we should know about?</p>
+
+          <p>This isn't a sales pitch—it's a genuine assessment to make sure we can help. If your request falls outside our capabilities (rare, but possible), we'll tell you upfront rather than overpromise.</p>
+
+          <h3>Step 2: Detailed Quote</h3>
+
+          <p>Based on your consultation, you'll receive a detailed quote within 2 minutes. This includes:</p>
+
+          <ul>
+            <li>Total cost with no hidden fees</li>
+            <li>Estimated completion timeline</li>
+            <li>What's included (assessments, discussions, revision rounds)</li>
+            <li>Payment options and schedule</li>
           </ul>
-        </div>
-        <div class="footer__links">
-          <h4 class="footer__heading">Resources</h4>
-          <ul class="footer__list">
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/roadmaps/">Degree Roadmaps</a></li>
-            <li><a href="/contact/">Contact</a></li>
+
+          <p>You're under no obligation at this point. Take time to think it over, compare options, or ask additional questions.</p>
+
+          <h3>Step 3: Expert Assignment</h3>
+
+          <p>Once you approve the quote and make the initial payment, we assign your course to a subject-matter expert. This isn't random—we match you with a tutor who has specific expertise in your course content. An accounting course goes to a CPA. A nursing course goes to a practicing RN with advanced degrees. An IT course goes to a certified technology professional.</p>
+
+          <h3>Step 4: Secure Access</h3>
+
+          <p>You provide secure access to your WGU student portal. We use VPN technology to match your typical login patterns and never access from flagged locations. Your account security is paramount—we've completed thousands of courses without a single security incident.</p>
+
+          <h3>Step 5: Course Completion</h3>
+
+          <p>Your assigned expert navigates your course systematically. They complete Performance Assessments with original, well-researched writing. They prepare for and complete Objective Assessments with the knowledge needed to pass. They participate in any required discussions or activities. Throughout this process, you receive regular updates.</p>
+
+          <h3>Step 6: Quality Assurance</h3>
+
+          <p>Before any work is submitted, it goes through our quality assurance process. This includes plagiarism checking (Turnitin), AI detection verification, rubric alignment review, and formatting checks. We submit only when we're confident in passing.</p>
+
+          <h3>Step 7: Completion & Support</h3>
+
+          <p>Once your course is complete and grades are posted, you receive final confirmation. If any assessment requires revision (uncommon but possible), we handle it promptly at no additional charge. Our support continues until you're fully satisfied.</p>
+
+          <!-- In-Content CTA 2 -->
+          <div class="content-cta">
+            <h3 class="content-cta__title">Have Questions About the Process?</h3>
+            <p class="content-cta__text">We're happy to walk you through exactly how we'd handle your specific courses. No commitment required.</p>
+            <div class="content-cta__buttons">
+              <a href="https://wa.me/447474784797?text=Hi!%20I%20have%20questions%20about%20your%20WGU%20class%20service." class="btn btn--primary" target="_blank" rel="noopener">Ask Us on WhatsApp</a>
+            </div>
+          </div>
+
+          <h2>WGU Programs and Courses We Support</h2>
+
+          <p>We have experts available for all WGU programs across all four colleges. Here's a sampling of the most common courses and programs we help with.</p>
+
+          <h3>College of Business</h3>
+
+          <ul>
+            <li><strong>MBA Program:</strong> Organizational Leadership, Strategic Management, Data-Driven Decision Making, Marketing, Accounting for Decision Makers, and all core MBA courses</li>
+            <li><strong>BS Business Administration:</strong> Business Law, Microeconomics, Macroeconomics, Organizational Behavior, Project Management</li>
+            <li><strong>BS Accounting:</strong> Intermediate Accounting, Auditing, Tax courses, Cost Accounting, Financial Statement Analysis</li>
+            <li><strong>MS Management & Leadership:</strong> Ethical Leadership, Innovation, Change Management, Executive Communications</li>
           </ul>
+
+          <h3>College of IT</h3>
+
+          <ul>
+            <li><strong>BS Computer Science:</strong> Data Structures, Algorithms, Software Engineering, Operating Systems, Discrete Math</li>
+            <li><strong>BS Cybersecurity:</strong> Network Security, Ethical Hacking, Digital Forensics, Security Architecture</li>
+            <li><strong>BS Data Analytics:</strong> Statistics, Data Mining, Machine Learning foundations, Visualization</li>
+            <li><strong>BS Software Engineering:</strong> Full-stack development, DevOps, Quality Assurance, System Design</li>
+            <li><strong>Certifications:</strong> A+, Network+, Security+, CCNA, AWS, Project+, and more</li>
+          </ul>
+
+          <h3>College of Health Professions</h3>
+
+          <ul>
+            <li><strong>BSN (RN to BSN):</strong> Community Health, Nursing Research, Leadership in Nursing, Evidence-Based Practice</li>
+            <li><strong>MSN Programs:</strong> Advanced Pathophysiology, Pharmacology, Health Assessment, Nursing Informatics</li>
+            <li><strong>BS Health Informatics:</strong> Healthcare Systems, Health Data Management, Information Systems</li>
+            <li><strong>MBA Healthcare Management:</strong> Healthcare Policy, Finance, Quality Management</li>
+          </ul>
+
+          <h3>Teachers College</h3>
+
+          <ul>
+            <li><strong>Teaching Licensure Programs:</strong> Foundational Perspectives, Classroom Management, Pedagogy courses</li>
+            <li><strong>MS Education Programs:</strong> Curriculum Design, Instructional Design, Educational Leadership</li>
+            <li><strong>Special Education:</strong> Exceptional Learners, Assessment, Behavior Management</li>
+          </ul>
+
+          <p>Don't see your specific course listed? We still cover it. These are just examples—our team includes experts across every WGU program and course offering.</p>
+
+          <h2>Addressing Common Concerns</h2>
+
+          <p>Hiring someone to take your class is a significant decision. You probably have concerns. Let's address them directly.</p>
+
+          <h3>Privacy and Security</h3>
+
+          <p>This is typically the biggest concern, and rightfully so. Your academic career and professional reputation are at stake. Here's how we protect you:</p>
+
+          <ul>
+            <li><strong>Encryption:</strong> All communications and file transfers use bank-level encryption</li>
+            <li><strong>Confidentiality Agreements:</strong> Every tutor signs legally binding NDAs</li>
+            <li><strong>No Third Parties:</strong> We never share your information with anyone outside our core team</li>
+            <li><strong>Anonymous Payments:</strong> Accept cryptocurrency for students who want complete anonymity</li>
+            <li><strong>Secure Access Protocols:</strong> VPN use, pattern-matching logins, no suspicious access patterns</li>
+            <li><strong>Track Record:</strong> 10+ years and 1,700+ students without a privacy breach</li>
+          </ul>
+
+          <h3>Quality and Grades</h3>
+
+          <p>Our reputation depends on results. We guarantee passing grades on all work we complete. In practice, most students receive B+ or higher grades. For WGU's pass/fail competency assessments, we achieve first-attempt passes in the overwhelming majority of cases.</p>
+
+          <p>If any assignment doesn't pass, we revise it at no additional cost until it does. In rare cases where we cannot deliver satisfactory results, we provide refunds.</p>
+
+          <h3>Detection Risk</h3>
+
+          <p>WGU, like all universities, has systems to detect academic integrity violations. We're intimately familiar with these systems because we've worked within them for a decade. Our approaches are specifically designed to avoid triggering detection:</p>
+
+          <ul>
+            <li>100% human-written work that passes AI detection</li>
+            <li>Original content that passes plagiarism detection</li>
+            <li>Login patterns that match normal student behavior</li>
+            <li>Writing style consistency across your academic career</li>
+            <li>Understanding of what evaluators look for in submissions</li>
+          </ul>
+
+          <h3>Cost Considerations</h3>
+
+          <p>Quality WGU course assistance isn't cheap. You're paying for expert-level work, guaranteed results, and comprehensive security. When you consider the cost of failing a course (lost tuition, extended enrollment, delayed career advancement), our services typically represent a smart investment.</p>
+
+          <p>We offer flexible payment plans for students managing finances, and volume discounts for those who need help with multiple courses or full terms.</p>
+
+          <h2>What Sets Coursework Ninja Apart</h2>
+
+          <p>The market for academic assistance is crowded. Here's why students choose us over alternatives.</p>
+
+          <h3>WGU Specialization</h3>
+
+          <p>We're not a generic essay mill that happens to accept WGU assignments. WGU is our specialty. Our team understands competency-based education, evaluation rubrics, the student portal, proctoring systems, and the specific challenges WGU students face. This specialization translates to higher quality outcomes.</p>
+
+          <h3>Expert Matching</h3>
+
+          <p>Your course isn't assigned to just any available writer. We match you with an expert who has demonstrable expertise in your specific subject area. MBA courses go to MBA graduates with professional experience. IT courses go to certified tech professionals. This ensures the work reflects genuine subject matter expertise.</p>
+
+          <h3>Communication Standards</h3>
+
+          <p>You'll never wait days for a response. Our 2-minute average response time on WhatsApp and Telegram means you can always get updates, ask questions, or raise concerns immediately. We believe in over-communicating, not leaving you in the dark.</p>
+
+          <h3>Comprehensive Service</h3>
+
+          <p>We don't just complete assignments—we manage your entire course. Discussions, quizzes, participation activities, performance assessments, objective assessment preparation and execution—everything required to complete your course is included.</p>
+
+          <h3>Proven Track Record</h3>
+
+          <p>With over 920 WGU degrees completed and a 98% client satisfaction rate, our track record speaks for itself. We've been doing this successfully for over a decade. Our longevity in this space is testimony to the quality and reliability of our services.</p>
+
+          <!-- In-Content CTA 3 -->
+          <div class="content-cta">
+            <h3 class="content-cta__title">Join 1,700+ Successful WGU Students</h3>
+            <p class="content-cta__text">Don't let overwhelming coursework derail your degree. Let our experts carry the load while you focus on what matters.</p>
+            <div class="content-cta__buttons">
+              <a href="https://wa.me/447474784797?text=Hi!%20I%27m%20ready%20to%20get%20started." class="btn btn--primary" target="_blank" rel="noopener">Start Your Journey on WhatsApp</a>
+              <a href="https://t.me/courseworkninja" class="btn btn--secondary" target="_blank" rel="noopener">Or Contact via Telegram</a>
+            </div>
+          </div>
+
+          <h2>Pricing and Getting Started</h2>
+
+          <p>Every course is priced individually based on several factors:</p>
+
+          <ul>
+            <li><strong>Course complexity:</strong> A quantitative course with heavy calculations typically costs more than a writing-based course</li>
+            <li><strong>Assessment types:</strong> Courses with proctored OAs require additional preparation and expertise</li>
+            <li><strong>Timeline:</strong> Accelerated completion comes at a premium; standard timelines are more economical</li>
+            <li><strong>Scope:</strong> Full course vs. specific assessments only</li>
+          </ul>
+
+          <p>We provide transparent quotes with no hidden fees. The price you're quoted is the price you pay. Payment is typically structured as 50% upfront and 50% upon completion, though flexible arrangements are available.</p>
+
+          <p>Accepted payment methods include credit/debit cards, PayPal, bank transfers, and cryptocurrencies (Bitcoin, Ethereum, USDT, and others).</p>
+
+          <h3>Taking the First Step</h3>
+
+          <p>Starting is simple. Send us a message on WhatsApp or Telegram with basic information about your situation:</p>
+
+          <ul>
+            <li>Which course(s) you need help with</li>
+            <li>Your deadline or target completion date</li>
+            <li>Any work already completed in the course</li>
+            <li>Any specific concerns or requirements</li>
+          </ul>
+
+          <p>Within minutes, you'll have a detailed quote and can decide whether to proceed. There's no pressure and no obligation. We're here to help you succeed on your terms.</p>
+
+          <h2>Related Resources</h2>
+
+          <p>Explore more ways we support WGU students:</p>
+
+          <ul>
+            <li><a href="/services/take-my-wgu-exam/">Take My WGU Exam</a> – Specialized support for Objective Assessments</li>
+            <li><a href="/services/wgu-capstone-help/">WGU Capstone Help</a> – End-to-end capstone project management</li>
+            <li><a href="/blog/wgu-term-planning-guide/">WGU Term Planning Guide</a> – Strategies for structuring successful terms</li>
+            <li><a href="/blog/wgu-course-order-strategy/">WGU Course Order Strategy</a> – Optimal sequencing for your courses</li>
+            <li><a href="/roadmaps/mba/">MBA Degree Roadmap</a> – Complete guide to the WGU MBA program</li>
+          </ul>
+
         </div>
-        <div class="footer__contact">
-          <h4 class="footer__heading">Get In Touch</h4>
-          <div class="footer__contact-links">
-            <a href="https://wa.me/1234567890" class="footer__contact-link">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-              WhatsApp
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="faq-section__inner">
+          <div class="section-header">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              Is it safe to pay someone to take my WGU class?
+              <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">
+                Yes, when you work with Coursework Ninja, your privacy and security are our top priorities. We use bank-level encryption, never share your information with third parties, and accept anonymous payment methods like cryptocurrency. Our tutors sign strict confidentiality agreements, and we have a proven track record of helping thousands of students without any privacy issues.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              How does the process of taking my WGU class work?
+              <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">
+                The process is simple: First, message us on WhatsApp or Telegram with details about your course. Within 2 minutes, you'll receive a personalized quote. Once you approve, we assign a subject-matter expert who logs into your course portal and completes all assignments, discussions, and assessments according to your timeline. You receive regular progress updates throughout.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              What grade can I expect if someone takes my WGU class?
+              <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">
+                We guarantee passing grades on all work we complete. Most of our clients receive grades in the B+ to A range. For WGU's competency-based assessments, we ensure you demonstrate proficiency on the first attempt in the vast majority of cases. If work doesn't meet the passing threshold, we revise it at no additional cost until it does.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              Can you take my entire WGU term or multiple classes?
+              <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">
+                Absolutely. Many students hire us to manage their entire 6-month term, which typically includes 4-6 courses. We can handle multiple classes simultaneously, coordinating with different subject experts as needed. This is actually our most popular option because it provides consistent support throughout your academic journey and often comes with volume discounts.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              How quickly can you complete my WGU course?
+              <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">
+                Completion time depends on the course complexity and your deadline. Some courses with primarily written assessments can be completed in 1-2 weeks. Courses with proctored exams or complex projects may take 2-4 weeks. We can also work on accelerated timelines when needed. During your quote, we'll provide a realistic completion estimate based on your specific course requirements.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              Do you handle proctored exams at WGU?
+              <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">
+                Yes, we provide comprehensive support for proctored Objective Assessments (OAs). Our tutors prepare you thoroughly with study materials, practice tests, and one-on-one coaching sessions. For students who prefer direct assistance, we also offer exam-taking services using secure, proven methods that have helped hundreds of students pass their proctored exams.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              What WGU programs do you support?
+              <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">
+                We support all WGU programs across all four colleges: Business (MBA, accounting, HR, marketing), IT (computer science, cybersecurity, data analytics, software development), Education (teaching licenses, educational leadership), and Health Professions (nursing, health informatics, healthcare management). Our team includes specialists in every major field of study.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              How do I pay for WGU class help services?
+              <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">
+                We accept multiple payment methods for your convenience and privacy: credit/debit cards, PayPal, bank transfers, and cryptocurrencies (Bitcoin, Ethereum, USDT, and others). Crypto payments are popular among students who prefer maximum anonymity. We typically require 50% upfront and 50% upon completion, though flexible payment plans are available for full-term packages.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              What if I'm not satisfied with the work?
+              <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">
+                Your satisfaction is guaranteed. If any assignment doesn't meet your expectations or fails to pass, we provide unlimited revisions at no extra charge. In the rare case that we cannot deliver satisfactory results, we offer a full refund. Our 98% client satisfaction rate speaks to the quality and reliability of our services.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              How do you ensure the work is original and not AI-generated?
+              <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">
+                Every piece of work is completed by human subject-matter experts with verified credentials in their fields. We never use AI writing tools like ChatGPT. All work passes through Turnitin and AI detection software before delivery. Our tutors are professionals with graduate degrees who understand academic standards and write in natural, human styles that reflect genuine expertise.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              Can I communicate with the tutor handling my class?
+              <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">
+                Yes, we encourage ongoing communication. While we protect tutor identities for privacy reasons, you can communicate directly through our secure messaging system. Ask questions, provide preferences, request updates, or give feedback on completed work. Many students appreciate being involved in the process while still having the heavy lifting handled by experts.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-item__question" aria-expanded="false">
+              What makes Coursework Ninja different from other WGU help services?
+              <svg class="faq-item__icon" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            </button>
+            <div class="faq-item__answer">
+              <div class="faq-item__answer-inner">
+                Several factors set us apart: 10+ years of WGU-specific experience, 23+ subject-matter experts with verified credentials, a 98% satisfaction rate, 24/7 availability with 2-minute response times, 100% human work (never AI), bank-level security, anonymous payment options, and a proven track record with over 920 WGU degrees completed. We're not a generic essay mill—we specialize in WGU's unique competency-based model.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Services -->
+    <section class="related-services">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Explore More WGU Services</h2>
+        </div>
+        <div class="related-services__grid">
+          <a href="/services/take-my-wgu-exam/" class="related-service-card">
+            <h3 class="related-service-card__title">Take My WGU Exam</h3>
+            <p class="related-service-card__text">Struggling with Objective Assessments? Our experts provide complete OA preparation and exam support to help you pass on the first attempt.</p>
+            <span class="related-service-card__link">
+              Learn more
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+            </span>
+          </a>
+          <a href="/services/wgu-capstone-help/" class="related-service-card">
+            <h3 class="related-service-card__title">WGU Capstone Help</h3>
+            <p class="related-service-card__text">The capstone is your final hurdle. Our specialists guide you from topic selection through final submission, ensuring a polished project.</p>
+            <span class="related-service-card__link">
+              Learn more
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+            </span>
+          </a>
+          <a href="/services/" class="related-service-card">
+            <h3 class="related-service-card__title">All Services</h3>
+            <p class="related-service-card__text">Browse our complete range of WGU support services, from individual assignment help to full degree completion programs.</p>
+            <span class="related-service-card__link">
+              View all services
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+      <div class="cta-banner__pattern"></div>
+      <div class="cta-banner__glow"></div>
+      <div class="container">
+        <div class="cta-banner__content">
+          <h2 class="cta-banner__title">Ready to Complete Your WGU Degree?</h2>
+          <p class="cta-banner__tagline">No forms. No waiting. <span>Just results.</span></p>
+          <div class="cta-banner__buttons">
+            <a href="https://wa.me/447474784797" class="cta-banner__btn cta-banner__btn--whatsapp" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span>WhatsApp</span>
             </a>
-            <a href="https://t.me/courseworkninja" class="footer__contact-link">
-              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-              Telegram
+            <a href="https://t.me/courseworkninja" class="cta-banner__btn cta-banner__btn--telegram" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              <span>Telegram</span>
             </a>
           </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__countries">
+        <span class="footer__countries-label">Serving Students Worldwide</span>
+        <div class="footer__countries-slider">
+          <div class="footer__countries-track">
+            <span class="footer__country">United States</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United Kingdom</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Canada</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Australia</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Germany</span><span class="footer__country-dot"></span>
+            <span class="footer__country">India</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Nigeria</span><span class="footer__country-dot"></span>
+            <span class="footer__country">South Africa</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Philippines</span><span class="footer__country-dot"></span>
+            <span class="footer__country">UAE</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Saudi Arabia</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Singapore</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United States</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United Kingdom</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Canada</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Australia</span><span class="footer__country-dot"></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__crypto">
+        <span class="footer__crypto-label">We Accept</span>
+        <div class="footer__crypto-logos">
+          <div class="footer__crypto-item" title="Bitcoin"><img src="/images/crypto/btc.webp" alt="Bitcoin" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Ethereum"><img src="/images/crypto/eth.webp" alt="Ethereum" loading="lazy"></div>
+          <div class="footer__crypto-item" title="USDT"><img src="/images/crypto/usdt.webp" alt="USDT" loading="lazy"></div>
+          <div class="footer__crypto-item" title="USDC"><img src="/images/crypto/usdc.webp" alt="USDC" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Solana"><img src="/images/crypto/sol.webp" alt="Solana" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Monero"><img src="/images/crypto/xmr.webp" alt="Monero" loading="lazy"></div>
+          <div class="footer__crypto-item" title="DAI"><img src="/images/crypto/dai.webp" alt="DAI" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Litecoin"><img src="/images/crypto/ltc.webp" alt="Litecoin" loading="lazy"></div>
         </div>
       </div>
       <div class="footer__bottom">
-        <p class="footer__copyright">&copy; 2024 Coursework Ninja. All rights reserved.</p>
+        <p class="footer__copyright">&copy; 2025 Coursework Ninja. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -1502,12 +1284,10 @@
         const question = item.querySelector('.faq-item__question');
         question.addEventListener('click', function() {
           const isOpen = item.classList.contains('is-open');
-          // Close all
           faqItems.forEach(function(i) {
             i.classList.remove('is-open');
             i.querySelector('.faq-item__question').setAttribute('aria-expanded', 'false');
           });
-          // Open clicked if wasn't open
           if (!isOpen) {
             item.classList.add('is-open');
             question.setAttribute('aria-expanded', 'true');
