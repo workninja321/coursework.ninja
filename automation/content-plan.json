@@ -1,9 +1,9 @@
 {
   "meta": {
     "version": "1.0",
-    "lastUpdated": "2025-12-18",
+    "lastUpdated": "2025-12-19",
     "totalTopics": 60,
-    "publishedCount": 27
+    "publishedCount": 32
   },
   "categories": [
     {
@@ -566,7 +566,8 @@
         "CPA"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-19",
       "internalLinks": [
         "wgu-mba-complete-guide",
         "wgu-jobs-after-graduation"
@@ -621,7 +622,8 @@
         "Data Science"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-19",
       "internalLinks": [
         "wgu-bsit-guide",
         "wgu-jobs-after-graduation"
@@ -757,7 +759,8 @@
         "Online Education"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-19",
       "internalLinks": [
         "wgu-vs-snhu-comparison",
         "wgu-vs-traditional-college"
@@ -783,7 +786,8 @@
         "Online Education"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-19",
       "internalLinks": [
         "wgu-vs-snhu-comparison",
         "wgu-vs-gcu-comparison"
@@ -1587,7 +1591,8 @@
         "Acceleration"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-19",
       "internalLinks": [
         "wgu-acceleration-guide",
         "wgu-one-term-graduation-guide"
