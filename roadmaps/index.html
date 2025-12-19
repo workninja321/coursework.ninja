@@ -34,6 +34,7 @@
       padding: calc(var(--space-16) + 80px) 0 var(--space-12);
       background: linear-gradient(135deg, #0b1630 0%, #173056 55%, #1f3d6e 100%);
       color: var(--color-white);
+      text-align: center;
     }
 
     .roadmaps-hero__eyebrow {
@@ -43,7 +44,7 @@
       font-size: var(--text-xs);
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.75);
+      color: var(--color-gold);
       margin-bottom: var(--space-3);
     }
 
@@ -52,27 +53,30 @@
       font-weight: var(--font-bold);
       margin-bottom: var(--space-4);
       color: #ffffff;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .roadmaps-hero__subtitle {
       font-size: var(--text-lg);
       color: rgba(255, 255, 255, 0.85);
-      max-width: 720px;
-      margin-bottom: var(--space-6);
-    }
-
-    .roadmaps-hero__cta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-3);
+      max-width: 640px;
+      margin: 0 auto var(--space-8);
+      line-height: 1.7;
     }
 
     .roadmaps-section {
       padding: var(--space-12) 0;
     }
 
+    .roadmaps-section--gray {
+      background: var(--color-offwhite);
+    }
+
     .section-header {
-      margin-bottom: var(--space-8);
+      text-align: center;
+      margin-bottom: var(--space-10);
     }
 
     .section-title {
@@ -85,21 +89,263 @@
     .section-subtitle {
       font-size: var(--text-base);
       color: var(--color-slate);
-      max-width: 680px;
+      max-width: 600px;
+      margin: 0 auto;
     }
 
+    /* Roadmap Preview Card */
+    .roadmap-preview {
+      background: var(--color-white);
+      border-radius: var(--radius-2xl);
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.12);
+      overflow: hidden;
+      max-width: 900px;
+      margin: 0 auto;
+      border: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .roadmap-preview__header {
+      background: linear-gradient(135deg, #0b1630 0%, #1b3a5c 100%);
+      padding: var(--space-6) var(--space-8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+    }
+
+    .roadmap-preview__info {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .roadmap-preview__badges {
+      display: flex;
+      gap: var(--space-2);
+    }
+
+    .roadmap-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: var(--font-semibold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .roadmap-pill--gold {
+      background: rgba(244, 168, 38, 0.2);
+      color: #fbd87f;
+    }
+
+    .roadmap-pill--teal {
+      background: rgba(15, 118, 110, 0.25);
+      color: #9de2db;
+    }
+
+    .roadmap-preview__title {
+      font-size: var(--text-xl);
+      font-weight: var(--font-bold);
+      color: #ffffff;
+    }
+
+    .roadmap-preview__stats {
+      display: flex;
+      gap: var(--space-6);
+    }
+
+    .roadmap-stat {
+      text-align: center;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .roadmap-stat__value {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-bold);
+      color: var(--color-gold);
+      display: block;
+    }
+
+    .roadmap-stat__label {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      opacity: 0.8;
+    }
+
+    /* Visual Flowchart Preview */
+    .roadmap-preview__flow {
+      padding: var(--space-8);
+      background: var(--color-offwhite);
+    }
+
+    .flow-timeline {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+      padding: 0 var(--space-4);
+    }
+
+    .flow-timeline::before {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: 60px;
+      right: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--color-gold) 0%, var(--color-teal) 100%);
+      border-radius: 2px;
+    }
+
+    .flow-phase {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      max-width: 180px;
+    }
+
+    .flow-phase__node {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--color-white);
+      border: 3px solid var(--color-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: var(--font-bold);
+      color: var(--color-navy);
+      font-size: var(--text-lg);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: var(--space-3);
+    }
+
+    .flow-phase__node--complete {
+      background: var(--color-gold);
+      color: var(--color-navy);
+    }
+
+    .flow-phase__node--active {
+      border-color: var(--color-teal);
+      background: var(--color-teal);
+      color: white;
+    }
+
+    .flow-phase__title {
+      font-size: var(--text-sm);
+      font-weight: var(--font-semibold);
+      color: var(--color-navy);
+      text-align: center;
+      margin-bottom: var(--space-1);
+    }
+
+    .flow-phase__courses {
+      font-size: var(--text-xs);
+      color: var(--color-slate);
+    }
+
+    .roadmap-preview__footer {
+      padding: var(--space-6) var(--space-8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      border-top: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .roadmap-preview__meta {
+      font-size: var(--text-sm);
+      color: var(--color-slate);
+    }
+
+    /* Coming Soon Cards */
+    .roadmaps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-6);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .roadmap-coming {
+      background: var(--color-white);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      border: 2px dashed rgba(100, 116, 139, 0.3);
+      text-align: center;
+      opacity: 0.7;
+    }
+
+    .roadmap-coming__icon {
+      width: 48px;
+      height: 48px;
+      background: var(--color-offwhite);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-4);
+    }
+
+    .roadmap-coming__icon svg {
+      width: 24px;
+      height: 24px;
+      color: var(--color-slate);
+    }
+
+    .roadmap-coming__title {
+      font-size: var(--text-base);
+      font-weight: var(--font-semibold);
+      color: var(--color-navy);
+      margin-bottom: var(--space-2);
+    }
+
+    .roadmap-coming__text {
+      font-size: var(--text-sm);
+      color: var(--color-slate);
+    }
+
+    /* Features Grid */
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: var(--space-6);
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
     .feature-card {
       background: var(--color-white);
-      border-radius: var(--radius-2xl);
+      border-radius: var(--radius-xl);
       padding: var(--space-6);
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-      border: 1px solid rgba(15, 23, 42, 0.06);
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+      border: 1px solid rgba(15, 23, 42, 0.04);
+      text-align: center;
+    }
+
+    .feature-card__icon {
+      width: 56px;
+      height: 56px;
+      background: linear-gradient(135deg, rgba(244, 168, 38, 0.15), rgba(15, 118, 110, 0.1));
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-4);
+    }
+
+    .feature-card__icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--color-gold);
     }
 
     .feature-card__title {
@@ -115,160 +361,59 @@
       line-height: 1.6;
     }
 
-    .roadmaps-filters {
-      display: grid;
-      gap: var(--space-6);
-      background: var(--color-white);
-      border-radius: var(--radius-2xl);
-      padding: var(--space-8);
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
-    }
-
-    .roadmaps-filters__header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: var(--space-4);
-    }
-
-    .roadmaps-filters__title {
-      font-size: var(--text-lg);
-      font-weight: var(--font-semibold);
-      color: var(--color-navy);
-    }
-
-    .roadmaps-filters__group {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: var(--space-3);
-    }
-
-    .roadmaps-filters__label {
-      font-size: var(--text-sm);
-      font-weight: var(--font-semibold);
-      color: var(--color-slate);
-      min-width: 90px;
-    }
-
-    .roadmap-filter {
-      appearance: none;
-      background: var(--color-offwhite);
-      color: var(--color-slate);
-      border-radius: var(--radius-full);
-      border: 1px solid transparent;
-      padding: var(--space-2) var(--space-4);
-      font-size: var(--text-sm);
-      font-weight: var(--font-medium);
-      cursor: pointer;
-      transition: all 0.2s ease;
-    }
-
-    .roadmap-filter:hover,
-    .roadmap-filter:focus-visible {
-      border-color: rgba(244, 168, 38, 0.5);
-      color: var(--color-navy);
-      outline: none;
-    }
-
-    .roadmap-filter.is-active {
-      background: var(--color-gold);
-      color: var(--color-navy);
-      border-color: var(--color-gold);
-    }
-
-    .roadmap-filter--disabled,
-    .roadmap-filter:disabled {
-      opacity: 0.4;
-      cursor: not-allowed;
-    }
-
-    .roadmap-filter--reset {
-      background: transparent;
-      border: 1px dashed rgba(100, 116, 139, 0.4);
-      color: var(--color-slate);
-    }
-
-    .roadmap-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: var(--space-8);
-      margin-top: var(--space-10);
-    }
-
-    .roadmap-card {
-      background: var(--color-white);
-      border-radius: var(--radius-2xl);
-      padding: var(--space-7);
-      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-5);
-      border: 1px solid rgba(15, 23, 42, 0.06);
-    }
-
-    .roadmap-card__title {
-      font-size: var(--text-lg);
-      font-weight: var(--font-semibold);
-      color: var(--color-navy);
-      margin-bottom: var(--space-2);
-    }
-
-    .roadmap-card__summary {
-      color: var(--color-slate);
-      font-size: var(--text-sm);
-      line-height: 1.6;
-    }
-
-    .roadmap-card__badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-2);
-    }
-
-    .roadmap-pill {
-      display: inline-flex;
-      align-items: center;
-      padding: 6px 12px;
-      border-radius: 999px;
-      background: rgba(15, 118, 110, 0.1);
-      color: var(--color-teal);
-      font-size: var(--text-xs);
-      font-weight: var(--font-semibold);
-    }
-
-    .roadmap-pill--gold {
-      background: rgba(244, 168, 38, 0.18);
-      color: #8a5b00;
-    }
-
-    .roadmap-card__meta {
-      display: grid;
-      gap: var(--space-2);
-      font-size: var(--text-sm);
-      color: var(--color-slate);
-    }
-
-    .roadmap-empty {
-      text-align: center;
-      padding: var(--space-10);
-      background: var(--color-offwhite);
-      border-radius: var(--radius-xl);
-      color: var(--color-slate);
-      display: none;
-    }
-
-    .roadmap-empty.is-visible {
-      display: block;
-    }
-
     @media (max-width: 720px) {
-      .roadmaps-filters {
-        padding: var(--space-6);
+      .roadmap-preview__header {
+        padding: var(--space-5);
+        flex-direction: column;
+        align-items: flex-start;
       }
 
-      .roadmaps-filters__label {
-        min-width: unset;
+      .roadmap-preview__stats {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .flow-timeline {
+        flex-direction: column;
+        gap: var(--space-4);
+        padding: 0;
+      }
+
+      .flow-timeline::before {
+        top: 0;
+        bottom: 0;
+        left: 24px;
+        right: auto;
+        width: 3px;
+        height: auto;
+      }
+
+      .flow-phase {
+        flex-direction: row;
+        max-width: none;
+        gap: var(--space-4);
+        text-align: left;
+      }
+
+      .flow-phase__node {
+        flex-shrink: 0;
+        margin-bottom: 0;
+      }
+
+      .flow-phase__title {
+        text-align: left;
+      }
+
+      .roadmap-preview__footer {
+        padding: var(--space-5);
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+
+      .roadmap-preview__footer .btn {
+        width: 100%;
+        justify-content: center;
       }
     }
   </style>
@@ -347,70 +492,125 @@
   <main id="main-content">
     <section class="roadmaps-hero">
       <div class="container">
-        <span class="roadmaps-hero__eyebrow">Roadmaps</span>
-        <h1 class="roadmaps-hero__title">Plan Your WGU Journey with Clear, Actionable Roadmaps</h1>
-        <p class="roadmaps-hero__subtitle">Explore program roadmaps that outline required courses, assessments, and certifications so you can map your path before you enroll.</p>
-        <div class="roadmaps-hero__cta">
-          <a href="/roadmaps/mba/" class="btn btn--primary">Explore the MBA Roadmap</a>
-          <a href="/contact/" class="btn btn--secondary">Talk to an Advisor</a>
-        </div>
+        <span class="roadmaps-hero__eyebrow">WGU Roadmaps</span>
+        <h1 class="roadmaps-hero__title">Your Step-by-Step Path to Graduation</h1>
+        <p class="roadmaps-hero__subtitle">Visual roadmaps showing every course, assessment, and milestone. Know exactly what's ahead before you start.</p>
       </div>
     </section>
 
     <section class="roadmaps-section">
       <div class="container">
-        <div class="roadmaps-filters" data-roadmap-filters>
-          <div class="roadmaps-filters__header">
-            <div class="roadmaps-filters__title">Filter roadmaps</div>
-            <button class="roadmap-filter roadmap-filter--reset is-active" type="button" data-filter-reset aria-pressed="true">All roadmaps</button>
-          </div>
-
-          <div class="roadmaps-filters__group">
-            <span class="roadmaps-filters__label">Level</span>
-            <button class="roadmap-filter" type="button" data-filter-group="level" data-filter-value="graduate" aria-pressed="false">Graduate</button>
-            <button class="roadmap-filter roadmap-filter--disabled" type="button" disabled>Undergraduate</button>
-          </div>
-
-          <div class="roadmaps-filters__group">
-            <span class="roadmaps-filters__label">School</span>
-            <button class="roadmap-filter" type="button" data-filter-group="school" data-filter-value="business" aria-pressed="false">Business</button>
-            <button class="roadmap-filter roadmap-filter--disabled" type="button" disabled>IT</button>
-            <button class="roadmap-filter roadmap-filter--disabled" type="button" disabled>Health</button>
-            <button class="roadmap-filter roadmap-filter--disabled" type="button" disabled>Education</button>
-          </div>
-
-          <div class="roadmaps-filters__group">
-            <span class="roadmaps-filters__label">Focus</span>
-            <button class="roadmap-filter" type="button" data-filter-group="focus" data-filter-value="leadership" aria-pressed="false">Leadership</button>
-            <button class="roadmap-filter" type="button" data-filter-group="focus" data-filter-value="strategy" aria-pressed="false">Strategy</button>
-            <button class="roadmap-filter" type="button" data-filter-group="focus" data-filter-value="finance" aria-pressed="false">Finance</button>
-            <button class="roadmap-filter" type="button" data-filter-group="focus" data-filter-value="operations" aria-pressed="false">Operations</button>
-            <button class="roadmap-filter" type="button" data-filter-group="focus" data-filter-value="analytics" aria-pressed="false">Analytics</button>
-          </div>
+        <div class="section-header">
+          <h2 class="section-title">Available Roadmaps</h2>
+          <p class="section-subtitle">Click on a roadmap to explore the full program journey.</p>
         </div>
 
-        <div class="roadmap-grid">
-          <article class="roadmap-card" data-level="graduate" data-school="business" data-focus="leadership strategy finance operations analytics" data-credential="mba" data-assessments="performance capstone" data-certs="none">
-            <div>
-              <div class="roadmap-card__badges">
-                <span class="roadmap-pill">Graduate</span>
-                <span class="roadmap-pill roadmap-pill--gold">Business</span>
+        <article class="roadmap-preview">
+          <div class="roadmap-preview__header">
+            <div class="roadmap-preview__info">
+              <div class="roadmap-preview__badges">
+                <span class="roadmap-pill roadmap-pill--gold">Graduate</span>
+                <span class="roadmap-pill roadmap-pill--teal">Business</span>
               </div>
-              <h2 class="roadmap-card__title">MBA Roadmap</h2>
-              <p class="roadmap-card__summary">A practical MBA roadmap covering leadership, finance, analytics, and operations with a capstone finale.</p>
+              <h3 class="roadmap-preview__title">Master of Business Administration (MBA)</h3>
             </div>
-            <div class="roadmap-card__meta">
-              <span>11 courses • 34 CUs</span>
-              <span>No GMAT or GRE required</span>
-              <span>Performance assessments + capstone</span>
+            <div class="roadmap-preview__stats">
+              <div class="roadmap-stat">
+                <span class="roadmap-stat__value">11</span>
+                <span class="roadmap-stat__label">Courses</span>
+              </div>
+              <div class="roadmap-stat">
+                <span class="roadmap-stat__value">34</span>
+                <span class="roadmap-stat__label">CUs</span>
+              </div>
+              <div class="roadmap-stat">
+                <span class="roadmap-stat__value">4</span>
+                <span class="roadmap-stat__label">Phases</span>
+              </div>
             </div>
-            <a href="/roadmaps/mba/" class="btn btn--primary">View roadmap</a>
-          </article>
+          </div>
+
+          <div class="roadmap-preview__flow">
+            <div class="flow-timeline">
+              <div class="flow-phase">
+                <div class="flow-phase__node">1</div>
+                <div>
+                  <div class="flow-phase__title">Leadership</div>
+                  <div class="flow-phase__courses">3 courses</div>
+                </div>
+              </div>
+              <div class="flow-phase">
+                <div class="flow-phase__node">2</div>
+                <div>
+                  <div class="flow-phase__title">Fundamentals</div>
+                  <div class="flow-phase__courses">3 courses</div>
+                </div>
+              </div>
+              <div class="flow-phase">
+                <div class="flow-phase__node">3</div>
+                <div>
+                  <div class="flow-phase__title">Strategy</div>
+                  <div class="flow-phase__courses">4 courses</div>
+                </div>
+              </div>
+              <div class="flow-phase">
+                <div class="flow-phase__node">4</div>
+                <div>
+                  <div class="flow-phase__title">Capstone</div>
+                  <div class="flow-phase__courses">1 course</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="roadmap-preview__footer">
+            <span class="roadmap-preview__meta">No GMAT or GRE required • Performance assessments</span>
+            <a href="/roadmaps/mba/" class="btn btn--primary">
+              Explore Full Roadmap
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="roadmaps-section roadmaps-section--gray">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Coming Soon</h2>
+          <p class="section-subtitle">More program roadmaps are on the way.</p>
         </div>
 
-        <div class="roadmap-empty" data-roadmap-empty>
-          <h3>No roadmaps match those filters yet</h3>
-          <p>Clear filters or check back soon as we add new programs.</p>
+        <div class="roadmaps-grid">
+          <div class="roadmap-coming">
+            <div class="roadmap-coming__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+              </svg>
+            </div>
+            <h3 class="roadmap-coming__title">B.S. Computer Science</h3>
+            <p class="roadmap-coming__text">IT School • Undergraduate</p>
+          </div>
+          <div class="roadmap-coming">
+            <div class="roadmap-coming__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3 class="roadmap-coming__title">B.S. Business Administration</h3>
+            <p class="roadmap-coming__text">Business School • Undergraduate</p>
+          </div>
+          <div class="roadmap-coming">
+            <div class="roadmap-coming__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+              </svg>
+            </div>
+            <h3 class="roadmap-coming__title">B.S. Nursing (RN to BSN)</h3>
+            <p class="roadmap-coming__text">Health School • Undergraduate</p>
+          </div>
         </div>
       </div>
     </section>
@@ -418,21 +618,36 @@
     <section class="roadmaps-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Why use a roadmap?</h2>
-          <p class="section-subtitle">Know the required exams, project milestones, and potential certifications before you enroll.</p>
+          <h2 class="section-title">Why Use a Roadmap?</h2>
+          <p class="section-subtitle">Know the full journey before you take the first step.</p>
         </div>
         <div class="features-grid">
           <div class="feature-card">
-            <h3 class="feature-card__title">Clarity on requirements</h3>
-            <p class="feature-card__text">See the assessments and milestones required to graduate, from foundational courses to capstone projects.</p>
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">See Every Requirement</h3>
+            <p class="feature-card__text">View all courses, assessments, and certifications required to graduate from day one.</p>
           </div>
           <div class="feature-card">
-            <h3 class="feature-card__title">Smarter pacing</h3>
-            <p class="feature-card__text">Estimate your timeline and build a plan that fits your work and life responsibilities.</p>
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Plan Your Pace</h3>
+            <p class="feature-card__text">Estimate your timeline and build a study schedule that fits work and life.</p>
           </div>
           <div class="feature-card">
-            <h3 class="feature-card__title">Program-specific prep</h3>
-            <p class="feature-card__text">Focus on the skills, tools, and certifications that matter most for your degree path.</p>
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <h3 class="feature-card__title">Focus Your Prep</h3>
+            <p class="feature-card__text">Know which skills and certifications to prioritize for your specific degree path.</p>
           </div>
         </div>
       </div>
