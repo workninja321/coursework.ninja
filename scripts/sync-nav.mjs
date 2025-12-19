@@ -17,6 +17,7 @@ function listHtmlFiles(root) {
     "index.html",
     path.join("blog", "index.html"),
     path.join("contact", "index.html"),
+    path.join("roadmaps", "index.html"),
     path.join("templates", "blog-post.html"),
     path.join("templates", "landing-page.html"),
   ];
@@ -28,7 +29,28 @@ function listHtmlFiles(root) {
         .map((d) => path.join("blog", d.name, "index.html"))
     : [];
 
-  return [...candidates, ...blogDirs].filter((p) => fs.existsSync(path.join(root, p)));
+  const roadmapDirs = fs.existsSync(path.join(root, "roadmaps"))
+    ? fs
+        .readdirSync(path.join(root, "roadmaps"), { withFileTypes: true })
+        .filter((d) => d.isDirectory())
+        .map((d) => path.join("roadmaps", d.name, "index.html"))
+    : [];
+
+  return [...candidates, ...blogDirs, ...roadmapDirs].filter((p) => fs.existsSync(path.join(root, p)));
+}
+
+function ensureRoadmapsLinkInMenu(html) {
+  const menuRe = /<ul class="header__menu">([\s\S]*?)<\/ul>/m;
+  const match = html.match(menuRe);
+  if (!match) return html;
+  if (match[0].includes('href="/roadmaps/"')) return html;
+
+  const blogItemRe = /<li><a href="\/blog\/" class="header__link(?:\s+active)?">Blog<\/a><\/li>/;
+  const injection = '\n          <li><a href="/roadmaps/" class="header__link">Roadmaps</a></li>';
+  if (!blogItemRe.test(match[0])) return html;
+
+  const replaced = match[0].replace(blogItemRe, (m) => `${m}${injection}`);
+  return html.replace(match[0], replaced);
 }
 
 function ensureContactLinkInMenu(html) {
@@ -39,6 +61,20 @@ function ensureContactLinkInMenu(html) {
 
   const injection = `\n          <li><a href="/contact/" class="header__link">Contact</a></li>`;
   const replaced = match[0].replace("</ul>", `${injection}\n        </ul>`);
+  return html.replace(match[0], replaced);
+}
+
+function ensureRoadmapsLinkInMobileMenu(html) {
+  const menuRe = /<ul class="header__mobile-menu-list">([\s\S]*?)<\/ul>/m;
+  const match = html.match(menuRe);
+  if (!match) return html;
+  if (match[0].includes('href="/roadmaps/"')) return html;
+
+  const blogItemRe = /<li><a href="\/blog\/" class="header__mobile-link">Blog<\/a><\/li>/;
+  const injection = '\n        <li><a href="/roadmaps/" class="header__mobile-link">Roadmaps</a></li>';
+  if (!blogItemRe.test(match[0])) return html;
+
+  const replaced = match[0].replace(blogItemRe, (m) => `${m}${injection}`);
   return html.replace(match[0], replaced);
 }
 
@@ -62,7 +98,9 @@ export function syncNav({ root = ROOT } = {}) {
     const before = fs.readFileSync(absPath, "utf8");
     let after = before;
 
+    after = ensureRoadmapsLinkInMenu(after);
     after = ensureContactLinkInMenu(after);
+    after = ensureRoadmapsLinkInMobileMenu(after);
     after = ensureContactLinkInMobileMenu(after);
 
     if (after !== before) {

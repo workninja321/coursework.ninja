@@ -578,6 +578,96 @@
     }
   }
 
+  // ========== ROADMAP FILTERS ==========
+  function initRoadmapFilters() {
+    const filterWrap = document.querySelector('[data-roadmap-filters]');
+    if (!filterWrap) return;
+
+    const filterButtons = filterWrap.querySelectorAll('[data-filter-group][data-filter-value]');
+    const resetButton = filterWrap.querySelector('[data-filter-reset]');
+    const cards = document.querySelectorAll('.roadmap-card');
+    const emptyState = document.querySelector('[data-roadmap-empty]');
+
+    if (!filterButtons.length || !cards.length) return;
+
+    function normalize(value) {
+      return (value || '').trim().toLowerCase();
+    }
+
+    function getActiveFilters() {
+      const active = {};
+      filterButtons.forEach(function(button) {
+        if (!button.classList.contains('is-active')) return;
+        const group = normalize(button.getAttribute('data-filter-group'));
+        const value = normalize(button.getAttribute('data-filter-value'));
+        if (!group || !value) return;
+        if (!active[group]) active[group] = [];
+        active[group].push(value);
+      });
+      return active;
+    }
+
+    function matchesGroup(card, group, values) {
+      if (!values || !values.length) return true;
+      const attr = normalize(card.getAttribute('data-' + group));
+      if (!attr) return false;
+      const tokens = attr.split(/\s+/).filter(Boolean);
+      return values.some(function(value) {
+        return tokens.includes(value);
+      });
+    }
+
+    function applyFilters() {
+      const active = getActiveFilters();
+      let visibleCount = 0;
+
+      cards.forEach(function(card) {
+        const matches = Object.keys(active).every(function(group) {
+          return matchesGroup(card, group, active[group]);
+        });
+
+        card.hidden = !matches;
+        if (matches) visibleCount += 1;
+      });
+
+      if (emptyState) {
+        emptyState.classList.toggle('is-visible', visibleCount === 0);
+      }
+    }
+
+    function setResetActive(isActive) {
+      if (!resetButton) return;
+      resetButton.classList.toggle('is-active', isActive);
+      resetButton.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    }
+
+    filterButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        if (button.disabled) return;
+        const isActive = button.classList.toggle('is-active');
+        button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        const anyActive = Array.from(filterButtons).some(function(btn) {
+          return btn.classList.contains('is-active');
+        });
+        setResetActive(!anyActive);
+        applyFilters();
+      });
+    });
+
+    if (resetButton) {
+      resetButton.addEventListener('click', function() {
+        filterButtons.forEach(function(button) {
+          button.classList.remove('is-active');
+          button.setAttribute('aria-pressed', 'false');
+        });
+        setResetActive(true);
+        applyFilters();
+      });
+    }
+
+    applyFilters();
+  }
+
   // ========== FAQ ACCORDION ==========
   function initFaqAccordion() {
     const faqQuestions = document.querySelectorAll('.faq__question');
@@ -726,6 +816,7 @@
     initHeroAnimation();
     initLazyLoad();
     initBlogCategoryFilter();
+    initRoadmapFilters();
     initFaqAccordion();
     initCounterAnimation();
 
