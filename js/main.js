@@ -668,6 +668,30 @@
     applyFilters();
   }
 
+  // ========== ROADMAP TIMELINE ==========
+  function initRoadmapTimeline() {
+    const headers = document.querySelectorAll('.roadmap-phase__header');
+    if (!headers.length) return;
+
+    headers.forEach(function(header) {
+      header.addEventListener('click', function() {
+        const phase = this.closest('.roadmap-phase');
+        if (!phase) return;
+        const isExpanded = phase.classList.contains('is-expanded');
+
+        phase.classList.toggle('is-expanded');
+        this.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+      });
+
+      header.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    });
+  }
+
   // ========== FAQ ACCORDION ==========
   function initFaqAccordion() {
     const faqQuestions = document.querySelectorAll('.faq__question');
@@ -817,6 +841,7 @@
     initLazyLoad();
     initBlogCategoryFilter();
     initRoadmapFilters();
+    initRoadmapTimeline();
     initFaqAccordion();
     initCounterAnimation();
 

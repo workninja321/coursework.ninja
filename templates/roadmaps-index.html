@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{TITLE}} | Coursework Ninja</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <link rel="canonical" href="{{CANONICAL_URL}}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{CANONICAL_URL}}">
+  <meta property="og:title" content="{{OG_TITLE}}">
+  <meta property="og:description" content="{{META_DESCRIPTION}}">
+  <meta property="og:image" content="https://coursework.ninja/images/og-image.webp">
+  <meta property="og:site_name" content="Coursework Ninja">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{OG_TITLE}}">
+  <meta name="twitter:description" content="{{META_DESCRIPTION}}">
+
+  <meta name="theme-color" content="#0B1630">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <style>
+    /* Roadmaps landing styles (matches current design) */
+    {{STYLES}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========== HEADER ========== -->
+  {{HEADER}}
+
+  <main id="main-content">
+    <section class="roadmaps-hero">
+      <div class="container">
+        <span class="roadmaps-hero__eyebrow">{{HERO_EYEBROW}}</span>
+        <h1 class="roadmaps-hero__title">{{HERO_TITLE}}</h1>
+        <p class="roadmaps-hero__subtitle">{{HERO_SUBTITLE}}</p>
+      </div>
+    </section>
+
+    <section class="roadmaps-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">{{FEATURED_TITLE}}</h2>
+          <p class="section-subtitle">{{FEATURED_SUBTITLE}}</p>
+        </div>
+
+        {{FEATURED_ROADMAP}}
+      </div>
+    </section>
+
+    <section class="roadmaps-section roadmaps-section--gray">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">{{BROWSE_TITLE}}</h2>
+          <p class="section-subtitle">{{BROWSE_SUBTITLE}}</p>
+        </div>
+
+        <div class="roadmap-filters" data-roadmap-filters>
+          {{#FILTER_GROUPS}}
+          <div class="roadmap-filters__group">
+            <span class="roadmap-filters__label">{{LABEL}}</span>
+            <div class="roadmap-filters__buttons">
+              {{#BUTTONS}}
+              <button class="roadmap-filter" type="button" data-filter-group="{{GROUP}}" data-filter-value="{{VALUE}}" aria-pressed="false">{{TEXT}}</button>
+              {{/BUTTONS}}
+            </div>
+          </div>
+          {{/FILTER_GROUPS}}
+          <button class="roadmap-filter roadmap-filter--reset is-active" type="button" data-filter-reset aria-pressed="true">Reset Filters</button>
+        </div>
+
+        <div class="roadmaps-grid">
+          {{#ROADMAP_CARDS}}
+          <article class="roadmap-card" data-level="{{LEVEL}}" data-school="{{SCHOOL}}" data-focus="{{FOCUS}}">
+            <div class="roadmap-card__badges">
+              {{#BADGES}}<span class="roadmap-pill roadmap-pill--{{STYLE}}">{{TEXT}}</span>{{/BADGES}}
+            </div>
+            <h3 class="roadmap-card__title">{{TITLE}}</h3>
+            <p class="roadmap-card__meta">{{META}}</p>
+            <ul class="roadmap-card__list">
+              {{#HIGHLIGHTS}}<li>{{TEXT}}</li>{{/HIGHLIGHTS}}
+            </ul>
+            <div class="roadmap-card__stats">
+              {{#STATS}}<span class="roadmap-card__stat">{{TEXT}}</span>{{/STATS}}
+            </div>
+            <div class="roadmap-card__footer">
+              <a href="{{URL}}" class="btn btn--primary">View Roadmap</a>
+            </div>
+          </article>
+          {{/ROADMAP_CARDS}}
+        </div>
+
+        <div class="roadmaps-empty" data-roadmap-empty>
+          No matching roadmaps yet. Try removing a filter.
+        </div>
+      </div>
+    </section>
+
+    <section class="roadmaps-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">{{WHY_TITLE}}</h2>
+          <p class="section-subtitle">{{WHY_SUBTITLE}}</p>
+        </div>
+        <div class="features-grid">
+          {{#WHY_CARDS}}
+          <div class="feature-card">
+            <div class="feature-card__icon">{{ICON}}</div>
+            <h3 class="feature-card__title">{{TITLE}}</h3>
+            <p class="feature-card__text">{{TEXT}}</p>
+          </div>
+          {{/WHY_CARDS}}
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  {{FOOTER}}
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

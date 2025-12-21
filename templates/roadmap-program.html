@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{{SEO_TITLE}} | Coursework Ninja</title>
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <link rel="canonical" href="https://coursework.ninja/roadmaps/{{SLUG}}/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://coursework.ninja/roadmaps/{{SLUG}}/">
+  <meta property="og:title" content="{{OG_TITLE}}">
+  <meta property="og:description" content="{{META_DESCRIPTION}}">
+  <meta property="og:image" content="https://coursework.ninja/images/og-image.webp">
+  <meta property="og:site_name" content="Coursework Ninja">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{TWITTER_TITLE}}">
+  <meta name="twitter:description" content="{{TWITTER_DESCRIPTION}}">
+
+  <meta name="theme-color" content="#0B1630">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <style>
+    /* Roadmap program styles (matches current design) */
+    {{STYLES}}
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========== HEADER ========== -->
+  {{HEADER}}
+
+  <main id="main-content">
+    <section class="roadmap-hero">
+      <div class="container">
+        <nav class="roadmap-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="/roadmaps/">Roadmaps</a>
+          <span>/</span>
+          <span>{{BREADCRUMB_LABEL}}</span>
+        </nav>
+
+        <div class="roadmap-hero__grid">
+          <div>
+            <div class="roadmap-hero__badges">
+              {{#BADGES}}<span class="roadmap-pill roadmap-pill--{{STYLE}}">{{TEXT}}</span>{{/BADGES}}
+            </div>
+            <h1 class="roadmap-hero__title">{{PROGRAM_NAME}}</h1>
+            <p class="roadmap-hero__subtitle">{{PROGRAM_SUBTITLE}}</p>
+            <div class="roadmap-hero__cta">
+              <a href="/contact/" class="btn btn--primary">Get Enrollment Help</a>
+              <a href="#roadmap" class="btn btn--secondary">View Roadmap</a>
+            </div>
+          </div>
+
+          <aside class="roadmap-sidebar">
+            <h2 class="roadmap-sidebar__title">Program Snapshot</h2>
+            <div class="roadmap-sidebar__stats">
+              {{#SNAPSHOT_STATS}}
+              <div class="roadmap-stat">
+                <span class="roadmap-stat__label">{{LABEL}}</span>
+                <span class="roadmap-stat__value">{{VALUE}}</span>
+              </div>
+              {{/SNAPSHOT_STATS}}
+            </div>
+            <p class="roadmap-sidebar__note">{{SNAPSHOT_NOTE}}</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="roadmap-content" id="roadmap">
+      <div class="container">
+        <div class="roadmap-layout">
+          <div class="roadmap-timeline">
+            {{#PHASES}}
+            <div class="roadmap-phase {{#IS_EXPANDED}}is-expanded{{/IS_EXPANDED}}" data-phase="{{INDEX}}">
+              <div class="roadmap-phase__header" role="button" tabindex="0" aria-expanded="{{ARIA_EXPANDED}}" aria-controls="phase-{{INDEX}}-courses">
+                <div class="roadmap-phase__node">{{INDEX}}</div>
+                <div class="roadmap-phase__info">
+                  <h2 class="roadmap-phase__title">
+                    {{TITLE}}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                  </h2>
+                  <div class="roadmap-phase__meta">{{META}}</div>
+                  <p class="roadmap-phase__desc">{{DESCRIPTION}}</p>
+                </div>
+              </div>
+              <div class="roadmap-courses" id="phase-{{INDEX}}-courses">
+                <div class="roadmap-courses__grid">
+                  {{#ITEMS}}
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">{{NAME}}</div>
+                      <div class="course-card__type">{{TYPE}}</div>
+                    </div>
+                    <span class="course-card__cus">{{TAG}}</span>
+                  </div>
+                  {{/ITEMS}}
+                </div>
+              </div>
+            </div>
+            {{/PHASES}}
+          </div>
+
+          <aside class="roadmap-info">
+            {{#INFO_CARDS}}
+            <div class="info-card">
+              <h3 class="info-card__title">
+                {{ICON}}
+                {{TITLE}}
+              </h3>
+              <ul class="info-card__list">
+                {{#ITEMS}}<li>{{TEXT}}</li>{{/ITEMS}}
+              </ul>
+              {{#LINK}}
+              <a href="{{URL}}" class="info-card__link">
+                {{TEXT}}
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+              {{/LINK}}
+            </div>
+            {{/INFO_CARDS}}
+          </aside>
+        </div>
+
+        <div class="roadmap-cta">
+          <h2 class="roadmap-cta__title">{{CTA_TITLE}}</h2>
+          <p class="roadmap-cta__text">{{CTA_TEXT}}</p>
+          <a href="/contact/" class="btn btn--primary">Talk to Coursework Ninja</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  {{FOOTER}}
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

@@ -266,51 +266,172 @@
       color: var(--color-slate);
     }
 
-    /* Coming Soon Cards */
-    .roadmaps-grid {
+    /* Roadmap Filters & Cards */
+    .roadmap-filters {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: var(--space-6);
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .roadmap-coming {
+      gap: var(--space-4);
       background: var(--color-white);
       border-radius: var(--radius-xl);
       padding: var(--space-6);
-      border: 2px dashed rgba(100, 116, 139, 0.3);
-      text-align: center;
-      opacity: 0.7;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      border: 1px solid rgba(15, 23, 42, 0.05);
+      margin-bottom: var(--space-8);
     }
 
-    .roadmap-coming__icon {
-      width: 48px;
-      height: 48px;
-      background: var(--color-offwhite);
-      border-radius: 50%;
+    .roadmap-filters__group {
       display: flex;
       align-items: center;
-      justify-content: center;
-      margin: 0 auto var(--space-4);
+      flex-wrap: wrap;
+      gap: var(--space-3);
     }
 
-    .roadmap-coming__icon svg {
-      width: 24px;
-      height: 24px;
+    .roadmap-filters__label {
+      font-size: var(--text-xs);
+      font-weight: var(--font-semibold);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-slate);
+      min-width: 90px;
+    }
+
+    .roadmap-filters__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .roadmap-filter {
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      background: var(--color-offwhite);
+      color: var(--color-navy);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: var(--font-semibold);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .roadmap-filter:hover {
+      border-color: rgba(15, 118, 110, 0.4);
+      color: var(--color-teal);
+    }
+
+    .roadmap-filter.is-active {
+      background: rgba(15, 118, 110, 0.15);
+      border-color: rgba(15, 118, 110, 0.35);
+      color: var(--color-teal);
+    }
+
+    .roadmap-filter--reset {
+      background: transparent;
+      border-style: dashed;
       color: var(--color-slate);
     }
 
-    .roadmap-coming__title {
-      font-size: var(--text-base);
-      font-weight: var(--font-semibold);
-      color: var(--color-navy);
-      margin-bottom: var(--space-2);
+    .roadmaps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: var(--space-6);
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
-    .roadmap-coming__text {
+    .roadmap-card {
+      background: var(--color-white);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+      height: 100%;
+    }
+
+    .roadmap-card__badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .roadmap-card__title {
+      font-size: var(--text-lg);
+      font-weight: var(--font-bold);
+      color: var(--color-navy);
+      margin: 0;
+    }
+
+    .roadmap-card__meta {
       font-size: var(--text-sm);
       color: var(--color-slate);
+      margin: 0;
+    }
+
+    .roadmap-card__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .roadmap-card__list li {
+      font-size: var(--text-sm);
+      color: var(--color-slate);
+      padding-left: var(--space-4);
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .roadmap-card__list li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      position: absolute;
+      left: 0;
+      top: 8px;
+    }
+
+    .roadmap-card__stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .roadmap-card__stat {
+      background: var(--color-offwhite);
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: var(--font-semibold);
+      color: var(--color-slate);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .roadmap-card__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      margin-top: auto;
+    }
+
+    .roadmaps-empty {
+      display: none;
+      margin-top: var(--space-6);
+      text-align: center;
+      color: var(--color-slate);
+      font-size: var(--text-sm);
+    }
+
+    .roadmaps-empty.is-visible {
+      display: block;
     }
 
     /* Features Grid */
@@ -415,6 +536,24 @@
         width: 100%;
         justify-content: center;
       }
+
+      .roadmap-filters {
+        padding: var(--space-5);
+      }
+
+      .roadmap-filters__label {
+        min-width: 100%;
+      }
+
+      .roadmap-card__footer {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .roadmap-card__footer .btn {
+        width: 100%;
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -494,15 +633,15 @@
       <div class="container">
         <span class="roadmaps-hero__eyebrow">WGU Roadmaps</span>
         <h1 class="roadmaps-hero__title">Your Step-by-Step Path to Graduation</h1>
-        <p class="roadmaps-hero__subtitle">Visual roadmaps showing every course, assessment, and milestone. Know exactly what's ahead before you start.</p>
+        <p class="roadmaps-hero__subtitle">Visual roadmaps highlighting key courses, assessments, and certifications so you can plan before you start.</p>
       </div>
     </section>
 
     <section class="roadmaps-section">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Available Roadmaps</h2>
-          <p class="section-subtitle">Click on a roadmap to explore the full program journey.</p>
+          <h2 class="section-title">Featured Roadmap</h2>
+          <p class="section-subtitle">Start with the MBA roadmap, then browse by degree level and focus.</p>
         </div>
 
         <article class="roadmap-preview">
@@ -579,38 +718,132 @@
     <section class="roadmaps-section roadmaps-section--gray">
       <div class="container">
         <div class="section-header">
-          <h2 class="section-title">Coming Soon</h2>
-          <p class="section-subtitle">More program roadmaps are on the way.</p>
+          <h2 class="section-title">Browse Roadmaps</h2>
+          <p class="section-subtitle">Filter by level, school, or focus area to find your program.</p>
+        </div>
+
+        <div class="roadmap-filters" data-roadmap-filters>
+          <div class="roadmap-filters__group">
+            <span class="roadmap-filters__label">Level</span>
+            <div class="roadmap-filters__buttons">
+              <button class="roadmap-filter" type="button" data-filter-group="level" data-filter-value="undergraduate" aria-pressed="false">Undergraduate</button>
+              <button class="roadmap-filter" type="button" data-filter-group="level" data-filter-value="graduate" aria-pressed="false">Graduate</button>
+            </div>
+          </div>
+          <div class="roadmap-filters__group">
+            <span class="roadmap-filters__label">School</span>
+            <div class="roadmap-filters__buttons">
+              <button class="roadmap-filter" type="button" data-filter-group="school" data-filter-value="business" aria-pressed="false">Business</button>
+              <button class="roadmap-filter" type="button" data-filter-group="school" data-filter-value="technology" aria-pressed="false">Technology</button>
+            </div>
+          </div>
+          <div class="roadmap-filters__group">
+            <span class="roadmap-filters__label">Focus</span>
+            <div class="roadmap-filters__buttons">
+              <button class="roadmap-filter" type="button" data-filter-group="focus" data-filter-value="business" aria-pressed="false">Business</button>
+              <button class="roadmap-filter" type="button" data-filter-group="focus" data-filter-value="information-technology" aria-pressed="false">Information Technology</button>
+              <button class="roadmap-filter" type="button" data-filter-group="focus" data-filter-value="cybersecurity" aria-pressed="false">Cybersecurity</button>
+              <button class="roadmap-filter" type="button" data-filter-group="focus" data-filter-value="computer-science" aria-pressed="false">Computer Science</button>
+            </div>
+          </div>
+          <button class="roadmap-filter roadmap-filter--reset is-active" type="button" data-filter-reset aria-pressed="true">Reset Filters</button>
         </div>
 
         <div class="roadmaps-grid">
-          <div class="roadmap-coming">
-            <div class="roadmap-coming__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
-              </svg>
+          <article class="roadmap-card" data-level="graduate" data-school="business" data-focus="business">
+            <div class="roadmap-card__badges">
+              <span class="roadmap-pill roadmap-pill--gold">Graduate</span>
+              <span class="roadmap-pill roadmap-pill--teal">Business</span>
             </div>
-            <h3 class="roadmap-coming__title">B.S. Computer Science</h3>
-            <p class="roadmap-coming__text">IT School • Undergraduate</p>
-          </div>
-          <div class="roadmap-coming">
-            <div class="roadmap-coming__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-              </svg>
+            <h3 class="roadmap-card__title">Master of Business Administration (MBA)</h3>
+            <p class="roadmap-card__meta">Leadership, strategy, and capstone focus.</p>
+            <ul class="roadmap-card__list">
+              <li>No GMAT/GRE required</li>
+              <li>Performance assessments</li>
+              <li>Capstone project</li>
+            </ul>
+            <div class="roadmap-card__stats">
+              <span class="roadmap-card__stat">11 Courses</span>
+              <span class="roadmap-card__stat">34 CUs</span>
+              <span class="roadmap-card__stat">12 mo listed</span>
             </div>
-            <h3 class="roadmap-coming__title">B.S. Business Administration</h3>
-            <p class="roadmap-coming__text">Business School • Undergraduate</p>
-          </div>
-          <div class="roadmap-coming">
-            <div class="roadmap-coming__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-              </svg>
+            <div class="roadmap-card__footer">
+              <a href="/roadmaps/mba/" class="btn btn--primary">View Roadmap</a>
             </div>
-            <h3 class="roadmap-coming__title">B.S. Nursing (RN to BSN)</h3>
-            <p class="roadmap-coming__text">Health School • Undergraduate</p>
-          </div>
+          </article>
+
+          <article class="roadmap-card" data-level="undergraduate" data-school="technology" data-focus="information-technology it">
+            <div class="roadmap-card__badges">
+              <span class="roadmap-pill roadmap-pill--gold">Undergraduate</span>
+              <span class="roadmap-pill roadmap-pill--teal">Technology</span>
+              <span class="roadmap-pill roadmap-pill--gold">Certifications</span>
+            </div>
+            <h3 class="roadmap-card__title">B.S. Information Technology (BSIT)</h3>
+            <p class="roadmap-card__meta">Broad IT degree with a strong certification stack.</p>
+            <ul class="roadmap-card__list">
+              <li>CompTIA A+, Network+, Security+</li>
+              <li>AWS Cloud Practitioner</li>
+              <li>ITIL 4 Foundation</li>
+            </ul>
+            <div class="roadmap-card__stats">
+              <span class="roadmap-card__stat">36 Courses</span>
+              <span class="roadmap-card__stat">9 Certs</span>
+              <span class="roadmap-card__stat">39 mo typical</span>
+            </div>
+            <div class="roadmap-card__footer">
+              <a href="/roadmaps/bs-information-technology/" class="btn btn--primary">View Roadmap</a>
+            </div>
+          </article>
+
+          <article class="roadmap-card" data-level="undergraduate" data-school="technology" data-focus="cybersecurity">
+            <div class="roadmap-card__badges">
+              <span class="roadmap-pill roadmap-pill--gold">Undergraduate</span>
+              <span class="roadmap-pill roadmap-pill--teal">Cybersecurity</span>
+              <span class="roadmap-pill roadmap-pill--gold">ABET</span>
+            </div>
+            <h3 class="roadmap-card__title">B.S. Cybersecurity &amp; Information Assurance</h3>
+            <p class="roadmap-card__meta">Security-first track with deep certification coverage.</p>
+            <ul class="roadmap-card__list">
+              <li>Security+, CySA+, PenTest+</li>
+              <li>SSCP/CCSP (Associate)</li>
+              <li>Stackable CompTIA credentials</li>
+            </ul>
+            <div class="roadmap-card__stats">
+              <span class="roadmap-card__stat">34 Courses</span>
+              <span class="roadmap-card__stat">14 Certs</span>
+              <span class="roadmap-card__stat">29 mo typical</span>
+            </div>
+            <div class="roadmap-card__footer">
+              <a href="/roadmaps/bs-cybersecurity-information-assurance/" class="btn btn--primary">View Roadmap</a>
+            </div>
+          </article>
+
+          <article class="roadmap-card" data-level="undergraduate" data-school="technology" data-focus="computer-science cs">
+            <div class="roadmap-card__badges">
+              <span class="roadmap-pill roadmap-pill--gold">Undergraduate</span>
+              <span class="roadmap-pill roadmap-pill--teal">Computer Science</span>
+              <span class="roadmap-pill roadmap-pill--gold">ABET</span>
+            </div>
+            <h3 class="roadmap-card__title">B.S. Computer Science (BSCS)</h3>
+            <p class="roadmap-card__meta">Algorithms, systems, and software engineering focus.</p>
+            <ul class="roadmap-card__list">
+              <li>Linux Essentials certification</li>
+              <li>ITIL Foundation certification</li>
+              <li>Capstone project</li>
+            </ul>
+            <div class="roadmap-card__stats">
+              <span class="roadmap-card__stat">37 Courses</span>
+              <span class="roadmap-card__stat">2 Certs</span>
+              <span class="roadmap-card__stat">25 mo typical</span>
+            </div>
+            <div class="roadmap-card__footer">
+              <a href="/roadmaps/bs-computer-science/" class="btn btn--primary">View Roadmap</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="roadmaps-empty" data-roadmap-empty>
+          No matching roadmaps yet. Try removing a filter.
         </div>
       </div>
     </section>
@@ -628,8 +861,8 @@
                 <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
               </svg>
             </div>
-            <h3 class="feature-card__title">See Every Requirement</h3>
-            <p class="feature-card__text">View all courses, assessments, and certifications required to graduate from day one.</p>
+            <h3 class="feature-card__title">See Key Requirements</h3>
+            <p class="feature-card__text">Review core courses, assessments, and certifications required to graduate from day one.</p>
           </div>
           <div class="feature-card">
             <div class="feature-card__icon">
