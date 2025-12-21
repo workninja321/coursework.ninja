@@ -119,7 +119,7 @@
       display: block;
       font-size: var(--text-2xl);
       font-weight: var(--font-bold);
-      color: var(--color-gold);
+      color: #F4A826;
     }
     .services-hero__trust-label {
       font-size: var(--text-sm);
@@ -149,10 +149,16 @@
     }
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: var(--space-8);
-      max-width: 1000px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-6);
+      max-width: 1200px;
       margin: 0 auto;
+    }
+    @media (max-width: 1100px) {
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .services-grid { grid-template-columns: 1fr; }
     }
     .service-card {
       background: var(--color-white);
@@ -375,17 +381,6 @@
           <p class="section-subtitle">Choose the level of support that fits your situation</p>
         </div>
         <div class="services-grid">
-          <a href="/services/take-my-wgu-class/" class="service-card service-card--featured">
-            <div class="service-card__icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            </div>
-            <h3 class="service-card__title">Take My WGU Class</h3>
-            <p class="service-card__desc">Complete course management. Our experts handle all assignments, discussions, and assessments while you focus on work and family.</p>
-            <span class="service-card__link">
-              Learn more
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </a>
           <a href="/services/take-my-wgu-exam/" class="service-card">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/><path d="M9 12h6M9 16h6"/></svg>
@@ -397,12 +392,34 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </span>
           </a>
+          <a href="/services/take-my-wgu-class/" class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <h3 class="service-card__title">Take My WGU Class</h3>
+            <p class="service-card__desc">Complete course management. Our experts handle all assignments, discussions, and assessments while you focus on work and family.</p>
+            <span class="service-card__link">
+              Learn more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
           <a href="/services/wgu-capstone-help/" class="service-card">
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
             </div>
             <h3 class="service-card__title">WGU Capstone Help</h3>
             <p class="service-card__desc">End-to-end capstone support from topic selection through final submission. We ensure your capstone passes on the first attempt.</p>
+            <span class="service-card__link">
+              Learn more
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </a>
+          <a href="/services/wgu-degree-completion/" class="service-card service-card--featured">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/><circle cx="12" cy="19" r="2"/></svg>
+            </div>
+            <h3 class="service-card__title">WGU Degree Completion</h3>
+            <p class="service-card__desc">Complete your entire WGU degree with expert help. All courses, exams, and capstone included. 920+ degrees completed.</p>
             <span class="service-card__link">
               Learn more
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
