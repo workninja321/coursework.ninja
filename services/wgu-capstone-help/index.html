@@ -426,6 +426,106 @@
       text-decoration: underline;
     }
     .service-content a:hover { color: var(--color-navy); }
+
+    /* Callouts and Visual Elements */
+    .callout {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      margin: var(--space-8) 0;
+      border-left: 4px solid var(--color-teal);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .callout--tip {
+      border-left-color: var(--color-teal);
+      background: linear-gradient(135deg, rgba(15, 118, 110, 0.05) 0%, var(--color-white) 100%);
+    }
+    .callout--warning {
+      border-left-color: var(--color-gold);
+      background: linear-gradient(135deg, rgba(244, 168, 38, 0.08) 0%, var(--color-white) 100%);
+    }
+    .callout--info {
+      border-left-color: #3B82F6;
+      background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, var(--color-white) 100%);
+    }
+    .callout__icon {
+      width: 24px;
+      height: 24px;
+      margin-bottom: var(--space-3);
+    }
+    .callout--tip .callout__icon { color: var(--color-teal); }
+    .callout--warning .callout__icon { color: var(--color-gold); }
+    .callout--info .callout__icon { color: #3B82F6; }
+    .callout__title {
+      font-size: var(--text-base);
+      font-weight: var(--font-semibold);
+      color: var(--color-navy);
+      margin-bottom: var(--space-2);
+    }
+    .callout__text {
+      color: var(--color-slate);
+      line-height: 1.7;
+      margin: 0;
+    }
+    .highlight-box {
+      background: linear-gradient(135deg, var(--color-navy) 0%, #1a2744 100%);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      margin: var(--space-8) 0;
+      color: var(--color-white);
+    }
+    .highlight-box__title {
+      font-size: var(--text-lg);
+      font-weight: var(--font-bold);
+      color: var(--color-gold);
+      margin-bottom: var(--space-3);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+    .highlight-box__text {
+      color: rgba(255,255,255,0.9);
+      line-height: 1.7;
+      margin: 0;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-4);
+      margin: var(--space-6) 0;
+    }
+    @media (max-width: 640px) {
+      .feature-grid { grid-template-columns: 1fr; }
+    }
+    .feature-item {
+      background: var(--color-white);
+      padding: var(--space-5);
+      border-radius: var(--radius-lg);
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+    }
+    .feature-item__icon {
+      width: 20px;
+      height: 20px;
+      color: var(--color-teal);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .feature-item__text {
+      color: var(--color-slate);
+      font-size: var(--text-sm);
+      line-height: 1.6;
+    }
+    .quote-block {
+      border-left: 3px solid var(--color-gold);
+      padding-left: var(--space-6);
+      margin: var(--space-8) 0;
+      font-style: italic;
+      color: var(--color-navy);
+      font-size: var(--text-lg);
+      line-height: 1.7;
+    }
     .program-cards {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -819,11 +919,21 @@
 
           <p>The capstone project is the culminating academic experience of your WGU degree program. It's designed to demonstrate that you can apply everything you've learned to a comprehensive, real-world project. Unlike regular Performance Assessments that focus on individual competencies, capstones integrate multiple competencies into a single, substantial deliverable.</p>
 
-          <p>For many students, the capstone represents the most significant academic challenge they've ever faced. The scope is larger than anything else in your program—often spanning 20 to 50+ pages of original research, analysis, and professional writing. The requirements are exacting, with detailed rubrics that must be satisfied point by point. And the stakes are high: this is the final barrier between you and your degree.</p>
+          <div class="callout callout--warning">
+            <svg class="callout__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            <p class="callout__title">Why Capstones Are So Challenging</p>
+            <p class="callout__text">20-50+ pages of original research. Exacting rubrics that must be satisfied point by point. Graduate-level methodology and citations. All while balancing work and family. This is the final barrier between you and your degree.</p>
+          </div>
 
-          <p>We understand why students struggle with capstones. After months or years of balancing work, family, and education, you're being asked to produce a graduate-level research project that would challenge a full-time student. You're exhausted from the journey so far. You may have never written anything of this length or complexity. And you have limited time to learn the intricacies of academic research methodology, proper citation, and rubric-aligned writing.</p>
+          <p>We understand why students struggle. After months or years of balancing responsibilities, you're asked to produce a research project that would challenge a full-time student. You may have never written anything of this length or complexity.</p>
 
-          <p>That's why we exist. Coursework Ninja was built to help working professionals complete their degrees without sacrificing their careers, relationships, or sanity. Our capstone specialists have completed hundreds of WGU capstones across every program. We know what evaluators look for, what causes revisions, and how to craft projects that pass on the first submission.</p>
+          <div class="highlight-box">
+            <p class="highlight-box__title">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              That's Why We Exist
+            </p>
+            <p class="highlight-box__text">Our capstone specialists have completed hundreds of WGU capstones across every program. We know what evaluators look for, what causes revisions, and how to craft projects that pass on the first submission.</p>
+          </div>
 
           <h2>WGU Capstone Types by Program</h2>
 
