@@ -1,9 +1,9 @@
 {
   "meta": {
     "version": "1.0",
-    "lastUpdated": "2025-12-21",
+    "lastUpdated": "2025-12-22",
     "totalTopics": 60,
-    "publishedCount": 35
+    "publishedCount": 38
   },
   "categories": [
     {
@@ -1009,13 +1009,14 @@
         "MHA"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-nursing-program-guide",
         "wgu-mba-complete-guide"
       ],
       "estimatedReadTime": 9,
-      "notes": "Cover career paths, program structure, industry outlook"
+      "notes": "Cover career paths, program structure, industry outlook",
+      "publishedDate": "2025-12-22"
     },
     {
       "id": "036",
@@ -1036,13 +1037,14 @@
         "Business"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-mba-complete-guide",
         "wgu-jobs-after-graduation"
       ],
       "estimatedReadTime": 9,
-      "notes": "Cover SHRM certification, career paths, course highlights"
+      "notes": "Cover SHRM certification, career paths, course highlights",
+      "publishedDate": "2025-12-22"
     },
     {
       "id": "037",
@@ -1116,13 +1118,14 @@
         "IT"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-bsit-guide",
         "wgu-jobs-after-graduation"
       ],
       "estimatedReadTime": 10,
-      "notes": "Cover languages taught, capstone project, job outcomes"
+      "notes": "Cover languages taught, capstone project, job outcomes",
+      "publishedDate": "2025-12-22"
     },
     {
       "id": "040",
