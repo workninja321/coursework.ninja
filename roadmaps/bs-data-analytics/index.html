@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WGU B.S. Data Analytics Roadmap: Certifications & Courses | Coursework Ninja</title>
+  <meta name="description" content="WGU B.S. Data Analytics roadmap with certification order, analytics milestones, and capstone planning.">
+  <link rel="canonical" href="https://coursework.ninja/roadmaps/bs-data-analytics/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://coursework.ninja/roadmaps/bs-data-analytics/">
+  <meta property="og:title" content="WGU B.S. Data Analytics Roadmap: Certifications & Courses">
+  <meta property="og:description" content="WGU B.S. Data Analytics roadmap with certification order, analytics milestones, and capstone planning.">
+  <meta property="og:image" content="https://coursework.ninja/images/og-image.webp">
+  <meta property="og:site_name" content="Coursework Ninja">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WGU B.S. Data Analytics Roadmap">
+  <meta name="twitter:description" content="Certification-focused data analytics roadmap with key milestones.">
+
+  <meta name="theme-color" content="#0B1630">
+  <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <style>
+    /* Hero */
+    .roadmap-hero {
+      padding: calc(var(--space-16) + 80px) 0 var(--space-10);
+      background: linear-gradient(135deg, #0b1630 0%, #1b2d4f 55%, #21446e 100%);
+      color: var(--color-white);
+    }
+
+    .roadmap-hero__breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      margin-bottom: var(--space-4);
+    }
+
+    .roadmap-hero__breadcrumb a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .roadmap-hero__breadcrumb a:hover {
+      color: var(--color-gold);
+    }
+
+    .roadmap-hero__breadcrumb span {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .roadmap-hero__grid {
+      display: grid;
+      gap: var(--space-8);
+      grid-template-columns: 1fr 320px;
+      align-items: start;
+    }
+
+    .roadmap-hero__badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-3);
+    }
+
+    .roadmap-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: var(--font-semibold);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .roadmap-pill--gold {
+      background: rgba(244, 168, 38, 0.2);
+      color: #fbd87f;
+    }
+
+    .roadmap-pill--teal {
+      background: rgba(15, 118, 110, 0.25);
+      color: #9de2db;
+    }
+
+    .roadmap-hero__title {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: var(--font-bold);
+      margin-bottom: var(--space-3);
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .roadmap-hero__subtitle {
+      font-size: var(--text-base);
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.6;
+      margin-bottom: var(--space-5);
+    }
+
+    .roadmap-hero__cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+    }
+
+    /* Fix secondary button visibility on dark hero */
+    .roadmap-hero__cta .btn--secondary {
+      background: transparent;
+      color: #ffffff;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+    }
+
+    .roadmap-hero__cta .btn--secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: #ffffff;
+    }
+
+    /* Sidebar Card */
+    .roadmap-sidebar {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+    }
+
+    .roadmap-sidebar__title {
+      font-size: var(--text-sm);
+      font-weight: var(--font-semibold);
+      color: rgba(255, 255, 255, 0.7);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--space-4);
+    }
+
+    .roadmap-sidebar__stats {
+      display: grid;
+      gap: var(--space-4);
+    }
+
+    .roadmap-stat {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: var(--space-3);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .roadmap-stat:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .roadmap-stat__label {
+      font-size: var(--text-sm);
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .roadmap-stat__value {
+      font-size: var(--text-lg);
+      font-weight: var(--font-bold);
+      color: var(--color-gold);
+    }
+
+    .roadmap-sidebar__note {
+      margin-top: var(--space-4);
+      padding-top: var(--space-4);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: var(--text-xs);
+      color: rgba(255, 255, 255, 0.6);
+      line-height: 1.5;
+    }
+
+    /* Main Content */
+    .roadmap-content {
+      padding: var(--space-10) 0;
+    }
+
+    .roadmap-layout {
+      display: grid;
+      gap: var(--space-10);
+      grid-template-columns: 1fr 300px;
+    }
+
+    /* Visual Timeline */
+    .roadmap-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+
+    .roadmap-timeline::before {
+      content: "";
+      position: absolute;
+      left: 28px;
+      top: 56px;
+      bottom: 56px;
+      width: 4px;
+      background: linear-gradient(180deg, var(--color-gold) 0%, var(--color-teal) 100%);
+      border-radius: 2px;
+    }
+
+    /* Phase */
+    .roadmap-phase {
+      position: relative;
+    }
+
+    .roadmap-phase__header {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-4);
+      cursor: pointer;
+      padding: var(--space-4) 0;
+      user-select: none;
+    }
+
+    .roadmap-phase__node {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--color-white);
+      border: 4px solid var(--color-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: var(--font-bold);
+      color: var(--color-navy);
+      font-size: var(--text-xl);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+      transition: all 0.3s ease;
+    }
+
+    .roadmap-phase__header:hover .roadmap-phase__node {
+      transform: scale(1.05);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+    }
+
+    .roadmap-phase.is-expanded .roadmap-phase__node {
+      background: var(--color-gold);
+      color: var(--color-navy);
+    }
+
+    .roadmap-phase__info {
+      flex: 1;
+      padding-top: var(--space-2);
+    }
+
+    .roadmap-phase__title {
+      font-size: var(--text-lg);
+      font-weight: var(--font-bold);
+      color: var(--color-navy);
+      margin-bottom: var(--space-1);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .roadmap-phase__title svg {
+      width: 20px;
+      height: 20px;
+      color: var(--color-slate);
+      transition: transform 0.3s ease;
+    }
+
+    .roadmap-phase.is-expanded .roadmap-phase__title svg {
+      transform: rotate(180deg);
+    }
+
+    .roadmap-phase__meta {
+      font-size: var(--text-sm);
+      color: var(--color-slate);
+    }
+
+    .roadmap-phase__desc {
+      font-size: var(--text-sm);
+      color: var(--color-slate);
+      margin-top: var(--space-1);
+    }
+
+    /* Course Cards */
+    .roadmap-courses {
+      margin-left: 76px;
+      padding: var(--space-4) 0 var(--space-6);
+      display: none;
+    }
+
+    .roadmap-phase.is-expanded .roadmap-courses {
+      display: block;
+      animation: slideDown 0.3s ease;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .roadmap-courses__grid {
+      display: grid;
+      gap: var(--space-3);
+    }
+
+    .course-card {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4) var(--space-5);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-4);
+      transition: all 0.2s ease;
+    }
+
+    .course-card:hover {
+      border-color: rgba(244, 168, 38, 0.3);
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+    }
+
+    .course-card__info {
+      flex: 1;
+    }
+
+    .course-card__name {
+      font-size: var(--text-sm);
+      font-weight: var(--font-semibold);
+      color: var(--color-navy);
+      margin-bottom: var(--space-1);
+    }
+
+    .course-card__type {
+      font-size: var(--text-xs);
+      color: var(--color-slate);
+    }
+
+    .course-card__cus {
+      background: var(--color-offwhite);
+      padding: var(--space-2) var(--space-3);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: var(--font-semibold);
+      color: var(--color-teal);
+      white-space: nowrap;
+    }
+
+    /* Info Sidebar */
+    .roadmap-info {
+      position: sticky;
+      top: 100px;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+
+    .info-card {
+      background: var(--color-white);
+      border-radius: var(--radius-xl);
+      padding: var(--space-5);
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+      border: 1px solid rgba(15, 23, 42, 0.04);
+    }
+
+    .info-card__title {
+      font-size: var(--text-sm);
+      font-weight: var(--font-semibold);
+      color: var(--color-navy);
+      margin-bottom: var(--space-3);
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    .info-card__title svg {
+      width: 18px;
+      height: 18px;
+      color: var(--color-gold);
+    }
+
+    .info-card__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .info-card__list li {
+      font-size: var(--text-sm);
+      color: var(--color-slate);
+      padding-left: var(--space-4);
+      position: relative;
+      line-height: 1.5;
+    }
+
+    .info-card__list li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      position: absolute;
+      left: 0;
+      top: 8px;
+    }
+
+    .info-card__link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      color: var(--color-teal);
+      text-decoration: none;
+      font-weight: var(--font-medium);
+      margin-top: var(--space-3);
+      padding-top: var(--space-3);
+      border-top: 1px solid rgba(15, 23, 42, 0.06);
+    }
+
+    .info-card__link:hover {
+      color: var(--color-navy);
+    }
+
+    .info-card__link svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    /* CTA Section */
+    .roadmap-cta {
+      background: linear-gradient(135deg, #0b1630 0%, #1b3a5c 100%);
+      border-radius: var(--radius-2xl);
+      padding: var(--space-10);
+      text-align: center;
+      color: var(--color-white);
+      margin-top: var(--space-8);
+    }
+
+    .roadmap-cta__title {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-bold);
+      margin-bottom: var(--space-3);
+      color: #ffffff;
+    }
+
+    .roadmap-cta__text {
+      font-size: var(--text-base);
+      color: rgba(255, 255, 255, 0.8);
+      max-width: 500px;
+      margin: 0 auto var(--space-6);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .roadmap-hero__grid {
+        grid-template-columns: 1fr;
+      }
+
+      .roadmap-sidebar {
+        order: -1;
+      }
+
+      .roadmap-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .roadmap-info {
+        position: static;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+
+      .info-card {
+        flex: 1;
+        min-width: 280px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .roadmap-timeline::before {
+        left: 20px;
+      }
+
+      .roadmap-phase__node {
+        width: 40px;
+        height: 40px;
+        font-size: var(--text-base);
+      }
+
+      .roadmap-courses {
+        margin-left: 56px;
+      }
+
+      .course-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-2);
+      }
+
+      .roadmap-info {
+        flex-direction: column;
+      }
+
+      .info-card {
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="container header__container">
+      <a href="/" class="header__logo">
+        <img src="/images/logo.webp" alt="Coursework Ninja" class="header__logo-img">
+      </a>
+
+      <nav class="header__nav" id="nav" aria-label="Main navigation">
+        <ul class="header__menu">
+          <li><a href="/#why-choose-us" class="header__link">Why Us</a></li>
+          <li><a href="/#services" class="header__link">Services</a></li>
+          <li><a href="/blog/" class="header__link">Blog</a></li>
+          <li><a href="/roadmaps/" class="header__link active">Roadmaps</a></li>
+          <li><a href="/#testimonials" class="header__link">Testimonials</a></li>
+          <li><a href="/contact/" class="header__link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://wa.me/447474784797" class="btn btn--primary header__cta" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span>Chat on WhatsApp</span>
+      </a>
+
+      <button class="header__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="header__toggle-icon header__toggle-icon--menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+        <svg class="header__toggle-icon header__toggle-icon--close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="header__mobile-menu" id="mobile-menu">
+    <button class="header__mobile-close" id="mobile-close" aria-label="Close menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <nav class="header__mobile-nav" aria-label="Mobile navigation">
+      <ul class="header__mobile-menu-list">
+        <li><a href="/#why-choose-us" class="header__mobile-link">Why Us</a></li>
+        <li><a href="/#services" class="header__mobile-link">Services</a></li>
+        <li><a href="/blog/" class="header__mobile-link">Blog</a></li>
+        <li><a href="/roadmaps/" class="header__mobile-link">Roadmaps</a></li>
+        <li><a href="/#testimonials" class="header__mobile-link">Testimonials</a></li>
+        <li><a href="/contact/" class="header__mobile-link">Contact</a></li>
+      </ul>
+      <div class="header__mobile-cta">
+        <a href="https://wa.me/447474784797" class="btn btn--primary btn--full" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Chat on WhatsApp
+        </a>
+        <a href="https://t.me/courseworkninja" class="btn btn--secondary btn--full" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+          </svg>
+          Or use Telegram
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <section class="roadmap-hero">
+      <div class="container">
+        <nav class="roadmap-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="/roadmaps/">Roadmaps</a>
+          <span>/</span>
+          <span>B.S. Data Analytics</span>
+        </nav>
+
+        <div class="roadmap-hero__grid">
+          <div>
+            <div class="roadmap-hero__badges">
+              <span class="roadmap-pill roadmap-pill--gold">Undergraduate</span>
+              <span class="roadmap-pill roadmap-pill--teal">Technology</span>
+              <span class="roadmap-pill roadmap-pill--gold">Data Analytics</span>
+            </div>
+            <h1 class="roadmap-hero__title">B.S. Data Analytics Roadmap</h1>
+            <p class="roadmap-hero__subtitle">An analytics-first degree blending statistics, SQL, visualization, and cloud-ready data workflows with certifications built in.</p>
+            <div class="roadmap-hero__cta">
+              <a href="/contact/" class="btn btn--primary">Get Enrollment Help</a>
+              <a href="#roadmap" class="btn btn--secondary">View Roadmap</a>
+            </div>
+          </div>
+
+          <aside class="roadmap-sidebar">
+            <h2 class="roadmap-sidebar__title">Program Snapshot</h2>
+            <div class="roadmap-sidebar__stats">
+              <div class="roadmap-stat">
+                <span class="roadmap-stat__label">Total Courses</span>
+                <span class="roadmap-stat__value">42</span>
+              </div>
+              <div class="roadmap-stat">
+                <span class="roadmap-stat__label">Certifications</span>
+                <span class="roadmap-stat__value">6 Listed</span>
+              </div>
+              <div class="roadmap-stat">
+                <span class="roadmap-stat__label">Term Length</span>
+                <span class="roadmap-stat__value">6 months</span>
+              </div>
+              <div class="roadmap-stat">
+                <span class="roadmap-stat__label">Typical Completion</span>
+                <span class="roadmap-stat__value">36 months</span>
+              </div>
+            </div>
+            <p class="roadmap-sidebar__note">Based on WGU program outcomes; your timeline depends on pace, transfer credits, and start date.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="roadmap-content" id="roadmap">
+      <div class="container">
+        <div class="roadmap-layout">
+          <div class="roadmap-timeline">
+            <!-- Phase 1 -->
+            <div class="roadmap-phase is-expanded" data-phase="1">
+              <div class="roadmap-phase__header" role="button" tabindex="0" aria-expanded="true" aria-controls="phase-1-courses">
+                <div class="roadmap-phase__node">1</div>
+                <div class="roadmap-phase__info">
+                  <h2 class="roadmap-phase__title">
+                    Analytics Foundations
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                  </h2>
+                  <div class="roadmap-phase__meta">5 milestones</div>
+                  <p class="roadmap-phase__desc">Build statistical thinking, data literacy, and SQL basics.</p>
+                </div>
+              </div>
+              <div class="roadmap-courses" id="phase-1-courses">
+                <div class="roadmap-courses__grid">
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">Data Analytics Foundations</div>
+                      <div class="course-card__type">Core Course</div>
+                    </div>
+                    <span class="course-card__cus">Core</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">Statistics for Data Science</div>
+                      <div class="course-card__type">Core Course</div>
+                    </div>
+                    <span class="course-card__cus">Core</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">SQL Fundamentals</div>
+                      <div class="course-card__type">Core Course</div>
+                    </div>
+                    <span class="course-card__cus">Core</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">Spreadsheets &amp; Business Analytics</div>
+                      <div class="course-card__type">Core Course</div>
+                    </div>
+                    <span class="course-card__cus">Core</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">Data Management Essentials</div>
+                      <div class="course-card__type">Core Course</div>
+                    </div>
+                    <span class="course-card__cus">Core</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 2 -->
+            <div class="roadmap-phase" data-phase="2">
+              <div class="roadmap-phase__header" role="button" tabindex="0" aria-expanded="false" aria-controls="phase-2-courses">
+                <div class="roadmap-phase__node">2</div>
+                <div class="roadmap-phase__info">
+                  <h2 class="roadmap-phase__title">
+                    Data Wrangling &amp; Modeling
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                  </h2>
+                  <div class="roadmap-phase__meta">5 milestones</div>
+                  <p class="roadmap-phase__desc">Clean, transform, and model data for analysis-ready pipelines.</p>
+                </div>
+              </div>
+              <div class="roadmap-courses" id="phase-2-courses">
+                <div class="roadmap-courses__grid">
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">Data Wrangling with Python</div>
+                      <div class="course-card__type">Core Course</div>
+                    </div>
+                    <span class="course-card__cus">Core</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">Data Modeling &amp; Warehousing</div>
+                      <div class="course-card__type">Core Course</div>
+                    </div>
+                    <span class="course-card__cus">Core</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">CompTIA Data+</div>
+                      <div class="course-card__type">Certification Exam</div>
+                    </div>
+                    <span class="course-card__cus">Cert</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">Data Quality &amp; Governance</div>
+                      <div class="course-card__type">Core Course</div>
+                    </div>
+                    <span class="course-card__cus">Core</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">Applied Analytics Lab</div>
+                      <div class="course-card__type">Performance Assessment</div>
+                    </div>
+                    <span class="course-card__cus">Lab</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 3 -->
+            <div class="roadmap-phase" data-phase="3">
+              <div class="roadmap-phase__header" role="button" tabindex="0" aria-expanded="false" aria-controls="phase-3-courses">
+                <div class="roadmap-phase__node">3</div>
+                <div class="roadmap-phase__info">
+                  <h2 class="roadmap-phase__title">
+                    Visualization &amp; Storytelling
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                  </h2>
+                  <div class="roadmap-phase__meta">5 milestones</div>
+                  <p class="roadmap-phase__desc">Turn data into insights and stakeholder-ready narratives.</p>
+                </div>
+              </div>
+              <div class="roadmap-courses" id="phase-3-courses">
+                <div class="roadmap-courses__grid">
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">Data Visualization</div>
+                      <div class="course-card__type">Core Course</div>
+                    </div>
+                    <span class="course-card__cus">Core</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">BI Tools &amp; Dashboards</div>
+                      <div class="course-card__type">Core Course</div>
+                    </div>
+                    <span class="course-card__cus">Core</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">Communication for Analysts</div>
+                      <div class="course-card__type">Core Course</div>
+                    </div>
+                    <span class="course-card__cus">Core</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">Udacity Data Analyst Nanodegree</div>
+                      <div class="course-card__type">Industry Credential</div>
+                    </div>
+                    <span class="course-card__cus">Credential</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">CertiProf Design Thinking</div>
+                      <div class="course-card__type">Optional Exam</div>
+                    </div>
+                    <span class="course-card__cus">Cert</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phase 4 -->
+            <div class="roadmap-phase" data-phase="4">
+              <div class="roadmap-phase__header" role="button" tabindex="0" aria-expanded="false" aria-controls="phase-4-courses">
+                <div class="roadmap-phase__node">4</div>
+                <div class="roadmap-phase__info">
+                  <h2 class="roadmap-phase__title">
+                    Applied Analytics &amp; Capstone
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                  </h2>
+                  <div class="roadmap-phase__meta">5 milestones</div>
+                  <p class="roadmap-phase__desc">Apply analytics to real problems and deliver a capstone.</p>
+                </div>
+              </div>
+              <div class="roadmap-courses" id="phase-4-courses">
+                <div class="roadmap-courses__grid">
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">AWS Certified Cloud Practitioner</div>
+                      <div class="course-card__type">Certification Exam</div>
+                    </div>
+                    <span class="course-card__cus">Cert</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">CompTIA Project+</div>
+                      <div class="course-card__type">Certification Exam</div>
+                    </div>
+                    <span class="course-card__cus">Cert</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">MSI Change Management</div>
+                      <div class="course-card__type">Optional Exam</div>
+                    </div>
+                    <span class="course-card__cus">Cert</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">Analytics Capstone Project</div>
+                      <div class="course-card__type">Capstone Assessment</div>
+                    </div>
+                    <span class="course-card__cus">Capstone</span>
+                  </div>
+                  <div class="course-card">
+                    <div class="course-card__info">
+                      <div class="course-card__name">Professional Portfolio</div>
+                      <div class="course-card__type">Career Milestone</div>
+                    </div>
+                    <span class="course-card__cus">Milestone</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <aside class="roadmap-info">
+            <div class="info-card">
+              <h3 class="info-card__title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Admission Requirements
+              </h3>
+              <ul class="info-card__list">
+                <li>High school diploma or equivalent</li>
+                <li>Meet WGU IT program readiness requirements</li>
+                <li>Transfer credits reviewed by an enrollment counselor</li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h3 class="info-card__title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 1l3 5 5 .5-3.5 4 1 5.5-5-2.5-5 2.5 1-5.5-3.5-4 5-.5z"/>
+                </svg>
+                Certifications &amp; Exams
+              </h3>
+              <ul class="info-card__list">
+                <li>CompTIA Data+</li>
+                <li>CompTIA Project+</li>
+                <li>AWS Certified Cloud Practitioner</li>
+                <li>Udacity Data Analyst Nanodegree</li>
+                <li>MSI Change Management (optional)</li>
+                <li>CertiProf Design Thinking Professional Certificate (optional)</li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h3 class="info-card__title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                  <polyline points="14 2 14 8 20 8"/>
+                  <line x1="16" y1="13" x2="8" y2="13"/>
+                  <line x1="16" y1="17" x2="8" y2="17"/>
+                </svg>
+                Assessment Types
+              </h3>
+              <ul class="info-card__list">
+                <li>Objective assessments (proctored exams)</li>
+                <li>Performance assessments (projects &amp; datasets)</li>
+                <li>Industry certification exams included</li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h3 class="info-card__title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="8" x2="12" y2="12"/>
+                  <line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
+                Prep Tips
+              </h3>
+              <ul class="info-card__list">
+                <li>Brush up on algebra and basic statistics</li>
+                <li>Practice SQL queries and spreadsheet modeling</li>
+                <li>Build a small dashboard in a BI tool</li>
+              </ul>
+              <a href="/blog/" class="info-card__link">
+                Explore data analytics resources
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </aside>
+        </div>
+
+        <div class="roadmap-cta">
+          <h2 class="roadmap-cta__title">Need a Custom Data Analytics Plan?</h2>
+          <p class="roadmap-cta__text">We can map a term-by-term plan, certification prep, and capstone milestones for your schedule.</p>
+          <a href="/contact/" class="btn btn--primary">Talk to Coursework Ninja</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__countries">
+        <span class="footer__countries-label">Serving Students Worldwide</span>
+        <div class="footer__countries-slider">
+          <div class="footer__countries-track">
+            <span class="footer__country">United States</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United Kingdom</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Canada</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Australia</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Germany</span><span class="footer__country-dot"></span>
+            <span class="footer__country">India</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Nigeria</span><span class="footer__country-dot"></span>
+            <span class="footer__country">South Africa</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Philippines</span><span class="footer__country-dot"></span>
+            <span class="footer__country">UAE</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Saudi Arabia</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Singapore</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United States</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United Kingdom</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Canada</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Australia</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Germany</span><span class="footer__country-dot"></span>
+            <span class="footer__country">India</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Nigeria</span><span class="footer__country-dot"></span>
+            <span class="footer__country">South Africa</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Philippines</span><span class="footer__country-dot"></span>
+            <span class="footer__country">UAE</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Saudi Arabia</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Singapore</span><span class="footer__country-dot"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__crypto">
+        <span class="footer__crypto-label">We Accept</span>
+        <div class="footer__crypto-logos">
+          <div class="footer__crypto-item" title="Bitcoin (BTC)"><img src="/images/crypto/btc.webp" alt="Bitcoin" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Ethereum (ETH)"><img src="/images/crypto/eth.webp" alt="Ethereum" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Tether (USDT)"><img src="/images/crypto/usdt.webp" alt="Tether USDT" loading="lazy"></div>
+          <div class="footer__crypto-item" title="USD Coin (USDC)"><img src="/images/crypto/usdc.webp" alt="USD Coin" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Solana (SOL)"><img src="/images/crypto/sol.webp" alt="Solana" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Monero (XMR)"><img src="/images/crypto/xmr.webp" alt="Monero" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Dai (DAI)"><img src="/images/crypto/dai.webp" alt="Dai" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Litecoin (LTC)"><img src="/images/crypto/ltc.webp" alt="Litecoin" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Coursework Ninja. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
