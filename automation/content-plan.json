@@ -1,9 +1,9 @@
 {
   "meta": {
     "version": "1.0",
-    "lastUpdated": "2025-12-19",
+    "lastUpdated": "2025-12-21",
     "totalTopics": 60,
-    "publishedCount": 32
+    "publishedCount": 35
   },
   "categories": [
     {
@@ -650,7 +650,8 @@
         "Licensure"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-21",
       "internalLinks": [
         "wgu-capstone-guide",
         "wgu-study-tips-working-adults"
@@ -678,7 +679,8 @@
         "IT Courses"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-21",
       "internalLinks": [
         "wgu-bsit-guide",
         "wgu-oa-exam-tips"
@@ -705,7 +707,8 @@
         "MBA Courses"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-21",
       "internalLinks": [
         "wgu-mba-complete-guide",
         "wgu-oa-exam-tips"

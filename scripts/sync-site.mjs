@@ -2,7 +2,7 @@
  * Sync Site Rollups
  * - Ensures Contact link exists in global nav (desktop + mobile)
  * - Syncs blog index cards + homepage "Recent Blog Posts" (exactly 3)
- * - Syncs sitemap.xml for blog posts + contact page
+ * - Syncs sitemap.xml for blog posts + key site sections
  *
  * Usage:
  *   node scripts/sync-site.mjs
@@ -69,6 +69,11 @@ function formatDateShort(ymd) {
   }).format(d);
 }
 
+function formatDateISOFromTimestamp(tsSeconds) {
+  if (!tsSeconds) return "";
+  return new Date(tsSeconds * 1000).toISOString().slice(0, 10);
+}
+
 function getGitTimestamp(relPath) {
   try {
     const r = spawnSync("git", ["log", "-1", "--format=%ct", "--", relPath], {
@@ -80,6 +85,18 @@ function getGitTimestamp(relPath) {
     return Number.isFinite(n) ? n : 0;
   } catch {
     return 0;
+  }
+}
+
+function getFileLastmod(relPath) {
+  try {
+    const absPath = path.join(ROOT, relPath);
+    const stat = fs.statSync(absPath);
+    const fsMtime = Math.floor(stat.mtimeMs / 1000);
+    const ts = getGitTimestamp(relPath) || fsMtime;
+    return formatDateISOFromTimestamp(ts);
+  } catch {
+    return "";
   }
 }
 
@@ -102,6 +119,28 @@ function getGitCreatedTimestamp(relPath) {
   } catch {
     return 0;
   }
+}
+
+function discoverSectionPages(sectionDir) {
+  const sectionRoot = path.join(ROOT, sectionDir);
+  if (!fs.existsSync(sectionRoot)) return [];
+
+  const pages = [];
+  const rootIndexRel = path.join(sectionDir, "index.html");
+  if (fs.existsSync(path.join(ROOT, rootIndexRel))) {
+    pages.push({ slug: "", relPath: rootIndexRel });
+  }
+
+  const entries = fs.readdirSync(sectionRoot, { withFileTypes: true });
+  for (const entry of entries) {
+    if (!entry.isDirectory()) continue;
+    const relPath = path.join(sectionDir, entry.name, "index.html");
+    if (!fs.existsSync(path.join(ROOT, relPath))) continue;
+    pages.push({ slug: entry.name, relPath });
+  }
+
+  pages.sort((a, b) => a.slug.localeCompare(b.slug));
+  return pages;
 }
 
 function discoverBlogPosts() {
@@ -268,6 +307,8 @@ function isoTodayLocal() {
 
 function syncSitemap(posts) {
   const today = isoTodayLocal();
+  const servicePages = discoverSectionPages("services");
+  const roadmapPages = discoverSectionPages("roadmaps");
 
   const urls = [
     {
@@ -288,6 +329,22 @@ function syncSitemap(posts) {
       changefreq: "monthly",
       priority: "0.7",
     },
+    ...servicePages.map((p) => ({
+      loc: p.slug
+        ? `https://coursework.ninja/services/${p.slug}/`
+        : "https://coursework.ninja/services/",
+      lastmod: getFileLastmod(p.relPath) || today,
+      changefreq: p.slug ? "monthly" : "weekly",
+      priority: "0.9",
+    })),
+    ...roadmapPages.map((p) => ({
+      loc: p.slug
+        ? `https://coursework.ninja/roadmaps/${p.slug}/`
+        : "https://coursework.ninja/roadmaps/",
+      lastmod: getFileLastmod(p.relPath) || today,
+      changefreq: p.slug ? "monthly" : "weekly",
+      priority: p.slug ? "0.8" : "0.9",
+    })),
     ...posts.map((p) => ({
       loc: `https://coursework.ninja/blog/${p.slug}/`,
       lastmod: p.modifiedDate || p.publishedDate || today,
