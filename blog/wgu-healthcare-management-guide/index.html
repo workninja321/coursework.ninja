@@ -49,7 +49,7 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://coursework.ninja/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://coursework.ninja/blog/"},{"@type":"ListItem","position":3,"name":"WGU Healthcare Management","item":"https://coursework.ninja/blog/wgu-healthcare-management-guide/"}]}</script>
 
   <!-- FAQPage Schema -->
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is WGU Healthcare Management the same as Healthcare Administration?","acceptedAnswer":{"@type":"Answer","text":"Yes, they refer to the same program. WGU's official program name is the B.S. Healthcare Administration, but many students and employers use healthcare management interchangeably since it's a common industry term. The curriculum covers leadership, operations, finance, compliance, and business principles as applied to healthcare settings."}},{"@type":"Question","name":"How long does the WGU Healthcare Administration degree take?","acceptedAnswer":{"@type":"Answer","text":"WGU reports that 63% of graduates complete the program within 17 months, which is approximately three six-month terms. However, your actual timeline depends on transfer credits, weekly study hours, and how quickly you can demonstrate competency on assessments. Experienced healthcare professionals often accelerate faster than average."}},{"@type":"Question","name":"How much does the WGU Healthcare Administration program cost?","acceptedAnswer":{"@type":"Answer","text":"WGU charges $3,830 per six-month term for this program, and you can complete as many courses as you want during each term for that flat rate. If you finish in three terms, your total cost is approximately $11,500 plus fees. Students who accelerate may finish in two terms for around $7,660."}},{"@type":"Question","name":"Do I need clinical credentials or a nursing license to enroll?","acceptedAnswer":{"@type":"Answer","text":"No clinical credentials are required. This program focuses on the business and operations side of healthcare—leadership, finance, compliance, quality improvement, and management—not clinical practice. Admissions are based on academic readiness and transcript review, not healthcare licensure."}},{"@type":"Question","name":"What jobs can I get with a WGU Healthcare Administration degree?","acceptedAnswer":{"@type":"Answer","text":"Graduates work as clinic managers, practice administrators, health services managers, revenue cycle supervisors, patient access managers, quality improvement coordinators, and healthcare project managers. According to the Bureau of Labor Statistics, healthcare management jobs are projected to grow 28% through 2032."}},{"@type":"Question","name":"Is WGU Healthcare Administration accredited?","acceptedAnswer":{"@type":"Answer","text":"Yes, the program carries dual accreditation. WGU is regionally accredited by the Northwest Commission on Colleges and Universities (NWCCU), and the business programs hold accreditation from the Accreditation Council for Business Schools and Programs (ACBSP)."}},{"@type":"Question","name":"Can I transfer credits into the WGU Healthcare Administration program?","acceptedAnswer":{"@type":"Answer","text":"Yes, WGU accepts transfer credits from accredited institutions. General education courses typically transfer well, and healthcare-specific courses and professional certifications may also qualify for credit. More transfer credits means fewer courses to complete and potentially fewer terms to pay for."}},{"@type":"Question","name":"How does the competency-based format work at WGU?","acceptedAnswer":{"@type":"Answer","text":"Instead of attending classes for a set number of weeks and earning a grade, you demonstrate mastery of specific competencies through assessments. If you already know the material from work experience, you can pass quickly and move on. This is why experienced healthcare professionals often accelerate faster than the advertised timeline."}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is WGU Healthcare Management the same as Healthcare Administration?","acceptedAnswer":{"@type":"Answer","text":"WGU's official program name is the B.S. Healthcare Administration. 'Healthcare management' is a common term used by students and employers for the same leadership-focused pathway."}},{"@type":"Question","name":"How long does the WGU Healthcare Administration degree take?","acceptedAnswer":{"@type":"Answer","text":"WGU reports that 63% of graduates finish within 17 months. Your timeline depends on transfer credits, weekly study time, and assessment pace."}},{"@type":"Question","name":"How much does the program cost?","acceptedAnswer":{"@type":"Answer","text":"WGU lists tuition at $3,830 per six-month term for this program. Total cost depends on how many terms you complete."}},{"@type":"Question","name":"Do I need clinical credentials to enroll?","acceptedAnswer":{"@type":"Answer","text":"The program focuses on administration and operations rather than clinical practice. Admissions decisions are based on academic readiness and transcript review."}}]}</script>
 
   <style>
     /* Featured image banner */
@@ -412,6 +412,118 @@
       font-weight: var(--font-medium);
       color: var(--color-navy);
     }
+  
+
+    /* Program visuals */
+    .course-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-6) 0;
+      font-size: 0.9rem;
+    }
+    .course-table th,
+    .course-table td {
+      padding: var(--space-3) var(--space-4);
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    .course-table th {
+      background: var(--color-navy);
+      color: white;
+      font-weight: var(--font-semibold);
+    }
+    .course-table th:first-child {
+      border-radius: var(--radius-lg) 0 0 0;
+    }
+    .course-table th:last-child {
+      border-radius: 0 var(--radius-lg) 0 0;
+    }
+    .course-table tr:nth-child(even) {
+      background: var(--color-offwhite);
+    }
+    .highlight-box {
+      background: linear-gradient(135deg, var(--color-navy), #1a2744);
+      color: white;
+      padding: var(--space-6);
+      border-radius: var(--radius-xl);
+      margin: var(--space-8) 0;
+    }
+    .highlight-box h3 {
+      color: var(--color-gold);
+      margin-top: 0;
+      margin-bottom: var(--space-3);
+    }
+    .highlight-box p {
+      color: #cbd5e1;
+      margin-bottom: var(--space-2);
+    }
+    .highlight-box p:last-child {
+      margin-bottom: 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-4);
+      margin: var(--space-8) 0;
+    }
+    @media (min-width: 640px) {
+      .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    .stats-grid__title {
+      grid-column: 1 / -1;
+      font-size: var(--text-xl);
+      font-weight: var(--font-bold);
+      color: var(--color-navy);
+      margin-bottom: var(--space-2);
+      padding-bottom: var(--space-3);
+      border-bottom: 2px solid var(--color-gold);
+    }
+    .stat-card {
+      background: linear-gradient(135deg, var(--color-navy), #1a2744);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      text-align: center;
+    }
+    .stat-card__value {
+      font-size: var(--text-xl);
+      font-weight: var(--font-bold);
+      color: var(--color-gold);
+      margin-bottom: var(--space-1);
+    }
+    .stat-card__label {
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.8);
+    }
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: var(--space-4);
+      margin: var(--space-6) 0;
+    }
+    @media (min-width: 640px) {
+      .cert-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .cert-card {
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      background: var(--color-white);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    }
+    .cert-card__name {
+      font-weight: var(--font-semibold);
+      color: var(--color-navy);
+      margin-bottom: var(--space-2);
+    }
+    .cert-card__org {
+      font-size: var(--text-sm);
+      color: var(--color-slate);
+    }
+
   </style>
 </head>
 <body>
@@ -510,253 +622,234 @@
       <div class="container">
         <div class="blog-content__wrapper">
           <article class="blog-article">
-            <p>If you're working in healthcare and wondering whether a management degree is worth your time, you're asking the right question. The healthcare industry is evolving rapidly, and the gap between clinical expertise and administrative leadership has never been more apparent. WGU's Healthcare Administration degree positions you to bridge that gap.</p>
+            <p>WGU's B.S. Healthcare Administration is widely searched as a healthcare management degree because it prepares you to lead operations, teams, and patient-focused services. It is built for working adults who want a practical business path inside hospitals, clinics, payer organizations, and public health programs.</p>
 
-<p>This comprehensive guide covers everything about the WGU healthcare management program: what you'll learn, how long it takes, what it costs, career outcomes, and strategies to accelerate through faster.</p>
-
-<div class="stat-box">
-  <div class="stat-box__item">
-    <span class="stat-box__number">$3,830</span>
-    <span class="stat-box__label">Per 6-Month Term</span>
-  </div>
-  <div class="stat-box__item">
-    <span class="stat-box__number">17 mo</span>
-    <span class="stat-box__label">Avg. Completion</span>
-  </div>
-  <div class="stat-box__item">
-    <span class="stat-box__number">$19,764</span>
-    <span class="stat-box__label">Salary Increase</span>
-  </div>
-  <div class="stat-box__item">
-    <span class="stat-box__number">28%</span>
-    <span class="stat-box__label">Job Growth (2032)</span>
-  </div>
-</div>
-
-<div class="warning-box">
-  <strong>Important:</strong> This is a business-side healthcare degree—not a clinical program. You don't need nursing credentials or clinical experience to enroll. The program prepares you for operations, administration, and management roles.
-</div>
+<p>The program uses a competency-based model, so you progress by demonstrating mastery instead of sitting through a fixed number of weeks. If you already work in healthcare, you can move faster through familiar topics and spend more time on new skills like finance, quality, and compliance.</p>
 
 <h2 id="overview">WGU Healthcare Management Degree Overview</h2>
-<p>The official name of this program is the B.S. Healthcare Administration, though most students and employers refer to it interchangeably as a healthcare management degree. WGU delivers the entire program online, structured around six-month terms with monthly enrollment windows throughout the year. This flexibility is intentional—it's built for people who are already working in healthcare and can't afford to put their careers on hold.</p>
+<p>On WGU's program page, the degree is listed as the B.S. Healthcare Administration with 34 total courses and a tuition rate of $3,830 per six-month term. WGU also reports that 63% of graduates finish within 17 months and an average salary increase of $19,764 after graduation. WGU is regionally accredited by NWCCU and its business programs are accredited by ACBSP, which matters for employer trust and graduate study pathways.</p>
 
-<p>What makes WGU different from traditional universities is its competency-based education (CBE) model. Instead of attending a fixed number of classes for a semester and earning a grade, you demonstrate mastery of specific competencies through assessments. If you already know the material from your work experience, you can pass the assessment and move on immediately. This is why experienced healthcare professionals often accelerate through the program much faster than the advertised timeline.</p>
+<div class="stats-grid">
+  <h3 class="stats-grid__title">Healthcare Administration at a Glance</h3>
+  <div class="stat-card">
+    <div class="stat-card__value">34</div>
+    <div class="stat-card__label">Total courses</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-card__value">$3,830</div>
+    <div class="stat-card__label">Tuition per term</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-card__value">17 mo</div>
+    <div class="stat-card__label">63% finish within</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-card__value">$19,764</div>
+    <div class="stat-card__label">Avg salary increase</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-card__value">ACBSP</div>
+    <div class="stat-card__label">Business accreditation</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-card__value">NWCCU</div>
+    <div class="stat-card__label">Regional accreditation</div>
+  </div>
+</div>
 
-<p>According to WGU's published data, 63% of graduates complete this degree within 17 months—significantly faster than the four-year timeline at traditional schools. The tuition is set at $3,830 per six-month term, and since you can complete as many courses as you want during a single term, finishing faster directly reduces your total cost. WGU also reports that graduates see an average salary increase of $19,764 after completing their degree, making the return on investment compelling for most students.</p>
+<div class="highlight-box">
+  <h3>Who This Degree Fits Best</h3>
+  <p><strong>Frontline supervisors:</strong> step up from coordinator or lead roles into clinic or department management.</p>
+  <p><strong>Operations and revenue teams:</strong> build finance, compliance, and workflow skills without a clinical license.</p>
+  <p><strong>Career changers:</strong> move into healthcare leadership with a business foundation employers recognize.</p>
+</div>
 
-<p>The program is accredited by the Accreditation Council for Business Schools and Programs (ACBSP), and WGU itself holds regional accreditation from the Northwest Commission on Colleges and Universities. This means your degree is recognized by employers nationwide and qualifies you for graduate programs if you decide to pursue an MHA or MBA later.</p>
+<h2 id="curriculum">Curriculum Themes and Skill Blocks</h2>
+<p>The curriculum blends healthcare operations with core business skills. You learn how to run teams, read financials, protect compliance, and improve service quality. The focus is practical: how to keep systems running, support clinicians, and deliver better outcomes for patients.</p>
 
-<p>One important distinction: this degree focuses on administration and operations, not clinical practice. You don't need to be a nurse, physician, or licensed clinician to enroll. The program is designed for people who want to lead teams, manage departments, and improve healthcare delivery from the operations side.</p>
+<table class="course-table">
+  <thead>
+    <tr>
+      <th>Skill Area</th>
+      <th>What You Learn</th>
+      <th>Why It Matters</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Healthcare Operations</td>
+      <td>Workflow design, patient flow, staffing logic</td>
+      <td>Improves access, throughput, and service quality</td>
+    </tr>
+    <tr>
+      <td>Healthcare Finance</td>
+      <td>Budgeting, cost control, variance analysis</td>
+      <td>Enables sustainable departments and resource planning</td>
+    </tr>
+    <tr>
+      <td>Compliance and Ethics</td>
+      <td>HIPAA, documentation standards, audit readiness</td>
+      <td>Reduces risk and strengthens patient trust</td>
+    </tr>
+    <tr>
+      <td>Quality Improvement</td>
+      <td>Safety metrics, root cause analysis, process change</td>
+      <td>Drives better outcomes and fewer incidents</td>
+    </tr>
+    <tr>
+      <td>Leadership</td>
+      <td>Coaching, conflict resolution, team performance</td>
+      <td>Builds a high-performing clinical support culture</td>
+    </tr>
+    <tr>
+      <td>Data and Analytics</td>
+      <td>KPI dashboards, reporting, decision support</td>
+      <td>Turns data into action and operational wins</td>
+    </tr>
+  </tbody>
+</table>
 
-<h2 id="ideal-for">Is This Degree Right for You?</h2>
-
-<p>Before you invest time and money, assess whether the WGU healthcare administration program fits your situation:</p>
-
-<h3>Ideal Candidates</h3>
-<ul>
-  <li><strong>Medical assistants</strong> ready to move into clinic supervisor roles</li>
-  <li><strong>Patient access staff</strong> wanting to lead registration/scheduling teams</li>
-  <li><strong>Billing specialists</strong> preparing for revenue cycle management</li>
-  <li><strong>Nurses</strong> seeking non-clinical leadership positions</li>
-  <li><strong>Healthcare IT staff</strong> transitioning to operations management</li>
-  <li><strong>Career changers</strong> with business experience entering healthcare</li>
-  <li><strong>Self-motivated learners</strong> who can manage their own study schedules</li>
-</ul>
-
-<h3>Not Ideal For</h3>
-<ul>
-  <li>Those wanting <strong>clinical positions</strong> (nursing, physical therapy, etc.)</li>
-  <li>People requiring <strong>structured classroom schedules</strong></li>
-  <li>Anyone who struggles with <strong>self-paced learning</strong></li>
-  <li>Those who need <strong>extensive hand-holding</strong> through coursework</li>
-</ul>
+<p>You will also complete performance assessments, which are project-based. If you want a deeper breakdown of project-style assessments, review our <a href="/blog/wgu-performance-assessment-guide/">WGU performance assessment guide</a>.</p>
 
 <div class="tip-box">
-  <strong>Time Commitment:</strong> Successful students typically dedicate 15-20 hours per week to coursework. If you can commit more time, you can accelerate faster.
+  <strong>Tip:</strong> Start collecting real workplace metrics now. Using actual scheduling or denial data can make your assessments faster and more credible.
 </div>
 
-<h2 id="curriculum">What You'll Learn: Core Competencies</h2>
-<p>The WGU Healthcare Administration curriculum is organized around competency areas that directly map to what healthcare managers actually do on the job. Unlike theoretical programs that focus heavily on academic research, this curriculum emphasizes practical skills you can apply immediately in your workplace.</p>
-
-<p>At its core, the program covers <strong>healthcare operations</strong>—how to design efficient workflows, manage scheduling systems, improve patient throughput, and handle service recovery when things go wrong. You'll learn the mechanics of the <strong>revenue cycle</strong>, including how claims flow through the system, why denials happen, and how to implement denial reduction strategies that protect your organization's financial health.</p>
-
-<p><strong>Healthcare finance</strong> forms another major pillar. You'll learn to read and interpret budgets, control costs at the departmental level, perform variance analysis when actual spending differs from projections, and use financial dashboards to communicate performance to leadership. This is particularly valuable if you're moving from a clinical or support role into a position with budget responsibility.</p>
-
-<p>The quality and safety component prepares you to work with patient safety metrics, implement risk management protocols, and lead continuous improvement initiatives. Regulatory compliance courses cover HIPAA requirements, documentation standards, and audit preparation—skills that every healthcare organization needs but few employees truly master.</p>
-
-<p>Leadership development runs throughout the program. You'll study supervision techniques, coaching methodologies, conflict resolution strategies, and performance management systems. Combined with coursework in strategic planning, market analysis, and service line development, you'll graduate with the skills needed to lead teams and contribute to organizational growth.</p>
-
-<h3>Operational Focus Areas You Can Map to Your Job</h3>
-<p>One of the most practical aspects of this program is how directly the curriculum connects to real healthcare environments. As you progress through courses, you'll recognize situations from your own workplace—and you can often use actual work projects as the foundation for your assessments.</p>
-
-<p><strong>Clinic and ambulatory operations</strong> courses teach you to optimize patient scheduling, reduce no-show rates, and maximize provider utilization. You'll learn how front-desk workflows impact patient access and how to develop standard operating procedures that allow cross-trained teams to function smoothly. If you work in a physician practice, urgent care, or outpatient specialty clinic, this content will feel immediately relevant.</p>
-
-<p><strong>Hospital department management</strong> content covers staffing models, shift handoffs, bed management, and coordination with case management teams. You'll learn to build and interpret unit-level quality dashboards and run effective daily huddles that keep your team aligned on priorities. These skills translate directly to supervisor and manager roles in inpatient settings.</p>
-
-<p><strong>Revenue and documentation</strong> coursework helps you understand how clinical documentation affects reimbursement, when and how to query physicians for clarification, and how claim denials ripple through departmental budgets. You'll also learn patient financial communication strategies and service recovery techniques—critical skills for anyone managing billing staff or patient access teams.</p>
-
-<p><strong>Compliance and audit readiness</strong> courses prepare you to implement HIPAA privacy workflows, enforce minimum necessary access principles, and maintain audit-ready documentation systems. You'll learn how to prepare for external audits, manage policy version control, and respond appropriately to compliance incidents with proper documentation and corrective action.</p>
-
-<h3>Healthcare Metrics and KPIs You'll Master</h3>
-<p>Healthcare management is increasingly data-driven, and this program ensures you can interpret and act on the metrics that matter. You'll learn to work with operational KPIs like average length of stay (ALOS), which affects staffing costs and bed availability, and readmission rates, which impact both quality scores and reimbursement under value-based payment models.</p>
-
-<p>For patient access, you'll track no-show rates, appointment lead times, scheduling accuracy, and reschedule rates. These metrics tell you whether patients can actually get care when they need it—and where your processes are creating friction.</p>
-
-<p>Revenue cycle metrics include denial rates, clean claim rates, days in accounts receivable, and cash flow indicators. Understanding these numbers is essential if you're managing billing teams or reporting to leadership on financial performance.</p>
-
-<p>Quality and safety metrics round out your toolkit: patient satisfaction scores, safety incident rates, complaint resolution times, and corrective action tracking. You'll also learn to monitor staffing-related indicators like overtime hours and productivity measures—early warning signs of team burnout that smart managers address before they become retention problems.</p>
-
-<h2 id="careers">Career Paths and Salary Potential</h2>
-
-<p>A healthcare administration degree opens doors across hospitals, physician practices, insurance companies, public health agencies, and healthcare technology firms.</p>
-
-<div class="stat-box">
-  <div class="stat-box__item">
-    <span class="stat-box__number">$110,680</span>
-    <span class="stat-box__label">Median Salary (BLS)</span>
-  </div>
-  <div class="stat-box__item">
-    <span class="stat-box__number">$209,990+</span>
-    <span class="stat-box__label">Top 10% Earn</span>
-  </div>
-  <div class="stat-box__item">
-    <span class="stat-box__number">28%</span>
-    <span class="stat-box__label">Job Growth by 2032</span>
-  </div>
-  <div class="stat-box__item">
-    <span class="stat-box__number">Faster</span>
-    <span class="stat-box__label">Than Average Growth</span>
-  </div>
-</div>
-
-<h3>Entry-Level Roles ($50K-$75K)</h3>
+<h3>Operational KPIs You Should Be Able to Explain</h3>
+<p>Healthcare administration runs on metrics. These are common indicators you will see in leadership reports and department dashboards, and they frequently show up in performance assessments.</p>
 <ul>
-  <li><strong>Clinic Manager</strong> – Oversee daily operations at physician practices or specialty clinics</li>
-  <li><strong>Patient Access Manager</strong> – Lead registration, scheduling, and intake teams</li>
-  <li><strong>Revenue Cycle Supervisor</strong> – Manage billing teams and denial reduction efforts</li>
-  <li><strong>Quality Improvement Coordinator</strong> – Run audits and process improvement projects</li>
+  <li>Average length of stay and how it affects capacity and staffing</li>
+  <li>Readmission rates tied to care coordination and quality</li>
+  <li>Appointment lead time and no-show rates in outpatient settings</li>
+  <li>Denial rates and clean-claim percentage in the revenue cycle</li>
+  <li>Days in accounts receivable and cash flow stability</li>
+  <li>Patient satisfaction scores and service recovery trends</li>
+  <li>Overtime hours as a signal of staffing and burnout risk</li>
+  <li>Incident rates and corrective action tracking for safety programs</li>
 </ul>
 
-<h3>Mid-Level Positions ($75K-$100K)</h3>
+<h3>How Assessments Typically Work</h3>
+<p>Most WGU healthcare administration courses use a mix of objective assessments (proctored exams) and performance assessments (projects or papers). Performance tasks are easier when you have real workplace examples, so plan to save reports, policies, or dashboards you can adapt for your submissions.</p>
+
+<h3>Tools and Systems You Will See in Healthcare Operations</h3>
+<p>You do not need to be a superuser, but you should understand what each system controls and which metrics it produces. The degree helps you speak the language of clinical, financial, and operational teams.</p>
 <ul>
-  <li><strong>Practice Administrator</strong> – Manage entire practices or multiple clinic locations</li>
-  <li><strong>Health Services Manager</strong> – Coordinate resources across clinical departments</li>
-  <li><strong>Care Delivery Manager</strong> – Oversee patient flow and care coordination</li>
-  <li><strong>Compliance Specialist</strong> – Manage enterprise-wide policy and training programs</li>
+  <li>Scheduling and capacity tools for patient flow, staffing, and access</li>
+  <li>Revenue cycle and billing dashboards for claims, denials, and cash</li>
+  <li>Quality and safety reporting tools for incident tracking and audits</li>
+  <li>Timekeeping and HR systems for labor cost and overtime visibility</li>
+  <li>Patient experience surveys and service recovery tracking</li>
 </ul>
 
-<h3>Senior Leadership ($100K-$200K+)</h3>
+<h2 id="careers">Career Paths and Advancement Options</h2>
+<p>This degree is designed for leadership roles that sit between clinical teams and business operations. It can support advancement from frontline roles into management or help you switch into healthcare administration from another industry.</p>
 <ul>
-  <li><strong>Director of Operations</strong> – Oversee multiple departments or service lines</li>
-  <li><strong>Long-Term Care Administrator</strong> – Run nursing homes and assisted living facilities</li>
-  <li><strong>VP of Operations</strong> – Executive leadership for healthcare systems</li>
-  <li><strong>Chief Operating Officer</strong> – Top operational leadership role</li>
+  <li>Clinic manager or practice administrator</li>
+  <li>Health services manager or department supervisor</li>
+  <li>Revenue cycle or billing supervisor</li>
+  <li>Patient access or scheduling manager</li>
+  <li>Quality improvement coordinator</li>
+  <li>Operations analyst or performance coordinator</li>
+  <li>Care delivery manager or program lead</li>
+  <li>Compliance or audit readiness specialist</li>
 </ul>
 
-<div class="tip-box">
-  <strong>Advancement Tip:</strong> Most senior roles require an MHA or MBA in addition to the bachelor's. WGU's healthcare admin degree is designed to prepare you for graduate programs.
-</div>
+<h3>Resume Keywords Employers Scan For</h3>
+<p>Hiring teams look for operations language, quality improvement experience, and the ability to connect data to decisions. Use these keywords honestly in your resume and back them up with projects or metrics from your coursework.</p>
+<ul>
+  <li>Patient flow, throughput, and capacity planning</li>
+  <li>Budget management and variance analysis</li>
+  <li>Revenue cycle and denial management</li>
+  <li>Quality improvement and root cause analysis</li>
+  <li>Compliance, audit readiness, and HIPAA awareness</li>
+  <li>Cross-functional leadership and stakeholder communication</li>
+</ul>
 
 <h2 id="credentials">Credentials to Consider After Graduation</h2>
-<p>Your degree provides a strong foundation, but professional certifications can accelerate your career trajectory by demonstrating specialized expertise. The right certifications depend on your career path and which roles you're targeting.</p>
-
-<p>For patient access and revenue cycle professionals, the <strong>CHAA (Certified Healthcare Access Associate)</strong> validates frontline competencies, while the <strong>CHAM (Certified Healthcare Access Manager)</strong> signals leadership readiness. Revenue cycle specialists might pursue the <strong>CRCR (Certified Revenue Cycle Representative)</strong> or certifications in healthcare billing and coding.</p>
-
-<p>Quality-focused professionals should consider the <strong>CPHQ (Certified Professional in Healthcare Quality)</strong>, which is widely recognized for roles in quality improvement, patient safety, and performance measurement. This certification pairs well with <strong>Lean Six Sigma</strong> credentials—Green Belt or Black Belt certifications are valuable in any healthcare organization pursuing operational excellence.</p>
-
-<p>For those aiming at senior leadership, the <strong>FACHE (Fellow of the American College of Healthcare Executives)</strong> is the gold standard credential for healthcare executives. It requires significant experience and demonstrates commitment to the profession at the highest level.</p>
-
-<p><strong>Project management certifications</strong> like the CAPM or PMP are valuable if your role involves leading implementations, workflow redesigns, or organizational change initiatives. Healthcare systems increasingly run complex projects, and formal project management credentials set you apart from candidates without structured training.</p>
-
-<div class="tip-box">
-  <p><strong>Certification Strategy Tip:</strong> Don't pursue certifications randomly. Research the job postings for your target role and note which certifications appear most frequently in requirements or preferred qualifications. Focus your certification efforts on credentials that will directly support your next career move.</p>
-</div>
+<p>Credentials are optional, but they can help you specialize. Choose based on your role and employer requirements, and focus on skills that align with your next promotion.</p>
+<ul>
+  <li>Quality and patient safety credentials for improvement roles</li>
+  <li>Patient access and revenue cycle credentials for front-end or billing paths</li>
+  <li>Project management credentials for operations leadership</li>
+  <li>Process improvement training for efficiency and throughput gains</li>
+</ul>
 
 <h2 id="admissions">Admissions and Transfer Strategy</h2>
-<p>WGU's admissions process is designed to get you started quickly, but investing time upfront in transcript evaluation and planning pays dividends throughout your program. The goal is to maximize transfer credits, minimize redundant coursework, and set yourself up for a strong first term.</p>
+<p>WGU admissions are straightforward. Your transfer credits and prior coursework can reduce time and cost, so submit transcripts early and plan a term strategy before you start.</p>
+<ul>
+  <li>Submit all transcripts early for transfer evaluation</li>
+  <li>Map previous business or healthcare coursework to requirements</li>
+  <li>Document work experience for faster competency progress</li>
+  <li>Plan your first term around high-confidence courses</li>
+  <li>Use our <a href="/blog/wgu-transfer-credits-guide/">transfer credit guide</a> to reduce paid terms</li>
+</ul>
 
-<p>Start by gathering transcripts from all previous colleges and universities—even if you attended briefly or didn't complete a degree. WGU accepts transfer credits from accredited institutions and evaluates them against specific course competencies. General education requirements like English composition, mathematics, and social sciences often transfer completely, which can eliminate entire courses from your degree plan.</p>
+<h2 id="tuition">Tuition, Time, and ROI Signals</h2>
+<p>WGU uses flat-rate tuition per six-month term. That means the faster you complete courses, the lower your total cost. Below is a simple cost estimate based on the current per-term tuition.</p>
 
-<p>If you've completed any healthcare-specific training, certifications, or professional development programs, document these as well. WGU may award credits for prior learning in some cases, and even if formal credit isn't available, your experience accelerates how quickly you can demonstrate competency.</p>
-
-<p>Before enrollment, work with your enrollment counselor to map your previous coursework and experience against the degree requirements. Identify which courses you're most likely to accelerate through quickly—typically those closest to your current job responsibilities. Plan your first term around these high-confidence courses to build momentum early.</p>
-
-<p>If your employer offers tuition assistance, understand the reimbursement requirements and timelines before you enroll. Many employers require passing grades or degree completion for reimbursement, and some have annual caps that affect how you pace your program.</p>
-
-<h2 id="tuition">Cost, Time, and ROI</h2>
-
-<p>WGU charges a flat tuition rate of <strong>$3,830 per six-month term</strong>. The faster you finish, the less you pay.</p>
-
-<div class="stat-box">
-  <div class="stat-box__item">
-    <span class="stat-box__number">$7,660</span>
-    <span class="stat-box__label">2 Terms (Fast)</span>
-  </div>
-  <div class="stat-box__item">
-    <span class="stat-box__number">$11,500</span>
-    <span class="stat-box__label">3 Terms (Average)</span>
-  </div>
-  <div class="stat-box__item">
-    <span class="stat-box__number">$15,320</span>
-    <span class="stat-box__label">4 Terms</span>
-  </div>
-  <div class="stat-box__item">
-    <span class="stat-box__number">$30K-60K</span>
-    <span class="stat-box__label">Traditional Schools</span>
-  </div>
-</div>
-
-<p>WGU reports that 63% of Healthcare Administration graduates finish within 17 months (~3 terms). At $11,500 total—compared to $30,000-$60,000 at traditional universities—the value proposition is clear.</p>
-
-<h3>Return on Investment</h3>
-<p>WGU reports an average salary increase of <strong>$19,764</strong> for graduates. Complete in 3 terms at ~$11,500, and you could recoup your entire investment within your first year post-graduation.</p>
-
-<div class="tip-box">
-  <strong>Transfer Credits = Savings:</strong> Every course you transfer in is one less to complete at WGU. With 50-75% of credits transferred (via Sophia, Study.com, or prior college), you could finish in 1-2 terms.
-</div>
-
-<h2 id="acceleration">How to Accelerate Through the Program</h2>
-
-<p>Experienced healthcare workers have a significant advantage at WGU: you've already learned much of the curriculum on the job. Here's how to leverage that:</p>
-
-<div class="timeline-box">
-  <h4>6-Step Acceleration Strategy</h4>
-  <div class="timeline-item">
-    <span class="timeline-week">Step 1</span>
-    <div class="timeline-content"><strong>Start with what you know.</strong> Identify courses matching your current job. Billing specialist? Start with revenue cycle. Supervisor? Start with leadership courses.</div>
-  </div>
-  <div class="timeline-item">
-    <span class="timeline-week">Step 2</span>
-    <div class="timeline-content"><strong>Use work for assessments.</strong> Performance assessments require real-world scenarios. Use actual projects from your job (with confidentiality modifications).</div>
-  </div>
-  <div class="timeline-item">
-    <span class="timeline-week">Step 3</span>
-    <div class="timeline-content"><strong>Schedule assessments early.</strong> Book OA dates at the start of each course. Deadlines create accountability and prevent endless "one more chapter" delays.</div>
-  </div>
-  <div class="timeline-item">
-    <span class="timeline-week">Step 4</span>
-    <div class="timeline-content"><strong>Batch related courses.</strong> Complete all finance courses together, then quality courses, then compliance. Reduces context-switching and allows note reuse.</div>
-  </div>
-  <div class="timeline-item">
-    <span class="timeline-week">Step 5</span>
-    <div class="timeline-content"><strong>Maintain study rhythm.</strong> Block 15-20 hours weekly. Early mornings, evenings, or weekends. Consistency beats intensity.</div>
-  </div>
-  <div class="timeline-item">
-    <span class="timeline-week">Step 6</span>
-    <div class="timeline-content"><strong>Push your mentor.</strong> Request course unlocks immediately after finishing one. Don't wait for weekly calls if you're ready to move forward.</div>
-  </div>
-</div>
+<table class="course-table">
+  <thead>
+    <tr>
+      <th>Completion Pace</th>
+      <th>Terms</th>
+      <th>Estimated Tuition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fast Track</td>
+      <td>1 term</td>
+      <td>$3,830</td>
+    </tr>
+    <tr>
+      <td>Accelerated</td>
+      <td>2 terms</td>
+      <td>$7,660</td>
+    </tr>
+    <tr>
+      <td>Typical</td>
+      <td>3 terms</td>
+      <td>$11,490</td>
+    </tr>
+    <tr>
+      <td>Standard</td>
+      <td>4 terms</td>
+      <td>$15,320</td>
+    </tr>
+  </tbody>
+</table>
 
 <div class="warning-box">
-  <strong>Common Pitfall:</strong> Don't wait until you feel "completely ready" for assessments. Most students over-study. If you're passing practice tests at 80%+, schedule the exam.
+  <strong>Always verify:</strong> Tuition and program outcomes can change, so confirm current pricing and completion data on the official WGU program page before enrolling.
 </div>
+
+<h3>Quick ROI Checklist</h3>
+<p>If you are unsure whether this degree is the right move, use this checklist to sanity-check your plan before you enroll.</p>
+<ul>
+  <li>You can commit consistent weekly time to assessments and projects</li>
+  <li>Your current or target role values healthcare administration training</li>
+  <li>You can use WGU's competency model to finish faster than a traditional program</li>
+  <li>You can apply coursework directly to your workplace for faster completion</li>
+  <li>You have a clear next-step role you want within 12-24 months</li>
+</ul>
+
+<h2 id="acceleration">Acceleration Playbook for Healthcare Admin Students</h2>
+<p>Acceleration is about smart sequencing, not rushing. Use your work experience to shorten project time and schedule assessments early to stay on track.</p>
+<ol>
+  <li>Start with operations and leadership courses that match your daily duties.</li>
+  <li>Use workplace metrics to complete performance assessments faster.</li>
+  <li>Book assessment dates early to create accountability.</li>
+  <li>Batch similar topics like finance and quality improvement.</li>
+  <li>Keep a running glossary of healthcare acronyms and regulations.</li>
+  <li>Use weekly planning to remove blockers and update your course order.</li>
+  <li>Ask your mentor to open the next course as soon as you finish one.</li>
+  <li>Pair your plan with our <a href="/blog/wgu-acceleration-guide/">WGU acceleration guide</a>.</li>
+</ol>
 
 <!-- In-article CTA -->
 <div class="blog-cta">
   <h3 class="blog-cta__title">Need Help With Healthcare Management Courses?</h3>
-  <ul style="list-style: none; padding-left: 0; margin: 0;">
-    <li class="blog-cta__text">Get a personalized study plan, assessment strategy, and accountability schedule built for your shifts.</li>
-  </ul>
+  <p class="blog-cta__text">Get a personalized study plan, assessment strategy, and accountability schedule built for your shifts.</p>
   <div class="blog-cta__buttons">
     <a href="https://wa.me/447474784797?text=Hi!%20I%20need%20help%20with%20my%20WGU%20Healthcare%20Management%20degree." class="btn btn--primary" target="_blank" rel="noopener">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -776,7 +869,7 @@
         <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq__answer">
-        <p>Yes, they refer to the same program. WGU's official program name is the B.S. Healthcare Administration, but many students and employers use "healthcare management" interchangeably since it's a common industry term. The curriculum covers leadership, operations, finance, compliance, and business principles as applied to healthcare settings—whether you call it administration or management, the competencies are the same.</p>
+        <p>WGU lists the program as the B.S. Healthcare Administration. "Healthcare management" is a common term used by students and employers for the same leadership-focused pathway.</p>
       </div>
     </div>
     <div class="faq__item">
@@ -785,61 +878,25 @@
         <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq__answer">
-        <p>WGU reports that 63% of graduates complete the program within 17 months, which is approximately three six-month terms. However, your actual timeline depends on several factors: how many transfer credits you bring in, how many hours per week you can dedicate to studying, and how quickly you can demonstrate competency on assessments. Experienced healthcare professionals who already know the material from their jobs often accelerate through faster than average.</p>
+        <p>WGU reports that 63% of graduates finish within 17 months. Your timeline depends on transfer credits, weekly study hours, and how quickly you complete assessments.</p>
       </div>
     </div>
     <div class="faq__item">
       <button class="faq__question" aria-expanded="false">
-        <span>How much does the WGU Healthcare Administration program cost?</span>
+        <span>How much does the program cost?</span>
         <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq__answer">
-        <p>WGU charges $3,830 per six-month term for this program, and you can complete as many courses as you want during each term for that flat rate. If you finish in three terms (the median timeframe), your total cost is approximately $11,500 plus fees. Students who accelerate aggressively may finish in two terms for around $7,660, while those who take longer will pay for additional terms. Always check the current program page for the most up-to-date tuition information.</p>
+        <p>WGU lists tuition at $3,830 per six-month term for this program. Your total cost depends on how many terms you need.</p>
       </div>
     </div>
     <div class="faq__item">
       <button class="faq__question" aria-expanded="false">
-        <span>Do I need clinical credentials or a nursing license to enroll?</span>
+        <span>Do I need clinical credentials to enroll?</span>
         <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
       </button>
       <div class="faq__answer">
-        <p>No clinical credentials are required. This program focuses on the business and operations side of healthcare—leadership, finance, compliance, quality improvement, and management—not clinical practice. You don't need to be a nurse, physician, or hold any clinical license to enroll or succeed in the program. Admissions are based on academic readiness and transcript review, not healthcare licensure.</p>
-      </div>
-    </div>
-    <div class="faq__item">
-      <button class="faq__question" aria-expanded="false">
-        <span>What jobs can I get with a WGU Healthcare Administration degree?</span>
-        <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq__answer">
-        <p>Graduates work as clinic managers, practice administrators, health services managers, revenue cycle supervisors, patient access managers, quality improvement coordinators, and healthcare project managers. The degree qualifies you for management roles in hospitals, physician practices, insurance companies, public health agencies, and healthcare technology firms. According to the Bureau of Labor Statistics, healthcare management jobs are projected to grow 28% through 2032.</p>
-      </div>
-    </div>
-    <div class="faq__item">
-      <button class="faq__question" aria-expanded="false">
-        <span>Is WGU Healthcare Administration accredited?</span>
-        <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq__answer">
-        <p>Yes, the program carries dual accreditation. WGU is regionally accredited by the Northwest Commission on Colleges and Universities (NWCCU), which means your degree is recognized by employers nationwide and qualifies you for graduate programs. Additionally, the business programs at WGU hold accreditation from the Accreditation Council for Business Schools and Programs (ACBSP), providing additional validation of academic quality.</p>
-      </div>
-    </div>
-    <div class="faq__item">
-      <button class="faq__question" aria-expanded="false">
-        <span>Can I transfer credits into the WGU Healthcare Administration program?</span>
-        <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq__answer">
-        <p>Yes, WGU accepts transfer credits from accredited institutions. General education courses like English, mathematics, and social sciences typically transfer well. Healthcare-specific courses and professional certifications may also qualify for credit. Submit transcripts early so your enrollment counselor can complete the evaluation before your start date. More transfer credits means fewer courses to complete at WGU and potentially fewer terms to pay for.</p>
-      </div>
-    </div>
-    <div class="faq__item">
-      <button class="faq__question" aria-expanded="false">
-        <span>How does the competency-based format work at WGU?</span>
-        <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
-      </button>
-      <div class="faq__answer">
-        <p>Instead of attending classes for a set number of weeks and earning a grade, you demonstrate mastery of specific competencies through assessments. For each course, you either take an objective assessment (similar to an exam) or complete a performance assessment (a project or paper). If you already know the material from work experience, you can pass quickly and move on. This is why experienced healthcare professionals often accelerate faster than the advertised timeline.</p>
+        <p>No. The degree focuses on operations and leadership rather than clinical practice. Admissions decisions are based on academic readiness and transcript review.</p>
       </div>
     </div>
   </div>
@@ -852,7 +909,7 @@
     <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-nursing-program-guide/">WGU Nursing Programs: RN to BSN and MSN Pathways Explained</a></li>
     <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-mba-complete-guide/">WGU MBA Program: Complete Guide to Fast-Track Your Business Degree</a></li>
     <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-jobs-after-graduation/">Jobs After WGU: Career Opportunities and Salary Expectations</a></li>
-    <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-performance-assessment-guide/">WGU Performance Assessments: Write Papers That Pass First Time</a></li>
+    <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-acceleration-guide/">How to Accelerate Through WGU: Complete Your Degree Faster</a></li>
   </ul>
 </section>
 
@@ -870,13 +927,12 @@
               <h2 class="blog-toc__title">Table of Contents</h2>
               <ul class="blog-toc__list">
                 <li class="blog-toc__item"><a href="#overview" class="blog-toc__link">Program Overview</a></li>
-                <li class="blog-toc__item"><a href="#ideal-for" class="blog-toc__link">Is This Right for You?</a></li>
-                <li class="blog-toc__item"><a href="#curriculum" class="blog-toc__link">Core Competencies</a></li>
+                <li class="blog-toc__item"><a href="#curriculum" class="blog-toc__link">Curriculum Themes</a></li>
                 <li class="blog-toc__item"><a href="#careers" class="blog-toc__link">Career Paths</a></li>
-                <li class="blog-toc__item"><a href="#credentials" class="blog-toc__link">Certifications</a></li>
-                <li class="blog-toc__item"><a href="#admissions" class="blog-toc__link">Admissions</a></li>
-                <li class="blog-toc__item"><a href="#tuition" class="blog-toc__link">Cost & ROI</a></li>
-                <li class="blog-toc__item"><a href="#acceleration" class="blog-toc__link">Acceleration Tips</a></li>
+                <li class="blog-toc__item"><a href="#credentials" class="blog-toc__link">Credentials to Consider</a></li>
+                <li class="blog-toc__item"><a href="#admissions" class="blog-toc__link">Admissions Strategy</a></li>
+                <li class="blog-toc__item"><a href="#tuition" class="blog-toc__link">Tuition & Time</a></li>
+                <li class="blog-toc__item"><a href="#acceleration" class="blog-toc__link">Acceleration Plan</a></li>
               </ul>
             </nav>
           </aside>
@@ -891,7 +947,7 @@
       <div class="container">
         <div class="cta-banner__content">
           <h2 class="cta-banner__title">Ready to Graduate Faster?</h2>
-          <div class="cta-banner__tagline">No forms. No waiting. <span>Just results.</span></div>
+          <p class="cta-banner__tagline">No forms. No waiting. <span>Just results.</span></p>
           <div class="cta-banner__buttons">
             <a href="https://wa.me/447474784797" class="cta-banner__btn cta-banner__btn--whatsapp" target="_blank" rel="noopener">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -949,7 +1005,7 @@
       </div>
 
       <div class="footer__bottom">
-        <div class="footer__copyright">&copy; 2025 Coursework Ninja. All rights reserved.</div>
+        <p class="footer__copyright">&copy; 2025 Coursework Ninja. All rights reserved.</p>
       </div>
     </div>
   </footer>
