@@ -1,9 +1,9 @@
 {
   "meta": {
     "version": "1.0",
-    "lastUpdated": "2025-12-22",
+    "lastUpdated": "2025-12-23",
     "totalTopics": 60,
-    "publishedCount": 38
+    "publishedCount": 44
   },
   "categories": [
     {
@@ -1065,13 +1065,14 @@
         "Business"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-mba-complete-guide",
         "wgu-certification-guide"
       ],
       "estimatedReadTime": 9,
-      "notes": "Cover PMP prep, MSPM program, career outlook"
+      "notes": "Cover PMP prep, MSPM program, career outlook",
+      "publishedDate": "2025-12-23"
     },
     {
       "id": "038",
@@ -1092,13 +1093,14 @@
         "IT"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-bsit-guide",
         "wgu-certification-guide"
       ],
       "estimatedReadTime": 10,
-      "notes": "Cover cloud certs included, hands-on labs, career outlook"
+      "notes": "Cover cloud certs included, hands-on labs, career outlook",
+      "publishedDate": "2025-12-23"
     },
     {
       "id": "039",
@@ -1145,13 +1147,14 @@
         "IT"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-bsit-guide",
         "wgu-certification-guide"
       ],
       "estimatedReadTime": 9,
-      "notes": "Cover Cisco certs, network labs, career paths"
+      "notes": "Cover Cisco certs, network labs, career paths",
+      "publishedDate": "2025-12-23"
     },
     {
       "id": "041",
@@ -1171,13 +1174,14 @@
         "Digital Marketing"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-mba-complete-guide",
         "wgu-jobs-after-graduation"
       ],
       "estimatedReadTime": 8,
-      "notes": "Cover digital marketing skills, career outcomes"
+      "notes": "Cover digital marketing skills, career outcomes",
+      "publishedDate": "2025-12-23"
     },
     {
       "id": "042",
@@ -1197,13 +1201,14 @@
         "Business"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-mba-complete-guide",
         "wgu-jobs-after-graduation"
       ],
       "estimatedReadTime": 8,
-      "notes": "Cover industry demand, skills taught, career paths"
+      "notes": "Cover industry demand, skills taught, career paths",
+      "publishedDate": "2025-12-23"
     },
     {
       "id": "043",
@@ -1465,13 +1470,14 @@
         "Motivation"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-jobs-after-graduation",
         "wgu-acceleration-guide"
       ],
       "estimatedReadTime": 8,
-      "notes": "Compile anonymized success patterns, timelines, tips"
+      "notes": "Compile anonymized success patterns, timelines, tips",
+      "publishedDate": "2025-12-23"
     },
     {
       "id": "053",
