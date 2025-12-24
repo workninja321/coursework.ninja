@@ -3,7 +3,7 @@
     "version": "1.0",
     "lastUpdated": "2025-12-24",
     "totalTopics": 60,
-    "publishedCount": 47
+    "publishedCount": 50
   },
   "categories": [
     {
@@ -1283,13 +1283,14 @@
         "MBA Courses"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-mba-complete-guide",
         "wgu-oa-exam-tips"
       ],
       "estimatedReadTime": 8,
-      "notes": "Cover TVM, ratio analysis, capital budgeting"
+      "notes": "Cover TVM, ratio analysis, capital budgeting",
+      "publishedDate": "2025-12-24"
     },
     {
       "id": "046",
@@ -1309,13 +1310,14 @@
         "MBA Courses"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-mba-complete-guide",
         "wgu-oa-exam-tips"
       ],
       "estimatedReadTime": 7,
-      "notes": "Cover leadership theories, change management, ethics"
+      "notes": "Cover leadership theories, change management, ethics",
+      "publishedDate": "2025-12-24"
     },
     {
       "id": "047",
@@ -1337,13 +1339,14 @@
         "IT Courses"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-bsit-guide",
         "wgu-software-engineering-guide"
       ],
       "estimatedReadTime": 8,
-      "notes": "Cover Python basics, data structures, algorithms"
+      "notes": "Cover Python basics, data structures, algorithms",
+      "publishedDate": "2025-12-24"
     },
     {
       "id": "048",
