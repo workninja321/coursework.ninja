@@ -513,7 +513,7 @@
               </span>
               <span class="blog-header__meta-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                8 min read
+                18 min read
               </span>
               <span class="blog-header__meta-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
@@ -570,16 +570,172 @@
   <h2 id="tvm">Time value of money</h2>
   <p>TVM is the backbone of C214. You should be able to evaluate whether a dollar today is worth more than a dollar later and connect that logic to project decisions. Focus on how discount rates change outcomes.</p>
 
-  <h2 id="ratios">Ratio analysis checklist</h2>
+  <h3>Core TVM formulas</h3>
+  <div class="highlight-box" style="background: linear-gradient(135deg, var(--color-navy) 0%, #1a2744 100%); border-radius: var(--radius-xl); padding: var(--space-6); margin: var(--space-6) 0; color: white;">
+    <h4 style="color: var(--color-gold); margin-bottom: var(--space-4);">Essential Time Value Formulas</h4>
+    <ul style="margin: 0; padding-left: var(--space-6); color: rgba(255,255,255,0.9);">
+      <li style="margin-bottom: var(--space-3);"><strong style="color: var(--color-gold);">Future Value (FV):</strong> FV = PV x (1 + r)^n<br><span style="font-size: var(--text-sm);">How much will money grow to in the future?</span></li>
+      <li style="margin-bottom: var(--space-3);"><strong style="color: var(--color-gold);">Present Value (PV):</strong> PV = FV / (1 + r)^n<br><span style="font-size: var(--text-sm);">What is future money worth today?</span></li>
+      <li style="margin-bottom: var(--space-3);"><strong style="color: var(--color-gold);">Annuity PV:</strong> PV = PMT x [(1 - (1 + r)^-n) / r]<br><span style="font-size: var(--text-sm);">Value of regular payments received over time</span></li>
+      <li style="margin-bottom: var(--space-3);"><strong style="color: var(--color-gold);">Perpetuity:</strong> PV = PMT / r<br><span style="font-size: var(--text-sm);">Value of payments that continue forever</span></li>
+    </ul>
+  </div>
+
+  <h3>TVM variables explained</h3>
   <ul>
-    <li><strong>Liquidity:</strong> current ratio, quick ratio</li>
-    <li><strong>Profitability:</strong> gross margin, net margin, ROA, ROE</li>
-    <li><strong>Leverage:</strong> debt-to-equity, interest coverage</li>
-    <li><strong>Efficiency:</strong> inventory turnover, receivables turnover</li>
+    <li><strong>PV (Present Value):</strong> The current worth of future cash flows</li>
+    <li><strong>FV (Future Value):</strong> The value of money at a future date</li>
+    <li><strong>r (Rate):</strong> The discount or interest rate per period</li>
+    <li><strong>n (Periods):</strong> The number of compounding periods</li>
+    <li><strong>PMT (Payment):</strong> Regular payment amount for annuities</li>
   </ul>
+
+  <div class="warning-box">
+    <p><strong>Common mistake:</strong> Mixing up time periods. If the rate is annual, periods must be in years. If the rate is monthly, convert years to months and divide the annual rate by 12.</p>
+  </div>
+
+  <h3>When to use each formula</h3>
+  <ul>
+    <li><strong>Lump sum investment growing:</strong> Use FV formula</li>
+    <li><strong>Evaluating a future payment today:</strong> Use PV formula</li>
+    <li><strong>Regular payments like loans or retirement:</strong> Use annuity formulas</li>
+    <li><strong>Preferred stock or perpetual bonds:</strong> Use perpetuity formula</li>
+  </ul>
+
+  <h2 id="ratios">Ratio analysis checklist</h2>
+  <p>Financial ratios help you quickly assess company health and compare performance. Know which ratios answer which questions.</p>
+
+  <h3>Liquidity ratios</h3>
+  <p>Can the company pay short-term obligations?</p>
+  <ul>
+    <li><strong>Current ratio:</strong> Current Assets / Current Liabilities (higher is better; 1.5-2.0 is healthy)</li>
+    <li><strong>Quick ratio:</strong> (Current Assets - Inventory) / Current Liabilities (more conservative)</li>
+    <li><strong>Cash ratio:</strong> Cash / Current Liabilities (most conservative)</li>
+  </ul>
+
+  <h3>Profitability ratios</h3>
+  <p>Is the company generating adequate returns?</p>
+  <ul>
+    <li><strong>Gross margin:</strong> (Revenue - COGS) / Revenue (efficiency of production)</li>
+    <li><strong>Operating margin:</strong> Operating Income / Revenue (core business profitability)</li>
+    <li><strong>Net margin:</strong> Net Income / Revenue (bottom-line profitability)</li>
+    <li><strong>ROA:</strong> Net Income / Total Assets (return on all assets)</li>
+    <li><strong>ROE:</strong> Net Income / Shareholders' Equity (return to owners)</li>
+  </ul>
+
+  <h3>Leverage ratios</h3>
+  <p>How much debt is the company using?</p>
+  <ul>
+    <li><strong>Debt-to-equity:</strong> Total Debt / Shareholders' Equity (financial risk)</li>
+    <li><strong>Debt ratio:</strong> Total Debt / Total Assets (asset financing)</li>
+    <li><strong>Interest coverage:</strong> EBIT / Interest Expense (ability to pay interest)</li>
+  </ul>
+
+  <h3>Efficiency ratios</h3>
+  <p>How well is the company using its assets?</p>
+  <ul>
+    <li><strong>Inventory turnover:</strong> COGS / Average Inventory (how fast inventory sells)</li>
+    <li><strong>Receivables turnover:</strong> Revenue / Average Receivables (collection speed)</li>
+    <li><strong>Asset turnover:</strong> Revenue / Total Assets (sales efficiency)</li>
+  </ul>
+
+  <div class="comparison-table" style="overflow-x: auto; margin: var(--space-6) 0;">
+    <table style="width: 100%; border-collapse: collapse; font-size: var(--text-sm);">
+      <thead>
+        <tr style="background: var(--color-navy); color: white;">
+          <th style="padding: var(--space-3); text-align: left;">Question</th>
+          <th style="padding: var(--space-3); text-align: left;">Use These Ratios</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background: var(--color-offwhite);">
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Can they pay bills?</td>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Current ratio, Quick ratio</td>
+        </tr>
+        <tr>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Are they profitable?</td>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Net margin, ROE, ROA</td>
+        </tr>
+        <tr style="background: var(--color-offwhite);">
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Too much debt?</td>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Debt-to-equity, Interest coverage</td>
+        </tr>
+        <tr>
+          <td style="padding: var(--space-3);">Using assets well?</td>
+          <td style="padding: var(--space-3);">Asset turnover, Inventory turnover</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <h2 id="budgeting">Capital budgeting decisions</h2>
   <p>Most scenarios ask which project a manager should choose. Use NPV and IRR to compare projects and remember that riskier projects should be discounted more heavily. Payback is useful for speed, but NPV tells you the real value.</p>
+
+  <h3>Net Present Value (NPV)</h3>
+  <p>NPV measures the dollar value a project adds to the firm. It is the most reliable capital budgeting method.</p>
+
+  <div class="highlight-box" style="background: linear-gradient(135deg, var(--color-navy) 0%, #1a2744 100%); border-radius: var(--radius-xl); padding: var(--space-6); margin: var(--space-6) 0; color: white;">
+    <h4 style="color: var(--color-gold); margin-bottom: var(--space-4);">NPV Formula and Decision Rule</h4>
+    <p style="margin-bottom: var(--space-3); color: rgba(255,255,255,0.9);"><strong style="color: var(--color-gold);">NPV = Sum of [Cash Flow / (1 + r)^t] - Initial Investment</strong></p>
+    <ul style="margin: 0; padding-left: var(--space-6); color: rgba(255,255,255,0.9);">
+      <li style="margin-bottom: var(--space-2);"><strong style="color: var(--color-gold);">Accept if NPV > 0:</strong> Project adds value to the firm</li>
+      <li style="margin-bottom: var(--space-2);"><strong style="color: var(--color-gold);">Reject if NPV < 0:</strong> Project destroys value</li>
+      <li style="margin-bottom: var(--space-2);"><strong style="color: var(--color-gold);">If NPV = 0:</strong> Project breaks even; decision depends on strategy</li>
+    </ul>
+  </div>
+
+  <h3>Internal Rate of Return (IRR)</h3>
+  <p>IRR is the discount rate that makes NPV equal to zero. It represents the project's expected return.</p>
+  <ul>
+    <li><strong>Accept if IRR > required return:</strong> Project exceeds the hurdle rate</li>
+    <li><strong>Reject if IRR < required return:</strong> Project fails to meet minimum requirements</li>
+    <li><strong>Caution:</strong> IRR can give misleading results for mutually exclusive projects</li>
+  </ul>
+
+  <h3>Payback period</h3>
+  <p>Payback measures how quickly an investment recovers its initial cost.</p>
+  <ul>
+    <li><strong>Advantages:</strong> Simple, easy to understand, emphasizes liquidity</li>
+    <li><strong>Disadvantages:</strong> Ignores time value of money, ignores cash flows after payback</li>
+    <li><strong>Use for:</strong> Quick screening, not final decision-making</li>
+  </ul>
+
+  <div class="comparison-table" style="overflow-x: auto; margin: var(--space-6) 0;">
+    <table style="width: 100%; border-collapse: collapse; font-size: var(--text-sm);">
+      <thead>
+        <tr style="background: var(--color-navy); color: white;">
+          <th style="padding: var(--space-3); text-align: left;">Method</th>
+          <th style="padding: var(--space-3); text-align: left;">What It Measures</th>
+          <th style="padding: var(--space-3); text-align: left;">Decision Rule</th>
+          <th style="padding: var(--space-3); text-align: left;">Best For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background: var(--color-offwhite);">
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">NPV</td>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Dollar value added</td>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Accept if > 0</td>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">All capital decisions</td>
+        </tr>
+        <tr>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">IRR</td>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Expected return %</td>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Accept if > hurdle rate</td>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Single project screening</td>
+        </tr>
+        <tr style="background: var(--color-offwhite);">
+          <td style="padding: var(--space-3);">Payback</td>
+          <td style="padding: var(--space-3);">Recovery time</td>
+          <td style="padding: var(--space-3);">Shorter is better</td>
+          <td style="padding: var(--space-3);">Quick screening</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tip-box">
+    <p><strong>Tip:</strong> When NPV and IRR conflict for mutually exclusive projects, always prefer NPV. NPV measures actual value created; IRR can be misleading with different project sizes.</p>
+  </div>
 
   <h2 id="risk">Risk and return basics</h2>
   <p>Every finance decision is a tradeoff between expected return and risk. In questions, select the option that matches the firm risk profile and long-term value, not just the largest short-term gain.</p>
@@ -691,6 +847,46 @@
         </button>
         <div class="faq__answer">
           <p>Build a one-page formula sheet, drill ratio categories, and practice scenario questions that link business decisions to financial metrics.</p>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          <span>What is the difference between NPV and IRR?</span>
+          <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__answer">
+          <p>NPV measures dollar value added to the firm (accept if > 0). IRR measures the project's expected return rate (accept if > required return). When they conflict, prefer NPV for mutually exclusive projects.</p>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          <span>Do I need to memorize all the ratio formulas?</span>
+          <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__answer">
+          <p>Focus on understanding what each ratio measures rather than memorizing every formula. Know liquidity, profitability, leverage, and efficiency categories. Recognize which ratio answers which business question.</p>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          <span>How long does C214 take to complete?</span>
+          <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__answer">
+          <p>Most students complete C214 in 2-4 weeks. Those with finance or accounting backgrounds often finish in 1-2 weeks. Practice with TVM calculations and ratio analysis accelerates preparation.</p>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          <span>What calculator should I use for C214?</span>
+          <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__answer">
+          <p>A financial calculator like the TI BA II Plus or HP 12C is recommended. Learn the TVM functions (N, I/Y, PV, PMT, FV) thoroughly. The exam provides a basic calculator, but knowing your own tool speeds up calculations.</p>
         </div>
       </div>
     </div>

@@ -514,7 +514,7 @@
               </span>
               <span class="blog-header__meta-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                8 min read
+                18 min read
               </span>
               <span class="blog-header__meta-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
@@ -540,6 +540,69 @@
   <h2 id="overview">Official course focus (WGU program guide)</h2>
   <p>The WGU BSIT program guide lists scripting and programming fundamentals as a core skill area. C493 focuses on Python basics such as variables, control flow, functions, and file handling.</p>
 
+  <h2 id="career">Python career outlook and salary data</h2>
+  <p>Python skills open doors across multiple high-paying career paths. According to the U.S. Bureau of Labor Statistics, software developer roles are projected to grow 17% through 2033, much faster than the average for all occupations. Python consistently ranks among the top three most in-demand programming languages.</p>
+
+  <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-4); margin: var(--space-6) 0;">
+    <div class="stat-card" style="background: var(--color-offwhite); padding: var(--space-4); border-radius: var(--radius-lg); text-align: center;">
+      <div style="font-size: var(--text-3xl); font-weight: var(--font-bold); color: var(--color-teal);">$130,160</div>
+      <div style="color: var(--color-slate); font-size: var(--text-sm);">Median Developer Salary (BLS 2024)</div>
+    </div>
+    <div class="stat-card" style="background: var(--color-offwhite); padding: var(--space-4); border-radius: var(--radius-lg); text-align: center;">
+      <div style="font-size: var(--text-3xl); font-weight: var(--font-bold); color: var(--color-teal);">17%</div>
+      <div style="color: var(--color-slate); font-size: var(--text-sm);">Job Growth Through 2033</div>
+    </div>
+    <div class="stat-card" style="background: var(--color-offwhite); padding: var(--space-4); border-radius: var(--radius-lg); text-align: center;">
+      <div style="font-size: var(--text-3xl); font-weight: var(--font-bold); color: var(--color-teal);">303,000+</div>
+      <div style="color: var(--color-slate); font-size: var(--text-sm);">New Developer Jobs Expected</div>
+    </div>
+  </div>
+
+  <h3>Python developer salaries by experience level</h3>
+  <div class="comparison-table" style="overflow-x: auto; margin: var(--space-6) 0;">
+    <table style="width: 100%; border-collapse: collapse; font-size: var(--text-sm);">
+      <thead>
+        <tr style="background: var(--color-navy); color: white;">
+          <th style="padding: var(--space-3); text-align: left;">Experience Level</th>
+          <th style="padding: var(--space-3); text-align: left;">Typical Salary Range</th>
+          <th style="padding: var(--space-3); text-align: left;">Common Roles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background: var(--color-offwhite);">
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Entry Level (0-2 years)</td>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">$65,000 - $85,000</td>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Junior Developer, QA Automation</td>
+        </tr>
+        <tr>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Mid-Level (3-5 years)</td>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">$90,000 - $120,000</td>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Software Engineer, Data Analyst</td>
+        </tr>
+        <tr style="background: var(--color-offwhite);">
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Senior (6-10 years)</td>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">$125,000 - $160,000</td>
+          <td style="padding: var(--space-3); border-bottom: 1px solid #e5e7eb;">Senior Engineer, Tech Lead</td>
+        </tr>
+        <tr>
+          <td style="padding: var(--space-3);">Principal/Staff (10+ years)</td>
+          <td style="padding: var(--space-3);">$165,000 - $220,000+</td>
+          <td style="padding: var(--space-3);">Staff Engineer, Architect</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Industries hiring Python developers</h3>
+  <p>Python is used across nearly every industry, but the highest demand comes from:</p>
+  <ul>
+    <li><strong>Technology and Software:</strong> Web development, cloud services, DevOps automation</li>
+    <li><strong>Finance and Fintech:</strong> Algorithmic trading, risk analysis, fraud detection</li>
+    <li><strong>Healthcare:</strong> Medical imaging, patient data analysis, research automation</li>
+    <li><strong>Data Science and AI:</strong> Machine learning, natural language processing, analytics</li>
+    <li><strong>Cybersecurity:</strong> Security automation, penetration testing tools, log analysis</li>
+  </ul>
+
   <h2 id="competencies">Core skills to master</h2>
   <ul>
     <li>Variables, data types, and expressions</li>
@@ -562,23 +625,112 @@
   </div>
 
   <h2 id="patterns">Python patterns to drill</h2>
+  <p>These foundational patterns appear in nearly every Python assessment and real-world project:</p>
+
+  <h3>Pattern 1: Input validation</h3>
+  <p>Always validate user input before processing. This prevents crashes and security issues:</p>
   <ul>
-    <li>Read input, validate it, then process it</li>
-    <li>Loop through a list and build a result</li>
-    <li>Use dictionaries for fast lookups</li>
-    <li>Write a function, then reuse it</li>
+    <li>Check if input exists and is not empty</li>
+    <li>Convert types safely with error handling</li>
+    <li>Validate ranges and acceptable values</li>
+    <li>Provide clear feedback for invalid input</li>
   </ul>
+
+  <h3>Pattern 2: List processing with accumulation</h3>
+  <p>Loop through a collection and build a result. This pattern is the foundation of data processing:</p>
+  <ul>
+    <li>Initialize an accumulator variable before the loop</li>
+    <li>Process each item and update the accumulator</li>
+    <li>Return or use the final accumulated value</li>
+    <li>Works for sums, counts, filtered lists, and transformations</li>
+  </ul>
+
+  <h3>Pattern 3: Dictionary lookups for efficiency</h3>
+  <p>Dictionaries provide O(1) average lookup time, making them ideal for:</p>
+  <ul>
+    <li>Counting occurrences of items</li>
+    <li>Mapping keys to related values</li>
+    <li>Caching computed results</li>
+    <li>Building lookup tables from data</li>
+  </ul>
+
+  <h3>Pattern 4: Functions for reusability</h3>
+  <p>Functions are the building blocks of clean code:</p>
+  <ul>
+    <li>Single responsibility: each function does one thing well</li>
+    <li>Clear parameters and return values</li>
+    <li>Meaningful names that describe the action</li>
+    <li>Docstrings for complex functions</li>
+  </ul>
+
+  <div class="tip-box">
+    <p><strong>Tip:</strong> When stuck on a problem, break it into smaller functions. If you can name the function clearly, you understand the problem.</p>
+  </div>
 
   <h2 id="files">File handling basics</h2>
   <p>Most beginner assessments include file reading or writing. Practice opening files, reading line by line, and saving output to a new file. Keep file paths simple and test with small datasets.</p>
 
+  <h3>File reading patterns</h3>
+  <ul>
+    <li><strong>Read entire file:</strong> Use when file is small and you need all content at once</li>
+    <li><strong>Read line by line:</strong> Use for larger files or when processing each line separately</li>
+    <li><strong>Context managers (with statement):</strong> Always use to ensure files close properly</li>
+  </ul>
+
+  <h3>File writing patterns</h3>
+  <ul>
+    <li><strong>Write mode ('w'):</strong> Creates new file or overwrites existing</li>
+    <li><strong>Append mode ('a'):</strong> Adds to end of existing file</li>
+    <li><strong>Always close files:</strong> Use context managers or explicit close()</li>
+  </ul>
+
+  <h3>Common file handling mistakes</h3>
+  <ul>
+    <li>Forgetting to strip newline characters from lines</li>
+    <li>Not handling file not found errors</li>
+    <li>Using wrong mode (read vs write)</li>
+    <li>Hard-coding file paths instead of using parameters</li>
+  </ul>
+
   <h2 id="debugging">Debugging checklist</h2>
+  <p>Debugging is a skill that separates good programmers from great ones. Use this systematic approach:</p>
+
+  <h3>Step 1: Reproduce the error</h3>
+  <ul>
+    <li>Identify the exact input that causes the problem</li>
+    <li>Note the error message and line number</li>
+    <li>Create a minimal test case that fails</li>
+  </ul>
+
+  <h3>Step 2: Understand the error</h3>
+  <ul>
+    <li><strong>SyntaxError:</strong> Check parentheses, colons, indentation</li>
+    <li><strong>NameError:</strong> Variable not defined or misspelled</li>
+    <li><strong>TypeError:</strong> Operation on wrong data type</li>
+    <li><strong>IndexError:</strong> Accessing list/string past its length</li>
+    <li><strong>KeyError:</strong> Dictionary key does not exist</li>
+  </ul>
+
+  <h3>Step 3: Isolate the problem</h3>
   <ul>
     <li>Print intermediate values to trace logic</li>
     <li>Check indentation and loop boundaries</li>
     <li>Confirm variable types before operations</li>
     <li>Handle empty or invalid input safely</li>
+    <li>Comment out sections to find the breaking point</li>
   </ul>
+
+  <h3>Step 4: Fix and verify</h3>
+  <ul>
+    <li>Make one change at a time</li>
+    <li>Test with the original failing input</li>
+    <li>Test with edge cases (empty, very large, negative)</li>
+    <li>Verify the fix does not break other functionality</li>
+  </ul>
+
+  <div class="warning-box">
+    <p><strong>Warning:</strong> Do not guess at fixes. Understand why your code fails before changing it. Random changes create new bugs.</p>
+  </div>
 
   <h2 id="assessment">Assessment approach</h2>
   <p>Course versions can vary. If your version uses an OA, focus on common Python patterns and reading code quickly. If your version includes a project task, map each requirement to a working function and test with sample inputs.</p>
@@ -684,6 +836,46 @@
           <p>Build a small practice project, solve daily coding exercises, and map each assessment requirement to a working Python example.</p>
         </div>
       </div>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          <span>What are the best resources for learning Python basics?</span>
+          <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__answer">
+          <p>The official Python documentation, Codecademy, and LeetCode easy problems are excellent starting points. For WGU specifically, focus on the zyBooks materials and practice with problems that match assessment objectives.</p>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          <span>How long does it take to pass C493?</span>
+          <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__answer">
+          <p>Students with no prior coding experience typically spend 3-4 weeks. Those with some programming background often complete it in 1-2 weeks. Daily practice is more important than total study hours.</p>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          <span>What job can I get with Python skills from C493?</span>
+          <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__answer">
+          <p>C493 builds foundational skills for roles like junior developer, QA automation engineer, IT support specialist, and data analyst. With additional courses, you can pursue software engineering and DevOps positions.</p>
+        </div>
+      </div>
+
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          <span>Should I use an IDE or text editor for practice?</span>
+          <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq__answer">
+          <p>VS Code with the Python extension is recommended for beginners. It provides syntax highlighting, debugging tools, and a built-in terminal. PyCharm is another excellent option with more features for larger projects.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -701,6 +893,7 @@
                   <h2 class="blog-toc__title">Table of Contents</h2>
                   <ul class="blog-toc__list">
                     <li class="blog-toc__item"><a href="#overview" class="blog-toc__link">Official Course Focus</a></li>
+                    <li class="blog-toc__item"><a href="#career" class="blog-toc__link">Career Outlook</a></li>
                     <li class="blog-toc__item"><a href="#competencies" class="blog-toc__link">Core Skills</a></li>
                     <li class="blog-toc__item"><a href="#workflow" class="blog-toc__link">Practice Workflow</a></li>
                     <li class="blog-toc__item"><a href="#patterns" class="blog-toc__link">Python Patterns</a></li>
