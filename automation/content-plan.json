@@ -1,9 +1,9 @@
 {
   "meta": {
     "version": "1.0",
-    "lastUpdated": "2025-12-23",
+    "lastUpdated": "2025-12-24",
     "totalTopics": 60,
-    "publishedCount": 44
+    "publishedCount": 47
   },
   "categories": [
     {
@@ -735,13 +735,14 @@
         "Technical Communication"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-performance-assessment-guide",
         "wgu-bsit-guide"
       ],
       "estimatedReadTime": 8,
-      "notes": "Document structure, audience analysis, visuals and formatting"
+      "notes": "Document structure, audience analysis, visuals and formatting",
+      "publishedDate": "2025-12-24"
     },
     {
       "id": "026",
@@ -1228,13 +1229,14 @@
         "Business Courses"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-mba-complete-guide",
         "wgu-oa-exam-tips"
       ],
       "estimatedReadTime": 7,
-      "notes": "Cover motivation theories, leadership styles, team dynamics"
+      "notes": "Cover motivation theories, leadership styles, team dynamics",
+      "publishedDate": "2025-12-24"
     },
     {
       "id": "044",
@@ -1254,13 +1256,14 @@
         "Business Courses"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-mba-complete-guide",
         "wgu-oa-exam-tips"
       ],
       "estimatedReadTime": 7,
-      "notes": "Cover planning, organizing, leading, controlling"
+      "notes": "Cover planning, organizing, leading, controlling",
+      "publishedDate": "2025-12-24"
     },
     {
       "id": "045",
