@@ -3,8 +3,8 @@
     "version": "1.1",
     "lastUpdated": "2025-01-02",
     "totalTopics": 100,
-    "publishedCount": 52,
-    "pendingCount": 48
+    "publishedCount": 56,
+    "pendingCount": 44
   },
   "categories": [
     {
@@ -1721,7 +1721,8 @@
         "Technology"
       ],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-20",
       "internalLinks": [
         "wgu-software-engineering-guide",
         "wgu-bsit-guide",
@@ -2194,7 +2195,8 @@
         "Acceleration"
       ],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-20",
       "internalLinks": [
         "wgu-acceleration-guide",
         "wgu-course-order-strategy"
@@ -2221,7 +2223,8 @@
         "Study Strategy"
       ],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-20",
       "internalLinks": [
         "wgu-oa-exam-tips",
         "wgu-acceleration-guide"
@@ -2248,7 +2251,8 @@
         "Productivity"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2025-12-20",
       "internalLinks": [
         "wgu-study-tips-working-adults",
         "wgu-burnout-prevention"
