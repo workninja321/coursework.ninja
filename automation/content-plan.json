@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 68,
-    "pendingBlogs": 25,
+    "publishedBlogs": 64,
+    "pendingBlogs": 29,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2325,8 +2325,7 @@
         "Study Tips"
       ],
       "priority": 2,
-      "status": "published",
-      "publishedDate": "2026-01-03",
+      "status": "pending",
       "internalLinks": [
         "wgu-oa-exam-tips",
         "wgu-mentor-tips"
@@ -2353,8 +2352,7 @@
         "Academic Structure"
       ],
       "priority": 2,
-      "status": "published",
-      "publishedDate": "2026-01-03",
+      "status": "pending",
       "internalLinks": [
         "wgu-acceleration-guide",
         "wgu-term-planning-guide"
@@ -2409,8 +2407,7 @@
         "Adult Learners"
       ],
       "priority": 2,
-      "status": "published",
-      "publishedDate": "2026-01-03",
+      "status": "pending",
       "internalLinks": [
         "wgu-jobs-after-graduation",
         "wgu-acceleration-guide"

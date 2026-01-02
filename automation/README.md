@@ -129,12 +129,185 @@ Make sure `automation/secrets/service-account.json` exists and contains your Goo
 
 ```
 automation/
-├── README.md           # This file
-├── secrets/            # (gitignored) Service account keys
+├── README.md                          # This file
+├── secrets/                           # (gitignored) Service account keys
 │   └── service-account.json
-├── logs/               # (gitignored) Execution logs
-└── tasks.json          # Current task queue (generated)
+├── logs/                              # (gitignored) Execution logs
+├── tasks.json                         # Current task queue (generated)
+├── content-plan.json                  # Master content plan with all topics
+├── blog-template-reference.md         # HTML template for blog posts
+├── image-gen-reference.md             # OpenRouter image generation guide
+├── daily-blog-autopilot.md            # OpenCode autopilot instructions
+├── run-daily-blog.sh                  # Launcher script for autopilot
+├── setup-autopilot.sh                 # Install/manage autopilot scheduler
+└── com.courseworkninja.dailyblog.plist # macOS LaunchAgent config
 
 scripts/
-└── seo-machine.mjs     # Main automation script
+└── seo-machine.mjs                    # Main automation script
+└── sync-site.mjs                      # Blog index sync script
+```
+
+---
+
+## OpenCode Autopilot Mode
+
+Fully automated blog generation using OpenCode running on autopilot.
+
+### How It Works
+
+```
+LaunchAgent (daily 9 AM) OR manual trigger
+    → run-daily-blog.sh [max_posts]
+        → Loop until max reached or no pending posts:
+            → opencode run [autopilot instructions]
+                → Select ONE highest-priority pending blog
+                → Research topic via web search
+                → Generate blog HTML with researched content
+                → Create cover image via OpenRouter API
+                → Update blog index
+                → Git commit & push
+                → Update content-plan.json
+                → Signal success
+            → Fresh OpenCode session for next post
+```
+
+**Key features:**
+- ONE post per OpenCode session (fresh context each time)
+- Research phase before writing (web search for current info)
+- Automatic restart for next post after success
+- Stops on error or when no pending posts remain
+
+### Quick Start
+
+```bash
+cd automation
+
+# Publish ONE post (test)
+./setup-autopilot.sh one
+
+# Publish up to 3 posts
+./setup-autopilot.sh run 3
+
+# Publish up to 10 posts
+./setup-autopilot.sh run 10
+
+# Install daily scheduler (9 AM, up to 10 posts)
+./setup-autopilot.sh install
+
+# Check status
+./setup-autopilot.sh status
+
+# View logs
+./setup-autopilot.sh logs
+
+# Clear error markers
+./setup-autopilot.sh clear
+
+# Uninstall scheduler
+./setup-autopilot.sh uninstall
+```
+
+### Status Markers
+
+The autopilot creates marker files to track state:
+
+| File | Meaning |
+|------|---------|
+| `logs/LAST_SUCCESS` | Last successfully published slug + timestamp |
+| `logs/NO_PENDING_POSTS` | No more pending blogs in content-plan.json |
+| `logs/GIT_PUSH_FAILED` | Git push failed, needs manual intervention |
+
+### Configuration
+
+Edit `daily-blog-autopilot.md` to change:
+- Research queries and depth
+- Quality checklist
+- Content requirements
+
+Edit `com.courseworkninja.dailyblog.plist` to change:
+- Run time (default: 9:00 AM)
+- Working directory
+
+Edit `run-daily-blog.sh` to change:
+- Default max posts per session
+- Sleep time between posts
+
+### Requirements
+
+- OpenCode CLI installed (`/opt/homebrew/bin/opencode`)
+- `.env` file with `OPENROUTER_API_KEY`
+- `cwebp` installed (`brew install webp`)
+- `jq` installed (`brew install jq`)
+- Git configured with push access
+
+### Logs
+
+Logs are written to:
+- `automation/logs/autopilot-YYYY-MM-DD.log` - Full session output
+- `automation/logs/launchd-stdout.log` - LaunchAgent stdout
+- `automation/logs/launchd-stderr.log` - LaunchAgent stderr
+- `automation/logs/telegram-stdout.log` - Telegram listener log
+
+---
+
+## Telegram Integration
+
+Remote monitoring and control via Telegram bot.
+
+### Setup
+
+1. Message [@BotFather](https://t.me/BotFather) on Telegram
+2. Send `/newbot` and follow prompts
+3. Copy the bot token
+4. Add to `.env`:
+   ```
+   TELEGRAM_BOT_TOKEN=your-bot-token
+   TELEGRAM_CHAT_ID=your-chat-id
+   ```
+5. To get your chat ID:
+   - Message your bot
+   - Visit: `https://api.telegram.org/bot<TOKEN>/getUpdates`
+   - Find `chat.id` in the response
+
+### Start Telegram Listener
+
+```bash
+./setup-autopilot.sh telegram-install
+```
+
+### Bot Commands
+
+| Command | Action |
+|---------|--------|
+| `/status` | Show autopilot status |
+| `/run N` | Start autopilot for N posts |
+| `/one` | Publish one post |
+| `/stop` | Stop after current post |
+| `/logs` | Get recent log file |
+| `/pending` | List next pending posts |
+| `/skip` | Skip current post |
+| `/approve` | Approve pending action |
+
+### Notifications You'll Receive
+
+| Event | Message |
+|-------|---------|
+| Session start | Posts count, timestamp |
+| Post selected | Slug, title, priority |
+| Research started | Topic being researched |
+| Writing started | Slug |
+| Image generation | Slug |
+| Push to GitHub | - |
+| Success | URL, timestamp |
+| Session complete | Total count, duration |
+| Error | Stage, details |
+| Git failure | Slug, troubleshooting tips |
+
+### Manage Telegram Listener
+
+```bash
+./setup-autopilot.sh telegram-install    # Start
+./setup-autopilot.sh telegram-uninstall  # Stop
+./setup-autopilot.sh telegram-restart    # Restart
+./setup-autopilot.sh telegram-test       # Test message
 ```
