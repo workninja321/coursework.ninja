@@ -3,8 +3,8 @@
     "version": "1.1",
     "lastUpdated": "2026-01-02",
     "totalTopics": 100,
-    "publishedCount": 61,
-    "pendingCount": 39
+    "publishedCount": 64,
+    "pendingCount": 36
   },
   "categories": [
     {
@@ -1953,7 +1953,8 @@
         "Computer Science"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-02",
       "internalLinks": [
         "wgu-c959-discrete-math",
         "wgu-computer-science-degree"
@@ -2009,7 +2010,8 @@
         "IT Courses"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-02",
       "internalLinks": [
         "wgu-bsit-guide",
         "wgu-oa-exam-tips"
@@ -2037,7 +2039,8 @@
         "OOP"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-02",
       "internalLinks": [
         "wgu-software-engineering-guide",
         "wgu-c195-software-2"

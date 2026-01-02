@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WGU C482 Software I: Java Fundamentals and OOP Guide | Coursework Ninja</title>
+  <meta name="description" content="Master WGU C482 Software I with this guide covering Java fundamentals, OOP principles, JavaFX GUI development, and the inventory management project. Includes PA tips.">
+  <meta name="keywords" content="WGU C482, C482 study guide, WGU Software I, C482 Java, WGU Java course">
+  <link rel="canonical" href="https://coursework.ninja/blog/wgu-c482-software-1/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://coursework.ninja/blog/wgu-c482-software-1/">
+  <meta property="og:title" content="WGU C482 Software I: Java Fundamentals and OOP Guide">
+  <meta property="og:description" content="Master WGU C482 Software I with this guide covering Java fundamentals, OOP principles, JavaFX GUI development, and the inventory management project. Includes PA tips.">
+  <meta property="og:image" content="https://coursework.ninja/images/blog/wgu-c482-software-1-cover.webp">
+  <meta property="og:site_name" content="Coursework Ninja">
+  <meta property="article:published_time" content="2026-01-02">
+  <meta property="article:modified_time" content="2026-01-02">
+  <meta property="article:author" content="Coursework Ninja Team">
+  <meta property="article:section" content="Course Help">
+  <meta property="article:tag" content="C482">
+  <meta property="article:tag" content="Java">
+  <meta property="article:tag" content="Software Development">
+  <meta property="article:tag" content="OOP">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WGU C482 Software I: Java Fundamentals and OOP Guide">
+  <meta name="twitter:description" content="Master WGU C482 Software I with Java fundamentals, OOP principles, and JavaFX. Includes inventory management project tips.">
+  <meta name="twitter:image" content="https://coursework.ninja/images/blog/wgu-c482-software-1-cover.webp">
+
+  <meta name="theme-color" content="#0B1630">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "WGU C482 Software I: Java Fundamentals and OOP Guide",
+    "description": "Master WGU C482 Software I with this guide covering Java fundamentals, OOP principles, JavaFX GUI development, and the inventory management project. Includes PA tips.",
+    "image": "https://coursework.ninja/images/blog/wgu-c482-software-1-cover.webp",
+    "author": {
+      "@type": "Organization",
+      "name": "Coursework Ninja",
+      "url": "https://coursework.ninja"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Coursework Ninja",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://coursework.ninja/images/logo.webp"
+      }
+    },
+    "datePublished": "2026-01-02",
+    "dateModified": "2026-01-02",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://coursework.ninja/blog/wgu-c482-software-1/"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://coursework.ninja/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://coursework.ninja/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "WGU C482 Software I", "item": "https://coursework.ninja/blog/wgu-c482-software-1/"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What programming language is used in WGU C482?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "C482 uses Java with JavaFX for GUI development. You'll work in an IDE (typically IntelliJ IDEA) and build a complete inventory management application. No prior Java experience is required, but programming fundamentals help."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How hard is the C482 inventory management project?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The project is manageable if you follow the UML diagram closely and implement one feature at a time. Most students complete it in 2-4 weeks. The challenging parts are understanding inheritance relationships and connecting the GUI to your data model."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to know Java before taking C482?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No prior Java knowledge is required. The course teaches Java fundamentals including syntax, OOP concepts, and JavaFX. However, having experience with any programming language will make the learning curve easier."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What IDE should I use for C482?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WGU recommends IntelliJ IDEA, and most course resources are based on it. The community edition is free and sufficient for the project. Some students use NetBeans or Eclipse, but IntelliJ has the best JavaFX integration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What comes after C482?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "C195 Software II builds directly on C482. You'll add database connectivity (MySQL), more complex GUI features, and scheduling functionality. Mastering C482's OOP concepts is essential for success in C195."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .blog-featured-image {
+      background: var(--color-offwhite);
+      padding: var(--space-8) 0;
+    }
+    .blog-featured-image__img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: var(--radius-xl);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .blog-header {
+      padding: calc(var(--space-16) + 80px) 0 var(--space-12);
+      background: linear-gradient(135deg, var(--color-navy) 0%, #1a2744 100%);
+      color: var(--color-white);
+    }
+    .blog-header__breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.6);
+      margin-bottom: var(--space-6);
+    }
+    .blog-header__breadcrumb a {
+      color: var(--color-gold);
+      text-decoration: none;
+    }
+    .blog-header__breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .blog-header__breadcrumb span {
+      color: rgba(255,255,255,0.6);
+    }
+    .blog-header__title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: var(--font-bold);
+      line-height: 1.2;
+      margin-bottom: var(--space-4);
+      color: #FFFFFF !important;
+    }
+    .blog-header__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.7);
+    }
+    .blog-header__meta-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+    .blog-content {
+      padding: var(--space-12) 0 var(--space-16);
+    }
+    .blog-content__wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-10);
+    }
+    @media (min-width: 1024px) {
+      .blog-content__wrapper {
+        grid-template-columns: 1fr 280px;
+      }
+    }
+    .blog-article {
+      max-width: 720px;
+    }
+    .blog-article h2 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-bold);
+      color: var(--color-navy);
+      margin: var(--space-10) 0 var(--space-4);
+    }
+    .blog-article h3 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-semibold);
+      color: var(--color-navy);
+      margin: var(--space-8) 0 var(--space-3);
+    }
+    .blog-article p {
+      color: var(--color-slate);
+      line-height: 1.8;
+      margin-bottom: var(--space-4);
+    }
+    .blog-article ul {
+      color: var(--color-slate);
+      line-height: 1.8;
+      margin-bottom: var(--space-4);
+      padding-left: var(--space-6);
+      list-style-type: disc;
+    }
+    .blog-article ol {
+      color: var(--color-slate);
+      line-height: 1.8;
+      margin-bottom: var(--space-4);
+      padding-left: var(--space-6);
+      list-style-type: decimal;
+    }
+    .blog-article li {
+      margin-bottom: var(--space-2);
+      display: list-item;
+    }
+    .blog-article li::marker {
+      color: var(--color-teal);
+    }
+    .blog-article strong {
+      color: var(--color-navy);
+      font-weight: var(--font-semibold);
+    }
+    .blog-article a {
+      color: var(--color-teal);
+      text-decoration: underline;
+    }
+    .blog-article a:hover {
+      color: var(--color-navy);
+    }
+    .blog-toc {
+      position: sticky;
+      top: 100px;
+      background: var(--color-offwhite);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+    }
+    .blog-toc__title {
+      font-size: var(--text-base);
+      font-weight: var(--font-semibold);
+      color: var(--color-navy);
+      margin-bottom: var(--space-4);
+    }
+    .blog-toc__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .blog-toc__item {
+      margin-bottom: var(--space-2);
+    }
+    .blog-toc__link {
+      font-size: var(--text-sm);
+      color: var(--color-slate);
+      text-decoration: none;
+      display: block;
+      padding: var(--space-1) 0;
+      transition: color 0.2s;
+    }
+    .blog-toc__link:hover {
+      color: var(--color-teal);
+    }
+    .blog-cta {
+      background: linear-gradient(135deg, var(--color-navy) 0%, #1a2744 100%);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      margin: var(--space-10) 0;
+      text-align: center;
+    }
+    .blog-cta__title {
+      font-size: var(--text-xl);
+      font-weight: var(--font-bold);
+      color: #FFFFFF !important;
+      margin-bottom: var(--space-3);
+    }
+    .blog-cta__text {
+      color: rgba(255,255,255,0.8) !important;
+      margin-bottom: var(--space-6);
+    }
+    .blog-cta__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space-3);
+    }
+    .blog-cta__buttons .btn--primary {
+      background: var(--color-gold);
+      color: var(--color-navy);
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-lg);
+      font-weight: var(--font-semibold);
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .blog-cta__buttons .btn--primary:hover {
+      background: var(--color-gold-hover);
+      transform: translateY(-2px);
+    }
+    .blog-cta__buttons .btn--secondary {
+      background: rgba(255,255,255,0.1);
+      color: #FFFFFF;
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-lg);
+      font-weight: var(--font-semibold);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .blog-cta__buttons .btn--secondary:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-2px);
+    }
+    .blog-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-top: var(--space-8);
+      padding-top: var(--space-6);
+      border-top: 1px solid #e5e7eb;
+    }
+    .blog-tag {
+      background: var(--color-offwhite);
+      color: var(--color-slate);
+      font-size: var(--text-sm);
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-full);
+      text-decoration: none;
+    }
+    .blog-tag:hover {
+      background: var(--color-gold);
+      color: var(--color-navy);
+    }
+    .blog-faq {
+      margin-top: var(--space-12);
+      padding-top: var(--space-10);
+      border-top: 1px solid #e5e7eb;
+    }
+    .blog-faq__title {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-bold);
+      color: var(--color-navy);
+      margin-bottom: var(--space-6);
+    }
+    .blog-faq .faq__item {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-3);
+      overflow: hidden;
+    }
+    .blog-faq .faq__question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space-4) var(--space-5);
+      background: var(--color-white);
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-size: var(--text-base);
+      font-weight: var(--font-medium);
+      color: var(--color-navy);
+      transition: background 0.2s;
+    }
+    .blog-faq .faq__question:hover {
+      background: var(--color-offwhite);
+    }
+    .blog-faq .faq__question span {
+      flex: 1;
+      padding-right: var(--space-4);
+    }
+    .blog-faq .faq__icon {
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .blog-faq .faq__question[aria-expanded="true"] .faq__icon {
+      transform: rotate(180deg);
+    }
+    .blog-faq .faq__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: var(--color-offwhite);
+    }
+    .blog-faq .faq__answer.is-open {
+      max-height: 500px;
+    }
+    .blog-faq .faq__answer p {
+      padding: var(--space-4) var(--space-5);
+      margin: 0;
+      color: var(--color-slate);
+      line-height: 1.7;
+    }
+    .tip-box {
+      background: #f0fdf4;
+      border-left: 4px solid var(--color-teal);
+      padding: var(--space-4) var(--space-6);
+      margin: var(--space-6) 0;
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+    }
+    .tip-box strong {
+      color: var(--color-teal);
+    }
+    .warning-box {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: var(--space-4) var(--space-6);
+      margin: var(--space-6) 0;
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+    }
+    .warning-box strong {
+      color: #b45309;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header" id="header">
+    <div class="container header__container">
+      <a href="/" class="header__logo">
+        <img src="/images/logo.webp" alt="Coursework Ninja" class="header__logo-img">
+      </a>
+      <nav class="header__nav" id="nav" aria-label="Main navigation">
+        <ul class="header__menu">
+          <li><a href="/#why-choose-us" class="header__link">Why Us</a></li>
+          <li><a href="/#services" class="header__link">Services</a></li>
+          <li><a href="/blog/" class="header__link">Blog</a></li>
+          <li><a href="/roadmaps/" class="header__link">Roadmaps</a></li>
+          <li><a href="/#testimonials" class="header__link">Testimonials</a></li>
+          <li><a href="/contact/" class="header__link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/447474784797" class="btn btn--primary header__cta" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Chat on WhatsApp</span>
+      </a>
+      <button class="header__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="header__toggle-icon header__toggle-icon--menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="header__toggle-icon header__toggle-icon--close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="header__mobile-menu" id="mobile-menu">
+    <button class="header__mobile-close" id="mobile-close" aria-label="Close menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <nav class="header__mobile-nav" aria-label="Mobile navigation">
+      <ul class="header__mobile-menu-list">
+        <li><a href="/#why-choose-us" class="header__mobile-link">Why Us</a></li>
+        <li><a href="/#services" class="header__mobile-link">Services</a></li>
+        <li><a href="/blog/" class="header__mobile-link">Blog</a></li>
+        <li><a href="/roadmaps/" class="header__mobile-link">Roadmaps</a></li>
+        <li><a href="/#testimonials" class="header__mobile-link">Testimonials</a></li>
+        <li><a href="/contact/" class="header__mobile-link">Contact</a></li>
+      </ul>
+      <div class="header__mobile-cta">
+        <a href="https://wa.me/447474784797" class="btn btn--primary btn--full" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a href="https://t.me/courseworkninja" class="btn btn--secondary btn--full" target="_blank" rel="noopener">Or use Telegram</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <section class="blog-header">
+      <div class="container">
+        <nav class="blog-header__breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <a href="/blog/">Blog</a>
+          <span>/</span>
+          <span>WGU C482 Guide</span>
+        </nav>
+        <h1 class="blog-header__title">WGU C482 Software I: Build Your First Java Application with Confidence</h1>
+        <div class="blog-header__meta">
+          <span class="blog-header__meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            January 2, 2026
+          </span>
+          <span class="blog-header__meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            10 min read
+          </span>
+          <span class="blog-header__meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            Course Help
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-featured-image">
+      <div class="container">
+        <img src="/images/blog/wgu-c482-software-1-cover.webp" alt="Java code and IDE interface representing software development concepts" class="blog-featured-image__img" width="1200" height="630" loading="eager">
+      </div>
+    </section>
+
+    <section class="blog-content">
+      <div class="container">
+        <div class="blog-content__wrapper">
+          <article class="blog-article">
+            <p>WGU C482 Software I is your introduction to professional software development using Java. This performance assessment course challenges you to build a complete inventory management application using object-oriented programming principles and JavaFX for the graphical user interface.</p>
+
+            <p>Whether you are new to programming or transitioning from another language, this guide will help you understand the core concepts, navigate the project requirements, and submit a passing application efficiently.</p>
+
+            <h2 id="course-overview">What C482 Software I Covers</h2>
+
+            <p>C482 is a hands-on course focused on building practical programming skills. You will learn:</p>
+
+            <ul>
+              <li><strong>Java Fundamentals:</strong> Variables, data types, operators, control structures, methods, and classes</li>
+              <li><strong>Object-Oriented Programming:</strong> Encapsulation, inheritance, polymorphism, and abstraction</li>
+              <li><strong>JavaFX GUI Development:</strong> Building graphical interfaces with scenes, stages, and FXML</li>
+              <li><strong>Data Management:</strong> Working with collections (ObservableList), searching, and filtering data</li>
+              <li><strong>Software Design:</strong> Following UML diagrams and implementing specified class structures</li>
+            </ul>
+
+            <p>The course culminates in a performance assessment where you build an inventory management system that tracks parts and products for a manufacturing company.</p>
+
+            <div class="tip-box">
+              <strong>Key Insight:</strong> This is a PA (Performance Assessment) course, not an OA. There is no exam. You demonstrate competency by building a working application that meets all rubric requirements.
+            </div>
+
+            <h2 id="oop-fundamentals">Object-Oriented Programming Fundamentals</h2>
+
+            <p>Understanding OOP is essential for C482. These concepts are not just theoretical; you will apply them directly in your project.</p>
+
+            <h3>Encapsulation</h3>
+
+            <p>Encapsulation means bundling data (fields) with the methods that operate on that data, and restricting direct access to internal state. In Java:</p>
+
+            <ul>
+              <li>Make fields <strong>private</strong></li>
+              <li>Provide <strong>public getter and setter methods</strong> to access and modify fields</li>
+              <li>This protects data integrity and allows validation in setters</li>
+            </ul>
+
+            <h3>Inheritance</h3>
+
+            <p>Inheritance allows a class (subclass) to inherit fields and methods from another class (superclass). In your inventory project:</p>
+
+            <ul>
+              <li>The <strong>Part</strong> class is abstract and serves as the superclass</li>
+              <li><strong>InHouse</strong> and <strong>Outsourced</strong> extend Part with their unique attributes</li>
+              <li>This avoids code duplication and establishes a clear hierarchy</li>
+            </ul>
+
+            <h3>Polymorphism</h3>
+
+            <p>Polymorphism allows objects to be treated as instances of their parent class. You can store InHouse and Outsourced parts in the same collection typed as Part, and call methods that work correctly for each subtype.</p>
+
+            <h3>Abstraction</h3>
+
+            <p>Abstraction hides complex implementation details and exposes only essential features. The abstract Part class defines what every part must have, without specifying how InHouse vs Outsourced parts differ internally.</p>
+
+            <div class="warning-box">
+              <strong>Critical:</strong> The provided UML diagram is your blueprint. Follow the class structure exactly. Deviating from the diagram (wrong field names, missing methods, incorrect relationships) will result in revision requests.
+            </div>
+
+            <h2 id="javafx-basics">JavaFX GUI Development</h2>
+
+            <p>JavaFX is the framework for building your application's graphical interface. Understanding its architecture will save you debugging time.</p>
+
+            <h3>Core JavaFX Concepts</h3>
+
+            <ul>
+              <li><strong>Stage:</strong> The window itself (your application has one primary stage)</li>
+              <li><strong>Scene:</strong> The content inside a stage; you switch scenes to show different screens</li>
+              <li><strong>FXML:</strong> XML files that define the layout of UI elements (buttons, tables, text fields)</li>
+              <li><strong>Controller:</strong> Java classes that handle user interactions and connect UI to data</li>
+            </ul>
+
+            <h3>FXML and Scene Builder</h3>
+
+            <p>Scene Builder is a visual tool for creating FXML files. You drag and drop UI components instead of writing XML by hand. Key tips:</p>
+
+            <ul>
+              <li>Every interactive element needs an <strong>fx:id</strong> to reference it in your controller</li>
+              <li>Buttons need <strong>onAction</strong> attributes pointing to controller methods</li>
+              <li>TableViews need columns defined with proper cell value factories</li>
+            </ul>
+
+            <h3>Switching Scenes</h3>
+
+            <p>Your application has multiple screens (main, add part, modify part, add product, modify product). You will load FXML files and switch the scene on button clicks. The pattern is consistent:</p>
+
+            <ol>
+              <li>Load the new FXML file using FXMLLoader</li>
+              <li>Get the current stage from the event source</li>
+              <li>Set the new scene on the stage</li>
+              <li>Show the stage</li>
+            </ol>
+
+            <div class="tip-box">
+              <strong>Pro Tip:</strong> Create a helper method for scene switching. You will call it many times, and a reusable method reduces code duplication and bugs.
+            </div>
+
+            <h2 id="project-breakdown">The Inventory Management Project</h2>
+
+            <p>The PA requires building a complete inventory system. Here is a breakdown of the major components:</p>
+
+            <h3>Data Model Classes</h3>
+
+            <ul>
+              <li><strong>Part (abstract):</strong> Base class with id, name, price, stock, min, max</li>
+              <li><strong>InHouse:</strong> Extends Part, adds machineId</li>
+              <li><strong>Outsourced:</strong> Extends Part, adds companyName</li>
+              <li><strong>Product:</strong> Has its own fields plus an ObservableList of associated Parts</li>
+              <li><strong>Inventory:</strong> Static class holding all parts and products, with add/remove/lookup methods</li>
+            </ul>
+
+            <h3>GUI Screens</h3>
+
+            <ul>
+              <li><strong>Main Screen:</strong> Tables showing all parts and products, search fields, buttons to add/modify/delete</li>
+              <li><strong>Add Part:</strong> Form to create new InHouse or Outsourced part (radio buttons toggle)</li>
+              <li><strong>Modify Part:</strong> Pre-populated form to edit existing part</li>
+              <li><strong>Add Product:</strong> Form with associated parts table and ability to add/remove associations</li>
+              <li><strong>Modify Product:</strong> Pre-populated form to edit existing product and its associations</li>
+            </ul>
+
+            <h3>Required Functionality</h3>
+
+            <ul>
+              <li>Search parts and products by ID or partial name match</li>
+              <li>Validate input (min &lt; stock &lt; max, positive prices, etc.)</li>
+              <li>Display error dialogs for invalid input or operations</li>
+              <li>Confirmation dialogs before delete operations</li>
+              <li>Prevent deleting products that have associated parts (or handle appropriately)</li>
+            </ul>
+
+            <div class="blog-cta">
+              <h3 class="blog-cta__title">Stuck on Your C482 Project?</h3>
+              <p class="blog-cta__text">Our Java experts can help you debug issues, understand OOP concepts, or review your code before submission.</p>
+              <div class="blog-cta__buttons">
+                <a href="https://wa.me/447474784797?text=Hi!%20I%20need%20help%20with%20WGU%20C482%20Software%20I%20project." class="btn btn--primary" target="_blank" rel="noopener">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Get C482 Help
+                </a>
+                <a href="https://t.me/courseworkninja" class="btn btn--secondary" target="_blank" rel="noopener">Telegram</a>
+              </div>
+            </div>
+
+            <h2 id="development-approach">Step-by-Step Development Approach</h2>
+
+            <p>Building the project incrementally reduces overwhelm and makes debugging easier:</p>
+
+            <ol>
+              <li><strong>Set Up Project:</strong> Create IntelliJ project, configure JavaFX SDK, verify a blank window runs</li>
+              <li><strong>Build Data Model:</strong> Create Part, InHouse, Outsourced, Product, and Inventory classes exactly per UML</li>
+              <li><strong>Create Main Screen:</strong> Build the FXML layout and connect TableViews to Inventory data</li>
+              <li><strong>Implement Add Part:</strong> Build form, handle radio button toggling, save new part to Inventory</li>
+              <li><strong>Implement Modify Part:</strong> Pass selected part data to form, update existing part on save</li>
+              <li><strong>Implement Delete Part:</strong> Add confirmation dialog, remove from Inventory</li>
+              <li><strong>Implement Search:</strong> Filter tables by ID or partial name match</li>
+              <li><strong>Repeat for Products:</strong> Add, modify, delete, search products with associated parts functionality</li>
+              <li><strong>Add Validation:</strong> Check all required input conditions, display error dialogs</li>
+              <li><strong>Polish and Test:</strong> Test all scenarios, fix edge cases, clean up code</li>
+            </ol>
+
+            <h2 id="common-issues">Common Issues and Solutions</h2>
+
+            <h3>TableView Not Displaying Data</h3>
+
+            <ul>
+              <li>Check that PropertyValueFactory column names match your getter methods exactly</li>
+              <li>Ensure you are setting the TableView items to the correct ObservableList</li>
+              <li>Verify the fx:id in FXML matches your @FXML annotated field name</li>
+            </ul>
+
+            <h3>Scene Not Switching</h3>
+
+            <ul>
+              <li>Verify the FXML file path is correct (starts with / if loading from resources)</li>
+              <li>Check for null pointer exceptions in the console</li>
+              <li>Ensure the controller class is specified in the FXML file</li>
+            </ul>
+
+            <h3>Radio Buttons Not Toggling Correctly</h3>
+
+            <ul>
+              <li>Put both radio buttons in the same ToggleGroup</li>
+              <li>Listen for selection changes to update the label (Machine ID vs Company Name)</li>
+            </ul>
+
+            <h3>Modify Not Saving Changes</h3>
+
+            <ul>
+              <li>Make sure you are updating the existing object, not creating a new one</li>
+              <li>Use the correct index when updating in the ObservableList</li>
+            </ul>
+
+            <h2 id="pa-tips">Performance Assessment Tips</h2>
+
+            <ul>
+              <li><strong>Read the rubric carefully:</strong> Every requirement is explicitly stated. Check your work against each point.</li>
+              <li><strong>Follow the UML exactly:</strong> Field names, method names, and class relationships must match</li>
+              <li><strong>Include Javadoc comments:</strong> The rubric requires documentation for your code</li>
+              <li><strong>Test thoroughly:</strong> Try invalid inputs, edge cases, and all button paths</li>
+              <li><strong>Submit complete package:</strong> Include all source files, FXML files, and any required documentation</li>
+            </ul>
+
+            <div class="tip-box">
+              <strong>Submission Tip:</strong> Take screenshots or record a video demonstrating all functionality before submitting. If you get a revision request, you can compare against what you submitted.
+            </div>
+
+            <h2 id="resources">Recommended Study Resources</h2>
+
+            <ul>
+              <li><strong>Course Materials:</strong> The webinars and provided code examples cover essential patterns</li>
+              <li><strong>YouTube:</strong> "Software 1 - C482" search brings up student walkthroughs</li>
+              <li><strong>Oracle JavaFX Documentation:</strong> Official reference for JavaFX components</li>
+              <li><strong>IntelliJ Documentation:</strong> Helpful for IDE setup and debugging</li>
+            </ul>
+
+            <p>After completing C482, you will move on to <a href="/blog/wgu-c195-software-2/">C195 Software II</a>, which adds database connectivity and more complex application features. The OOP foundation you build here is essential for that course.</p>
+
+            <section class="blog-faq" id="faq">
+              <h2 class="blog-faq__title">Frequently Asked Questions</h2>
+
+              <div class="faq__items">
+                <div class="faq__item">
+                  <button class="faq__question" aria-expanded="false">
+                    <span>What programming language is used in WGU C482?</span>
+                    <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="faq__answer">
+                    <p>C482 uses Java with JavaFX for GUI development. You'll work in an IDE (typically IntelliJ IDEA) and build a complete inventory management application. No prior Java experience is required, but programming fundamentals help.</p>
+                  </div>
+                </div>
+
+                <div class="faq__item">
+                  <button class="faq__question" aria-expanded="false">
+                    <span>How hard is the C482 inventory management project?</span>
+                    <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="faq__answer">
+                    <p>The project is manageable if you follow the UML diagram closely and implement one feature at a time. Most students complete it in 2-4 weeks. The challenging parts are understanding inheritance relationships and connecting the GUI to your data model.</p>
+                  </div>
+                </div>
+
+                <div class="faq__item">
+                  <button class="faq__question" aria-expanded="false">
+                    <span>Do I need to know Java before taking C482?</span>
+                    <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="faq__answer">
+                    <p>No prior Java knowledge is required. The course teaches Java fundamentals including syntax, OOP concepts, and JavaFX. However, having experience with any programming language will make the learning curve easier.</p>
+                  </div>
+                </div>
+
+                <div class="faq__item">
+                  <button class="faq__question" aria-expanded="false">
+                    <span>What IDE should I use for C482?</span>
+                    <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="faq__answer">
+                    <p>WGU recommends IntelliJ IDEA, and most course resources are based on it. The community edition is free and sufficient for the project. Some students use NetBeans or Eclipse, but IntelliJ has the best JavaFX integration.</p>
+                  </div>
+                </div>
+
+                <div class="faq__item">
+                  <button class="faq__question" aria-expanded="false">
+                    <span>What comes after C482?</span>
+                    <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="faq__answer">
+                    <p>C195 Software II builds directly on C482. You'll add database connectivity (MySQL), more complex GUI features, and scheduling functionality. Mastering C482's OOP concepts is essential for success in C195.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-resources" style="margin-top: var(--space-10); padding-top: var(--space-8); border-top: 1px solid #e2e8f0;">
+              <h2 style="color: var(--color-navy); margin-bottom: var(--space-4);">Related Resources</h2>
+              <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-software-engineering-guide/" style="color: var(--color-teal); text-decoration: underline;">WGU Software Engineering Degree: Complete Guide</a></li>
+                <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-performance-assessment-guide/" style="color: var(--color-teal); text-decoration: underline;">WGU Performance Assessments: Write Papers That Pass First Time</a></li>
+                <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-acceleration-guide/" style="color: var(--color-teal); text-decoration: underline;">How to Accelerate at WGU: Complete Your Degree Faster</a></li>
+              </ul>
+            </section>
+
+            <div class="blog-tags">
+              <a href="/blog/tag/c482/" class="blog-tag">C482</a>
+              <a href="/blog/tag/java/" class="blog-tag">Java</a>
+              <a href="/blog/tag/software-development/" class="blog-tag">Software Development</a>
+              <a href="/blog/tag/oop/" class="blog-tag">OOP</a>
+            </div>
+          </article>
+
+          <aside class="blog-sidebar">
+            <nav class="blog-toc" aria-label="Table of contents">
+              <h2 class="blog-toc__title">Table of Contents</h2>
+              <ul class="blog-toc__list">
+                <li class="blog-toc__item"><a href="#course-overview" class="blog-toc__link">Course Overview</a></li>
+                <li class="blog-toc__item"><a href="#oop-fundamentals" class="blog-toc__link">OOP Fundamentals</a></li>
+                <li class="blog-toc__item"><a href="#javafx-basics" class="blog-toc__link">JavaFX Basics</a></li>
+                <li class="blog-toc__item"><a href="#project-breakdown" class="blog-toc__link">Project Breakdown</a></li>
+                <li class="blog-toc__item"><a href="#development-approach" class="blog-toc__link">Development Approach</a></li>
+                <li class="blog-toc__item"><a href="#common-issues" class="blog-toc__link">Common Issues</a></li>
+                <li class="blog-toc__item"><a href="#pa-tips" class="blog-toc__link">PA Tips</a></li>
+                <li class="blog-toc__item"><a href="#resources" class="blog-toc__link">Resources</a></li>
+                <li class="blog-toc__item"><a href="#faq" class="blog-toc__link">FAQ</a></li>
+              </ul>
+            </nav>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="cta-banner__pattern"></div>
+      <div class="cta-banner__glow"></div>
+      <div class="container">
+        <div class="cta-banner__content">
+          <h2 class="cta-banner__title">Ready to Graduate Faster?</h2>
+          <p class="cta-banner__tagline">No forms. No waiting. <span>Just results.</span></p>
+          <div class="cta-banner__buttons">
+            <a href="https://wa.me/447474784797" class="cta-banner__btn cta-banner__btn--whatsapp" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+            <a href="https://t.me/courseworkninja" class="cta-banner__btn cta-banner__btn--telegram" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              <span>Telegram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__countries">
+        <span class="footer__countries-label">Serving Students Worldwide</span>
+        <div class="footer__countries-slider">
+          <div class="footer__countries-track">
+            <span class="footer__country">United States</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United Kingdom</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Canada</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Australia</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Germany</span><span class="footer__country-dot"></span>
+            <span class="footer__country">India</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Nigeria</span><span class="footer__country-dot"></span>
+            <span class="footer__country">South Africa</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Philippines</span><span class="footer__country-dot"></span>
+            <span class="footer__country">UAE</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Saudi Arabia</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Singapore</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United States</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United Kingdom</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Canada</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Australia</span><span class="footer__country-dot"></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__crypto">
+        <span class="footer__crypto-label">We Accept</span>
+        <div class="footer__crypto-logos">
+          <div class="footer__crypto-item" title="Bitcoin"><img src="/images/crypto/btc.webp" alt="Bitcoin" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Ethereum"><img src="/images/crypto/eth.webp" alt="Ethereum" loading="lazy"></div>
+          <div class="footer__crypto-item" title="USDT"><img src="/images/crypto/usdt.webp" alt="USDT" loading="lazy"></div>
+          <div class="footer__crypto-item" title="USDC"><img src="/images/crypto/usdc.webp" alt="USDC" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Solana"><img src="/images/crypto/sol.webp" alt="Solana" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Monero"><img src="/images/crypto/xmr.webp" alt="Monero" loading="lazy"></div>
+          <div class="footer__crypto-item" title="DAI"><img src="/images/crypto/dai.webp" alt="DAI" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Litecoin"><img src="/images/crypto/ltc.webp" alt="Litecoin" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Coursework Ninja. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
