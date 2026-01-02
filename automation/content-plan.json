@@ -1,10 +1,14 @@
 {
-  "meta": {
-    "version": "1.1",
+"meta": {
+    "version": "1.2",
     "lastUpdated": "2026-01-03",
     "totalTopics": 100,
-    "publishedCount": 70,
-    "pendingCount": 30
+    "totalBlogs": 93,
+    "totalLandings": 7,
+    "publishedBlogs": 68,
+    "pendingBlogs": 25,
+    "cancelledLandings": 7,
+    "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
   "categories": [
     {
@@ -487,8 +491,8 @@
         "Help"
       ],
       "priority": 1,
-      "status": "published",
-      "publishedDate": "2026-01-02",
+      "status": "cancelled",
+      "cancelledReason": "Landing pages handled separately in /services/",
       "internalLinks": [
         "wgu-mba-complete-guide",
         "wgu-capstone-guide"
@@ -515,8 +519,8 @@
         "Help"
       ],
       "priority": 1,
-      "status": "published",
-      "publishedDate": "2026-01-03",
+      "status": "cancelled",
+      "cancelledReason": "Landing pages handled separately in /services/",
       "internalLinks": [
         "wgu-bsit-guide",
         "wgu-certification-guide"
@@ -543,8 +547,8 @@
         "Help"
       ],
       "priority": 1,
-      "status": "published",
-      "publishedDate": "2026-01-03",
+      "status": "cancelled",
+      "cancelledReason": "Landing pages handled separately in /services/",
       "internalLinks": [
         "wgu-nursing-program-guide"
       ],
@@ -960,8 +964,8 @@
         "Help"
       ],
       "priority": 1,
-      "status": "published",
-      "publishedDate": "2026-01-03",
+      "status": "cancelled",
+      "cancelledReason": "Landing pages handled separately in /services/",
       "internalLinks": [
         "wgu-capstone-guide",
         "wgu-performance-assessment-guide"
@@ -989,7 +993,8 @@
         "Help"
       ],
       "priority": 1,
-      "status": "pending",
+      "status": "cancelled",
+      "cancelledReason": "Landing pages handled separately in /services/",
       "internalLinks": [
         "wgu-oa-exam-tips",
         "wgu-proctored-exam-guide"
@@ -1538,7 +1543,8 @@
         "Help"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "cancelled",
+      "cancelledReason": "Landing pages handled separately in /services/",
       "internalLinks": [
         "wgu-accounting-degree-guide"
       ],
@@ -1563,7 +1569,8 @@
         "Help"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "cancelled",
+      "cancelledReason": "Landing pages handled separately in /services/",
       "internalLinks": [
         "wgu-cybersecurity-degree-guide",
         "wgu-certification-guide"
@@ -1757,7 +1764,8 @@
         "Graduate"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-03",
       "internalLinks": [
         "wgu-mba-complete-guide",
         "wgu-jobs-after-graduation"
