@@ -1793,7 +1793,8 @@
         "Technology"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-03",
       "internalLinks": [
         "wgu-healthcare-management-guide",
         "wgu-bsit-guide"
