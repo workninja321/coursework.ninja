@@ -1,10 +1,10 @@
 {
   "meta": {
     "version": "1.1",
-    "lastUpdated": "2026-01-02",
+    "lastUpdated": "2026-01-03",
     "totalTopics": 100,
-    "publishedCount": 64,
-    "pendingCount": 36
+    "publishedCount": 70,
+    "pendingCount": 30
   },
   "categories": [
     {
@@ -515,7 +515,8 @@
         "Help"
       ],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-03",
       "internalLinks": [
         "wgu-bsit-guide",
         "wgu-certification-guide"
@@ -542,7 +543,8 @@
         "Help"
       ],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-03",
       "internalLinks": [
         "wgu-nursing-program-guide"
       ],
@@ -958,7 +960,8 @@
         "Help"
       ],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-03",
       "internalLinks": [
         "wgu-capstone-guide",
         "wgu-performance-assessment-guide"
@@ -2314,7 +2317,8 @@
         "Study Tips"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-03",
       "internalLinks": [
         "wgu-oa-exam-tips",
         "wgu-mentor-tips"
@@ -2341,7 +2345,8 @@
         "Academic Structure"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-03",
       "internalLinks": [
         "wgu-acceleration-guide",
         "wgu-term-planning-guide"
@@ -2396,7 +2401,8 @@
         "Adult Learners"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-03",
       "internalLinks": [
         "wgu-jobs-after-graduation",
         "wgu-acceleration-guide"
