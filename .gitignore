@@ -10,6 +10,13 @@ node_modules/
 automation/secrets/
 automation/logs/
 
+# Automation scripts (keep private - not for public repo)
+automation/*.sh
+automation/*.plist
+automation/*.md
+!automation/README.md
+BlogNinja.command
+
 # Service account keys
 *.json
 !package.json
