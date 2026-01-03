@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 68,
-    "pendingBlogs": 25,
+    "publishedBlogs": 69,
+    "pendingBlogs": 24,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2083,7 +2083,8 @@
         "Software Development"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-03",
       "internalLinks": [
         "wgu-c482-software-1",
         "wgu-software-engineering-guide"

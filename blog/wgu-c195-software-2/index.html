@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WGU C195 Software II: Advanced Java and Database Integration | Coursework Ninja</title>
+  <meta name="description" content="Pass WGU C195 Software II with a step-by-step plan: JavaFX + JDBC + MySQL scheduling app, time zones, reports, validations, and rubric-focused submission tips.">
+  <meta name="keywords" content="WGU C195, C195 study guide, WGU Software II, C195 tips, WGU advanced Java">
+  <link rel="canonical" href="https://coursework.ninja/blog/wgu-c195-software-2/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://coursework.ninja/blog/wgu-c195-software-2/">
+  <meta property="og:title" content="WGU C195 Software II: Advanced Java and Database Integration">
+  <meta property="og:description" content="A practical, rubric-first guide to WGU C195: build the JavaFX scheduling app with JDBC + MySQL, handle time zones, validations, reports, and submit with confidence.">
+  <meta property="og:image" content="https://coursework.ninja/images/blog/wgu-c195-software-2-cover.webp">
+  <meta property="og:site_name" content="Coursework Ninja">
+  <meta property="article:published_time" content="2026-01-03">
+  <meta property="article:modified_time" content="2026-01-03">
+  <meta property="article:author" content="Coursework Ninja Team">
+  <meta property="article:section" content="Course Help">
+  <meta property="article:tag" content="C195">
+  <meta property="article:tag" content="Java">
+  <meta property="article:tag" content="Databases">
+  <meta property="article:tag" content="Software Development">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="WGU C195 Software II: Advanced Java and Database Integration">
+  <meta name="twitter:description" content="Build the C195 scheduling app faster with a clear plan for JDBC, MySQL, JavaFX, time zones, and reports.">
+  <meta name="twitter:image" content="https://coursework.ninja/images/blog/wgu-c195-software-2-cover.webp">
+
+  <meta name="theme-color" content="#0B1630">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/images/favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "WGU C195 Software II: Advanced Java and Database Integration",
+    "description": "Pass WGU C195 Software II with a rubric-first plan for the JavaFX scheduling app: JDBC + MySQL integration, time zones, validations, reports, and submission tips.",
+    "image": "https://coursework.ninja/images/blog/wgu-c195-software-2-cover.webp",
+    "author": {
+      "@type": "Organization",
+      "name": "Coursework Ninja",
+      "url": "https://coursework.ninja"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Coursework Ninja",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://coursework.ninja/images/logo.webp"
+      }
+    },
+    "datePublished": "2026-01-03",
+    "dateModified": "2026-01-03",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://coursework.ninja/blog/wgu-c195-software-2/"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://coursework.ninja/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://coursework.ninja/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "WGU C195 Software II", "item": "https://coursework.ninja/blog/wgu-c195-software-2/"}
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is WGU C195 Software II an OA or a PA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "C195 is typically a performance assessment (project) where you build a JavaFX scheduling application connected to a MySQL database. Always confirm the current assessment type in your course dashboard and task overview."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What do you build in WGU C195 Software II?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You build a desktop scheduling application with a login screen, customer and appointment management (CRUD), calendar views, validation rules (like business hours and overlaps), reminders, and reports—backed by a provided MySQL database accessed via JDBC."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the hardest part of C195 for most students?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Time zone handling, date/time conversions, and validation logic (business hours and overlapping appointments) are common pain points. A clean time conversion strategy (store in UTC, display in local time) reduces most bugs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need SQL knowledge for C195?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You don\u2019t need to be a database expert, but basic SQL (SELECT, JOIN, WHERE, GROUP BY) helps a lot. It\u2019s especially useful for report queries and for checking overlaps efficiently."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I reuse parts of my C482 Software I code in C195?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Many students reuse their own JavaFX patterns, helper methods, or UI structure from C482 to speed up development. Use your own work, follow the rubric, and avoid copying public repos\u2014academic integrity rules still apply."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What causes revisions in the C195 submission most often?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Missing rubric items (like required reports, login activity logging, or upcoming appointment alerts), weak validation edge cases, and time zone mistakes are common reasons for revision. A checklist-based pass before submission prevents most rework."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .blog-featured-image {
+      background: var(--color-offwhite);
+      padding: var(--space-8) 0;
+    }
+    .blog-featured-image__img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: var(--radius-xl);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .blog-header {
+      padding: calc(var(--space-16) + 80px) 0 var(--space-12);
+      background: linear-gradient(135deg, var(--color-navy) 0%, #1a2744 100%);
+      color: var(--color-white);
+    }
+    .blog-header__breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.6);
+      margin-bottom: var(--space-6);
+    }
+    .blog-header__breadcrumb a {
+      color: var(--color-gold);
+      text-decoration: none;
+    }
+    .blog-header__breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    .blog-header__breadcrumb span {
+      color: rgba(255,255,255,0.6);
+    }
+    .blog-header__title {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: var(--font-bold);
+      line-height: 1.2;
+      margin-bottom: var(--space-4);
+      color: #FFFFFF !important;
+    }
+    .blog-header__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.7);
+    }
+    .blog-header__meta-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+    .blog-content {
+      padding: var(--space-12) 0 var(--space-16);
+    }
+    .blog-content__wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-10);
+    }
+    @media (min-width: 1024px) {
+      .blog-content__wrapper {
+        grid-template-columns: 1fr 280px;
+      }
+    }
+    .blog-article {
+      max-width: 720px;
+    }
+    .blog-article h2 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-bold);
+      color: var(--color-navy);
+      margin: var(--space-10) 0 var(--space-4);
+    }
+    .blog-article h3 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-semibold);
+      color: var(--color-navy);
+      margin: var(--space-8) 0 var(--space-3);
+    }
+    .blog-article p {
+      color: var(--color-slate);
+      line-height: 1.8;
+      margin-bottom: var(--space-4);
+    }
+    .blog-article ul {
+      color: var(--color-slate);
+      line-height: 1.8;
+      margin-bottom: var(--space-4);
+      padding-left: var(--space-6);
+      list-style-type: disc;
+    }
+    .blog-article ol {
+      color: var(--color-slate);
+      line-height: 1.8;
+      margin-bottom: var(--space-4);
+      padding-left: var(--space-6);
+      list-style-type: decimal;
+    }
+    .blog-article li {
+      margin-bottom: var(--space-2);
+      display: list-item;
+    }
+    .blog-article li::marker {
+      color: var(--color-teal);
+    }
+    .blog-article strong {
+      color: var(--color-navy);
+      font-weight: var(--font-semibold);
+    }
+    .blog-article a {
+      color: var(--color-teal);
+      text-decoration: underline;
+    }
+    .blog-article a:hover {
+      color: var(--color-navy);
+    }
+    .blog-toc {
+      position: sticky;
+      top: 100px;
+      background: var(--color-offwhite);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+    }
+    .blog-toc__title {
+      font-size: var(--text-base);
+      font-weight: var(--font-semibold);
+      color: var(--color-navy);
+      margin-bottom: var(--space-4);
+    }
+    .blog-toc__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .blog-toc__item {
+      margin-bottom: var(--space-2);
+    }
+    .blog-toc__link {
+      font-size: var(--text-sm);
+      color: var(--color-slate);
+      text-decoration: none;
+      display: block;
+      padding: var(--space-1) 0;
+      transition: color 0.2s;
+    }
+    .blog-toc__link:hover {
+      color: var(--color-teal);
+    }
+    .blog-cta {
+      background: linear-gradient(135deg, var(--color-navy) 0%, #1a2744 100%);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      margin: var(--space-10) 0;
+      text-align: center;
+    }
+    .blog-cta__title {
+      font-size: var(--text-xl);
+      font-weight: var(--font-bold);
+      color: #FFFFFF !important;
+      margin-bottom: var(--space-3);
+    }
+    .blog-cta__text {
+      color: rgba(255,255,255,0.8) !important;
+      margin-bottom: var(--space-6);
+    }
+    .blog-cta__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space-3);
+    }
+    .blog-cta__buttons .btn--primary {
+      background: var(--color-gold);
+      color: var(--color-navy);
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-lg);
+      font-weight: var(--font-semibold);
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .blog-cta__buttons .btn--primary:hover {
+      background: var(--color-gold-hover);
+      transform: translateY(-2px);
+    }
+    .blog-cta__buttons .btn--secondary {
+      background: rgba(255,255,255,0.1);
+      color: #FFFFFF;
+      padding: 0.875rem 1.5rem;
+      border-radius: var(--radius-lg);
+      font-weight: var(--font-semibold);
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: background 0.2s, transform 0.2s;
+    }
+    .blog-cta__buttons .btn--secondary:hover {
+      background: rgba(255,255,255,0.2);
+      transform: translateY(-2px);
+    }
+    .blog-faq {
+      margin-top: var(--space-12);
+      padding-top: var(--space-10);
+      border-top: 1px solid #e5e7eb;
+    }
+    .blog-faq__title {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-bold);
+      color: var(--color-navy);
+      margin-bottom: var(--space-6);
+    }
+    .blog-faq .faq__item {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-3);
+      overflow: hidden;
+    }
+    .blog-faq .faq__question {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space-4) var(--space-5);
+      background: var(--color-white);
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-size: var(--text-base);
+      font-weight: var(--font-medium);
+      color: var(--color-navy);
+      transition: background 0.2s;
+    }
+    .blog-faq .faq__question:hover {
+      background: var(--color-offwhite);
+    }
+    .blog-faq .faq__question span {
+      flex: 1;
+      padding-right: var(--space-4);
+    }
+    .blog-faq .faq__icon {
+      flex-shrink: 0;
+      transition: transform 0.3s;
+    }
+    .blog-faq .faq__question[aria-expanded="true"] .faq__icon {
+      transform: rotate(180deg);
+    }
+    .blog-faq .faq__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: var(--color-offwhite);
+    }
+    .blog-faq .faq__answer.is-open {
+      max-height: 500px;
+    }
+    .blog-faq .faq__answer p {
+      padding: var(--space-4) var(--space-5);
+      margin: 0;
+      color: var(--color-slate);
+      line-height: 1.7;
+    }
+    .tip-box {
+      background: #f0fdf4;
+      border-left: 4px solid var(--color-teal);
+      padding: var(--space-4) var(--space-6);
+      margin: var(--space-6) 0;
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+    }
+    .tip-box strong {
+      color: var(--color-teal);
+    }
+    .warning-box {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: var(--space-4) var(--space-6);
+      margin: var(--space-6) 0;
+      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+    }
+    .warning-box strong {
+      color: #b45309;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="header" id="header">
+    <div class="container header__container">
+      <a href="/" class="header__logo">
+        <img src="/images/logo.webp" alt="Coursework Ninja" class="header__logo-img">
+      </a>
+      <nav class="header__nav" id="nav" aria-label="Main navigation">
+        <ul class="header__menu">
+          <li><a href="/#why-choose-us" class="header__link">Why Us</a></li>
+          <li><a href="/#services" class="header__link">Services</a></li>
+          <li><a href="/blog/" class="header__link">Blog</a></li>
+          <li><a href="/roadmaps/" class="header__link">Roadmaps</a></li>
+          <li><a href="/#testimonials" class="header__link">Testimonials</a></li>
+          <li><a href="/contact/" class="header__link">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/447474784797" class="btn btn--primary header__cta" target="_blank" rel="noopener">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        <span>Chat on WhatsApp</span>
+      </a>
+      <button class="header__toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg class="header__toggle-icon header__toggle-icon--menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="header__toggle-icon header__toggle-icon--close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="header__mobile-menu" id="mobile-menu">
+    <button class="header__mobile-close" id="mobile-close" aria-label="Close menu">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <nav class="header__mobile-nav" aria-label="Mobile navigation">
+      <ul class="header__mobile-menu-list">
+        <li><a href="/#why-choose-us" class="header__mobile-link">Why Us</a></li>
+        <li><a href="/#services" class="header__mobile-link">Services</a></li>
+        <li><a href="/blog/" class="header__mobile-link">Blog</a></li>
+        <li><a href="/roadmaps/" class="header__mobile-link">Roadmaps</a></li>
+        <li><a href="/#testimonials" class="header__mobile-link">Testimonials</a></li>
+        <li><a href="/contact/" class="header__mobile-link">Contact</a></li>
+      </ul>
+      <div class="header__mobile-cta">
+        <a href="https://wa.me/447474784797" class="btn btn--primary btn--full" target="_blank" rel="noopener">Chat on WhatsApp</a>
+        <a href="https://t.me/courseworkninja" class="btn btn--secondary btn--full" target="_blank" rel="noopener">Or use Telegram</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="main-content">
+    <section class="blog-header">
+      <div class="container">
+        <nav class="blog-header__breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span>/</span>
+          <a href="/blog/">Blog</a>
+          <span>/</span>
+          <span>WGU C195 Guide</span>
+        </nav>
+        <h1 class="blog-header__title">WGU C195 Software II: Build the JavaFX Scheduling App (JDBC + MySQL) Without Getting Stuck</h1>
+        <div class="blog-header__meta">
+          <span class="blog-header__meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            January 3, 2026
+          </span>
+          <span class="blog-header__meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            11 min read
+          </span>
+          <span class="blog-header__meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            Course Help
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-featured-image">
+      <div class="container">
+        <img src="/images/blog/wgu-c195-software-2-cover.webp" alt="Java developer working on a scheduling app with database tables and calendar views" class="blog-featured-image__img" width="1200" height="630" loading="eager">
+      </div>
+    </section>
+
+    <section class="blog-content">
+      <div class="container">
+        <div class="blog-content__wrapper">
+          <article class="blog-article">
+            <p>WGU C195 Software II (Advanced Java and Database Integration) is the course where everything you learned in Software I gets upgraded: instead of a purely in-memory JavaFX app, you build a <strong>real scheduling system</strong> connected to a <strong>MySQL database</strong> via <strong>JDBC</strong>.</p>
+
+            <p>That jump in complexity is exactly why C195 feels intimidating. The good news: the requirements are consistent, repeatable, and very “rubric-first.” If you build the project in the right order, C195 becomes a sequence of small wins.</p>
+
+            <p>This guide gives you a practical path through the project: what to build, which parts to tackle first, what usually causes revisions, and how to handle the “big three” technical pain points: <strong>database CRUD</strong>, <strong>time zones</strong>, and <strong>validation rules</strong>.</p>
+
+            <div class="tip-box">
+              <strong>Fast-track mindset:</strong> Treat C195 like a production-style assignment. Start with the checklist (Task Overview + rubric), then implement requirements in a deliberate order. Random coding is the fastest route to rewrites.
+            </div>
+
+            <h2 id="course-overview">What WGU C195 Is (and What It Usually Isn’t)</h2>
+
+            <p>C195 is commonly delivered as a <strong>performance assessment</strong> where you build an application and submit your project. Always confirm your exact assessment type in your course dashboard, but the public requirements for the classic C195 task are widely documented in student resources.</p>
+
+            <p>At a high level, you build a <strong>desktop scheduling application</strong> for a fictional global consulting organization. Your app pulls data from a provided MySQL database, and <strong>you cannot modify the database structure</strong>. The project typically includes:</p>
+
+            <ul>
+              <li><strong>Login + localization:</strong> Translate UI / error messaging for at least two languages.</li>
+              <li><strong>Customer management:</strong> Create, update, delete customer records tied to addresses/locations.</li>
+              <li><strong>Appointment scheduling:</strong> CRUD appointments linked to customers, with type, time, and contact.</li>
+              <li><strong>Calendar views:</strong> Weekly and monthly appointment views.</li>
+              <li><strong>Time zones:</strong> Store consistently (often UTC) and display in local time; handle DST.</li>
+              <li><strong>Validation + exception controls:</strong> Prevent overlaps, invalid customers, invalid login, and out-of-hours scheduling.</li>
+              <li><strong>Reminders:</strong> Alert users on login if they have an appointment within 15 minutes.</li>
+              <li><strong>Reports:</strong> Provide multiple database-driven reports.</li>
+              <li><strong>Login activity logging:</strong> Append timestamps to a text file.</li>
+            </ul>
+
+            <p>If you want to see a clear, public listing of these requirements, this GitHub repo includes the full task breakdown as a reference: <a href="https://github.com/JasonETrowbridge/WGU-C195" target="_blank" rel="noopener">JasonETrowbridge/WGU-C195</a>.</p>
+
+            <div class="warning-box">
+              <strong>Academic integrity:</strong> Use public repos only to understand requirements and patterns. Do not copy code. Your submission must be your original work and must meet WGU originality requirements.
+            </div>
+
+            <h2 id="prereqs">Prerequisites That Make C195 Easier</h2>
+
+            <p>You do not need to be a “Java wizard,” but you should be comfortable with the basics. If you struggled in Software I, revisit that foundation first. Start here:</p>
+
+            <ul>
+              <li><a href="/blog/wgu-c482-software-1/">WGU C482 Software I: Java Fundamentals and OOP Guide</a> (your direct prerequisite)</li>
+              <li><a href="/blog/wgu-d191-advanced-data-management/">WGU D191 Advanced Data Management</a> (helpful if SQL/JOINs feel fuzzy)</li>
+              <li><a href="/blog/wgu-performance-assessment-guide/">WGU Performance Assessments: How to Pass PAs</a> (rubric-first workflow)</li>
+            </ul>
+
+            <p>Also: understand how WGU evaluators use rubrics. Even when your app “works,” missing a rubric item can trigger revisions. WGU’s scoring policy for performance assessments is documented here: <a href="https://cm.wgu.edu/t5/WGU-Student-Policy-Handbook/Performance-Assessment-Scoring-Policy-and-Rubrics/ta-p/188" target="_blank" rel="noopener">Performance Assessment Scoring Policy and Rubrics (WGU Knowledge Center)</a>.</p>
+
+            <h2 id="project-requirements">C195 Project Requirements (Translated into a Build Plan)</h2>
+
+            <p>Most students get stuck because they treat C195 as “one big project.” Instead, treat it as <strong>three subsystems</strong> that you connect:</p>
+
+            <ol>
+              <li><strong>UI subsystem (JavaFX):</strong> Scenes, controllers, navigation, validation messages.</li>
+              <li><strong>Data subsystem (MySQL + JDBC):</strong> Connection management, queries, CRUD methods.</li>
+              <li><strong>Time subsystem (ZonedDateTime strategy):</strong> Conversion rules, business-hours checks, upcoming alert logic.</li>
+            </ol>
+
+            <p>When these are cleanly separated, everything else (reports, calendar views, reminders) becomes much simpler.</p>
+
+            <h2 id="rubric-breakdown">Rubric Breakdown (A–J): What Evaluators Typically Expect</h2>
+
+            <p>If you want C195 to feel predictable, stop thinking “features” and start thinking “rubric evidence.” One of the most useful public references for the classic C195 task is a repo that includes the requirement list (A–J) in plain language. It’s a good reminder of what your submission needs to demonstrate: <a href="https://github.com/JasonETrowbridge/WGU-C195" target="_blank" rel="noopener">JasonETrowbridge/WGU-C195</a>.</p>
+
+            <p>Requirements change over time, so always follow your current Task Overview. But many versions of C195 include expectations like these:</p>
+
+            <ul>
+              <li><strong>A) Login + localization:</strong> Determine the user’s location/locale and translate login and error control messages into two languages. This is often done with <strong>ResourceBundle</strong> and a localized properties file.</li>
+              <li><strong>B) Customer records:</strong> Create and maintain customer records in the database (commonly name, address, phone). Watch for foreign key constraints when deleting.</li>
+              <li><strong>C) Lambda expression(s):</strong> Use lambda expressions in a meaningful way tied to scheduling/maintaining appointments. Don’t just “add a lambda to satisfy the rubric”—make it simplify code (e.g., filtering lists, event handlers, table row actions) and explain why.</li>
+              <li><strong>D) Calendar views:</strong> Provide month and week views describing appointments. Most students implement this as filtered views of the appointment list.</li>
+              <li><strong>E) Time zones + DST:</strong> Automatically adjust appointment times based on time zones and daylight saving time. The most reliable approach is “store canonical, display local.”</li>
+              <li><strong>F) Exception controls:</strong> Prevent out-of-business-hours scheduling, overlapping appointments, invalid customer data, and incorrect login attempts. Many rubrics also require <strong>at least two different mechanisms</strong> of exception control (e.g., input validation + exception catching + alerting).</li>
+              <li><strong>G) Alerts/popups:</strong> Use lambdas and/or centralized helpers to generate standard popups/alerts. Students often create a reusable alert helper to avoid duplicating 50+ lines of UI code.</li>
+              <li><strong>H) 15-minute reminder:</strong> On login, alert if an appointment is within 15 minutes. The easiest way is a query for “now through now+15 minutes” in canonical time, then convert to display time.</li>
+              <li><strong>I) Reports:</strong> Provide specific reports (appointment types by month, schedules, and one additional). Treat this as an SQL + presentation task, not a UX design project.</li>
+              <li><strong>J) Login activity logging:</strong> Append timestamped logins to a text file (often named something like <code>login_activity.txt</code>). Include failed attempts if your Task Overview requires it.</li>
+            </ul>
+
+            <div class="warning-box">
+              <strong>Don’t miss this hidden “stat”:</strong> Some versions of the task explicitly call out originality limits (e.g., no more than 30% closely paraphrased/quoted overall, and no more than 10% matching any single source). Treat public repos as requirements references only, and write your own code.
+            </div>
+
+            <h2 id="architecture">Architecture That Keeps You Sane (and Helps You Finish Faster)</h2>
+
+            <p>C195 doesn’t require enterprise architecture, but your future self will thank you if you adopt a small, consistent structure. Successful submissions tend to converge on a simple MVC-ish pattern:</p>
+
+            <ul>
+              <li><strong>model</strong>: Plain data objects like Customer, Appointment, Contact (fields + getters/setters).</li>
+              <li><strong>dao (or repository)</strong>: Database CRUD methods (getAllCustomers, addCustomer, updateAppointment, etc.).</li>
+              <li><strong>controller</strong>: JavaFX controllers that load data into tables/forms and call DAO methods.</li>
+              <li><strong>util</strong>: Reusable helpers (time conversion, alert dialogs, input parsing, validation).</li>
+              <li><strong>view</strong>: FXML files and UI assets.</li>
+            </ul>
+
+            <p>This package split has two practical benefits:</p>
+
+            <ol>
+              <li><strong>Debugging is faster:</strong> If a record isn’t saving, you know to look at DAO first, not the controller.</li>
+              <li><strong>Rubric coverage is clearer:</strong> You can point to the exact code path that proves each requirement.</li>
+            </ol>
+
+            <p>A widely shared C195 acceleration tip (from recent Reddit threads) is to create “helper methods” early: a single function for standardized alerts, a single function for converting time zones, and helper methods for mapping IDs to names for combo boxes. The main reason this works: C195 is filled with repeated patterns, and helpers reduce both code and mistakes.</p>
+
+            <h2 id="validation">Validation Rules: How to Avoid the Two Biggest Revision Triggers</h2>
+
+            <p>In most C195 versions, revisions happen because the app allows a user to schedule something the rubric says must be blocked. The two most common blockers are <strong>overlaps</strong> and <strong>business hours</strong>.</p>
+
+            <h3>Overlapping appointments</h3>
+            <p>Overlap logic seems easy until you implement “modify appointment.” A robust approach checks for overlaps using canonical time, and when editing, excludes the appointment currently being edited.</p>
+
+            <p>Test overlap scenarios explicitly:</p>
+            <ul>
+              <li>Exact same start/end time as an existing appointment</li>
+              <li>New start inside an existing appointment window</li>
+              <li>New end inside an existing appointment window</li>
+              <li>New appointment fully wraps an existing appointment</li>
+              <li>Back-to-back appointments (end == start) — confirm whether this is allowed in your rubric</li>
+            </ul>
+
+            <h3>Business hours</h3>
+            <p>Many rubrics define business hours in a specific time zone (often Eastern), not the student’s local zone. The safest strategy is:</p>
+            <ul>
+              <li>Parse input as the user’s local time</li>
+              <li>Convert to the rubric’s business-hours zone</li>
+              <li>Validate the converted time is inside the allowed window</li>
+              <li>Store in canonical time</li>
+            </ul>
+
+            <div class="tip-box">
+              <strong>Reality check:</strong> If your app “works on your machine” but fails business-hours checks when evaluated in another locale, you’ll get a revision. Validate in the expected zone, not just your own.
+            </div>
+
+            <h3>Input validation vs exceptions</h3>
+            <p>When the rubric says “exception controls,” that doesn’t mean your program should crash. It usually means: proactively validate input, and show a clear message when something is invalid. You can satisfy “two different mechanisms” by combining:</p>
+            <ul>
+              <li><strong>Form validation</strong> (empty fields, invalid IDs, invalid date ranges)</li>
+              <li><strong>Try/catch around database operations</strong> (SQL exceptions with a user-friendly alert)</li>
+              <li><strong>Logical checks</strong> (overlap and business hour rules)</li>
+            </ul>
+
+            <h3>Make your validation visible</h3>
+            <p>Evaluators can’t read your mind. If you block an invalid appointment, show a clear alert that says what rule was violated and what the allowed range is. This reduces “works but not evident” feedback.</p>
+
+            <h3>Bonus: The 15-minute alert is easier than it sounds</h3>
+            <p>Students commonly overcomplicate this. You don’t need a background scheduler. Most rubrics only require an alert immediately after login. The practical flow is: query appointments, find any within the next 15 minutes, and display an alert. If none exist, show a “No upcoming appointments” message if your task requires it.</p>
+
+            <h3>Logging user activity</h3>
+            <p>Logging is usually a single append operation, but don’t leave it to the end. Create a dedicated method to append each login attempt with a timestamp. That way, even if you refactor the login flow, logging stays consistent.</p>
+
+            <h3>Localization: keep it focused</h3>
+            <p>For localization, you usually don’t need to translate every screen. Most task versions focus on the login form and error messages. Implement it early, then leave it alone—last-minute localization changes are a fast way to introduce bugs.</p>
+
+            <h3>Reports: use SQL for the heavy lifting</h3>
+            <p>Another recurring tip from successful students: use SQL aggregation functions where possible. A “types by month” report is naturally expressed as GROUP BY month + type. You can still display results in JavaFX, but let the database do the counting.</p>
+
+            <h3>Javadoc and documentation</h3>
+            <p>Some cohorts require strong documentation. If your course requires Javadocs, write them as you build. It’s far easier than trying to retroactively explain how your own code works the night before submission.</p>
+
+            <h3>Keep your submission runnable</h3>
+            <p>If you’re using IntelliJ + JavaFX, do at least one “clean import” test before you submit: zip/export, unzip, and run as if you were the evaluator. If dependencies aren’t set up correctly, this is where you catch it—before it becomes a revision.</p>
+
+            <h3>UI: What Screens You Usually Need</h3>
+
+            <p>Exact layouts vary, but most passing submissions include at least:</p>
+
+            <ul>
+              <li><strong>Login screen</strong> (localized labels/messages, plus login logging).</li>
+              <li><strong>Main dashboard</strong> with tabs or sections for Customers and Appointments.</li>
+              <li><strong>Customer form</strong> (add/modify in one scene is common).</li>
+              <li><strong>Appointment form</strong> (add/modify in one scene is common).</li>
+              <li><strong>Reports view</strong> (TableView or simple output is fine if it meets requirements).</li>
+            </ul>
+
+            <h3>Database: CRUD Without Chaos</h3>
+
+            <p>Your database CRUD strategy is a huge success lever. If you’re comfortable with patterns, use a small DAO layer:</p>
+
+            <ul>
+              <li><strong>DB connection helper</strong>: one place that creates the JDBC connection and handles errors.</li>
+              <li><strong>DAO methods</strong>: “get all appointments”, “insert appointment”, “update customer”, etc.</li>
+              <li><strong>Model classes</strong>: Customer, Appointment, Contact, User (as needed).</li>
+            </ul>
+
+            <div class="tip-box">
+              <strong>Pro tip:</strong> Students who finish faster typically create reusable helpers early (alerts, time conversions, and ID lookups). A recent Reddit guide highlights this as a “do this first” move.
+            </div>
+
+            <p>One of the most shared “passed fast” posts is here: <a href="https://www.reddit.com/r/WGUIT/comments/17n3hd9/software_ii_c195_passed_in_5_days_tipsguide/" target="_blank" rel="noopener">Software II (C195) Passed in 5 Days (Tips/Guide)</a>. Even if you’re not trying to finish in five days, the workflow advice is solid.</p>
+
+            <h2 id="setup-tools">Setup and Tools: Avoid the “Day 1 Dependency Trap”</h2>
+
+            <p>A surprising amount of C195 pain is not “coding,” it’s setup: JavaFX dependencies, MySQL Connector/J, and a project structure that exports cleanly for submission.</p>
+
+            <h3>Use Maven/Gradle for Dependencies (When Allowed)</h3>
+
+            <p>Students increasingly recommend using Maven-based JavaFX templates and importing MySQL Connector/J via Maven instead of manually managing jar files. The “Passed in 5 Days” Reddit post specifically calls out using <strong>mysql-connector-j</strong> (new naming) and avoiding outdated drivers.</p>
+
+            <h3>Test the Export Early</h3>
+
+            <p>Do not wait until submission day to export/zip and test on a clean project import. Many “my evaluator couldn’t run it” revisions are packaging problems, not code problems.</p>
+
+            <h2 id="jdbc-mysql">JDBC + MySQL: The Minimum You Must Get Right</h2>
+
+            <p>At minimum, your database layer should support:</p>
+
+            <ul>
+              <li><strong>Read lists</strong> for customers, appointments, contacts, etc.</li>
+              <li><strong>Create/update/delete</strong> customers.</li>
+              <li><strong>Create/update/delete</strong> appointments (with overlap and business-hours checks).</li>
+              <li><strong>Report queries</strong> that aggregate data (counts per month, schedules per consultant/contact, and a third custom report).</li>
+            </ul>
+
+            <p>Keep your SQL simple and safe:</p>
+
+            <ul>
+              <li>Prefer <strong>prepared statements</strong>.</li>
+              <li>Log or display errors with meaningful messages (and keep it user-friendly).</li>
+              <li>When doing reports, it’s usually easier to let SQL do the grouping (e.g., COUNT, GROUP BY) instead of doing everything in Java loops.</li>
+            </ul>
+
+            <h2 id="timezones">Time Zones and Business Hours: The Part That Breaks Apps</h2>
+
+            <p>Time zones are the reason working apps get rejected. You can avoid 90% of these issues with one consistent rule:</p>
+
+            <div class="tip-box">
+              <strong>Rule:</strong> Convert inputs into a single canonical zone for storage (often UTC), and convert back to the user’s local time for display.
+            </div>
+
+            <p>Then design validations around that rule:</p>
+
+            <ul>
+              <li><strong>Overlap checks</strong> should compare canonical times (UTC or a consistent zone) to avoid local-time ambiguity.</li>
+              <li><strong>Business hours checks</strong> should explicitly convert to the required time zone (commonly Eastern). Do not assume business hours are in your local time—confirm the expected window in your task overview.</li>
+              <li><strong>DST handling</strong>: Always use Java’s modern time API (e.g., ZonedDateTime) instead of older Date/Calendar logic.</li>
+            </ul>
+
+            <p>If you’re stuck on converting between zones, the Reddit guide explicitly recommends using <strong>withZoneSameInstant</strong> to keep the moment-in-time consistent while changing zones.</p>
+
+            <h2 id="reports">Reports: Keep It Simple, Keep It Correct</h2>
+
+            <p>C195 typically requires multiple reports (for example, appointment counts by month, a schedule for each consultant/contact, and one additional report of your choice). The goal is not a “pretty dashboard.” The goal is: <strong>prove you can query and present data</strong>.</p>
+
+            <p>Strong report strategies:</p>
+
+            <ul>
+              <li>Write one SQL query per report and display results in a TableView.</li>
+              <li>Use SQL functions like <strong>MONTH()</strong>, <strong>COUNT()</strong>, and <strong>GROUP BY</strong> where appropriate.</li>
+              <li>Keep report UI minimal and predictable so you don’t burn time on layouts.</li>
+            </ul>
+
+            <div class="blog-cta">
+              <h3 class="blog-cta__title">Need Help Getting Your C195 Project Unstuck?</h3>
+              <p class="blog-cta__text">Get help from real developers who can debug JDBC issues, time zone bugs, and validation logic—without rewriting your entire project.</p>
+              <div class="blog-cta__buttons">
+                <a href="https://wa.me/447474784797?text=Hi!%20I%20need%20help%20with%20WGU%20C195%20Software%20II%20(JDBC%20%2B%20MySQL%20scheduling%20app)." class="btn btn--primary" target="_blank" rel="noopener">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                  Get C195 Help
+                </a>
+                <a href="https://t.me/courseworkninja" class="btn btn--secondary" target="_blank" rel="noopener">Telegram</a>
+              </div>
+            </div>
+
+            <h2 id="step-by-step">A Step-by-Step C195 Build Order (That Minimizes Rework)</h2>
+
+            <p>If you implement in this order, you reduce the chance that you build UI against the wrong data model or rewrite time logic later:</p>
+
+            <ol>
+              <li><strong>Project setup:</strong> Confirm JavaFX runs. Confirm DB connection works. Create a place for config/credentials (do not hardcode secrets).</li>
+              <li><strong>Models:</strong> Create model classes for Customer, Appointment, Contact, and any supporting data.</li>
+              <li><strong>DB helper + DAOs:</strong> Create reusable methods for connecting and for the CRUD operations you know you will need.</li>
+              <li><strong>Login:</strong> Implement login UI + logging + localization early so it’s not forgotten at the end.</li>
+              <li><strong>Customer CRUD:</strong> Build customer screen and forms. Validate input carefully.</li>
+              <li><strong>Appointment CRUD:</strong> Build appointment screen and forms. Add time zone conversions and validations (business hours + overlap).</li>
+              <li><strong>15-minute alert:</strong> Run the upcoming appointment query right after login.</li>
+              <li><strong>Calendar views:</strong> Implement month/week views by filtering the appointment list.</li>
+              <li><strong>Reports:</strong> Add the required report queries and display.</li>
+              <li><strong>Final pass:</strong> Walk the rubric line-by-line. Record a short “demo checklist” for yourself to verify every path works.</li>
+            </ol>
+
+            <h2 id="common-pitfalls">Common C195 Pitfalls (and How to Avoid Them)</h2>
+
+            <h3>1) Time zone conversions that “look right” but fail edge cases</h3>
+            <ul>
+              <li>Choose a canonical storage zone (commonly UTC) and stick to it.</li>
+              <li>Convert to local time only for display.</li>
+              <li>Test with appointments near midnight and around DST boundaries.</li>
+            </ul>
+
+            <h3>2) Overlap checks that are incomplete</h3>
+            <ul>
+              <li>Check overlap using the exact logic described in your task overview.</li>
+              <li>Run overlap checks against the database or a canonical in-memory list.</li>
+              <li>Remember to handle updates (exclude the appointment being edited).</li>
+            </ul>
+
+            <h3>3) “It works” but the rubric item is missing</h3>
+            <ul>
+              <li>Missing report requirements</li>
+              <li>Missing login activity logging</li>
+              <li>Missing “appointment within 15 minutes” alert</li>
+              <li>Missing required exception controls or missing the “two different mechanisms” requirement</li>
+            </ul>
+
+            <div class="tip-box">
+              <strong>Checklist habit:</strong> Convert the Task Overview page into a checklist and only check items off after you’ve tested them in the running app. This is repeatedly recommended by students who finish quickly.
+            </div>
+
+            <h2 id="submission">Submission Checklist: What to Verify Before You Upload</h2>
+
+            <p>Before submission, run a clean demo path with your rubric open. Confirm:</p>
+
+            <ul>
+              <li>You can log in, and logins append to the activity file.</li>
+              <li>Localization changes messages/labels as required.</li>
+              <li>Customer add/modify/delete works and updates the database.</li>
+              <li>Appointment add/modify/delete works and updates the database.</li>
+              <li>Business-hours and overlap validations prevent invalid scheduling.</li>
+              <li>The 15-minute upcoming appointment alert triggers (test by creating an appointment close to now).</li>
+              <li>Calendar views (month/week) correctly show appointments.</li>
+              <li>All required reports generate correct output.</li>
+              <li>The exported project runs on a clean machine/import (dependency check).</li>
+            </ul>
+
+            <p>If you’re consistently getting PA revisions in other courses, read: <a href="/blog/wgu-performance-assessment-guide/">WGU Performance Assessments: Write Papers That Pass First Time</a>—the same rubric discipline applies to software projects.</p>
+
+            <section class="blog-faq" id="faq">
+              <h2 class="blog-faq__title">Frequently Asked Questions</h2>
+
+              <div class="faq__items">
+                <div class="faq__item">
+                  <button class="faq__question" aria-expanded="false">
+                    <span>Is WGU C195 an OA or a PA?</span>
+                    <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="faq__answer">
+                    <p>C195 is commonly a project-based performance assessment where you submit a JavaFX scheduling app connected to a MySQL database. Confirm your exact assessment type in your course dashboard and task overview.</p>
+                  </div>
+                </div>
+
+                <div class="faq__item">
+                  <button class="faq__question" aria-expanded="false">
+                    <span>What do you build for C195 Software II?</span>
+                    <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="faq__answer">
+                    <p>You typically build a scheduling application with login, customer and appointment CRUD, calendar views, reports, validations, time zone handling, and an “appointment within 15 minutes” alert.</p>
+                  </div>
+                </div>
+
+                <div class="faq__item">
+                  <button class="faq__question" aria-expanded="false">
+                    <span>What is the hardest part of C195?</span>
+                    <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="faq__answer">
+                    <p>Time zones and validation logic (business hours and overlaps) are the biggest pain points. If you store in a canonical zone (often UTC) and convert only at UI boundaries, most bugs disappear.</p>
+                  </div>
+                </div>
+
+                <div class="faq__item">
+                  <button class="faq__question" aria-expanded="false">
+                    <span>Do I need to be good at SQL for C195?</span>
+                    <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="faq__answer">
+                    <p>Basic SQL is enough: SELECT, JOIN, WHERE, and GROUP BY. It helps a lot for reports and overlap checks without writing tons of filtering code.</p>
+                  </div>
+                </div>
+
+                <div class="faq__item">
+                  <button class="faq__question" aria-expanded="false">
+                    <span>Can I reuse pieces of my C482 project?</span>
+                    <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="faq__answer">
+                    <p>Many students reuse their own UI patterns, helper methods, or scene structure from Software I to accelerate. Use your own work, and do not copy public repos—meet the rubric and WGU originality expectations.</p>
+                  </div>
+                </div>
+
+                <div class="faq__item">
+                  <button class="faq__question" aria-expanded="false">
+                    <span>Where can I get help if I’m stuck?</span>
+                    <svg class="faq__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                  </button>
+                  <div class="faq__answer">
+                    <p>If you’re blocked on time zones, JDBC, or validation logic, contact us on <a href="https://wa.me/447474784797" target="_blank" rel="noopener">WhatsApp</a> or <a href="https://t.me/courseworkninja" target="_blank" rel="noopener">Telegram</a>. We provide human expert support with privacy-first handling of your work.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="related-resources" style="margin-top: var(--space-10); padding-top: var(--space-8); border-top: 1px solid #e2e8f0;">
+              <h2 style="color: var(--color-navy); margin-bottom: var(--space-4);">Related Resources</h2>
+              <ul style="list-style: none; padding: 0;">
+                <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-c482-software-1/" style="color: var(--color-teal); text-decoration: underline;">WGU C482 Software I: Java Fundamentals and OOP Guide</a></li>
+                <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-software-engineering-guide/" style="color: var(--color-teal); text-decoration: underline;">WGU Software Engineering Degree: Become a Developer</a></li>
+                <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-performance-assessment-guide/" style="color: var(--color-teal); text-decoration: underline;">WGU Performance Assessments: Write Papers That Pass First Time</a></li>
+                <li style="margin-bottom: var(--space-3);"><a href="/blog/wgu-oa-exam-tips/" style="color: var(--color-teal); text-decoration: underline;">How to Pass WGU Objective Assessments (OAs): Proven Study Strategies</a></li>
+              </ul>
+            </section>
+
+            <p style="margin-top: var(--space-8);">Need direct help with your C195 submission? Visit <a href="/contact/">Contact</a> or message us on WhatsApp/Telegram. We’ll help you finish faster without guesswork.</p>
+          </article>
+
+          <aside class="blog-sidebar">
+            <nav class="blog-toc" aria-label="Table of contents">
+              <h2 class="blog-toc__title">Table of Contents</h2>
+              <ul class="blog-toc__list">
+                <li class="blog-toc__item"><a href="#course-overview" class="blog-toc__link">Course Overview</a></li>
+                <li class="blog-toc__item"><a href="#prereqs" class="blog-toc__link">Prerequisites</a></li>
+                <li class="blog-toc__item"><a href="#project-requirements" class="blog-toc__link">Project Requirements</a></li>
+                <li class="blog-toc__item"><a href="#rubric-breakdown" class="blog-toc__link">Rubric Breakdown</a></li>
+                <li class="blog-toc__item"><a href="#architecture" class="blog-toc__link">Architecture</a></li>
+                <li class="blog-toc__item"><a href="#validation" class="blog-toc__link">Validation Rules</a></li>
+                <li class="blog-toc__item"><a href="#setup-tools" class="blog-toc__link">Setup &amp; Tools</a></li>
+                <li class="blog-toc__item"><a href="#jdbc-mysql" class="blog-toc__link">JDBC + MySQL</a></li>
+                <li class="blog-toc__item"><a href="#timezones" class="blog-toc__link">Time Zones</a></li>
+                <li class="blog-toc__item"><a href="#reports" class="blog-toc__link">Reports</a></li>
+                <li class="blog-toc__item"><a href="#step-by-step" class="blog-toc__link">Build Order</a></li>
+                <li class="blog-toc__item"><a href="#common-pitfalls" class="blog-toc__link">Common Pitfalls</a></li>
+                <li class="blog-toc__item"><a href="#submission" class="blog-toc__link">Submission Checklist</a></li>
+                <li class="blog-toc__item"><a href="#faq" class="blog-toc__link">FAQ</a></li>
+              </ul>
+            </nav>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+      <div class="cta-banner__pattern"></div>
+      <div class="cta-banner__glow"></div>
+      <div class="container">
+        <div class="cta-banner__content">
+          <h2 class="cta-banner__title">Ready to Finish C195 Faster?</h2>
+          <p class="cta-banner__tagline">No forms. No waiting. <span>Just results.</span></p>
+          <div class="cta-banner__buttons">
+            <a href="https://wa.me/447474784797" class="cta-banner__btn cta-banner__btn--whatsapp" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+            <a href="https://t.me/courseworkninja" class="cta-banner__btn cta-banner__btn--telegram" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              <span>Telegram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__countries">
+        <span class="footer__countries-label">Serving Students Worldwide</span>
+        <div class="footer__countries-slider">
+          <div class="footer__countries-track">
+            <span class="footer__country">United States</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United Kingdom</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Canada</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Australia</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Germany</span><span class="footer__country-dot"></span>
+            <span class="footer__country">India</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Nigeria</span><span class="footer__country-dot"></span>
+            <span class="footer__country">South Africa</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Philippines</span><span class="footer__country-dot"></span>
+            <span class="footer__country">UAE</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Saudi Arabia</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Singapore</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United States</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United Kingdom</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Canada</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Australia</span><span class="footer__country-dot"></span>
+          </div>
+        </div>
+      </div>
+      <div class="footer__crypto">
+        <span class="footer__crypto-label">We Accept</span>
+        <div class="footer__crypto-logos">
+          <div class="footer__crypto-item" title="Bitcoin"><img src="/images/crypto/btc.webp" alt="Bitcoin" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Ethereum"><img src="/images/crypto/eth.webp" alt="Ethereum" loading="lazy"></div>
+          <div class="footer__crypto-item" title="USDT"><img src="/images/crypto/usdt.webp" alt="USDT" loading="lazy"></div>
+          <div class="footer__crypto-item" title="USDC"><img src="/images/crypto/usdc.webp" alt="USDC" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Solana"><img src="/images/crypto/sol.webp" alt="Solana" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Monero"><img src="/images/crypto/xmr.webp" alt="Monero" loading="lazy"></div>
+          <div class="footer__crypto-item" title="DAI"><img src="/images/crypto/dai.webp" alt="DAI" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Litecoin"><img src="/images/crypto/ltc.webp" alt="Litecoin" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Coursework Ninja. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js" defer></script>
+</body>
+</html>
