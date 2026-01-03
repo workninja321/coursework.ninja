@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 67,
-    "pendingBlogs": 26,
+    "publishedBlogs": 68,
+    "pendingBlogs": 25,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -1996,7 +1996,8 @@
         "IT Courses"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-03",
       "internalLinks": [
         "wgu-computer-science-degree",
         "wgu-software-engineering-guide"
