@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 65,
-    "pendingBlogs": 28,
+    "publishedBlogs": 67,
+    "pendingBlogs": 26,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -1822,7 +1822,8 @@
         "Licensure"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-03",
       "internalLinks": [
         "wgu-teaching-degree-guide",
         "wgu-capstone-guide"
@@ -1850,7 +1851,8 @@
         "Teaching"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-03",
       "internalLinks": [
         "wgu-teaching-degree-guide",
         "wgu-jobs-after-graduation"
