@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 71,
-    "pendingBlogs": 22,
+    "publishedBlogs": 72,
+    "pendingBlogs": 21,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2167,13 +2167,14 @@
         "Online Education"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-vs-snhu-comparison",
         "wgu-vs-purdue-global"
       ],
       "estimatedReadTime": 10,
-      "notes": "Compare competency-based vs traditional, Starbucks partnership, cost"
+      "notes": "Compare competency-based vs traditional, Starbucks partnership, cost",
+      "publishedDate": "2026-01-04"
     },
     {
       "id": "077",
