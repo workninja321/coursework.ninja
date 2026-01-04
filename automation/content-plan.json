@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 78,
-    "pendingBlogs": 15,
+    "publishedBlogs": 79,
+    "pendingBlogs": 14,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2585,13 +2585,14 @@
         "IT Service Management"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-certification-guide",
         "wgu-bsit-guide"
       ],
       "estimatedReadTime": 10,
-      "notes": "Cover ITIL 4 foundations, service value system, study resources"
+      "notes": "Cover ITIL 4 foundations, service value system, study resources",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "092",
