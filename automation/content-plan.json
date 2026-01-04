@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 75,
-    "pendingBlogs": 18,
+    "publishedBlogs": 76,
+    "pendingBlogs": 17,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2391,13 +2391,14 @@
         "Technology"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-computer-science-degree",
         "wgu-employer-perception"
       ],
       "estimatedReadTime": 8,
-      "notes": "Cover ABET importance, which WGU programs have it, career implications"
+      "notes": "Cover ABET importance, which WGU programs have it, career implications",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "085",
