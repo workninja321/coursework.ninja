@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 77,
-    "pendingBlogs": 16,
+    "publishedBlogs": 78,
+    "pendingBlogs": 15,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2448,13 +2448,14 @@
         "Benefits"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-financial-aid-guide",
         "wgu-transfer-credits-guide"
       ],
       "estimatedReadTime": 10,
-      "notes": "Cover GI Bill usage, military credit transfer, Yellow Ribbon, VET TEC"
+      "notes": "Cover GI Bill usage, military credit transfer, Yellow Ribbon, VET TEC",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "087",
