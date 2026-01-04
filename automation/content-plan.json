@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 76,
-    "pendingBlogs": 17,
+    "publishedBlogs": 77,
+    "pendingBlogs": 16,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2419,13 +2419,14 @@
         "Adult Learners"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-jobs-after-graduation",
         "wgu-acceleration-guide"
       ],
       "estimatedReadTime": 10,
-      "notes": "Cover best programs for career changers, timeline expectations, success stories"
+      "notes": "Cover best programs for career changers, timeline expectations, success stories",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "086",
