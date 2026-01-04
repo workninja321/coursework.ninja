@@ -1,12 +1,12 @@
 {
-"meta": {
+  "meta": {
     "version": "1.2",
-    "lastUpdated": "2026-01-03",
+    "lastUpdated": "2026-01-04",
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 69,
-    "pendingBlogs": 24,
+    "publishedBlogs": 71,
+    "pendingBlogs": 22,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2111,12 +2111,13 @@
         "Online Education"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
+      "publishedDate": "2026-01-03",
       "internalLinks": [
         "wgu-vs-snhu-comparison",
         "wgu-vs-traditional-college"
       ],
-      "estimatedReadTime": 10,
+      "estimatedReadTime": 12,
       "notes": "Compare competency-based vs traditional online, cost, reputation, outcomes"
     },
     {
@@ -2138,13 +2139,14 @@
         "Online Education"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-vs-snhu-comparison",
         "wgu-vs-gcu-comparison"
       ],
       "estimatedReadTime": 9,
-      "notes": "Compare secular vs faith-based, format, cost, student experience"
+      "notes": "Compare secular vs faith-based, format, cost, student experience",
+      "publishedDate": "2026-01-04"
     },
     {
       "id": "076",
