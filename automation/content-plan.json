@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 74,
-    "pendingBlogs": 19,
+    "publishedBlogs": 75,
+    "pendingBlogs": 18,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2362,13 +2362,14 @@
         "Academic Structure"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-acceleration-guide",
         "wgu-term-planning-guide"
       ],
       "estimatedReadTime": 7,
-      "notes": "Cover CU to credit hour conversion, SAP requirements, transfer implications"
+      "notes": "Cover CU to credit hour conversion, SAP requirements, transfer implications",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "084",
