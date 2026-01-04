@@ -1,12 +1,12 @@
 {
   "meta": {
     "version": "1.2",
-    "lastUpdated": "2026-01-04",
+    "lastUpdated": "2026-01-05",
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 73,
-    "pendingBlogs": 20,
+    "publishedBlogs": 74,
+    "pendingBlogs": 19,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2334,13 +2334,14 @@
         "Study Tips"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-oa-exam-tips",
         "wgu-mentor-tips"
       ],
       "estimatedReadTime": 8,
-      "notes": "Cover retake policies, study plan revision, when to take breaks"
+      "notes": "Cover retake policies, study plan revision, when to take breaks",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "083",
