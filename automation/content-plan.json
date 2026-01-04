@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 72,
-    "pendingBlogs": 21,
+    "publishedBlogs": 73,
+    "pendingBlogs": 20,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2195,13 +2195,14 @@
         "Online Education"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-vs-snhu-comparison",
         "wgu-vs-purdue-global"
       ],
       "estimatedReadTime": 9,
-      "notes": "Compare FlexPath to WGU model, doctoral programs, cost, support"
+      "notes": "Compare FlexPath to WGU model, doctoral programs, cost, support",
+      "publishedDate": "2026-01-04"
     },
     {
       "id": "078",
