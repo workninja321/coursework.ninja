@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 84,
-    "pendingBlogs": 9,
+    "publishedBlogs": 85,
+    "pendingBlogs": 8,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2783,13 +2783,14 @@
         "Certifications"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-bsit-guide",
         "wgu-network-operations-guide"
       ],
       "estimatedReadTime": 11,
-      "notes": "Cover N10-008 objectives, subnetting, protocols, troubleshooting"
+      "notes": "Cover N10-008 objectives, subnetting, protocols, troubleshooting",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "099",
