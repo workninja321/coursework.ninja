@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 81,
-    "pendingBlogs": 12,
+    "publishedBlogs": 82,
+    "pendingBlogs": 11,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2698,13 +2698,14 @@
         "Certifications"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-cybersecurity-degree-guide",
         "wgu-security-plus-guide"
       ],
       "estimatedReadTime": 11,
-      "notes": "Cover PT0-002 objectives, tools, practical scenarios, lab recommendations"
+      "notes": "Cover PT0-002 objectives, tools, practical scenarios, lab recommendations",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "096",
