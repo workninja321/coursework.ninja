@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 86,
-    "pendingBlogs": 7,
+    "publishedBlogs": 87,
+    "pendingBlogs": 6,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2308,13 +2308,14 @@
         "Student Support"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-mentor-tips",
         "wgu-burnout-prevention"
       ],
       "estimatedReadTime": 7,
-      "notes": "Cover SAP requirements, when to request, process, alternatives"
+      "notes": "Cover SAP requirements, when to request, process, alternatives",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "082",
