@@ -5,8 +5,8 @@
     "totalTopics": 112,
     "totalBlogs": 105,
     "totalLandings": 7,
-    "publishedBlogs": 94,
-    "pendingBlogs": 11,
+    "publishedBlogs": 95,
+    "pendingBlogs": 10,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2933,14 +2933,15 @@
         "Graduate"
       ],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-computer-science-degree",
         "wgu-acceleration-guide",
         "wgu-one-term-graduation-guide"
       ],
       "estimatedReadTime": 12,
-      "notes": "Detail the shared courses, entry requirements, and timeline for the accelerated path"
+      "notes": "Detail the shared courses, entry requirements, and timeline for the accelerated path",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "104",
