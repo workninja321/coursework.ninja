@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 80,
-    "pendingBlogs": 13,
+    "publishedBlogs": 81,
+    "pendingBlogs": 12,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2641,13 +2641,14 @@
         "Certifications"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-cloud-computing-guide",
         "wgu-certification-guide"
       ],
       "estimatedReadTime": 12,
-      "notes": "Cover CCP and SAA objectives, hands-on labs, free tier usage"
+      "notes": "Cover CCP and SAA objectives, hands-on labs, free tier usage",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "094",
