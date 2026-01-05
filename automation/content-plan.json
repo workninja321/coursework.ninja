@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 90,
-    "pendingBlogs": 3,
+    "publishedBlogs": 91,
+    "pendingBlogs": 2,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2563,13 +2563,14 @@
         "IT Courses"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-software-engineering-guide",
         "wgu-bsit-guide"
       ],
       "estimatedReadTime": 9,
-      "notes": "Cover testing methodologies, test cases, defect tracking, ISTQB prep"
+      "notes": "Cover testing methodologies, test cases, defect tracking, ISTQB prep",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "091",
