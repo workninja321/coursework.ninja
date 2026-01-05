@@ -2,11 +2,11 @@
   "meta": {
     "version": "1.2",
     "lastUpdated": "2026-01-05",
-    "totalTopics": 100,
-    "totalBlogs": 93,
+    "totalTopics": 112,
+    "totalBlogs": 105,
     "totalLandings": 7,
-    "publishedBlogs": 93,
-    "pendingBlogs": 0,
+    "publishedBlogs": 94,
+    "pendingBlogs": 11,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2853,6 +2853,355 @@
       "estimatedReadTime": 8,
       "notes": "Cover LPI Linux Essentials objectives, basic commands, open source",
       "publishedDate": "2026-01-05"
+    },
+    {
+      "id": "101",
+      "type": "blog",
+      "slug": "wgu-guardian-browser-meazure-learning",
+      "title": "WGU Guardian Browser Guide: Navigating Meazure Learning Exams",
+      "primaryKeyword": "WGU Guardian Browser",
+      "secondaryKeywords": [
+        "Meazure Learning WGU",
+        "Guardian Browser proctoring",
+        "WGU exam proctoring 2026",
+        "WGU proctoring technical issues"
+      ],
+      "category": "exam-prep",
+      "tags": [
+        "Proctoring",
+        "Guardian Browser",
+        "Meazure Learning",
+        "Exams"
+      ],
+      "priority": 1,
+      "status": "published",
+      "internalLinks": [
+        "wgu-proctored-exam-guide",
+        "wgu-oa-exam-tips",
+        "wgu-acceleration-guide"
+      ],
+      "estimatedReadTime": 10,
+      "notes": "Cover setup, hardware requirements, troubleshooting Guardian Browser errors",
+      "publishedDate": "2026-01-05"
+    },
+    {
+      "id": "102",
+      "type": "blog",
+      "slug": "wgu-psychology-degree-guide",
+      "title": "WGU B.S. Psychology: Complete Program Overview and Review",
+      "primaryKeyword": "WGU psychology degree",
+      "secondaryKeywords": [
+        "WGU psychology reviews",
+        "online psychology degree WGU",
+        "BS psychology WGU",
+        "WGU psychology curriculum"
+      ],
+      "category": "degree-guides",
+      "tags": [
+        "Psychology",
+        "Health Science",
+        "Undergraduate",
+        "Leavitt School"
+      ],
+      "priority": 2,
+      "status": "pending",
+      "internalLinks": [
+        "wgu-teaching-degree-guide",
+        "wgu-jobs-after-graduation",
+        "wgu-study-tips-working-adults"
+      ],
+      "estimatedReadTime": 11,
+      "notes": "Cover curriculum, career paths, and student feedback on the new program"
+    },
+    {
+      "id": "103",
+      "type": "blog",
+      "slug": "wgu-accelerated-mscs-pathway",
+      "title": "WGU Accelerated BS+MS Computer Science: Earn Two Degrees in Record Time",
+      "primaryKeyword": "WGU accelerated MSCS",
+      "secondaryKeywords": [
+        "WGU BS+MS CS",
+        "WGU accelerated computer science",
+        "dual degree WGU",
+        "fast track master's WGU"
+      ],
+      "category": "degree-guides",
+      "tags": [
+        "Computer Science",
+        "BS+MS",
+        "Acceleration",
+        "Graduate"
+      ],
+      "priority": 1,
+      "status": "pending",
+      "internalLinks": [
+        "wgu-computer-science-degree",
+        "wgu-acceleration-guide",
+        "wgu-one-term-graduation-guide"
+      ],
+      "estimatedReadTime": 12,
+      "notes": "Detail the shared courses, entry requirements, and timeline for the accelerated path"
+    },
+    {
+      "id": "104",
+      "type": "blog",
+      "slug": "wgu-d829-digital-forensics-guide",
+      "title": "WGU D829 Digital Forensics: How to Pass and Fast-Track This Course",
+      "primaryKeyword": "WGU D829",
+      "secondaryKeywords": [
+        "D829 study guide",
+        "WGU digital forensics",
+        "D829 tips",
+        "Cybersecurity courses WGU"
+      ],
+      "category": "course-help",
+      "tags": [
+        "D829",
+        "Cybersecurity",
+        "Digital Forensics",
+        "IT Courses"
+      ],
+      "priority": 2,
+      "status": "pending",
+      "internalLinks": [
+        "wgu-cybersecurity-degree-guide",
+        "wgu-oa-exam-tips",
+        "wgu-bsit-guide"
+      ],
+      "estimatedReadTime": 8,
+      "notes": "Focus on lab environments, key forensics tools, and OA preparation"
+    },
+    {
+      "id": "105",
+      "type": "blog",
+      "slug": "wgu-servicenow-certification-guide",
+      "title": "WGU ServiceNow Application Developer: Boosting Your IT Career",
+      "primaryKeyword": "WGU ServiceNow",
+      "secondaryKeywords": [
+        "WGU ServiceNow certificate",
+        "ServiceNow Application Developer WGU",
+        "WGU micro-credentials",
+        "IT career advancement"
+      ],
+      "category": "exam-prep",
+      "tags": [
+        "ServiceNow",
+        "Certifications",
+        "IT",
+        "Career"
+      ],
+      "priority": 3,
+      "status": "pending",
+      "internalLinks": [
+        "wgu-certification-guide",
+        "wgu-bsit-guide",
+        "wgu-jobs-after-graduation"
+      ],
+      "estimatedReadTime": 9,
+      "notes": "Explain the ServiceNow partnership, exam objectives, and market value"
+    },
+    {
+      "id": "106",
+      "type": "blog",
+      "slug": "wgu-connect-social-platform-review",
+      "title": "WGU Connect: How to Use WGU’s New Social Initiative for Networking",
+      "primaryKeyword": "WGU Connect",
+      "secondaryKeywords": [
+        "WGU social platform",
+        "WGU networking",
+        "WGU student community",
+        "WGU connect review"
+      ],
+      "category": "study-tips",
+      "tags": [
+        "WGU Connect",
+        "Networking",
+        "Student Life",
+        "Community"
+      ],
+      "priority": 3,
+      "status": "pending",
+      "internalLinks": [
+        "wgu-mentor-tips",
+        "wgu-career-services-review",
+        "wgu-study-tips-working-adults"
+      ],
+      "estimatedReadTime": 7,
+      "notes": "Guide on creating a profile, finding peer groups, and professional networking"
+    },
+    {
+      "id": "107",
+      "type": "blog",
+      "slug": "wgu-public-health-degree-guide",
+      "title": "WGU B.S. Public Health: A Guide to the New Leavitt School Program",
+      "primaryKeyword": "WGU public health",
+      "secondaryKeywords": [
+        "online public health degree WGU",
+        "BS public health WGU",
+        "Leavitt School of Health WGU",
+        "WGU public health career"
+      ],
+      "category": "degree-guides",
+      "tags": [
+        "Public Health",
+        "Healthcare",
+        "Leavitt School",
+        "Undergraduate"
+      ],
+      "priority": 2,
+      "status": "pending",
+      "internalLinks": [
+        "wgu-healthcare-management-guide",
+        "wgu-nursing-program-guide",
+        "wgu-jobs-after-graduation"
+      ],
+      "estimatedReadTime": 10,
+      "notes": "Cover core competencies, career outcomes in community health, and enrollment"
+    },
+    {
+      "id": "108",
+      "type": "blog",
+      "slug": "wgu-d662-advanced-technical-course-tips",
+      "title": "WGU D662 Study Guide: Mastering the Advanced Technical Curriculum",
+      "primaryKeyword": "WGU D662",
+      "secondaryKeywords": [
+        "D662 tips",
+        "WGU D662 study guide",
+        "advanced IT courses WGU",
+        "D662 OA strategy"
+      ],
+      "category": "course-help",
+      "tags": [
+        "D662",
+        "IT Courses",
+        "Advanced",
+        "Technology"
+      ],
+      "priority": 1,
+      "status": "pending",
+      "internalLinks": [
+        "wgu-bsit-guide",
+        "wgu-software-engineering-guide",
+        "wgu-oa-exam-tips"
+      ],
+      "estimatedReadTime": 11,
+      "notes": "Detailed breakdown of the most difficult concepts in D662 and how to pass"
+    },
+    {
+      "id": "109",
+      "type": "blog",
+      "slug": "wgu-ai-skills-fundamentals-guide",
+      "title": "WGU AI Skills Fundamentals: Preparing for the Future of Work",
+      "primaryKeyword": "WGU AI fundamentals",
+      "secondaryKeywords": [
+        "WGU AI certificate",
+        "Artificial Intelligence WGU",
+        "WGU micro-credentials",
+        "AI for business WGU"
+      ],
+      "category": "exam-prep",
+      "tags": [
+        "AI",
+        "Artificial Intelligence",
+        "Micro-Credentials",
+        "Future of Work"
+      ],
+      "priority": 2,
+      "status": "pending",
+      "internalLinks": [
+        "wgu-certification-guide",
+        "wgu-computer-science-degree",
+        "wgu-jobs-after-graduation"
+      ],
+      "estimatedReadTime": 8,
+      "notes": "Overview of AI literacy goals and the value of this micro-credential"
+    },
+    {
+      "id": "110",
+      "type": "blog",
+      "slug": "wgu-health-science-degree-review",
+      "title": "WGU B.S. Health Science: Program Structure and Career Opportunities",
+      "primaryKeyword": "WGU health science",
+      "secondaryKeywords": [
+        "online health science degree WGU",
+        "BS health science WGU",
+        "healthcare careers WGU",
+        "Leavitt School reviews"
+      ],
+      "category": "degree-guides",
+      "tags": [
+        "Health Science",
+        "Healthcare",
+        "Undergraduate",
+        "Leavitt School"
+      ],
+      "priority": 2,
+      "status": "pending",
+      "internalLinks": [
+        "wgu-nursing-program-guide",
+        "wgu-healthcare-management-guide",
+        "wgu-jobs-after-graduation"
+      ],
+      "estimatedReadTime": 9,
+      "notes": "Compare with Healthcare Management and detail pre-professional tracks"
+    },
+    {
+      "id": "111",
+      "type": "blog",
+      "slug": "wgu-d317-it-infrastructure-fundamentals",
+      "title": "WGU D317 IT Infrastructure: Study Strategy and OA Tips",
+      "primaryKeyword": "WGU D317",
+      "secondaryKeywords": [
+        "D317 study guide",
+        "WGU IT infrastructure",
+        "D317 OA tips",
+        "CompTIA A+ WGU D317"
+      ],
+      "category": "course-help",
+      "tags": [
+        "D317",
+        "IT Fundamentals",
+        "CompTIA A+",
+        "IT Courses"
+      ],
+      "priority": 2,
+      "status": "pending",
+      "internalLinks": [
+        "wgu-comptia-a-plus-guide",
+        "wgu-bsit-guide",
+        "wgu-oa-exam-tips"
+      ],
+      "estimatedReadTime": 9,
+      "notes": "Link to A+ certification goals and provide specific D317 OA insights"
+    },
+    {
+      "id": "112",
+      "type": "blog",
+      "slug": "wgu-mscs-vs-msit-comparison",
+      "title": "WGU MSCS vs MSIT: Which Graduate Degree is Best for You?",
+      "primaryKeyword": "WGU MSCS vs MSIT",
+      "secondaryKeywords": [
+        "WGU computer science masters",
+        "WGU IT masters",
+        "online masters comparison",
+        "MSCS or MSIT WGU"
+      ],
+      "category": "comparisons",
+      "tags": [
+        "MSCS",
+        "MSIT",
+        "Graduate",
+        "Comparison"
+      ],
+      "priority": 2,
+      "status": "pending",
+      "internalLinks": [
+        "wgu-computer-science-degree",
+        "wgu-bsit-guide",
+        "wgu-jobs-after-graduation"
+      ],
+      "estimatedReadTime": 10,
+      "notes": "Deep dive into career outcomes, curriculum focus (theory vs application), and difficulty"
     }
   ]
 }
