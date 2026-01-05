@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 79,
-    "pendingBlogs": 14,
+    "publishedBlogs": 80,
+    "pendingBlogs": 13,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2613,13 +2613,14 @@
         "IT Fundamentals"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-certification-guide",
         "wgu-bsit-guide"
       ],
       "estimatedReadTime": 11,
-      "notes": "Cover Core 1 and Core 2 objectives, labs, practice exams"
+      "notes": "Cover Core 1 and Core 2 objectives, labs, practice exams",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "093",
