@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 87,
-    "pendingBlogs": 6,
+    "publishedBlogs": 88,
+    "pendingBlogs": 5,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2478,13 +2478,14 @@
         "Alumni"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-jobs-after-graduation",
         "wgu-employer-perception"
       ],
       "estimatedReadTime": 8,
-      "notes": "Cover career coaching, resume help, Handshake platform, alumni resources"
+      "notes": "Cover career coaching, resume help, Handshake platform, alumni resources",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "088",
