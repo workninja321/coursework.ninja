@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 91,
-    "pendingBlogs": 2,
+    "publishedBlogs": 92,
+    "pendingBlogs": 1,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2817,13 +2817,14 @@
         "Certifications"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-bsit-guide",
         "wgu-cloud-computing-guide"
       ],
       "estimatedReadTime": 10,
-      "notes": "Cover XK0-005 objectives, command line, file systems, security"
+      "notes": "Cover XK0-005 objectives, command line, file systems, security",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "100",
