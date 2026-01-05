@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 83,
-    "pendingBlogs": 10,
+    "publishedBlogs": 84,
+    "pendingBlogs": 9,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2755,13 +2755,14 @@
         "Certifications"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-bsit-guide",
         "wgu-certification-guide"
       ],
       "estimatedReadTime": 9,
-      "notes": "Cover PK0-005 objectives, project lifecycle, agile vs waterfall"
+      "notes": "Cover PK0-005 objectives, project lifecycle, agile vs waterfall",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "098",
