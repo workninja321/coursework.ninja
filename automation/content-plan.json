@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 85,
-    "pendingBlogs": 8,
+    "publishedBlogs": 86,
+    "pendingBlogs": 7,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -1434,13 +1434,14 @@
         "IT Courses"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-software-engineering-guide",
         "wgu-bsit-guide"
       ],
       "estimatedReadTime": 9,
-      "notes": "Cover OOP concepts, Java syntax, project requirements"
+      "notes": "Cover OOP concepts, Java syntax, project requirements",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "051",
