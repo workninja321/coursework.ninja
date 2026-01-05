@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 88,
-    "pendingBlogs": 5,
+    "publishedBlogs": 89,
+    "pendingBlogs": 4,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2506,13 +2506,14 @@
         "Business Courses"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-mba-complete-guide",
         "wgu-c214-financial-management"
       ],
       "estimatedReadTime": 8,
-      "notes": "Cover financial statements, ratio analysis, budgeting basics"
+      "notes": "Cover financial statements, ratio analysis, budgeting basics",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "089",
