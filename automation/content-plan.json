@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 92,
-    "pendingBlogs": 1,
+    "publishedBlogs": 93,
+    "pendingBlogs": 0,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2845,13 +2845,14 @@
         "Certifications"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-linux-plus-guide",
         "wgu-bsit-guide"
       ],
       "estimatedReadTime": 8,
-      "notes": "Cover LPI Linux Essentials objectives, basic commands, open source"
+      "notes": "Cover LPI Linux Essentials objectives, basic commands, open source",
+      "publishedDate": "2026-01-05"
     }
   ]
 }
