@@ -5,8 +5,8 @@
     "totalTopics": 100,
     "totalBlogs": 93,
     "totalLandings": 7,
-    "publishedBlogs": 89,
-    "pendingBlogs": 4,
+    "publishedBlogs": 90,
+    "pendingBlogs": 3,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2534,13 +2534,14 @@
         "Fundamentals"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-mba-complete-guide",
         "wgu-oa-exam-tips"
       ],
       "estimatedReadTime": 6,
-      "notes": "Cover business ethics, communication, critical thinking basics"
+      "notes": "Cover business ethics, communication, critical thinking basics",
+      "publishedDate": "2026-01-05"
     },
     {
       "id": "090",
