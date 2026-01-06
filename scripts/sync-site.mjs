@@ -11,6 +11,7 @@
 import fs from "fs";
 import path from "path";
 import { spawnSync } from "child_process";
+import { syncContact } from "./sync-contact.mjs";
 import { syncNav } from "./sync-nav.mjs";
 
 const ROOT = process.cwd();
@@ -32,7 +33,12 @@ function readFile(relPath) {
 }
 
 function writeFile(relPath, content) {
-  fs.writeFileSync(path.join(ROOT, relPath), content, "utf8");
+  const absPath = path.join(ROOT, relPath);
+  const dir = path.dirname(absPath);
+  const base = path.basename(absPath);
+  const tmpPath = path.join(dir, `.${base}.tmp-${process.pid}-${Date.now()}`);
+  fs.writeFileSync(tmpPath, content, "utf8");
+  fs.renameSync(tmpPath, absPath);
 }
 
 function escapeHtml(str) {
@@ -375,6 +381,7 @@ function syncSitemap(posts) {
 }
 
 function main() {
+  syncContact({ root: ROOT });
   syncNav({ root: ROOT });
 
   const posts = discoverBlogPosts();

@@ -120,9 +120,10 @@ When creating new blog posts:
 3. Update relevant `tags/<tag>/index.html` if applicable
 
 ## CTA Buttons
-Use WhatsApp/Telegram links consistently:
-- WhatsApp: `https://wa.me/1234567890`
-- Telegram: `https://t.me/courseworkninja`
+Use contact links from `site-config.json`:
+- WhatsApp: `contact.whatsappNumber` (wa.me digits only)
+- Telegram: `contact.telegramUrl`
+- Email: `contact.supportEmail`
 
 ## Safety
 - Do NOT run Bash commands

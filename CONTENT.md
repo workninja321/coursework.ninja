@@ -470,8 +470,8 @@ We provide a simple, step-by-step video guide on how to do this securely. It is 
 
 ## CONTACT LINKS
 
-**WhatsApp:** https://wa.me/1234567890
-**WhatsApp with Message:** https://wa.me/1234567890?text=Hi!%20I%20need%20help%20with%20my%20WGU%20coursework.
+**WhatsApp:** https://wa.me/12512806919
+**WhatsApp with Message:** https://wa.me/12512806919?text=Hi!%20I%20need%20help%20with%20my%20WGU%20coursework.
 **Telegram:** https://t.me/courseworkninja
 
 ---

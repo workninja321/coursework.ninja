@@ -149,7 +149,7 @@
             <h3 class="blog-cta__title">[CTA Title]</h3>
             <p class="blog-cta__text">[CTA Text]</p>
             <div class="blog-cta__buttons">
-              <a href="https://wa.me/447474784797?text=[encoded message]" class="btn btn--primary" target="_blank" rel="noopener">
+              <a href="https://wa.me/12512806919?text=[encoded message]" class="btn btn--primary" target="_blank" rel="noopener">
                 <svg><!-- WhatsApp icon --></svg>
                 [Button Text]
               </a>
