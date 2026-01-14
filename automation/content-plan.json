@@ -1,12 +1,12 @@
 {
   "meta": {
     "version": "1.2",
-    "lastUpdated": "2026-01-05",
+    "lastUpdated": "2026-01-14",
     "totalTopics": 112,
     "totalBlogs": 105,
     "totalLandings": 7,
-    "publishedBlogs": 95,
-    "pendingBlogs": 10,
+    "publishedBlogs": 96,
+    "pendingBlogs": 9,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -3079,14 +3079,15 @@
         "Technology"
       ],
       "priority": 1,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-bsit-guide",
         "wgu-software-engineering-guide",
         "wgu-oa-exam-tips"
       ],
       "estimatedReadTime": 11,
-      "notes": "Detailed breakdown of the most difficult concepts in D662 and how to pass"
+      "notes": "Detailed breakdown of the most difficult concepts in D662 and how to pass",
+      "publishedDate": "2026-01-14"
     },
     {
       "id": "109",
