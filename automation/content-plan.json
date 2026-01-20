@@ -5,8 +5,8 @@
     "totalTopics": 112,
     "totalBlogs": 105,
     "totalLandings": 7,
-    "publishedBlogs": 99,
-    "pendingBlogs": 6,
+    "publishedBlogs": 100,
+    "pendingBlogs": 5,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -3112,14 +3112,15 @@
         "Future of Work"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-certification-guide",
         "wgu-computer-science-degree",
         "wgu-jobs-after-graduation"
       ],
       "estimatedReadTime": 8,
-      "notes": "Overview of AI literacy goals and the value of this micro-credential"
+      "notes": "Overview of AI literacy goals and the value of this micro-credential",
+      "publishedDate": "2026-01-20"
     },
     {
       "id": "110",
