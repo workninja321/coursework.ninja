@@ -14,9 +14,9 @@ RETRY_JITTER_MAX="${RETRY_JITTER_MAX:-10}"
 OPENCODE_TIMEOUT="${OPENCODE_TIMEOUT:-1800}"
 FALLBACK_MODEL="${FALLBACK_MODEL:-anthropic/claude-sonnet-4-5}"
 
-PATTERN_RATE_LIMIT="rate.?limit|429|too many requests|quota|throttl"
-PATTERN_CONTEXT_LENGTH="context.?length|token.?limit|maximum.?context|too.?long"
-PATTERN_TRANSIENT="timeout|connection|temporary|unavailable|503|502|ECONNRESET"
+PATTERN_RATE_LIMIT='"error".*rate.?limit|"code".*429|RateLimitError|TooManyRequests'
+PATTERN_CONTEXT_LENGTH='"error".*context.?length|"error".*token.?limit|ContextLengthExceeded'
+PATTERN_TRANSIENT='"error".*timeout|"error".*connection|ECONNRESET|"code".*50[23]'
 
 calculate_backoff_with_jitter() {
     local current_wait="$1"
@@ -79,6 +79,12 @@ run_with_retry() {
         exit_code=${PIPESTATUS[0]}
         set -e
         
+        if [[ $exit_code -eq 0 && -s "$output_file" ]]; then
+            log_info "Completed successfully after ${attempt} attempt(s)" \
+                "{\"attempts\": ${attempt}, \"model\": \"${current_model}\", \"success\": true}"
+            return 0
+        fi
+        
         if [[ $exit_code -eq 124 || $exit_code -eq 137 ]]; then
             log_warning "Timeout after ${OPENCODE_TIMEOUT}s" \
                 "{\"error_type\": \"timeout\", \"timeout_seconds\": ${OPENCODE_TIMEOUT}}"
@@ -118,12 +124,6 @@ run_with_retry() {
                 continue
                 ;;
         esac
-        
-        if [[ $exit_code -eq 0 && -s "$output_file" ]]; then
-            log_info "Completed successfully after ${attempt} attempt(s)" \
-                "{\"attempts\": ${attempt}, \"model\": \"${current_model}\", \"success\": true}"
-            return 0
-        fi
         
         log_warning "Failed (exit=${exit_code}, output_exists=$([[ -s "$output_file" ]] && echo true || echo false))" \
             "{\"exit_code\": ${exit_code}, \"attempt\": ${attempt}}"
