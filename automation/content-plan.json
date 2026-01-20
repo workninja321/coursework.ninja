@@ -5,8 +5,8 @@
     "totalTopics": 112,
     "totalBlogs": 105,
     "totalLandings": 7,
-    "publishedBlogs": 104,
-    "pendingBlogs": 1,
+    "publishedBlogs": 105,
+    "pendingBlogs": 0,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -3024,14 +3024,15 @@
         "Community"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-mentor-tips",
         "wgu-career-services-review",
         "wgu-study-tips-working-adults"
       ],
       "estimatedReadTime": 7,
-      "notes": "Guide on creating a profile, finding peer groups, and professional networking"
+      "notes": "Guide on creating a profile, finding peer groups, and professional networking",
+      "publishedDate": "2026-01-20"
     },
     {
       "id": "107",
