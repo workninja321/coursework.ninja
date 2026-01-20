@@ -2964,14 +2964,15 @@
         "IT Courses"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-cybersecurity-degree-guide",
         "wgu-oa-exam-tips",
         "wgu-bsit-guide"
       ],
       "estimatedReadTime": 8,
-      "notes": "Focus on lab environments, key forensics tools, and OA preparation"
+      "notes": "Focus on lab environments, key forensics tools, and OA preparation",
+      "publishedDate": "2026-01-20"
     },
     {
       "id": "105",
