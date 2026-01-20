@@ -5,8 +5,8 @@
     "totalTopics": 112,
     "totalBlogs": 105,
     "totalLandings": 7,
-    "publishedBlogs": 103,
-    "pendingBlogs": 2,
+    "publishedBlogs": 104,
+    "pendingBlogs": 1,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -2994,14 +2994,15 @@
         "Career"
       ],
       "priority": 3,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-certification-guide",
         "wgu-bsit-guide",
         "wgu-jobs-after-graduation"
       ],
       "estimatedReadTime": 9,
-      "notes": "Explain the ServiceNow partnership, exam objectives, and market value"
+      "notes": "Explain the ServiceNow partnership, exam objectives, and market value",
+      "publishedDate": "2026-01-20"
     },
     {
       "id": "106",
