@@ -2904,14 +2904,15 @@
         "Leavitt School"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-teaching-degree-guide",
         "wgu-jobs-after-graduation",
         "wgu-study-tips-working-adults"
       ],
       "estimatedReadTime": 11,
-      "notes": "Cover curriculum, career paths, and student feedback on the new program"
+      "notes": "Cover curriculum, career paths, and student feedback on the new program",
+      "publishedDate": "2026-01-20"
     },
     {
       "id": "103",
