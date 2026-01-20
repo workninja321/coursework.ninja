@@ -12,6 +12,14 @@ import { fileURLToPath } from "url";
 
 const ROOT = process.cwd();
 
+function writeFileAtomic(filePath, content) {
+  const dir = path.dirname(filePath);
+  const base = path.basename(filePath);
+  const tmpPath = path.join(dir, `.${base}.tmp-${process.pid}-${Date.now()}`);
+  fs.writeFileSync(tmpPath, content, "utf8");
+  fs.renameSync(tmpPath, filePath);
+}
+
 function listHtmlFiles(root) {
   const candidates = [
     "index.html",
@@ -104,7 +112,7 @@ export function syncNav({ root = ROOT } = {}) {
     after = ensureContactLinkInMobileMenu(after);
 
     if (after !== before) {
-      fs.writeFileSync(absPath, after, "utf8");
+      writeFileAtomic(absPath, after);
       changedCount += 1;
       console.log(`[sync-nav] updated: ${relPath}`);
     }

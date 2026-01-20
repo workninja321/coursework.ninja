@@ -6,9 +6,12 @@ node_modules/
 .env.local
 .env.*.local
 
-# Automation secrets (NEVER commit these)
+# Automation secrets and runtime (NEVER commit these)
 automation/secrets/
 automation/logs/
+automation/work/
+automation/state/
+automation/locks/
 
 # Automation scripts (keep private - not for public repo)
 automation/*.sh

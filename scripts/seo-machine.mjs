@@ -26,22 +26,56 @@ import { google } from "googleapis";
 // ============ Utility Functions ============
 
 function die(msg) {
-  console.error(`[seo-machine] ERROR: ${msg}`);
-  process.exit(1);
+  throw new Error(msg);
 }
 
 function log(msg) {
   console.log(`[seo-machine] ${msg}`);
 }
 
+function runCommand(cmd, args, opts = {}) {
+  return spawnSync(cmd, args, { encoding: "utf8", ...opts });
+}
+
 function sh(cmd, args, opts = {}) {
-  const r = spawnSync(cmd, args, { encoding: "utf8", ...opts });
+  const r = runCommand(cmd, args, opts);
   if (r.status !== 0) {
     console.error(r.stdout || "");
     console.error(r.stderr || "");
-    die(`Command failed: ${cmd} ${args.join(" ")}`);
+    throw new Error(`Command failed: ${cmd} ${args.join(" ")}`);
   }
   return r.stdout.trim();
+}
+
+async function sleep(ms) {
+  await new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function withRetry(
+  fn,
+  { retries = 3, delayMs = 1000, factor = 2, label = "operation" } = {}
+) {
+  let attempt = 1;
+  let wait = delayMs;
+  while (true) {
+    try {
+      return await fn();
+    } catch (err) {
+      if (attempt >= retries) throw err;
+      log(`${label} failed (attempt ${attempt}/${retries}). Retrying in ${wait}ms...`);
+      await sleep(wait);
+      wait *= factor;
+      attempt += 1;
+    }
+  }
+}
+
+function writeFileAtomic(filePath, content) {
+  const dir = path.dirname(filePath);
+  const base = path.basename(filePath);
+  const tmp = path.join(dir, `.${base}.tmp-${process.pid}-${Date.now()}`);
+  fs.writeFileSync(tmp, content, "utf8");
+  fs.renameSync(tmp, filePath);
 }
 
 function isoTodayLocal() {
@@ -63,6 +97,7 @@ function colLetter(n) {
   return s;
 }
 
+async function main() {
 // ============ Configuration ============
 
 const SHEET_ID = process.env.SEO_SHEET_ID;
@@ -107,6 +142,11 @@ if (dirty) {
   die("Working tree is not clean. Commit or stash your changes first.\n" + dirty);
 }
 
+const branch = sh("git", ["branch", "--show-current"], { cwd: ROOT });
+if (branch !== "main") {
+  die(`Expected to be on "main" but found "${branch}".`);
+}
+
 // ============ Step 2: Pull Latest ============
 
 log("Pulling latest changes...");
@@ -127,15 +167,19 @@ const sheets = google.sheets({ version: "v4", auth });
 
 log(`Reading sheet: ${SHEET_NAME}`);
 const range = `${SHEET_NAME}!A1:Z`;
-const resp = await sheets.spreadsheets.values.get({
-  spreadsheetId: SHEET_ID,
-  range,
-});
+const resp = await withRetry(
+  () =>
+    sheets.spreadsheets.values.get({
+      spreadsheetId: SHEET_ID,
+      range,
+    }),
+  { label: "Sheets read" }
+);
 
 const values = resp.data.values || [];
 if (values.length < 2) {
   log("Sheet has no data rows. Nothing to process.");
-  process.exit(0);
+  return;
 }
 
 // Parse headers and rows
@@ -201,16 +245,17 @@ const tasks = rows
 
 if (tasks.length === 0) {
   log(`No READY tasks due by ${TODAY}. Exiting.`);
-  process.exit(0);
+  return;
 }
 
 log(`Found ${tasks.length} task(s) to process:`);
 tasks.forEach((t) => log(`  - [${t.type}] ${t.slug}: ${t.title}`));
 
+try {
 // ============ Step 4: Write Tasks File ============
 
 const taskFile = path.join(ROOT, "automation", "tasks.json");
-fs.writeFileSync(taskFile, JSON.stringify({ today: TODAY, tasks }, null, 2));
+writeFileAtomic(taskFile, JSON.stringify({ today: TODAY, tasks }, null, 2));
 log(`Wrote tasks to ${taskFile}`);
 
 // ============ Step 5: Build Claude Prompt ============
@@ -281,18 +326,23 @@ log("Running Claude Code...");
 log(`  Model: ${process.env.CLAUDE_MODEL || "sonnet"}`);
 log(`  Max turns: ${process.env.CLAUDE_MAX_TURNS || "15"}`);
 
-const claudeResult = spawnSync("claude", claudeArgs, {
-  cwd: ROOT,
-  input: prompt,
-  encoding: "utf8",
-  maxBuffer: 10 * 1024 * 1024, // 10MB buffer for large outputs
-});
-
-if (claudeResult.status !== 0) {
-  console.error(claudeResult.stdout || "");
-  console.error(claudeResult.stderr || "");
-  die("Claude Code run failed.");
-}
+const claudeResult = await withRetry(
+  () => {
+    const result = runCommand("claude", claudeArgs, {
+      cwd: ROOT,
+      input: prompt,
+      encoding: "utf8",
+      maxBuffer: 10 * 1024 * 1024,
+    });
+    if (result.status !== 0) {
+      console.error(result.stdout || "");
+      console.error(result.stderr || "");
+      throw new Error("Claude Code run failed.");
+    }
+    return result;
+  },
+  { label: "Claude Code run" }
+);
 
 console.log("\n--- Claude Output ---");
 console.log(claudeResult.stdout);
@@ -318,7 +368,7 @@ const changes = sh("git", ["status", "--porcelain"], { cwd: ROOT });
 
 if (!changes) {
   log("No files were changed. Nothing to commit.");
-  process.exit(0);
+  return;
 }
 
 log("Changes detected:");
@@ -348,6 +398,7 @@ try {
   log("Warning: Could not push. You may need to push manually.");
 }
 
+} finally {
 // ============ Step 8: Update Sheet Status ============
 
 function expectedPath(t) {
@@ -357,6 +408,7 @@ function expectedPath(t) {
   return null;
 }
 
+try {
 const statusColIndex = COL.status + 1; // 1-based for sheets API
 const statusColLetter = colLetter(statusColIndex);
 
@@ -375,13 +427,23 @@ for (const t of tasks) {
 }
 
 log("Updating sheet statuses...");
-await sheets.spreadsheets.values.batchUpdate({
-  spreadsheetId: SHEET_ID,
-  requestBody: {
-    valueInputOption: "RAW",
-    data: updates,
-  },
-});
+await withRetry(
+  () =>
+    sheets.spreadsheets.values.batchUpdate({
+      spreadsheetId: SHEET_ID,
+      requestBody: {
+        valueInputOption: "RAW",
+        data: updates,
+      },
+    }),
+  { label: "Sheets update" }
+);
+} catch (err) {
+  const message = err && err.message ? err.message : String(err);
+  console.error(`[seo-machine] ERROR: Failed to update sheet statuses: ${message}`);
+}
+
+}
 
 // ============ Done ============
 
@@ -389,3 +451,15 @@ log(`\n✅ SEO Machine complete!`);
 log(`   Processed: ${tasks.length} task(s)`);
 log(`   Date: ${TODAY}`);
 log(`\nGitHub Pages should update automatically within a few minutes.`);
+}
+
+let exitCode = 0;
+try {
+  await main();
+} catch (err) {
+  const message = err && err.message ? err.message : String(err);
+  console.error(`[seo-machine] ERROR: ${message}`);
+  exitCode = 1;
+}
+
+process.exit(exitCode);
