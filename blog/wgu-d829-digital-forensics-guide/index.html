@@ -143,324 +143,6 @@
     ]
   }
   </script>
-
-  <style>
-    /* Featured image banner */
-    .blog-featured-image {
-      background: var(--color-offwhite);
-      padding: var(--space-8) 0;
-    }
-    .blog-featured-image__img {
-      width: 100%;
-      max-width: 800px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      border-radius: var(--radius-xl);
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-    }
-
-    /* Blog header - account for fixed header */
-    .blog-header {
-      padding: calc(var(--space-16) + 80px) 0 var(--space-12);
-      background: linear-gradient(135deg, var(--color-navy) 0%, #1a2744 100%);
-      color: var(--color-white);
-    }
-    .blog-header__breadcrumb {
-      display: flex;
-      align-items: center;
-      gap: var(--space-2);
-      font-size: var(--text-sm);
-      color: rgba(255,255,255,0.6);
-      margin-bottom: var(--space-6);
-    }
-    .blog-header__breadcrumb a {
-      color: var(--color-gold);
-      text-decoration: none;
-    }
-    .blog-header__breadcrumb a:hover {
-      text-decoration: underline;
-    }
-    .blog-header__breadcrumb span {
-      color: rgba(255,255,255,0.6);
-    }
-    .blog-header__title {
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
-      font-weight: var(--font-bold);
-      line-height: 1.2;
-      margin-bottom: var(--space-4);
-      color: #FFFFFF !important;
-    }
-    .blog-header__meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-4);
-      font-size: var(--text-sm);
-      color: rgba(255,255,255,0.7);
-    }
-    .blog-header__meta-item {
-      display: flex;
-      align-items: center;
-      gap: var(--space-2);
-    }
-
-    .blog-content {
-      padding: var(--space-12) 0 var(--space-16);
-    }
-    .blog-content__wrapper {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-10);
-    }
-    @media (min-width: 1024px) {
-      .blog-content__wrapper {
-        grid-template-columns: 1fr 280px;
-      }
-    }
-    .blog-article {
-      max-width: 720px;
-    }
-    .blog-article h2 {
-      font-size: var(--text-2xl);
-      font-weight: var(--font-bold);
-      color: var(--color-navy);
-      margin: var(--space-10) 0 var(--space-4);
-    }
-    .blog-article h3 {
-      font-size: var(--text-xl);
-      font-weight: var(--font-semibold);
-      color: var(--color-navy);
-      margin: var(--space-8) 0 var(--space-3);
-    }
-    .blog-article p {
-      color: var(--color-slate);
-      line-height: 1.8;
-      margin-bottom: var(--space-4);
-    }
-    .blog-article ul {
-      color: var(--color-slate);
-      line-height: 1.8;
-      margin-bottom: var(--space-4);
-      padding-left: var(--space-6);
-      list-style-type: disc;
-    }
-    .blog-article ol {
-      color: var(--color-slate);
-      line-height: 1.8;
-      margin-bottom: var(--space-4);
-      padding-left: var(--space-6);
-      list-style-type: decimal;
-    }
-    .blog-article li {
-      margin-bottom: var(--space-2);
-      display: list-item;
-    }
-    .blog-article li::marker {
-      color: var(--color-teal);
-    }
-    .blog-article strong {
-      color: var(--color-navy);
-      font-weight: var(--font-semibold);
-    }
-    .blog-article a {
-      color: var(--color-teal);
-      text-decoration: underline;
-    }
-    .blog-article a:hover {
-      color: var(--color-navy);
-    }
-
-    .blog-toc {
-      position: sticky;
-      top: 100px;
-      background: var(--color-offwhite);
-      border-radius: var(--radius-xl);
-      padding: var(--space-6);
-    }
-    .blog-toc__title {
-      font-size: var(--text-base);
-      font-weight: var(--font-semibold);
-      color: var(--color-navy);
-      margin-bottom: var(--space-4);
-    }
-    .blog-toc__list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .blog-toc__item {
-      margin-bottom: var(--space-2);
-    }
-    .blog-toc__link {
-      font-size: var(--text-sm);
-      color: var(--color-slate);
-      text-decoration: none;
-      display: block;
-      padding: var(--space-1) 0;
-      transition: color 0.2s;
-    }
-    .blog-toc__link:hover {
-      color: var(--color-teal);
-    }
-
-    .blog-cta {
-      background: linear-gradient(135deg, var(--color-navy) 0%, #1a2744 100%);
-      border-radius: var(--radius-xl);
-      padding: var(--space-8);
-      margin: var(--space-10) 0;
-      text-align: center;
-    }
-    .blog-cta__title {
-      font-size: var(--text-xl);
-      font-weight: var(--font-bold);
-      color: #FFFFFF !important;
-      margin-bottom: var(--space-3);
-    }
-    .blog-cta__text {
-      color: rgba(255,255,255,0.8) !important;
-      margin-bottom: var(--space-6);
-    }
-    .blog-cta__buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: var(--space-3);
-    }
-    .blog-cta__buttons .btn--primary {
-      background: var(--color-gold);
-      color: var(--color-navy);
-      padding: 0.875rem 1.5rem;
-      border-radius: var(--radius-lg);
-      font-weight: var(--font-semibold);
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      text-decoration: none;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .blog-cta__buttons .btn--primary:hover {
-      background: var(--color-gold-hover);
-      transform: translateY(-2px);
-    }
-    .blog-cta__buttons .btn--secondary {
-      background: rgba(255,255,255,0.1);
-      color: #FFFFFF;
-      padding: 0.875rem 1.5rem;
-      border-radius: var(--radius-lg);
-      font-weight: var(--font-semibold);
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.2);
-      transition: background 0.2s, transform 0.2s;
-    }
-    .blog-cta__buttons .btn--secondary:hover {
-      background: rgba(255,255,255,0.2);
-      transform: translateY(-2px);
-    }
-
-    .blog-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-2);
-      margin-top: var(--space-8);
-      padding-top: var(--space-6);
-      border-top: 1px solid #e5e7eb;
-    }
-    .blog-tag {
-      background: var(--color-offwhite);
-      color: var(--color-slate);
-      font-size: var(--text-sm);
-      padding: var(--space-1) var(--space-3);
-      border-radius: var(--radius-full);
-      text-decoration: none;
-    }
-    .blog-tag:hover {
-      background: var(--color-gold);
-      color: var(--color-navy);
-    }
-
-    .blog-faq {
-      margin-top: var(--space-12);
-      padding-top: var(--space-10);
-      border-top: 1px solid #e5e7eb;
-    }
-    .blog-faq__title {
-      font-size: var(--text-2xl);
-      font-weight: var(--font-bold);
-      color: var(--color-navy);
-      margin-bottom: var(--space-6);
-    }
-    .blog-faq .faq__item {
-      border: 1px solid var(--color-border);
-      border-radius: var(--radius-lg);
-      margin-bottom: var(--space-3);
-      overflow: hidden;
-    }
-    .blog-faq .faq__question {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: var(--space-4) var(--space-5);
-      background: var(--color-white);
-      border: none;
-      cursor: pointer;
-      text-align: left;
-      font-size: var(--text-base);
-      font-weight: var(--font-medium);
-      color: var(--color-navy);
-      transition: background 0.2s;
-    }
-    .blog-faq .faq__question:hover {
-      background: var(--color-offwhite);
-    }
-    .blog-faq .faq__question span {
-      flex: 1;
-      padding-right: var(--space-4);
-    }
-    .blog-faq .faq__icon {
-      flex-shrink: 0;
-      transition: transform 0.3s;
-    }
-    .blog-faq .faq__question[aria-expanded="true"] .faq__icon {
-      transform: rotate(180deg);
-    }
-    .blog-faq .faq__answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-      background: var(--color-offwhite);
-    }
-    .blog-faq .faq__answer.is-open {
-      max-height: 500px;
-    }
-    .blog-faq .faq__answer p {
-      padding: var(--space-4) var(--space-5);
-      margin: 0;
-      color: var(--color-slate);
-      line-height: 1.7;
-    }
-
-    .tip-box {
-      background: #f0fdf4;
-      border-left: 4px solid var(--color-teal);
-      padding: var(--space-4) var(--space-6);
-      margin: var(--space-6) 0;
-      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-    }
-    .tip-box strong {
-      color: var(--color-teal);
-    }
-    .warning-box {
-      background: #fef3c7;
-      border-left: 4px solid #f59e0b;
-      padding: var(--space-4) var(--space-6);
-      margin: var(--space-6) 0;
-      border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-    }
-    .warning-box strong {
-      color: #b45309;
-    }
-  </style>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -871,16 +553,23 @@
     </section>
 
     <!-- CTA BANNER -->
+    <!-- CTA BANNER -->
     <section class="cta-banner">
       <div class="cta-banner__pattern"></div>
       <div class="cta-banner__glow"></div>
       <div class="container">
         <div class="cta-banner__content">
-          <h2 class="cta-banner__title">Ready to accelerate more than D829?</h2>
+          <h2 class="cta-banner__title">Ready to Graduate Faster?</h2>
           <p class="cta-banner__tagline">No forms. No waiting. <span>Just results.</span></p>
           <div class="cta-banner__buttons">
-            <a href="https://wa.me/12512806919" class="btn btn--primary" target="_blank" rel="noopener">Chat on WhatsApp</a>
-            <a href="https://t.me/courseworkninja" class="btn btn--secondary" target="_blank" rel="noopener">Message on Telegram</a>
+            <a href="https://wa.me/12512806919" class="cta-banner__btn cta-banner__btn--whatsapp" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+            <a href="https://t.me/courseworkninja" class="cta-banner__btn cta-banner__btn--telegram" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+              <span>Telegram</span>
+            </a>
           </div>
         </div>
       </div>
@@ -888,44 +577,48 @@
   </main>
 
   <!-- FOOTER -->
+  <!-- FOOTER -->
   <footer class="footer">
-    <div class="container footer__top">
-      <div class="footer__brand">
-        <a href="/" class="footer__logo-link">
-          <img src="/images/logo.webp" alt="Coursework Ninja" class="footer__logo-img">
-        </a>
-        <p class="footer__tagline">Human experts helping WGU students finish faster—without shortcuts, bots, or plagiarism.</p>
-      </div>
-      <div class="footer__links">
-        <div class="footer__column">
-          <h2 class="footer__heading">Navigation</h2>
-          <ul class="footer__list">
-            <li><a href="/" class="footer__link">Home</a></li>
-            <li><a href="/blog/" class="footer__link">Blog</a></li>
-            <li><a href="/roadmaps/" class="footer__link">Roadmaps</a></li>
-            <li><a href="/contact/" class="footer__link">Contact</a></li>
-          </ul>
-        </div>
-        <div class="footer__column">
-          <h2 class="footer__heading">Students we help</h2>
-          <ul class="footer__list">
-            <li><span class="footer__pill">WGU Cybersecurity</span></li>
-            <li><span class="footer__pill">WGU IT &amp; BSCS</span></li>
-            <li><span class="footer__pill">Working adults</span></li>
-          </ul>
-        </div>
-        <div class="footer__column">
-          <h2 class="footer__heading">Secure payments</h2>
-          <div class="footer__payments">
-            <span class="footer__pill">Visa</span>
-            <span class="footer__pill">Mastercard</span>
-            <span class="footer__pill">Crypto</span>
+    <div class="container">
+      <div class="footer__countries">
+        <span class="footer__countries-label">Serving Students Worldwide</span>
+        <div class="footer__countries-slider">
+          <div class="footer__countries-track">
+            <span class="footer__country">United States</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United Kingdom</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Canada</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Australia</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Germany</span><span class="footer__country-dot"></span>
+            <span class="footer__country">India</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Nigeria</span><span class="footer__country-dot"></span>
+            <span class="footer__country">South Africa</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Philippines</span><span class="footer__country-dot"></span>
+            <span class="footer__country">UAE</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Saudi Arabia</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Singapore</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United States</span><span class="footer__country-dot"></span>
+            <span class="footer__country">United Kingdom</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Canada</span><span class="footer__country-dot"></span>
+            <span class="footer__country">Australia</span><span class="footer__country-dot"></span>
           </div>
         </div>
       </div>
-    </div>
-    <div class="container footer__bottom">
-      <p class="footer__copy">&copy; 2026 Coursework Ninja. Not affiliated with WGU.</p>
+      <div class="footer__crypto">
+        <span class="footer__crypto-label">We Accept</span>
+        <div class="footer__crypto-logos">
+          <div class="footer__crypto-item" title="Bitcoin"><img src="/images/crypto/btc.webp" alt="Bitcoin" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Ethereum"><img src="/images/crypto/eth.webp" alt="Ethereum" loading="lazy"></div>
+          <div class="footer__crypto-item" title="USDT"><img src="/images/crypto/usdt.webp" alt="USDT" loading="lazy"></div>
+          <div class="footer__crypto-item" title="USDC"><img src="/images/crypto/usdc.webp" alt="USDC" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Solana"><img src="/images/crypto/sol.webp" alt="Solana" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Monero"><img src="/images/crypto/xmr.webp" alt="Monero" loading="lazy"></div>
+          <div class="footer__crypto-item" title="DAI"><img src="/images/crypto/dai.webp" alt="DAI" loading="lazy"></div>
+          <div class="footer__crypto-item" title="Litecoin"><img src="/images/crypto/ltc.webp" alt="Litecoin" loading="lazy"></div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">&copy; 2025 Coursework Ninja. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 
