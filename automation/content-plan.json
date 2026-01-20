@@ -5,8 +5,8 @@
     "totalTopics": 112,
     "totalBlogs": 105,
     "totalLandings": 7,
-    "publishedBlogs": 102,
-    "pendingBlogs": 3,
+    "publishedBlogs": 103,
+    "pendingBlogs": 2,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -3202,14 +3202,15 @@
         "Comparison"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-computer-science-degree",
         "wgu-bsit-guide",
         "wgu-jobs-after-graduation"
       ],
       "estimatedReadTime": 10,
-      "notes": "Deep dive into career outcomes, curriculum focus (theory vs application), and difficulty"
+      "notes": "Deep dive into career outcomes, curriculum focus (theory vs application), and difficulty",
+      "publishedDate": "2026-01-20"
     }
   ]
 }
