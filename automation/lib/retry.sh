@@ -12,7 +12,7 @@ RETRY_BACKOFF_FACTOR="${RETRY_BACKOFF_FACTOR:-2}"
 RETRY_JITTER_MAX="${RETRY_JITTER_MAX:-10}"
 
 OPENCODE_TIMEOUT="${OPENCODE_TIMEOUT:-600}"
-FALLBACK_MODEL="${FALLBACK_MODEL:-anthropic/claude-sonnet-4}"
+FALLBACK_MODEL="${FALLBACK_MODEL:-claude-sonnet-4}"
 
 PATTERN_RATE_LIMIT="rate.?limit|429|too many requests|quota|throttl"
 PATTERN_CONTEXT_LENGTH="context.?length|token.?limit|maximum.?context|too.?long"
