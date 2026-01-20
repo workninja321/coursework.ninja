@@ -1,12 +1,12 @@
 {
   "meta": {
     "version": "1.2",
-    "lastUpdated": "2026-01-14",
+    "lastUpdated": "2026-01-20",
     "totalTopics": 112,
     "totalBlogs": 105,
     "totalLandings": 7,
-    "publishedBlogs": 96,
-    "pendingBlogs": 9,
+    "publishedBlogs": 99,
+    "pendingBlogs": 6,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -3052,14 +3052,15 @@
         "Undergraduate"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-healthcare-management-guide",
         "wgu-nursing-program-guide",
         "wgu-jobs-after-graduation"
       ],
       "estimatedReadTime": 10,
-      "notes": "Cover core competencies, career outcomes in community health, and enrollment"
+      "notes": "Cover core competencies, career outcomes in community health, and enrollment",
+      "publishedDate": "2026-01-20"
     },
     {
       "id": "108",
