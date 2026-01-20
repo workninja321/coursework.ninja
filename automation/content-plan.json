@@ -5,8 +5,8 @@
     "totalTopics": 112,
     "totalBlogs": 105,
     "totalLandings": 7,
-    "publishedBlogs": 100,
-    "pendingBlogs": 5,
+    "publishedBlogs": 101,
+    "pendingBlogs": 4,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -3142,14 +3142,15 @@
         "Leavitt School"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-nursing-program-guide",
         "wgu-healthcare-management-guide",
         "wgu-jobs-after-graduation"
       ],
       "estimatedReadTime": 9,
-      "notes": "Compare with Healthcare Management and detail pre-professional tracks"
+      "notes": "Compare with Healthcare Management and detail pre-professional tracks",
+      "publishedDate": "2026-01-20"
     },
     {
       "id": "111",
