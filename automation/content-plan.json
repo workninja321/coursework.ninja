@@ -5,8 +5,8 @@
     "totalTopics": 112,
     "totalBlogs": 105,
     "totalLandings": 7,
-    "publishedBlogs": 101,
-    "pendingBlogs": 4,
+    "publishedBlogs": 102,
+    "pendingBlogs": 3,
     "cancelledLandings": 7,
     "note": "Landing pages handled separately in /services/ - not managed by autopilot"
   },
@@ -3172,14 +3172,15 @@
         "IT Courses"
       ],
       "priority": 2,
-      "status": "pending",
+      "status": "published",
       "internalLinks": [
         "wgu-comptia-a-plus-guide",
         "wgu-bsit-guide",
         "wgu-oa-exam-tips"
       ],
       "estimatedReadTime": 9,
-      "notes": "Link to A+ certification goals and provide specific D317 OA insights"
+      "notes": "Link to A+ certification goals and provide specific D317 OA insights",
+      "publishedDate": "2026-01-20"
     },
     {
       "id": "112",
